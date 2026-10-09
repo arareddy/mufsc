@@ -1,0 +1,6 @@
+build/
+private/
+*.olean
+*.ilean
+*.zip
+__pycache__/

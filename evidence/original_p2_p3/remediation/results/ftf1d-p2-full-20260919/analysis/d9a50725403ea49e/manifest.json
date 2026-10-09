@@ -1,0 +1,13 @@
+{
+  "status": "COMPLETE175",
+  "trial_units": 175,
+  "source_csv": "remediation/results/ftf1d-p2-full-20260919/derived/5bd18805da0f2e2e/deletion_method_results.csv",
+  "source_sha256": "695703d5637198062818856f777143c031bd4471dfc7014099f86f7517cab027",
+  "script_sha256": "5bec34c23c60c49e0a286a0b532873d56d90543cef9405218201112e5dd768af",
+  "bootstrap_draws": 5000,
+  "bootstrap_seed": 978531,
+  "uncertainty": "95% percentile bootstrap of mean paired fresh/method ratios. Paired-row bootstrap treats trial units as independent. Fixed-k seed-block bootstrap resamples seeds within k and carries all datasets sharing that seed together; neither interval estimates deployment reliability.",
+  "scope": "elapsed is serial call; modeled client-plus-server excludes network; end-to-end includes recorded input/checkpoint load, materialization and equal-schema witness output. Numeric exactness is independently saved in each trial, not inferred from timing. Metadata/output auxiliary content varies by method and is disclosed in receipts.",
+  "reduction_definitions": "mean relative reduction=mean(1-method/fresh); pooled reduction=1-sum(method)/sum(fresh); ratio of mean times=sum(fresh)/sum(method) differs from mean speedup.",
+  "missing_P3": "Original ACS artifacts absent; no corrected P3 inference."
+}

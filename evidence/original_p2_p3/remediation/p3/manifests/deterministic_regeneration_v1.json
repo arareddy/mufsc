@@ -1,0 +1,16 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 remediation/p3/environment/bin/python -B remediation/p3/scripts/prepare_acs2018_v1.py --verify-regeneration",
+  "data_manifest_sha256": "8202b957bf78dc860dec497af3e45039738fda61845f9264d9e6b447de144f48",
+  "dataset_version": "acs2018-ftf1-p3-v1",
+  "design_count": 19,
+  "log": "logs/regeneration_v1.log",
+  "log_sha256": "659589f0f27e5769f7c9d946264d75a8f4701d353cfa9268e08e24d67b375a79",
+  "population_count": 8,
+  "prepared_file_count": 428,
+  "preparer_sha256": "8fabeda98e5caec0b2922ddd1f5cb1aa58a0c651ac1c70b3a9f8ad42cb5318ac",
+  "protocol_sha256": "2698bb7c630e42fa75ebbd162523117f0696135b0ddb8b6f4863bbdef1d31a4f",
+  "regeneration_exit_code": 0,
+  "request_count": 95,
+  "scope": "implementation reproducibility check in a separate process; independent dataset oracle gate remains separate",
+  "status": "PASS"
+}

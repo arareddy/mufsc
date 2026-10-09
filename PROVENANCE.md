@@ -1,0 +1,13 @@
+# Scientific provenance
+
+The 17 current numerical modules in `core/src` are exact copies of the accepted FTF-1D snapshot. `SCIENTIFIC_SOURCE_HASHES.json` binds each copied module; the original source aggregate and training-map hashes are retained in the accepted gates. The fixed-point descriptor repair changes temporary representation ownership, not the declared mathematical map. The module's legacy `FTF-1` tag alone does not distinguish snapshots.
+
+P1 and P4 use the historical source under `historical/p1_p4`, recovered selectively from the retained original full reproduction archive. The nested executed-source snapshot SHA256 is `ead11ffa88f6f4b186707d4e760bc3f45a5933772dba4181ed3e79ab67eaf5fc`, matching its preserved execution receipt. Only this small source snapshot and the frozen run configuration were recovered; the large archive was not expanded. P1 configs are 800 shards of 100 seeds (10,000 seeds for each of eight kappa values); four methods give 320,000 method/seed outcomes. P4 has 57 settings.
+
+P2 has 175 cases and P3 has 95 cases, each with three replay comparisons against fresh training: 810 original comparisons. Their frozen accepted tables/gates are preserved. They are not replaced by the packaging smoke checks.
+
+The new studies each retain frozen protocols, case configurations, identity descriptions and numerical summaries. `expected/lloyd` has complete saved outputs for all 30 matched populations and two methods; `expected/client` has C0/T1/T2 whole-client quality witnesses for the original 15 cases. Most bulk historical caches/checkpoints are intentionally absent. They can be recreated by the provided commands; no PASS label substitutes for a missing witness in a fresh run.
+
+Sanitized reports preserve historical chronology and may mention a planned/unrun study that was completed later. The current scope is `CLAIMS_AND_LIMITATIONS.md` and `STUDIES.json`. Symbolic `source://` and `study://` references are provenance labels, not live paths. The complete package uses relative paths. Hashes inside original reports refer to original artifacts; `MANIFEST.sha256` binds the actual review copy. A text-redacted report cannot retain the same whole-file hash as its original.
+
+Original research files and live manuscript were treated as read-only. The author-side preparation receipts and original path mapping are intentionally outside this anonymous release. Identifying copyright attribution is withheld in this anonymous review-only copy with explicit rightsholder permission; original terms are retained. This does not authorize anonymous public relicensing.

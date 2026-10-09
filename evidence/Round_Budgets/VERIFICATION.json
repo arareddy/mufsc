@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "expected_unique_keys": 180,
+  "observed_unique_keys": 180,
+  "expected_replay_comparisons": 135,
+  "observed_replay_comparisons": 135,
+  "expected_timing_observations": 720,
+  "observed_timing_observations": 720,
+  "gate_method_outputs": 180,
+  "measured_witness_comparisons": 720,
+  "missing": [],
+  "duplicates": [],
+  "independent_seeds_per_dataset": 5,
+  "repetitions_per_key": 4,
+  "identity_checks": [
+    {
+      "dataset": "adult",
+      "seed": 10000,
+      "records": 30162,
+      "removed": 30,
+      "stable_identity_hash": "1da5937884c8d0c7e99f9d83677da3afcd00ede822cb9bfda22d849447282480",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "adult",
+      "seed": 10001,
+      "records": 30162,
+      "removed": 30,
+      "stable_identity_hash": "ca95cdfbb85bf4730d4823e8755cfca3ad68eff1b94669a906e52b6c4860efbf",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "adult",
+      "seed": 10002,
+      "records": 30162,
+      "removed": 30,
+      "stable_identity_hash": "8516bfc3a1d04e7ffc5acffed2ee17ff65214e4ad9d9948b03aca11380e84878",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "adult",
+      "seed": 10003,
+      "records": 30162,
+      "removed": 30,
+      "stable_identity_hash": "60f5d1e9da68ff8e047af3ebe070de1a1afce2bf06f3e67ac2857fc21905183e",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "adult",
+      "seed": 10004,
+      "records": 30162,
+      "removed": 30,
+      "stable_identity_hash": "a8d35eab57f80d478e78af7970617836bb179ddf551199d24c4d864dcbff4747",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "bank",
+      "seed": 10000,
+      "records": 45211,
+      "removed": 45,
+      "stable_identity_hash": "e4738c8cc3fe8e2fc49014172fcc3d03a8bd0db94cc9db03029e9c9fc38d6f3f",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "bank",
+      "seed": 10001,
+      "records": 45211,
+      "removed": 45,
+      "stable_identity_hash": "957ca0c3c6842f018cdbc9ef2049ffc33793ca457b817bf949353fbc0ae361a6",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "bank",
+      "seed": 10002,
+      "records": 45211,
+      "removed": 45,
+      "stable_identity_hash": "c91a7030048634d64beb7eeeedd67ffa09ff98a69755047eb0a74fc1492a4865",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "bank",
+      "seed": 10003,
+      "records": 45211,
+      "removed": 45,
+      "stable_identity_hash": "d162e30d2325422d8d6453ab787567ec728f9a5188ebffbebc78df7dcf330836",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "bank",
+      "seed": 10004,
+      "records": 45211,
+      "removed": 45,
+      "stable_identity_hash": "1557b1a75c08770df2e4df54802592671ffff5dad941aaee56d88608690cb54d",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "credit",
+      "seed": 10000,
+      "records": 30000,
+      "removed": 30,
+      "stable_identity_hash": "1800066eae719c6752b99eb39cfdbca7a412428b88a2f183bec5466aa2882f29",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "credit",
+      "seed": 10001,
+      "records": 30000,
+      "removed": 30,
+      "stable_identity_hash": "50d3de4b67940ac5df5d9fd7cfe631747a3ed2821befd3d792300d536323d29e",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "credit",
+      "seed": 10002,
+      "records": 30000,
+      "removed": 30,
+      "stable_identity_hash": "d8dcefb0130c5cb9cf9ef530f81541d44d181cd867962ab3cac0d78ae72a6c8a",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "credit",
+      "seed": 10003,
+      "records": 30000,
+      "removed": 30,
+      "stable_identity_hash": "2ab9857a28a2c5dac80e162e06a065cfea2790ddddb5d7efce16e312f7063498",
+      "unique_source_rows": true
+    },
+    {
+      "dataset": "credit",
+      "seed": 10004,
+      "records": 30000,
+      "removed": 30,
+      "stable_identity_hash": "a0dd27390cd3736d8e12e76667bd959b14ddfe2892c8ed26df02944473adb029",
+      "unique_source_rows": true
+    }
+  ],
+  "objective_definition": "Phi=max(Phi_A,Phi_B); G=Phi_A+Phi_B (sum of group-normalized costs)",
+  "exact_quality_definition_checks": 180
+}

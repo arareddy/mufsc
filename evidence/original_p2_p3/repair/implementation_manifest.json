@@ -1,0 +1,25 @@
+{
+  "version": "FTF-1D-descriptor-v1",
+  "baseline_code_sha256": "6f613c76ba4fffccf3815fc2deadf58ae00eb9e57feb83fc8e7f2236308ae909",
+  "code_sha256": "d76d7c0606512c458147955aff2a0afea992c87246ce30e4c43cc28003602c31",
+  "map_sha256": "7c25a7f41af39859cc4cc254b3a70525380285904e7f67cd45ca8efbe3633d52",
+  "files": {
+    "src/assignment.py": "9212661f84865d190d9681c915410fb212b63228c9de5e02c43086f77500d9cd",
+    "src/centralized.py": "d3b80befe2562ade83231071dda89d03f3003c9dd492a8725633eb83b8a6daac",
+    "src/certificates.py": "a56c1e4f977aecda0e43ca5e2570d2a0bc784dd0af3c97a5d44ba9f8d79d16f1",
+    "src/datasets.py": "9c6d8b2a4efeda7143258ea3d92392faf81ef5231e61bf08af5352751a172c83",
+    "src/digest.py": "32b811b98214d8829b89f3597a8c6b6eed10888f7379d04b217254221af6876b",
+    "src/exact_numeric.py": "9baed40c7f34f5078b2b4787492e4bf04ce25b76461017bab616082185702bd1",
+    "src/fair_update.py": "bb116060e8211f20e87921ba9c276894d70acb70996be1c8fe50aca01ccf57bd",
+    "src/fixedpoint.py": "bbaf16a2176206c238cabaf67c07a6cefd9d91f64ffe2a9db7feece90cd0eeaf",
+    "src/kmeanspp.py": "1628050e73e3dfe01926d285ff769c3a58815821e6dd334a233a73dcb9c02151",
+    "src/merged_baseline.py": "ad0dc0b0f0df72e3f93a21e01fb0e28ca1412515dcd86debe66df175a3b177ba",
+    "src/objective.py": "28a73a22ae99c4e2e851404b4de10ba62617445d9937accfc652a3f35fb95903",
+    "src/rng.py": "259be03f9ea19091f4b201d70f354a082cfe821fe61314ec13c1a44c7dd40f67",
+    "src/splitgroup.py": "f5a10cddebd921e2a53d3b224035d6507262933e5ca99b4cd914aba824ddcc03",
+    "src/timing.py": "1ae4bbba3f7f9a1461a3bb7d672b60cad76b19b3ea8975302973918f7f67fad0",
+    "src/train.py": "85ec56fdbebf644800ee88cb1594a56245850ee2496c33951d4c5bab3c81a4e5",
+    "src/unlearn.py": "264a3ca2326f35fec11d77eff707675c63fea9e4de2928ef7319ccf79b48a717",
+    "src/validation.py": "7c0a8ed77fa100e65e0d46086ae762965d8213f632e02601644805f6ccd2a5e4"
+  }
+}

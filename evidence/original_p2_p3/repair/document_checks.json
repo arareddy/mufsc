@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "title_unchanged": true,
+  "abstract_only_authorized_sentence_changed": true,
+  "formal_statement_and_algorithm_blocks": 15,
+  "formal_blocks_by_file": {
+    "main.tex": 8,
+    "appendix.tex": 4,
+    "s2_matched_budget_statement.tex": 1,
+    "s2_coupling_statement.tex": 2
+  },
+  "active_citation_keys": 54,
+  "active_source_files": 23,
+  "unchanged_scientific_assets": {
+    "appendix.tex": "a901aa4289a04b1bb70f3e080eef543e145cfde60ce723390f8bdddeb22bdf3d",
+    "references.bib": "61e84803a04de999fd3cf0886f54fb3e1824a1950a917b919a13edc3c253e67e",
+    "iclr2027_conference.sty": "ed84d3f9b9cde191055ca56863e9a438ef1199d1441f9de444a35acef06c6778",
+    "plainnat.bst": "21eefa76f1c967f5074776fcef096c0f8f2b9e42347e84b62e1dbb121dcae486",
+    "numerical_contract.tex": "66225541e1ad7a1827eedf083e9721390f51d893d4257c3a47f516a06970f905",
+    "s2_matched_budget_statement.tex": "4b867b3460b1e946a8da56ece5b8c8ac72b027e998f6155690feef2f205eed51",
+    "s2_matched_budget_proof.tex": "91c5b8dbb3cfafa0af8f8311bf352dd311932f100e7c8ecbf589e3f1d92b0d7a",
+    "s2_coupling_statement.tex": "2c06cf938366d2917feccc22e2bc6b50c7abf9ed85d098a8bd3f64c2a6669611",
+    "s2_coupling_proof.tex": "21ec8800e7a6fda7d505254229342fba34b7b80b7bff5f6ceafb2e1dc6b9763f",
+    "s2_p3_diagnostic_table.tex": "88a9af26e387ad66bd558b41a2110e3b2529462d590207841fad4f4c6abf9163",
+    "figures/corrected_p1.pdf": "9051243392efaf4bf36b016e203c1a3b5542bb30d03d5b34093211f3c5f1d2ab",
+    "figures/corrected_p4.pdf": "1156b4fdbc6a7c710a16cec2c77d077fb790add9a7ac42d58e42ec742e8fc581",
+    "generated/corrected_p1_table.tex": "bdf4db74ce1f6b87853cd64fdf031044218e7cc56475e32166c87d4f395c0054",
+    "generated/corrected_p4_diagnostics.tex": "50b99648c1073d7961d73857c40179b349f94d5c85d0f909e777ca18cbdeb7f5",
+    "generated/corrected_p4_full_table.tex": "ca7035ffd8c91b7c2eb36b86612c9a06dd23a2cda58d6efe639d3e25107c8b8d",
+    "generated/p3_populations.tex": "c7c48f7056e13df3d5572cdb06580ddf4ead1ec84d11e4d06d030519a100020c",
+    "generated/p3_designs.tex": "f846f8d399b9953ccef108f4180f489f549cfb31ceb687abc1e7422956abfcd7"
+  },
+  "original_input_files_unchanged": 26,
+  "documents": {
+    "Fair_to_Forget_FTF1D_20260919": {
+      "pages": 37,
+      "sha256": "25933aa9ad73ddca33dab3c111b8adeda36d6ab5fc23c6ff81b2a91ed0003320",
+      "internal_named_links": 247,
+      "unresolved_named_destinations": []
+    },
+    "Fair_to_Forget_Descriptor_Repair_Report_20260919": {
+      "pages": 4,
+      "sha256": "ffbe476e22453f5b93413ed29e81e9ae3d0736ed9f0fb0432c40f0e210067d13",
+      "internal_named_links": 0,
+      "unresolved_named_destinations": []
+    }
+  },
+  "main_body_pages": 9,
+  "scope": "Source/metadata/citation/link/build checks; visual review is recorded separately. Mathematical statements and appendix proofs byte-identical, not newly audited."
+}

@@ -1,0 +1,12 @@
+{
+  "original_supplement_files_byte_identical": 1026,
+  "changed_original_packaging_files": [
+    ".gitignore",
+    "MANIFEST.json",
+    "MANIFEST.sha256",
+    "README.md",
+    "licenses/LEGACY_MIT_LICENSE.txt"
+  ],
+  "scope": "Packaging checks only; no new experiment campaign or Lean compilation.",
+  "distribution": "supplement only; excludes local paper/ directory"
+}

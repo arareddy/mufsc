@@ -1,0 +1,16 @@
+# Current paper-to-supplement crosswalk
+
+Use stable LaTeX labels below; appendix/table numbers can move during final typesetting. This map follows the final consolidation, including the weak-monotonicity correction and the accompanying-material wording. The preserved formal ledger records its own earlier source snapshot explicitly. No empirical values are revised here.
+
+| Paper anchor | Included evidence and interpretation |
+|---|---|
+| Table 1 — `tab:replay-main`; `app:p2-evidence`, `app:p3-evidence`, `app:timing` | `evidence/original_p2_p3/` has canonical P2/P3 derived method results and timing/coverage summaries. P2: T=15, 175 requests and 525 replay comparisons; P3: T=5/10/20/40, 95 requests and 285 comparisons. Total algorithm/E2E ratios divide summed fresh by summed replay times. The appendix also reports distinct means of paired ratios. Certification's adverse E2E outcomes are retained. |
+| Table 2 — `tab:client-main`; `app:client-summary`, `app:client-refinement` | `evidence/Client_Deletion/tables/aggregate_timings.csv`, `evidence/Client_Refinement/tables/aggregate_timings.csv` and their REPORT/PROTOCOL files. Compact T=0 has three timing repeats; canonical Direct T=1/T=2 has four. One preselected client per dataset, k=10 and five seeds. Quality is computed per seed before averaging; excess T=0 quality cost is a cross-budget comparison, not replay error. |
+| Table 3 — `tab:lloyd-main`; `app:lloyd` | `evidence/Lloyd_Comparison/tables/paired_methods_summary.csv`, `summary.csv`, `quality.csv`, `step_increases.csv`, REPORT and NUMERICAL_CONTRACT. Fair and Lloyd start from matched centers on the same retained populations. Lower worst-group cost can accompany higher population/larger-group cost. |
+| `app:experiments`, `app:round-budgets` | `evidence/Round_Budgets/`, original P1/P4 evidence, `configs/`, `STUDIES.json`, `DATA.md`, `TIMING_SCOPE.md`. Later 0–2-round studies have separate populations/protocols; no pooling with original budgets. |
+| `app:client-diversity`, `app:client-sequences` | `evidence/Client_Diversity/`, `evidence/Client_Sequences/`. Shared populations and correlated sequence steps are not independent additional trials. |
+| `app:group-quality` | `evidence/Group_Quality/`: maximum versus mean group cost, paired changes, adverse transitions and reused populations remain explicit. |
+| `app:multigroup-prototype` | `evidence/Multigroup/`, `evidence/audits/Multigroup_Audit/`, `variants/multigroup/`. This categorical prototype is a separate map; exact replay does not imply exact optimization. |
+| Mathematical theorem/equation labels | `formal_verification/THEOREM_COVERAGE.md`, with source, exact statements, pins and receipts in the five lane folders listed in `formal_verification/README.md`. |
+
+`paper_crosswalk/` contains byte-preserved snapshots of the three saved main-table source fragments for convenient review, plus their hashes. The full manuscript source package is separate. All original experiment tables, reports, audit dispositions, figures and small evidence remain in their original supplement paths. `REPRODUCTION_MATRIX.md` distinguishes actual packaging checks from full grids, raw reconstruction and proof compilation that were not rerun.

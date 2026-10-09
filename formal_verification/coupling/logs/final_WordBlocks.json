@@ -1,0 +1,12 @@
+{
+  "source": "proof/WordBlocks.lean",
+  "sha256": "b6128dd6f9708327304130feab437855899c557f7e7e0c82fa072a2cdfb65d93",
+  "started_utc": "2026-09-26T10:07:41.133876+00:00",
+  "finished_utc": "2026-09-26T10:07:42.353912+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "trust": 0,
+  "threads": 1,
+  "compiler_output": "logs/final_WordBlocks.log"
+}

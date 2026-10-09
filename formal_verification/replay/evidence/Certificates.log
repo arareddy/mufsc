@@ -1,0 +1,6 @@
+'Replay.reverse_triangle_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.basic_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.runner_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.outward_bounds_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.basic_certified_label' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.runner_certified_label' depends on axioms: [propext, Classical.choice, Quot.sound]

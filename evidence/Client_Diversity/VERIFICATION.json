@@ -1,0 +1,22 @@
+{
+  "all_case_receipt_hashes_valid": true,
+  "balanced_order_and_time_decomposition": true,
+  "candidate_unchanged": true,
+  "complete_input_bindings_unchanged": true,
+  "completed_batches": 15,
+  "counts": {
+    "declared_state_comparisons": 60,
+    "model_comparisons": 60,
+    "returned_compact_state_comparisons": 30,
+    "timed_declared_state_comparisons": 270,
+    "timed_gate_model_comparisons": 270,
+    "timed_returned_compact_state_comparisons": 90
+  },
+  "equal_output_bytes_and_gate_models": true,
+  "exact_quality_checks": 30,
+  "lock_batches": 15,
+  "scope": "Saved-output and reporting verification; kernel/state equality is asserted by bound worker, not a new independent numerical oracle.",
+  "status": "PASS",
+  "timed_observations": 270,
+  "unique_cases": 30
+}

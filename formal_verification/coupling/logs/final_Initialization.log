@@ -1,0 +1,9 @@
+BUNDLE/proof/Initialization.lean:78:29: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Coupling.table_is_d2_sampling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.record_location_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.transferred_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.table_probability_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.table_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.initialization_tuple_TV' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.retained_tuple_TV' depends on axioms: [propext, Classical.choice, Quot.sound]

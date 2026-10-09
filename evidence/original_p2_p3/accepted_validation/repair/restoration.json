@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "ACS_files": 428,
+  "ACS_dataset_manifest_sha256": "8202b957bf78dc860dec497af3e45039738fda61845f9264d9e6b447de144f48",
+  "tabular_files": 181,
+  "scope": "All frozen file hashes checked; public source files not refetched; historical data_gate retained as historical preparation evidence, a new restored-input verification binds this location."
+}

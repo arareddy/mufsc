@@ -1,0 +1,6 @@
+'Replay.summary_counts_exact' depends on axioms: [propext, Quot.sound]
+'Replay.whole_client_compact' depends on axioms: [propext, Quot.sound]
+'Replay.summaries_equal' depends on axioms: [propext, Quot.sound]
+'Replay.initialized_state_equal' depends on axioms: [propext, Quot.sound]
+'Replay.canonical_active_congr' depends on axioms: [propext, Quot.sound]
+'Replay.whole_client_initializer' depends on axioms: [propext, Quot.sound]

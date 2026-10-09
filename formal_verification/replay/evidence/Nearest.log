@@ -1,0 +1,4 @@
+'Replay.nearest_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.nearest_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.nearest_tie_smallest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.strict_winner_nearest' depends on axioms: [propext, Classical.choice, Quot.sound]

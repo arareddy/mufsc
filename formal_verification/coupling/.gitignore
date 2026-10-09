@@ -1,0 +1,5 @@
+build/
+private/
+.lake/
+__pycache__/
+*.zip

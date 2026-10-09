@@ -1,0 +1,5 @@
+'Coupling.event_probability_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.initialization_word_offsets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.event_work_contribution' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.finite_law_expected_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.deletion_witness_summary' depends on axioms: [propext, Classical.choice, Quot.sound]

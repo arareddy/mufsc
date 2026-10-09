@@ -1,0 +1,14 @@
+\begin{table}[htbp]
+\centering
+\caption{Whole-client deletion at $k=10$: one preselected client per dataset, five seeds, on the same retained populations. Fresh/replay ratios divide total resident-request times at matched $T$. Compact $T=0$ uses a separate implementation and three repeats; canonical Direct $T=1,2$ uses four repeats. Quality is mean worst-group cost over five seeds, computed within seed before averaging.}
+\label{tab:client-main}
+\begin{tabular}{lrrrrr}
+\toprule
+ & Compact $T=0$ & Direct $T=1$ & Direct $T=2$ & $\Phi(T=0)$ & $\Phi(T=2)$ \\
+\midrule
+Adult & 26.96 & 2.053 & 1.544 & 117.957 & 95.998 \\
+Bank & 115.53 & 2.646 & 1.828 & 45.898 & 32.634 \\
+Credit & 25.03 & 2.647 & 1.856 & 20.124 & 13.009 \\
+\bottomrule
+\end{tabular}
+\end{table}

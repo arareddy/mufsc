@@ -1,0 +1,5 @@
+'Replay.direct_stays_direct' depends on axioms: [propext, Quot.sound]
+'Replay.replayStep_equal' depends on axioms: [propext, Quot.sound]
+'Replay.trajectory_equal' depends on axioms: [propext, Quot.sound]
+'Replay.finite_trajectory_equal' depends on axioms: [propext, Quot.sound]
+'Replay.zero_round' depends on axioms: [propext, Quot.sound]

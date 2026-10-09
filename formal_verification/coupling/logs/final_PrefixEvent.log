@@ -1,0 +1,7 @@
+BUNDLE/proof/PrefixEvent.lean:121:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+note: this linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'Coupling.retained_six_slot_mapping' depends on axioms: [propext, Quot.sound]
+'Coupling.old_six_slot_mapping' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.prefix_event_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.prefix_common_zero_slot' depends on axioms: [propext, Quot.sound]
+'Coupling.prefix_probability' depends on axioms: [propext, Classical.choice, Quot.sound]

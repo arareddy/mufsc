@@ -1,0 +1,7 @@
+dataset,client,source_client_id,roles,size,group0,group1,group0_fraction,remaining0,remaining1,ordered_row_ids_sha256
+adult,0,0,smallest;median_size;min_group0_fraction,300,97,203,97/300,9685,20177,34f4a56b859b9d6120276ebec4ea7aebe2e2cad4fd036c3e9c535b47164af5cd
+adult,99,99,largest;max_group0_fraction;min_surviving_smaller_group,462,179,283,179/462,9603,20097,b07d8d63c1f1a96503de686b99feaa198013190061904cbd3c754b405757ec21
+bank,0,0,smallest;median_size;min_group0_fraction,2259,899,1360,899/2259,17098,25854,c3a167cee665cf12d4a71dcf00cfce7bab5c6384c113df2a8062ae129fcc8896
+bank,19,19,largest;max_group0_fraction;min_surviving_smaller_group,2290,916,1374,2/5,17081,25840,7905f6a1dc53ef1ca8096e62cdf27b8e33bdf005a230387bd0b1549bf15755fc
+credit,0,0,smallest;median_size;min_group0_fraction,299,53,246,53/299,5332,24369,e55aa1c4f1b08c743dbcac73ccc7b596a78d9a09f9da2bb52432ef5e0f14f61c
+credit,99,99,largest;max_group0_fraction;min_surviving_smaller_group,399,138,261,46/133,5247,24354,0fd22423c3f0c7e864fcbfb6c1eebae071b4aee91fa2e7f4b98891bef1ebd6a2

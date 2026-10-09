@@ -1,0 +1,43 @@
+{
+  "accepted_validity_attempt": 0,
+  "data_version": "acs2018-ftf1-p3-v1",
+  "deletion_seed": 10541045708418928415,
+  "design_index": 15,
+  "master_seed": 4,
+  "protocol_sha256": "2698bb7c630e42fa75ebbd162523117f0696135b0ddb8b6f4863bbdef1d31a4f",
+  "removal_source_hash": "c4d55a916f7b53b8704e95365503b21a7ee27b6a92ef213a4363db7b1fdb70ea",
+  "removed": {
+    "3": [
+      6920
+    ]
+  },
+  "source_records": [
+    {
+      "SERIALNO": "2018HU0800377",
+      "SPORDER": 2,
+      "client_id": 3,
+      "dataset_config_id": "0ce0d980010f69bf4d46",
+      "declaration_sha256": "5f9644338fd1ffb661753079b4934480b3eeda0e0c9d645343ee506a34070007",
+      "deletion_batch_hash": "c4d55a916f7b53b8704e95365503b21a7ee27b6a92ef213a4363db7b1fdb70ea",
+      "deletion_seed": 10541045708418928415,
+      "design_index": 15,
+      "flat_sample_index": 12365,
+      "geography": "CA",
+      "local_sample_index": 6920,
+      "master_seed": 4,
+      "native_id": "2018:06:2018HU0800377:2",
+      "r": 1,
+      "requested_deletion_fraction": "0.00001",
+      "source_csv_sha256": "dc2187fc90df2c5f6b546ee89a2b41c9a97379c9e7136461b6a6c8de871b43e0",
+      "source_row_id": 223279,
+      "stable_record_id": "CA:source-row:223279",
+      "state_fips": 6
+    }
+  ],
+  "unconditional_validity_proof": {
+    "group_A": 49033,
+    "group_B": 50967,
+    "r": 1,
+    "r_less_than_both_groups": true
+  }
+}

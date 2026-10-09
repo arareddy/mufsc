@@ -1,0 +1,61 @@
+{
+  "claim_map_sha256": "3a88cc64e29a1b863548645e37905e49e7c9eab820dae29a19dde9f094891453",
+  "closure_counts": {
+    "CLOSED": 72,
+    "CLOSED_SCOPE_CORRECTED": 1
+  },
+  "closure_ledger_sha256": "eaf8eac046b9d6eb5a5d6e914153fe508e541f8f288c8b84cbe4fb1ed76fd417",
+  "code_sha256": "6f613c76ba4fffccf3815fc2deadf58ae00eb9e57feb83fc8e7f2236308ae909",
+  "coverage": {
+    "P1": 320000,
+    "P2": 175,
+    "P3": 95,
+    "P4": 57
+  },
+  "dataset_version": "acs2018-ftf1-p3-v1",
+  "final_evidence": {
+    "files": {
+      "remediation/evidence/independent_final_evidence.json": "f9f38ca93bfba6594516f4a872f11b1492200f612582868f0299baed60dcd01f",
+      "remediation/p3/analysis/9ec4154fb41a4c2f/manifest.json": "8b7d5f2fff72bc9a170754ec40005277b6bed3054c9a74bc32578510df15b599",
+      "remediation/p3/analysis/EXECUTION_SUMMARY.json": "6a8e01a146af4e1911f817311cf54ba347ec4c1f5f034541f75f489f443db251",
+      "remediation/p3/data/acs2018-ftf1-p3-v1/manifest.json": "8202b957bf78dc860dec497af3e45039738fda61845f9264d9e6b447de144f48",
+      "remediation/p3/manifests/source_manifest_v1.json": "c23101b1e2ad28ac66f7cca69390d30368d1a6e7eb43257511b7f8ac27e03fa6",
+      "remediation/p3/manuscript/evidence/MANUSCRIPT_COMPLETE_v1.json": "a5df6d16dc2220a9925465bae8d2b7e5efed5ab8e041ce1c2309139f2f350dd6",
+      "remediation/p3/manuscript/evidence/discrepancy_manuscript_map.json": "8f4fd4c49f4fbc50c319496d611547996c93bf94910bfcf02c54dbcb61a6914f",
+      "remediation/p3/manuscript/evidence/source_bundle_manifest.json": "415e43ce730f422633736980cb81aa47774526c0fa92a46ad62cd318ea548c57",
+      "remediation/p3/manuscript/evidence/source_bundle_reproduction.json": "3eb16382102b627b61fb2b7718bb58dfb5843d37946c0cbc65fc8c4d3df31e5c",
+      "remediation/p3/manuscript/evidence/visual_qa.json": "c8ebc6e141e3041b2d48d120ffaccb3fb556a30f87f626c99369f8a45b84274a",
+      "remediation/p3/packaging/preservation_report_v2.json": "27e29b526b4436df237ba7e109eaed05a5aa43ab658bbafb6cc57f53498af4f5",
+      "remediation/p3/results/acs2018-ftf1-p3-v1-full-20260906/run_manifest.json": "eee6d2e0bde951f9a9f80365e714939764279fb94238db6e7e42373f49e149e3",
+      "remediation/p3/specification/PROTOCOL_v1.json": "2698bb7c630e42fa75ebbd162523117f0696135b0ddb8b6f4863bbdef1d31a4f",
+      "remediation/p3/validation/P3_VALIDATION_COMPLETE_v1.json": "55727fe6eadbec61629c19c559128358e089c8a23a714d8de51e89ef1545089f"
+    },
+    "pdf_sha256": "d8e2672cc7243db41f0f94b972505205ea4f27f79713edcaaa35664bfe8989f6",
+    "source_zip_sha256": "b1be931f473176346f804ad148d605c42c06bdad77ac6c6b1e9a370031ed5b2f"
+  },
+  "historical_reconstruction": "Explicitly OUT OF SCOPE; dependent active claims removed",
+  "map_sha256": "7c25a7f41af39859cc4cc254b3a70525380285904e7f67cd45ca8efbe3633d52",
+  "p3_coverage": {
+    "method_outputs": 380,
+    "replay_comparisons": 285,
+    "table_rows": {
+      "design_metrics.csv": 76,
+      "pilot_seed_metrics.csv": 40,
+      "rounds.csv": 3000,
+      "suite_metrics.csv": 4,
+      "trials.csv": 380
+    },
+    "trial_units": 95
+  },
+  "package_integrity": "Companion receipt is emitted only after archive entry SHA-256 and ZIP CRC verification; package is not its own payload.",
+  "packaging_receipt": "remediation/p3/packages/Fair_to_Forget_FTF1_ACS2018_P3_v1_Reproducible_20260906.receipt.json",
+  "preservation_scope": "The prior corrected paper has one changed .DS_Store file. The external original package has the same two Finder-file drifts reported by the prior release. These are not scientific source, PDF, experiment, or package changes. No restoration or original-package editing was performed; their cause is not established. Full byte-for-byte preservation of those three filesystem metadata files is not claimed.",
+  "readiness": "CORRECTED_DRAFT_READY_FOR_AUTHOR_AND_SUBMISSION_REVIEW",
+  "required": {
+    "P1": 320000,
+    "P2": 175,
+    "P3": 95,
+    "P4": 57
+  },
+  "scope": "Completed declared FTF-1 repairs and empirical replacement; no general speedup, deployment reliability, or historical reconstruction claim"
+}

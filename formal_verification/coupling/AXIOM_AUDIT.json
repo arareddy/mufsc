@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "theorems": 101,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "unexpected_axioms": [],
+  "trust": 0,
+  "threads": 1,
+  "log": "logs/final_AxiomAudit.log"
+}

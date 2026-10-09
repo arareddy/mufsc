@@ -1,0 +1,4 @@
+'Replay.local_multiplicity_conservation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.integer_stats_patch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.integer_stats_abandonment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.owner_partition_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

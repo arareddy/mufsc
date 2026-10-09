@@ -1,0 +1,495 @@
+@FairUpdate.le_groupMax : ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : Nonempty G] (f : G → ℝ) (g : G),
+  f g ≤ FairUpdate.groupMax f
+'FairUpdate.le_groupMax' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.groupMax_le : ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : Nonempty G] (f : G → ℝ) (r : ℝ),
+  (∀ (g : G), f g ≤ r) → FairUpdate.groupMax f ≤ r
+'FairUpdate.groupMax_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.groupMax_mono : ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : Nonempty G] (f h : G → ℝ),
+  (∀ (g : G), f g ≤ h g) → FairUpdate.groupMax f ≤ FairUpdate.groupMax h
+'FairUpdate.groupMax_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.weighted_le_groupMax : ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : Nonempty G] (w : FairUpdate.Simplex G)
+  (f : G → ℝ), FairUpdate.weighted w f ≤ FairUpdate.groupMax f
+'FairUpdate.weighted_le_groupMax' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.mass_nonneg : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] (p : FairUpdate.Quadratics G I)
+  (w : FairUpdate.Simplex G) (i : I), 0 ≤ FairUpdate.mass p w i
+'FairUpdate.mass_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.linear_zero_of_mass_zero : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G]
+  (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G) (i : I),
+  FairUpdate.mass p w i = 0 → FairUpdate.linear p w i = 0
+'FairUpdate.linear_zero_of_mass_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.scalar_complete_square : ∀ (a b x : ℝ), a ≠ 0 → a * x ^ 2 - 2 * b * x + b ^ 2 / a = a * (x - b / a) ^ 2
+'FairUpdate.scalar_complete_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.scalar_lower_bound : ∀ (a b x : ℝ), 0 ≤ a → (a = 0 → b = 0) → -(b ^ 2 / a) ≤ a * x ^ 2 - 2 * b * x
+'FairUpdate.scalar_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.scalar_value_at_candidate : ∀ (a b z : ℝ),
+  (a = 0 → b = 0) → (a * (if a = 0 then z else b / a) ^ 2 - 2 * b * if a = 0 then z else b / a) = -(b ^ 2 / a)
+'FairUpdate.scalar_value_at_candidate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.weighted_expansion : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Fintype I]
+  (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G) (c : I → ℝ),
+  FairUpdate.weighted w (FairUpdate.groupCost p c) =
+    FairUpdate.weighted w p.q + ∑ i, (FairUpdate.mass p w i * c i ^ 2 - 2 * FairUpdate.linear p w i * c i)
+'FairUpdate.weighted_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.dual_le_weighted : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Fintype I]
+  (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G) (c : I → ℝ),
+  FairUpdate.dual p w ≤ FairUpdate.weighted w (FairUpdate.groupCost p c)
+'FairUpdate.dual_le_weighted' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.weighted_minimizer_eq_dual : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Fintype I]
+  (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G) (fallback : I → ℝ),
+  FairUpdate.weighted w (FairUpdate.groupCost p (FairUpdate.minimizer p w fallback)) = FairUpdate.dual p w
+'FairUpdate.weighted_minimizer_eq_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.weak_duality : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype I]
+  (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G) (c : I → ℝ), FairUpdate.dual p w ≤ FairUpdate.fixedPhi p c
+'FairUpdate.weak_duality' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.objective_bddBelow : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype I] (p : FairUpdate.Quadratics G I),
+  FairUpdate.Simplex G → BddBelow (Set.range (FairUpdate.fixedPhi p))
+'FairUpdate.objective_bddBelow' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.dual_le_optimum : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype I] (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G),
+  FairUpdate.dual p w ≤ FairUpdate.optimum p
+'FairUpdate.dual_le_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.optimum_le_returned : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype I] (p : FairUpdate.Quadratics G I),
+  FairUpdate.Simplex G → ∀ (returned : I → ℝ), FairUpdate.optimum p ≤ FairUpdate.fixedPhi p returned
+'FairUpdate.optimum_le_returned' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.returned_gap_certificate : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype I] (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G) (returned : I → ℝ),
+  0 ≤ FairUpdate.fixedPhi p returned - FairUpdate.optimum p ∧
+    FairUpdate.fixedPhi p returned - FairUpdate.optimum p ≤ FairUpdate.fixedPhi p returned - FairUpdate.dual p w
+'FairUpdate.returned_gap_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.best_evaluated_certificate : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype I] {E : Type u_3} [inst_3 : Fintype E] [inst_4 : Nonempty E] (p : FairUpdate.Quadratics G I)
+  (evaluated : E → FairUpdate.Simplex G) (returned : I → ℝ),
+  0 ≤ FairUpdate.fixedPhi p returned - FairUpdate.optimum p ∧
+    FairUpdate.fixedPhi p returned - FairUpdate.optimum p ≤
+      FairUpdate.fixedPhi p returned - FairUpdate.groupMax fun e => FairUpdate.dual p (evaluated e)
+'FairUpdate.best_evaluated_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.guarded_nonincrease : ∀ {X : Type u_1} (score : X → ℝ) (incumbent candidate : X),
+  score (FairUpdate.guarded score incumbent candidate) ≤ score incumbent
+'FairUpdate.guarded_nonincrease' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.nearestDistance_le : ∀ {P : Type u_1} {K : Type u_2} {X : Type u_3} [inst : Fintype K] [inst_1 : Nonempty K]
+  (distance : P → X → ℝ) (c : K → X) (p : P) (k : K), FairUpdate.nearestDistance distance c p ≤ distance p (c k)
+'FairUpdate.nearestDistance_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.nearestCost_le_assignedCost : ∀ {G : Type u_1} {P : Type u_2} {K : Type u_3} {X : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype K] [inst_2 : Nonempty K] (weight : G → P → ℝ),
+  (∀ (g : G) (p : P), 0 ≤ weight g p) →
+    ∀ (distance : P → X → ℝ) (assignment : P → K) (c : K → X) (g : G),
+      FairUpdate.nearestCost weight distance c g ≤ FairUpdate.assignedCost weight distance assignment c g
+'FairUpdate.nearestCost_le_assignedCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.nearest_max_le_assigned_max : ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : Nonempty G] {P : Type u_2}
+  {K : Type u_3} {X : Type u_4} [inst_2 : Fintype P] [inst_3 : Fintype K] [inst_4 : Nonempty K] (weight : G → P → ℝ),
+  (∀ (g : G) (p : P), 0 ≤ weight g p) →
+    ∀ (distance : P → X → ℝ) (assignment : P → K) (c : K → X),
+      FairUpdate.groupMax (FairUpdate.nearestCost weight distance c) ≤
+        FairUpdate.groupMax (FairUpdate.assignedCost weight distance assignment c)
+'FairUpdate.nearest_max_le_assigned_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.assigned_eq_nearest_of_minimizing : ∀ {G : Type u_1} {P : Type u_2} {K : Type u_3} {X : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype K] [inst_2 : Nonempty K] (weight : G → P → ℝ) (distance : P → X → ℝ)
+  (assignment : P → K) (c : K → X),
+  (∀ (p : P) (k : K), distance p (c (assignment p)) ≤ distance p (c k)) →
+    FairUpdate.assignedCost weight distance assignment c = FairUpdate.nearestCost weight distance c
+'FairUpdate.assigned_eq_nearest_of_minimizing' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.guarded_refinement_nonincrease : ∀ {G : Type u_1} [inst : Fintype G] [inst_1 : Nonempty G] {P : Type u_2}
+  {K : Type u_3} {X : Type u_4} [inst_2 : Fintype P] [inst_3 : Fintype K] [inst_4 : Nonempty K] (weight : G → P → ℝ),
+  (∀ (g : G) (p : P), 0 ≤ weight g p) →
+    ∀ (distance : P → X → ℝ) (assignment : P → K) (incumbent candidate : K → X),
+      (∀ (p : P) (k : K), distance p (incumbent (assignment p)) ≤ distance p (incumbent k)) →
+        FairUpdate.groupMax
+            (FairUpdate.nearestCost weight distance
+              (FairUpdate.guarded (fun c => FairUpdate.groupMax (FairUpdate.assignedCost weight distance assignment c))
+                incumbent candidate)) ≤
+          FairUpdate.groupMax (FairUpdate.nearestCost weight distance incumbent)
+'FairUpdate.guarded_refinement_nonincrease' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.weighted_mix : ∀ {G : Type u_1} [inst : Fintype G] (u v : FairUpdate.Simplex G) (t : ℝ) (ht : 0 ≤ t)
+  (ht1 : t ≤ 1) (f : G → ℝ),
+  FairUpdate.weighted (FairUpdate.mix u v t ht ht1) f = t * FairUpdate.weighted u f + (1 - t) * FairUpdate.weighted v f
+'FairUpdate.weighted_mix' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.dual_eq_infimum : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Fintype I]
+  (p : FairUpdate.Quadratics G I) (w : FairUpdate.Simplex G),
+  FairUpdate.dual p w = sInf (Set.range fun c => FairUpdate.weighted w (FairUpdate.groupCost p c))
+'FairUpdate.dual_eq_infimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.dual_concave : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Fintype I]
+  (p : FairUpdate.Quadratics G I) (u v : FairUpdate.Simplex G) (t : ℝ) (ht : 0 ≤ t) (ht1 : t ≤ 1),
+  t * FairUpdate.dual p u + (1 - t) * FairUpdate.dual p v ≤ FairUpdate.dual p (FairUpdate.mix u v t ht ht1)
+'FairUpdate.dual_concave' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.weighted_difference : ∀ {G : Type u_1} [inst : Fintype G] (u v : FairUpdate.Simplex G) (f : G → ℝ),
+  FairUpdate.weighted v f = FairUpdate.weighted u f + ∑ g, (v.weight g - u.weight g) * f g
+'FairUpdate.weighted_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.dual_supergradient : ∀ {G : Type u_1} {I : Type u_2} [inst : Fintype G] [inst_1 : Fintype I]
+  (p : FairUpdate.Quadratics G I) (u v : FairUpdate.Simplex G) (fallback : I → ℝ),
+  FairUpdate.dual p v ≤
+    FairUpdate.dual p u + ∑ g, (v.weight g - u.weight g) * FairUpdate.groupCost p (FairUpdate.minimizer p u fallback) g
+'FairUpdate.dual_supergradient' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.squaredDistance_nonneg : ∀ {D : Type u_1} [inst : Fintype D] (x c : D → ℝ),
+  0 ≤ FairUpdate.Moments.squaredDistance x c
+'FairUpdate.Moments.squaredDistance_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.total_nonneg : ∀ {P : Type u_1} [inst : Fintype P] (w : P → ℝ),
+  (∀ (p : P), 0 ≤ w p) → 0 ≤ FairUpdate.Moments.total w
+'FairUpdate.Moments.total_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.weights_zero_of_total_zero : ∀ {P : Type u_1} [inst : Fintype P] (w : P → ℝ),
+  (∀ (p : P), 0 ≤ w p) → FairUpdate.Moments.total w = 0 → ∀ (p : P), w p = 0
+'FairUpdate.Moments.weights_zero_of_total_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.zero_total_moments : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] [inst_1 : Fintype D]
+  (w : P → ℝ),
+  (∀ (p : P), 0 ≤ w p) →
+    ∀ (x : P → D → ℝ),
+      FairUpdate.Moments.total w = 0 →
+        (∀ (d : D), FairUpdate.Moments.first w x d = 0) ∧ FairUpdate.Moments.second w x = 0
+'FairUpdate.Moments.zero_total_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.scalar_raw_expansion : ∀ {P : Type u_1} [inst : Fintype P] (w z : P → ℝ) (c : ℝ),
+  ∑ p, w p * (z p - c) ^ 2 = ∑ p, w p * z p ^ 2 + FairUpdate.Moments.total w * c ^ 2 - (2 * ∑ p, w p * z p) * c
+'FairUpdate.Moments.scalar_raw_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.raw_moment_identity : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] [inst_1 : Fintype D]
+  (w : P → ℝ) (x : P → D → ℝ) (c : D → ℝ),
+  FairUpdate.Moments.rawCost w x c =
+    FairUpdate.Moments.second w x +
+      ∑ d, (FairUpdate.Moments.total w * c d ^ 2 - 2 * FairUpdate.Moments.first w x d * c d)
+'FairUpdate.Moments.raw_moment_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.raw_moment_norm_form : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] [inst_1 : Fintype D]
+  (w : P → ℝ) (x : P → D → ℝ) (c : D → ℝ),
+  FairUpdate.Moments.rawCost w x c =
+    FairUpdate.Moments.second w x - 2 * ∑ d, FairUpdate.Moments.first w x d * c d +
+      FairUpdate.Moments.total w * ∑ d, c d ^ 2
+'FairUpdate.Moments.raw_moment_norm_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.restricted_nonneg : ∀ {P : Type u_1} {K : Type u_2} [inst : DecidableEq K] (w : P → ℝ),
+  (∀ (p : P), 0 ≤ w p) → ∀ (label : P → K) (k : K) (p : P), 0 ≤ FairUpdate.Moments.restricted w label k p
+'FairUpdate.Moments.restricted_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.sum_restricted : ∀ {P : Type u_1} {K : Type u_2} [inst : Fintype P] [inst_1 : Fintype K]
+  [inst_2 : DecidableEq K] (w : P → ℝ) (label : P → K) (f : P → ℝ),
+  ∑ k, ∑ p, FairUpdate.Moments.restricted w label k p * f p = ∑ p, w p * f p
+'FairUpdate.Moments.sum_restricted' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.total_restricted_sum : ∀ {P : Type u_1} {K : Type u_2} [inst : Fintype P] [inst_1 : Fintype K]
+  [inst_2 : DecidableEq K] (w : P → ℝ) (label : P → K),
+  ∑ k, FairUpdate.Moments.total (FairUpdate.Moments.restricted w label k) = FairUpdate.Moments.total w
+'FairUpdate.Moments.total_restricted_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.first_restricted_sum : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} [inst : Fintype P]
+  [inst_1 : Fintype K] [inst_2 : DecidableEq K] (w : P → ℝ) (label : P → K) (x : P → D → ℝ) (d : D),
+  ∑ k, FairUpdate.Moments.first (FairUpdate.Moments.restricted w label k) x d = FairUpdate.Moments.first w x d
+'FairUpdate.Moments.first_restricted_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.second_restricted_sum : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} [inst : Fintype P]
+  [inst_1 : Fintype K] [inst_2 : DecidableEq K] [inst_3 : Fintype D] (w : P → ℝ) (label : P → K) (x : P → D → ℝ),
+  ∑ k, FairUpdate.Moments.second (FairUpdate.Moments.restricted w label k) x = FairUpdate.Moments.second w x
+'FairUpdate.Moments.second_restricted_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.assigned_cost_by_cells : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} [inst : Fintype P]
+  [inst_1 : Fintype K] [inst_2 : DecidableEq K] [inst_3 : Fintype D] (w : P → ℝ) (assignment : P → K) (x : P → D → ℝ)
+  (c : K → D → ℝ),
+  ∑ k, FairUpdate.Moments.rawCost (FairUpdate.Moments.restricted w assignment k) x (c k) =
+    ∑ p, w p * FairUpdate.Moments.squaredDistance (x p) (c (assignment p))
+'FairUpdate.Moments.assigned_cost_by_cells' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.data_groupCost_eq_assignedCost : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype D] [inst_2 : Fintype K] [inst_3 : DecidableEq K] (w : G → P → ℝ)
+  (hw : ∀ (g : G) (p : P), 0 ≤ w g p) (assignment : P → K) (x : P → D → ℝ) (c : K → D → ℝ) (g : G),
+  FairUpdate.groupCost (FairUpdate.Moments.fromData w hw assignment x) (FairUpdate.Moments.flatten c) g =
+    FairUpdate.assignedCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment c g
+'FairUpdate.Moments.data_groupCost_eq_assignedCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.data_fixedPhi_eq_assigned_max : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype P] [inst_3 : Fintype D] [inst_4 : Fintype K]
+  [inst_5 : DecidableEq K] (w : G → P → ℝ) (hw : ∀ (g : G) (p : P), 0 ≤ w g p) (assignment : P → K) (x : P → D → ℝ)
+  (c : K → D → ℝ),
+  FairUpdate.fixedPhi (FairUpdate.Moments.fromData w hw assignment x) (FairUpdate.Moments.flatten c) =
+    FairUpdate.groupMax
+      (FairUpdate.assignedCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment c)
+'FairUpdate.Moments.data_fixedPhi_eq_assigned_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.membership_nonneg : ∀ {P : Type u_1} {G : Type u_2} [inst : DecidableEq G] (group : P → G) (g : G)
+  (p : P), 0 ≤ FairUpdate.Moments.membership group g p
+'FairUpdate.Moments.membership_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.groupCount_eq_card : ∀ {P : Type u_1} {G : Type u_2} [inst : Fintype P] [inst_1 : DecidableEq G]
+  (group : P → G) (g : G), FairUpdate.Moments.groupCount group g = ↑{p | group p = g}.card
+'FairUpdate.Moments.groupCount_eq_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.groupCount_pos : ∀ {P : Type u_1} {G : Type u_2} [inst : Fintype P] [inst_1 : DecidableEq G]
+  (group : P → G) (g : G), (∃ p, group p = g) → 0 < FairUpdate.Moments.groupCount group g
+'FairUpdate.Moments.groupCount_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.normalizedWeight_nonneg : ∀ {P : Type u_1} {G : Type u_2} [inst : Fintype P]
+  [inst_1 : DecidableEq G] (group : P → G) (g : G) (p : P), 0 ≤ FairUpdate.Moments.normalizedWeight group g p
+'FairUpdate.Moments.normalizedWeight_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.sum_divide : ∀ {P : Type u_1} [inst : Fintype P] (z : P → ℝ) (n : ℝ), (∑ p, z p) / n = ∑ p, z p / n
+'FairUpdate.Moments.sum_divide' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.normalizedWeight_sum_one : ∀ {P : Type u_1} {G : Type u_2} [inst : Fintype P]
+  [inst_1 : DecidableEq G] (group : P → G) (g : G),
+  (∃ p, group p = g) → ∑ p, FairUpdate.Moments.normalizedWeight group g p = 1
+'FairUpdate.Moments.normalizedWeight_sum_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.total_div : ∀ {P : Type u_1} [inst : Fintype P] (w : P → ℝ) (n : ℝ),
+  (FairUpdate.Moments.total fun p => w p / n) = FairUpdate.Moments.total w / n
+'FairUpdate.Moments.total_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.first_div : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] (w : P → ℝ) (x : P → D → ℝ) (n : ℝ)
+  (d : D), FairUpdate.Moments.first (fun p => w p / n) x d = FairUpdate.Moments.first w x d / n
+'FairUpdate.Moments.first_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.second_div : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] [inst_1 : Fintype D] (w : P → ℝ)
+  (x : P → D → ℝ) (n : ℝ), FairUpdate.Moments.second (fun p => w p / n) x = FairUpdate.Moments.second w x / n
+'FairUpdate.Moments.second_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.restricted_div : ∀ {P : Type u_1} {K : Type u_2} [inst : DecidableEq K] (w : P → ℝ)
+  (assignment : P → K) (k : K) (n : ℝ),
+  FairUpdate.Moments.restricted (fun p => w p / n) assignment k = fun p =>
+    FairUpdate.Moments.restricted w assignment k p / n
+'FairUpdate.Moments.restricted_div' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.normalized_coefficients : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype D] [inst_2 : DecidableEq G] [inst_3 : DecidableEq K] (group : P → G)
+  (assignment : P → K) (x : P → D → ℝ) (g : G) (k : K) (d : D),
+  (FairUpdate.Moments.fromData (FairUpdate.Moments.normalizedWeight group) ⋯ assignment x).a g (k, d) =
+      FairUpdate.Moments.total (FairUpdate.Moments.restricted (FairUpdate.Moments.membership group g) assignment k) /
+        FairUpdate.Moments.groupCount group g ∧
+    (FairUpdate.Moments.fromData (FairUpdate.Moments.normalizedWeight group) ⋯ assignment x).b g (k, d) =
+        FairUpdate.Moments.first (FairUpdate.Moments.restricted (FairUpdate.Moments.membership group g) assignment k) x
+            d /
+          FairUpdate.Moments.groupCount group g ∧
+      (FairUpdate.Moments.fromData (FairUpdate.Moments.normalizedWeight group) ⋯ assignment x).q g =
+        FairUpdate.Moments.second (FairUpdate.Moments.membership group g) x / FairUpdate.Moments.groupCount group g
+'FairUpdate.Moments.normalized_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.normalized_assignedCost : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype D] [inst_2 : DecidableEq G] (group : P → G) (assignment : P → K) (x : P → D → ℝ)
+  (c : K → D → ℝ) (g : G),
+  FairUpdate.assignedCost (FairUpdate.Moments.normalizedWeight group)
+      (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment c g =
+    (∑ p ∈ {p | group p = g}, FairUpdate.Moments.squaredDistance (x p) (c (assignment p))) /
+      FairUpdate.Moments.groupCount group g
+'FairUpdate.Moments.normalized_assignedCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.disjoint_client_aggregation : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  {C : Type u_5} [inst : Fintype P] [inst_1 : Fintype D] [inst_2 : Fintype C] [inst_3 : DecidableEq K]
+  [inst_4 : DecidableEq C] (owner : P → C) (w : G → P → ℝ) (assignment : P → K) (x : P → D → ℝ),
+  FairUpdate.Moments.federatedStats owner w assignment x = FairUpdate.Moments.centralStats w assignment x
+'FairUpdate.Moments.disjoint_client_aggregation' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.algorithm_relative_centralized_equivalence : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3}
+  {G : Type u_4} {C : Type u_5} [inst : Fintype P] [inst_1 : Fintype D] [inst_2 : Fintype C] [inst_3 : DecidableEq K]
+  [inst_4 : DecidableEq C] {Result : Type u_6} (owner : P → C) (w : G → P → ℝ) (assignment : P → K) (x : P → D → ℝ)
+  (solver : FairUpdate.Moments.Stats G K D → Result),
+  solver (FairUpdate.Moments.federatedStats owner w assignment x) =
+    solver (FairUpdate.Moments.centralStats w assignment x)
+'FairUpdate.Moments.algorithm_relative_centralized_equivalence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@FairUpdate.Moments.raw_data_certificate : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype P] [inst_3 : Fintype D] [inst_4 : Fintype K]
+  [inst_5 : DecidableEq K] {E : Type u_5} [inst_6 : Fintype E] [inst_7 : Nonempty E] (w : G → P → ℝ)
+  (hw : ∀ (g : G) (p : P), 0 ≤ w g p) (assignment : P → K) (x : P → D → ℝ) (returned : K → D → ℝ)
+  (evaluated : E → FairUpdate.Simplex G),
+  let p := FairUpdate.Moments.fromData w hw assignment x;
+  let raw :=
+    FairUpdate.groupMax
+      (FairUpdate.assignedCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment returned);
+  0 ≤ raw - FairUpdate.optimum p ∧
+    raw - FairUpdate.optimum p ≤ raw - FairUpdate.groupMax fun e => FairUpdate.dual p (evaluated e)
+'FairUpdate.Moments.raw_data_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.moment_guarded_refinement : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype P] [inst_3 : Fintype D] [inst_4 : Fintype K]
+  [inst_5 : Nonempty K] [inst_6 : DecidableEq K] (w : G → P → ℝ) (hw : ∀ (g : G) (p : P), 0 ≤ w g p)
+  (assignment : P → K) (x : P → D → ℝ) (incumbent candidate : K → D → ℝ),
+  (∀ (p : P) (k : K),
+      FairUpdate.Moments.squaredDistance (x p) (incumbent (assignment p)) ≤
+        FairUpdate.Moments.squaredDistance (x p) (incumbent k)) →
+    FairUpdate.groupMax
+        (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center)
+          (FairUpdate.guarded
+            (fun c =>
+              FairUpdate.fixedPhi (FairUpdate.Moments.fromData w hw assignment x) (FairUpdate.Moments.flatten c))
+            incumbent candidate)) ≤
+      FairUpdate.groupMax
+        (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) incumbent)
+'FairUpdate.Moments.moment_guarded_refinement' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.raw_centered_moment_identity : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P]
+  [inst_1 : Fintype D] (w : P → ℝ) (x : P → D → ℝ) (c : D → ℝ),
+  FairUpdate.Moments.total w ≠ 0 →
+    FairUpdate.Moments.rawCost w x c =
+      FairUpdate.Moments.second w x - ∑ d, FairUpdate.Moments.first w x d ^ 2 / FairUpdate.Moments.total w +
+        FairUpdate.Moments.total w *
+          FairUpdate.Moments.squaredDistance c fun d => FairUpdate.Moments.first w x d / FairUpdate.Moments.total w
+'FairUpdate.Moments.raw_centered_moment_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.raw_mean_minimizes : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] [inst_1 : Fintype D]
+  (w : P → ℝ),
+  (∀ (p : P), 0 ≤ w p) →
+    ∀ (x : P → D → ℝ) (c : D → ℝ),
+      0 < FairUpdate.Moments.total w →
+        (FairUpdate.Moments.rawCost w x fun d => FairUpdate.Moments.first w x d / FairUpdate.Moments.total w) ≤
+          FairUpdate.Moments.rawCost w x c
+'FairUpdate.Moments.raw_mean_minimizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.raw_objective_range : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype P] [inst_3 : Fintype D] [inst_4 : Fintype K]
+  [inst_5 : DecidableEq K] (w : G → P → ℝ) (hw : ∀ (g : G) (p : P), 0 ≤ w g p) (assignment : P → K) (x : P → D → ℝ),
+  (Set.range fun c =>
+      FairUpdate.groupMax
+        (FairUpdate.assignedCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment c)) =
+    Set.range (FairUpdate.fixedPhi (FairUpdate.Moments.fromData w hw assignment x))
+'FairUpdate.Moments.raw_objective_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.raw_infimum_eq_optimum : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype P] [inst_3 : Fintype D] [inst_4 : Fintype K]
+  [inst_5 : DecidableEq K] (w : G → P → ℝ) (hw : ∀ (g : G) (p : P), 0 ≤ w g p) (assignment : P → K) (x : P → D → ℝ),
+  sInf
+      (Set.range fun c =>
+        FairUpdate.groupMax
+          (FairUpdate.assignedCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment c)) =
+    FairUpdate.optimum (FairUpdate.Moments.fromData w hw assignment x)
+'FairUpdate.Moments.raw_infimum_eq_optimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Moments.groupMax_bool : ∀ (f : Bool → ℝ), FairUpdate.groupMax f = max (f false) (f true)
+'FairUpdate.Moments.groupMax_bool' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.two_group_moment_monotonicity : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} [inst : Fintype P]
+  [inst_1 : Fintype D] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : DecidableEq K] (group : P → Bool)
+  (assignment : P → K) (x : P → D → ℝ) (incumbent candidate : K → D → ℝ),
+  (∀ (p : P) (k : K),
+      FairUpdate.Moments.squaredDistance (x p) (incumbent (assignment p)) ≤
+        FairUpdate.Moments.squaredDistance (x p) (incumbent k)) →
+    let w := FairUpdate.Moments.normalizedWeight group;
+    let score := fun c =>
+      FairUpdate.fixedPhi (FairUpdate.Moments.fromData w ⋯ assignment x) (FairUpdate.Moments.flatten c);
+    let updated := FairUpdate.guarded score incumbent candidate;
+    max (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) updated false)
+        (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) updated true) ≤
+      max (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) incumbent false)
+        (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) incumbent true)
+'FairUpdate.Moments.two_group_moment_monotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Moments.counterexample_values : FairUpdate.Moments.counterexampleCost (4 / 3) = 25 / 9 ∧
+  FairUpdate.Moments.counterexampleCost (5 / 4) = 49 / 16 ∧
+    FairUpdate.Moments.counterexampleCost 0 = 9 ∧
+      FairUpdate.Moments.counterexampleCost 3 = 10 ∧ FairUpdate.Moments.counterexampleCost (3 / 2) = 13 / 4
+'FairUpdate.Moments.counterexample_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Moments.counterexample_global_lower_bound : ∀ (c : ℝ), 25 / 9 ≤ FairUpdate.Moments.counterexampleCost c
+'FairUpdate.Moments.counterexample_global_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Moments.counterexample_unique_minimizer : ∀ (c : ℝ),
+  FairUpdate.Moments.counterexampleCost c = 25 / 9 ↔ c = 4 / 3
+'FairUpdate.Moments.counterexample_unique_minimizer' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Moments.finite_search_counterexample : FairUpdate.Moments.counterexampleCost (4 / 3) <
+    FairUpdate.Moments.counterexampleCost (3 / 2) ∧
+  FairUpdate.Moments.counterexampleCost (5 / 4) < FairUpdate.Moments.counterexampleCost (3 / 2) ∧
+    FairUpdate.Moments.counterexampleCost (3 / 2) < FairUpdate.Moments.counterexampleCost 0 ∧
+      FairUpdate.Moments.counterexampleCost (3 / 2) < FairUpdate.Moments.counterexampleCost 3 ∧
+        FairUpdate.guarded FairUpdate.Moments.counterexampleCost (5 / 4) (3 / 2) = 5 / 4
+'FairUpdate.Moments.finite_search_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.unweighted_cell_statistics : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype D] [inst_2 : DecidableEq G] [inst_3 : DecidableEq K] (group : P → G)
+  (assignment : P → K) (x : P → D → ℝ) (g : G) (k : K),
+  let cell := {p | group p = g ∧ assignment p = k};
+  FairUpdate.Moments.total (FairUpdate.Moments.restricted (FairUpdate.Moments.membership group g) assignment k) =
+      ↑cell.card ∧
+    (∀ (d : D),
+        FairUpdate.Moments.first (FairUpdate.Moments.restricted (FairUpdate.Moments.membership group g) assignment k) x
+            d =
+          ∑ p ∈ cell, x p d) ∧
+      FairUpdate.Moments.second (FairUpdate.Moments.restricted (FairUpdate.Moments.membership group g) assignment k) x =
+        ∑ p ∈ cell, ∑ d, x p d ^ 2
+'FairUpdate.Moments.unweighted_cell_statistics' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.scaled_first : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] (w : P → ℝ) (z : P → D → ℝ)
+  (scale : ℝ) (d : D), FairUpdate.Moments.first w (fun p d => z p d / scale) d = FairUpdate.Moments.first w z d / scale
+'FairUpdate.Moments.scaled_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.scaled_second : ∀ {P : Type u_1} {D : Type u_2} [inst : Fintype P] [inst_1 : Fintype D] (w : P → ℝ)
+  (z : P → D → ℝ) (scale : ℝ),
+  (FairUpdate.Moments.second w fun p d => z p d / scale) = FairUpdate.Moments.second w z / scale ^ 2
+'FairUpdate.Moments.scaled_second' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.normalized_scaled_coefficients : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype D] [inst_2 : DecidableEq G] [inst_3 : DecidableEq K] (group : P → G)
+  (assignment : P → K) (z : P → D → ℝ) (scale : ℝ) (g : G) (k : K) (d : D),
+  (FairUpdate.Moments.fromData (FairUpdate.Moments.normalizedWeight group) ⋯ assignment fun p d => z p d / scale).b g
+        (k, d) =
+      FairUpdate.Moments.first (FairUpdate.Moments.restricted (FairUpdate.Moments.membership group g) assignment k) z
+          d /
+        (FairUpdate.Moments.groupCount group g * scale) ∧
+    (FairUpdate.Moments.fromData (FairUpdate.Moments.normalizedWeight group) ⋯ assignment fun p d => z p d / scale).q
+        g =
+      FairUpdate.Moments.second (FairUpdate.Moments.membership group g) z /
+        (FairUpdate.Moments.groupCount group g * scale ^ 2)
+'FairUpdate.Moments.normalized_scaled_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.central_statistics_score_eq_raw : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  [inst : Fintype P] [inst_1 : Fintype K] [inst_2 : DecidableEq K] [inst_3 : Fintype D] (w : G → P → ℝ)
+  (assignment : P → K) (x : P → D → ℝ) (c : K → D → ℝ) (g : G),
+  FairUpdate.Moments.statisticsScore (FairUpdate.Moments.centralStats w assignment x) c g =
+    FairUpdate.assignedCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment c g
+'FairUpdate.Moments.central_statistics_score_eq_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.federated_statistics_score_eq_raw : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  {C : Type u_5} [inst : Fintype P] [inst_1 : Fintype K] [inst_2 : DecidableEq K] [inst_3 : Fintype D]
+  [inst_4 : Fintype C] [inst_5 : DecidableEq C] (owner : P → C) (w : G → P → ℝ) (assignment : P → K) (x : P → D → ℝ)
+  (c : K → D → ℝ) (g : G),
+  FairUpdate.Moments.statisticsScore (FairUpdate.Moments.federatedStats owner w assignment x) c g =
+    FairUpdate.assignedCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) assignment c g
+'FairUpdate.Moments.federated_statistics_score_eq_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.federated_statistics_guard_nonincrease : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3}
+  {G : Type u_4} {C : Type u_5} [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype P] [inst_3 : Fintype D]
+  [inst_4 : Fintype K] [inst_5 : Nonempty K] [inst_6 : DecidableEq K] [inst_7 : Fintype C] [inst_8 : DecidableEq C]
+  (owner : P → C) (w : G → P → ℝ),
+  (∀ (g : G) (p : P), 0 ≤ w g p) →
+    ∀ (assignment : P → K) (x : P → D → ℝ) (incumbent candidate : K → D → ℝ),
+      (∀ (p : P) (k : K),
+          FairUpdate.Moments.squaredDistance (x p) (incumbent (assignment p)) ≤
+            FairUpdate.Moments.squaredDistance (x p) (incumbent k)) →
+        FairUpdate.groupMax
+            (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center)
+              (FairUpdate.guarded
+                (fun c =>
+                  FairUpdate.groupMax
+                    (FairUpdate.Moments.statisticsScore (FairUpdate.Moments.federatedStats owner w assignment x) c))
+                incumbent candidate)) ≤
+          FairUpdate.groupMax
+            (FairUpdate.nearestCost w (fun p center => FairUpdate.Moments.squaredDistance (x p) center) incumbent)
+'FairUpdate.Moments.federated_statistics_guard_nonincrease' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Moments.federated_guarded_solver_eq_central : ∀ {P : Type u_1} {D : Type u_2} {K : Type u_3} {G : Type u_4}
+  {C : Type u_5} [inst : Fintype G] [inst_1 : Nonempty G] [inst_2 : Fintype P] [inst_3 : Fintype D] [inst_4 : Fintype K]
+  [inst_5 : DecidableEq K] [inst_6 : Fintype C] [inst_7 : DecidableEq C] (owner : P → C) (w : G → P → ℝ)
+  (assignment : P → K) (x : P → D → ℝ) (incumbent : K → D → ℝ)
+  (candidateMap : FairUpdate.Moments.Stats G K D → K → D → ℝ),
+  FairUpdate.guarded
+      (fun c =>
+        FairUpdate.groupMax
+          (FairUpdate.Moments.statisticsScore (FairUpdate.Moments.federatedStats owner w assignment x) c))
+      incumbent (candidateMap (FairUpdate.Moments.federatedStats owner w assignment x)) =
+    FairUpdate.guarded
+      (fun c =>
+        FairUpdate.groupMax (FairUpdate.Moments.statisticsScore (FairUpdate.Moments.centralStats w assignment x) c))
+      incumbent (candidateMap (FairUpdate.Moments.centralStats w assignment x))
+'FairUpdate.Moments.federated_guarded_solver_eq_central' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Moments.counterexample_raw_group_a : ∀ (c : ℝ), ((-1 - c) ^ 2 + (1 - c) ^ 2) / 2 = 1 + c ^ 2
+'FairUpdate.Moments.counterexample_raw_group_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Moments.counterexample_curve_values : 3 * (1 - 0) = 3 ∧
+  3 * (1 - 1) = 0 ∧ 3 * (1 - 1 / 2) = 3 / 2 ∧ 3 * (1 - 5 / 9) = 4 / 3
+'FairUpdate.Moments.counterexample_curve_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Geometry.two_weight_comparison : ∀ (t u a₀ b₀ a₁ b₁ : ℝ),
+  0 ≤ t →
+    u ≤ 1 →
+      t < u →
+        t * a₀ + (1 - t) * b₀ ≤ t * a₁ + (1 - t) * b₁ →
+          u * a₁ + (1 - u) * b₁ ≤ u * a₀ + (1 - u) * b₀ → a₁ ≤ a₀ ∧ b₀ ≤ b₁
+'FairUpdate.Geometry.two_weight_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Geometry.selected_minimizers_monotone : ∀ {X : Type u_1} (fA fB : X → ℝ) (curve : ℝ → X),
+  (∀ (t : ℝ), 0 ≤ t → t ≤ 1 → ∀ (x : X), t * fA (curve t) + (1 - t) * fB (curve t) ≤ t * fA x + (1 - t) * fB x) →
+    ∀ (t u : ℝ), 0 ≤ t → t ≤ u → u ≤ 1 → fA (curve u) ≤ fA (curve t) ∧ fB (curve t) ≤ fB (curve u)
+'FairUpdate.Geometry.selected_minimizers_monotone' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Geometry.weighted_binary : ∀ (t : ℝ) (ht : 0 ≤ t) (ht1 : t ≤ 1) (f : Bool → ℝ),
+  FairUpdate.weighted (FairUpdate.Geometry.binarySimplex t ht ht1) f = t * f false + (1 - t) * f true
+'FairUpdate.Geometry.weighted_binary' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Geometry.quadratic_lambda_monotonicity : ∀ {I : Type u_1} [inst : Fintype I]
+  (p : FairUpdate.Quadratics Bool I) (fallback : ℝ → I → ℝ) (t u : ℝ) (ht : 0 ≤ t) (htu : t ≤ u) (hu : u ≤ 1),
+  let ct := FairUpdate.minimizer p (FairUpdate.Geometry.binarySimplex t ht ⋯) (fallback t);
+  let cu := FairUpdate.minimizer p (FairUpdate.Geometry.binarySimplex u ⋯ hu) (fallback u);
+  FairUpdate.groupCost p cu false ≤ FairUpdate.groupCost p ct false ∧
+    FairUpdate.groupCost p ct true ≤ FairUpdate.groupCost p cu true
+'FairUpdate.Geometry.quadratic_lambda_monotonicity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Geometry.binary_minimizer_formula : ∀ {I : Type u_1} [inst : Fintype I] (p : FairUpdate.Quadratics Bool I)
+  (t : ℝ) (ht : 0 ≤ t) (ht1 : t ≤ 1) (fallback : I → ℝ) (i : I),
+  t * p.a false i + (1 - t) * p.a true i ≠ 0 →
+    FairUpdate.minimizer p (FairUpdate.Geometry.binarySimplex t ht ht1) fallback i =
+      (t * p.b false i + (1 - t) * p.b true i) / (t * p.a false i + (1 - t) * p.a true i)
+'FairUpdate.Geometry.binary_minimizer_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Geometry.projection_expansion_a : ∀ {D : Type u_1} [inst : Fintype D] (x a b : D → ℝ) (t : ℝ),
+  FairUpdate.Moments.squaredDistance x a =
+    FairUpdate.Moments.squaredDistance x (FairUpdate.Geometry.along a b t) +
+        FairUpdate.Moments.squaredDistance (FairUpdate.Geometry.along a b t) a +
+      2 * t * (FairUpdate.Geometry.directionDot x a b - t * FairUpdate.Geometry.directionSquare a b)
+'FairUpdate.Geometry.projection_expansion_a' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Geometry.projection_expansion_b : ∀ {D : Type u_1} [inst : Fintype D] (x a b : D → ℝ) (t : ℝ),
+  FairUpdate.Moments.squaredDistance x b =
+    FairUpdate.Moments.squaredDistance x (FairUpdate.Geometry.along a b t) +
+        FairUpdate.Moments.squaredDistance (FairUpdate.Geometry.along a b t) b +
+      2 * (t - 1) * (FairUpdate.Geometry.directionDot x a b - t * FairUpdate.Geometry.directionSquare a b)
+'FairUpdate.Geometry.projection_expansion_b' depends on axioms: [propext, Classical.choice, Quot.sound]
+FairUpdate.Geometry.clamp_properties : ∀ (h v : ℝ),
+  0 < v →
+    let t := FairUpdate.Geometry.clampParameter h v;
+    0 ≤ t ∧ t ≤ 1 ∧ 0 ≤ t * (h - t * v) ∧ 0 ≤ (t - 1) * (h - t * v)
+'FairUpdate.Geometry.clamp_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Geometry.coincident_of_direction_zero : ∀ {D : Type u_1} [inst : Fintype D] (a b : D → ℝ),
+  FairUpdate.Geometry.directionSquare a b = 0 → a = b
+'FairUpdate.Geometry.coincident_of_direction_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@FairUpdate.Geometry.segment_projection_nonincrease : ∀ {D : Type u_1} [inst : Fintype D] (x a b : D → ℝ),
+  ∃ t,
+    0 ≤ t ∧
+      t ≤ 1 ∧
+        FairUpdate.Moments.squaredDistance (FairUpdate.Geometry.along a b t) a ≤
+            FairUpdate.Moments.squaredDistance x a ∧
+          FairUpdate.Moments.squaredDistance (FairUpdate.Geometry.along a b t) b ≤
+            FairUpdate.Moments.squaredDistance x b
+'FairUpdate.Geometry.segment_projection_nonincrease' depends on axioms: [propext, Classical.choice, Quot.sound]

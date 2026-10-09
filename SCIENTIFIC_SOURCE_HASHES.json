@@ -1,0 +1,207 @@
+[
+  {
+    "path": "core/src/assignment.py",
+    "sha256": "9212661f84865d190d9681c915410fb212b63228c9de5e02c43086f77500d9cd",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/centralized.py",
+    "sha256": "d3b80befe2562ade83231071dda89d03f3003c9dd492a8725633eb83b8a6daac",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/certificates.py",
+    "sha256": "a56c1e4f977aecda0e43ca5e2570d2a0bc784dd0af3c97a5d44ba9f8d79d16f1",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/datasets.py",
+    "sha256": "9c6d8b2a4efeda7143258ea3d92392faf81ef5231e61bf08af5352751a172c83",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/digest.py",
+    "sha256": "32b811b98214d8829b89f3597a8c6b6eed10888f7379d04b217254221af6876b",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/exact_numeric.py",
+    "sha256": "9baed40c7f34f5078b2b4787492e4bf04ce25b76461017bab616082185702bd1",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/fair_update.py",
+    "sha256": "bb116060e8211f20e87921ba9c276894d70acb70996be1c8fe50aca01ccf57bd",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/fixedpoint.py",
+    "sha256": "bbaf16a2176206c238cabaf67c07a6cefd9d91f64ffe2a9db7feece90cd0eeaf",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/kmeanspp.py",
+    "sha256": "1628050e73e3dfe01926d285ff769c3a58815821e6dd334a233a73dcb9c02151",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/merged_baseline.py",
+    "sha256": "ad0dc0b0f0df72e3f93a21e01fb0e28ca1412515dcd86debe66df175a3b177ba",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/objective.py",
+    "sha256": "28a73a22ae99c4e2e851404b4de10ba62617445d9937accfc652a3f35fb95903",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/rng.py",
+    "sha256": "259be03f9ea19091f4b201d70f354a082cfe821fe61314ec13c1a44c7dd40f67",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/splitgroup.py",
+    "sha256": "f5a10cddebd921e2a53d3b224035d6507262933e5ca99b4cd914aba824ddcc03",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/timing.py",
+    "sha256": "1ae4bbba3f7f9a1461a3bb7d672b60cad76b19b3ea8975302973918f7f67fad0",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/train.py",
+    "sha256": "85ec56fdbebf644800ee88cb1594a56245850ee2496c33951d4c5bab3c81a4e5",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/unlearn.py",
+    "sha256": "264a3ca2326f35fec11d77eff707675c63fea9e4de2928ef7319ccf79b48a717",
+    "scientific_module": true
+  },
+  {
+    "path": "core/src/validation.py",
+    "sha256": "7c0a8ed77fa100e65e0d46086ae762965d8213f632e02601644805f6ccd2a5e4",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/assignment.py",
+    "sha256": "9212661f84865d190d9681c915410fb212b63228c9de5e02c43086f77500d9cd",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/centralized.py",
+    "sha256": "d3b80befe2562ade83231071dda89d03f3003c9dd492a8725633eb83b8a6daac",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/certificates.py",
+    "sha256": "a56c1e4f977aecda0e43ca5e2570d2a0bc784dd0af3c97a5d44ba9f8d79d16f1",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/datasets.py",
+    "sha256": "9c6d8b2a4efeda7143258ea3d92392faf81ef5231e61bf08af5352751a172c83",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/digest.py",
+    "sha256": "32b811b98214d8829b89f3597a8c6b6eed10888f7379d04b217254221af6876b",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/exact_numeric.py",
+    "sha256": "9baed40c7f34f5078b2b4787492e4bf04ce25b76461017bab616082185702bd1",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/fair_update.py",
+    "sha256": "bb116060e8211f20e87921ba9c276894d70acb70996be1c8fe50aca01ccf57bd",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/fixedpoint.py",
+    "sha256": "377278da46b1688019cb6190d47d11f9a6c86a5b6d32b516e239554425f83f32",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/kmeanspp.py",
+    "sha256": "1628050e73e3dfe01926d285ff769c3a58815821e6dd334a233a73dcb9c02151",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/merged_baseline.py",
+    "sha256": "ad0dc0b0f0df72e3f93a21e01fb0e28ca1412515dcd86debe66df175a3b177ba",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/objective.py",
+    "sha256": "28a73a22ae99c4e2e851404b4de10ba62617445d9937accfc652a3f35fb95903",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/rng.py",
+    "sha256": "259be03f9ea19091f4b201d70f354a082cfe821fe61314ec13c1a44c7dd40f67",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/splitgroup.py",
+    "sha256": "f5a10cddebd921e2a53d3b224035d6507262933e5ca99b4cd914aba824ddcc03",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/timing.py",
+    "sha256": "1ae4bbba3f7f9a1461a3bb7d672b60cad76b19b3ea8975302973918f7f67fad0",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/train.py",
+    "sha256": "85ec56fdbebf644800ee88cb1594a56245850ee2496c33951d4c5bab3c81a4e5",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/unlearn.py",
+    "sha256": "264a3ca2326f35fec11d77eff707675c63fea9e4de2928ef7319ccf79b48a717",
+    "scientific_module": true
+  },
+  {
+    "path": "historical/p1_p4/src/validation.py",
+    "sha256": "7c0a8ed77fa100e65e0d46086ae762965d8213f632e02601644805f6ccd2a5e4",
+    "scientific_module": true
+  },
+  {
+    "path": "variants/binary/client_c0.py",
+    "sha256": "6d7b8d993ed9e9fcda896192ee6e6299a434ab7cdc25ab9907fc6b4bc1cf3dde",
+    "scientific_module": true
+  },
+  {
+    "path": "variants/binary/lloyd.py",
+    "sha256": "b71feb7f7f5467c8c6e42bfcb7c6b0447bdca4c0bcb7fbde9c1cef3c7beeb489",
+    "scientific_module": true
+  },
+  {
+    "path": "variants/binary/scoring.py",
+    "sha256": "e46c1cb1d468436264c30a64cf12eade71a7eb894ae3570fde18e450ee41dbb7",
+    "scientific_module": true
+  },
+  {
+    "path": "variants/multigroup/fixtures.py",
+    "sha256": "0707fa5da3f757febcd27a498688b4b11db88ea295787aecc5c1802e46157a24",
+    "scientific_module": true
+  },
+  {
+    "path": "variants/multigroup/multigroup.py",
+    "sha256": "b7ff301f3fbcbc79b846c2969525612e471d71a5cf702d090ff6c1bf2e3f0c3a",
+    "scientific_module": true
+  },
+  {
+    "path": "variants/multigroup/oracle.py",
+    "sha256": "1e557da95382b4c568ffa3f7f1f916fc352bf7ef9da215c1606f57be307eaac0",
+    "scientific_module": true
+  },
+  {
+    "path": "variants/multigroup/test_multigroup.py",
+    "sha256": "012bf8ae109631f1bed129314a4eceb4c904de02974361f698b8a5db5771cf82",
+    "scientific_module": true
+  }
+]

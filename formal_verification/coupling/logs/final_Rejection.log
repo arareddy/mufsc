@@ -1,0 +1,6 @@
+'Coupling.rejection_tail_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.accepted_trace_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.rejection_terminates_total_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.first_category_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.exact_coupling_disagreement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.binary_total_variation' depends on axioms: [propext, Classical.choice, Quot.sound]

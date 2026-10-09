@@ -1,0 +1,539 @@
+{
+  "status": "pass",
+  "theorem_declarations": 105,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "unexpected_axioms": [],
+  "trust": 0,
+  "threads": 1,
+  "declarations": {
+    "FTF.expect_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expect_mono": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expect_const": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expect_add": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expect_mul": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expect_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.tower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.local_sum_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.weight_sandwich": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.max_weight_le_kappa": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_client_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.energy_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.root_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.root_sq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.weighted_cauchy": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.root_add": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.root_mono": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.root_scale": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.root_const": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.root_of_sqrt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.sqrt_expect_affine": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.young": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.sqrt_expect_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.near_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.near_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.near_triangle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.cost_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.distortion_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.distortion_symm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.cost_root_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.distortion_root_triangle": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.distortion_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.normalized_group_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.represented_snap_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.near_mono_centers": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.cost_mono_centers": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.zero_cost_completion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.cost_zero_of_covered": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.conditional_server_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.finite_geometric_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.split_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.server_nonincrease_preserves": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.split_zero_constant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.split_additive_constant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_zero_constant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.groupCost_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.group_cost_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.fair_le_total": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.total_le_card_fair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.optimal_total_le_card_fair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expect_fair_le_total": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.nearestIndex_spec": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.slice_cost_decomposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.local_rep_decomposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.split_local_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.split_warm_start": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_client_uniform": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_sum_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.globalWeight_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_cost_decomposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_rep_decomposition": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_local_geometric_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.share_zero_implies_empty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.quantization_expectation_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.binary_grid_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.multigroup_grid_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.represented_quantization": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.groupPart_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.groupPart_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.fairOn_le_cost": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.cost_le_card_fairOn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.fair_additive_from_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.fair_zero_from_root": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.copies_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.rational_copy_counts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.copies_objective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.copies_category_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.unweighted_to_weighted_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.copies_draw_expectation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.copies_run_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.weightedRun_scale": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.weightedRun_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.weightedRun_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.weightedRun_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.weightedRun_expect": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.anchorWeight_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.aggregate_weighted_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.anchor_total_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.anchor_cost_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.anchor_count_weight": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.client_group_normalized_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.anchor_count_divisor": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expect_sum_on": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.deletedIndicator_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.touch_le_indicators": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.touch_probability_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expected_touched_mass": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.slice_square_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.expected_touched_mass_max": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.mrsAlpha_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.warm_start_binary_grid": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.merged_warm_start": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.warm_start_binary_fair": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FTF.warm_start_binary_fair_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

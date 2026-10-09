@@ -1,0 +1,514 @@
+{
+  "status": "PASS",
+  "new_lemmas": 20,
+  "total_including_prerequisites": 100,
+  "trust_level": 0,
+  "axioms": {
+    "FairUpdate.le_groupMax": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.groupMax_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.groupMax_mono": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.weighted_le_groupMax": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.mass_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.linear_zero_of_mass_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.scalar_complete_square": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.scalar_lower_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.scalar_value_at_candidate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.weighted_expansion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.dual_le_weighted": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.weighted_minimizer_eq_dual": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.weak_duality": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.objective_bddBelow": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.dual_le_optimum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.optimum_le_returned": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.returned_gap_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.best_evaluated_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.guarded_nonincrease": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.nearestDistance_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.nearestCost_le_assignedCost": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.nearest_max_le_assigned_max": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.assigned_eq_nearest_of_minimizing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.guarded_refinement_nonincrease": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.weighted_mix": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.dual_eq_infimum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.dual_concave": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.weighted_difference": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.dual_supergradient": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.squaredDistance_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.total_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.weights_zero_of_total_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.zero_total_moments": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.scalar_raw_expansion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.raw_moment_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.raw_moment_norm_form": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.restricted_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.sum_restricted": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.total_restricted_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.first_restricted_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.second_restricted_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.assigned_cost_by_cells": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.data_groupCost_eq_assignedCost": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.data_fixedPhi_eq_assigned_max": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.membership_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.groupCount_eq_card": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.groupCount_pos": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.normalizedWeight_nonneg": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.sum_divide": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.normalizedWeight_sum_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.total_div": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.first_div": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.second_div": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.restricted_div": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.normalized_coefficients": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.normalized_assignedCost": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.disjoint_client_aggregation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.algorithm_relative_centralized_equivalence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.raw_data_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.moment_guarded_refinement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.raw_centered_moment_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.raw_mean_minimizes": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.raw_objective_range": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.raw_infimum_eq_optimum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.groupMax_bool": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.two_group_moment_monotonicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.counterexample_values": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.counterexample_global_lower_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.counterexample_unique_minimizer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.finite_search_counterexample": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.unweighted_cell_statistics": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.scaled_first": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.scaled_second": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.normalized_scaled_coefficients": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.central_statistics_score_eq_raw": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.federated_statistics_score_eq_raw": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.federated_statistics_guard_nonincrease": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.federated_guarded_solver_eq_central": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.counterexample_raw_group_a": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Moments.counterexample_curve_values": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.two_weight_comparison": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.selected_minimizers_monotone": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.weighted_binary": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.quadratic_lambda_monotonicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.binary_minimizer_formula": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.projection_expansion_a": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.projection_expansion_b": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.clamp_properties": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.coincident_of_direction_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.segment_projection_nonincrease": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.projection_expansion_segment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.clamp_variational": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.clamped_projection_is_nearest": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.weighted_segment_projection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.two_pow_mod_three": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.five_ninths_not_dyadic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.mean_cost_expansion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.mean_group_costs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.positive_mean_denominator": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "FairUpdate.Geometry.ideal_mean_curve_monotonicity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_hashes": {
+    "FairUpdate": "b27df75db35d9f9aad2efe8e00c2fb28ce10514cde89054c319e141e4b4a04d3",
+    "Moments": "8c730f928fe762742967f590954bc647f95da19db050c2c98e1d8f54d5f4eb9b",
+    "Geometry": "040ae55c98d76ce541621503148d1f2aa81d707fa2a36ce4eaa9524229dcdb46"
+  },
+  "domain_axioms_added": []
+}

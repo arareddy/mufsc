@@ -1,0 +1,212 @@
+{
+  "format": "sha256-size-v1",
+  "source_hashes": {
+    "FairUpdate": "b27df75db35d9f9aad2efe8e00c2fb28ce10514cde89054c319e141e4b4a04d3",
+    "Moments": "8c730f928fe762742967f590954bc647f95da19db050c2c98e1d8f54d5f4eb9b",
+    "Geometry": "040ae55c98d76ce541621503148d1f2aa81d707fa2a36ce4eaa9524229dcdb46"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 45,
+      "sha256": "2b3df3bc291a1029325aaf335280802befd819dd35d55457ba0ec5c4d2c6bdfc"
+    },
+    {
+      "path": "AXIOM_AUDIT.json",
+      "bytes": 12170,
+      "sha256": "1a756e153953fdfb7c395ca0165df7de338faa235033d77661fbe66e60279978"
+    },
+    {
+      "path": "COVERAGE.md",
+      "bytes": 3786,
+      "sha256": "1c093c62d53fa4e24944f94d13fda9cf07deddcfcbd757af568bb82c76178f0e"
+    },
+    {
+      "path": "DEPENDENCIES.json",
+      "bytes": 4420,
+      "sha256": "1848999454a37f8dcb4a63af6f9ea031ee8580e25b7e0b001aabfddec9534008"
+    },
+    {
+      "path": "MANUSCRIPT_INPUTS.json",
+      "bytes": 3303,
+      "sha256": "4a71bb935cb84fdeb04e20af08828d29568dcd4ee4ebd8704e7025983893e883"
+    },
+    {
+      "path": "PRESERVED_VERSIONS.json",
+      "bytes": 240,
+      "sha256": "af57febe85fd85241464a96173791d1d40f93144ec34d13ac0059cf3c0b78030"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1384,
+      "sha256": "1ed89e65f357f3a0d6f819d7ee37cd162ee6ae0dc9441499a66dd271805862e9"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 4306,
+      "sha256": "464158a6e557f30c2946da3de33f2e67dbf2ba6834f7ac59430960ebf367b270"
+    },
+    {
+      "path": "VERIFIED_THEOREMS.md",
+      "bytes": 8686,
+      "sha256": "170866c2f10b4bb2f1bcdbbeb140817be83f4e385cddd41654e21e8d49ffd9a1"
+    },
+    {
+      "path": "build.py",
+      "bytes": 4387,
+      "sha256": "ddb6df27ca3c51dbd71b494c294c817da255e929497f223d1500b9c646c0f318"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "logs/final_FairUpdate_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/final_Geometry_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/final_Moments_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/final_axioms.log",
+      "bytes": 47282,
+      "sha256": "207d653209c49f7d35a1f6c16b5c3052c81f14065c9bdf98104970c83393e6f0"
+    },
+    {
+      "path": "logs/final_receipt.json",
+      "bytes": 1960,
+      "sha256": "2ac5d04e609350a13b90310969e31e53493fa77cda2af25d27c585b6fe8abb1e"
+    },
+    {
+      "path": "logs/g01_FairUpdate_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g01_Geometry_compiler.log",
+      "bytes": 1357,
+      "sha256": "d092be13ea120ab132e8f55e88eb5243004ee7ea2da4ce6cacdd9734cbd2f7c9"
+    },
+    {
+      "path": "logs/g01_Moments_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g01_receipt.json",
+      "bytes": 1619,
+      "sha256": "163c9959a784913393439c2fae764de2f53ec685064bdb2a43f7bad8c533169b"
+    },
+    {
+      "path": "logs/g02_FairUpdate_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g02_Geometry_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g02_Moments_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g02_axioms.log",
+      "bytes": 42759,
+      "sha256": "8a779da03affa3d2adb6e2fb043e72e87f83ea54694ed5a1df3c6ee7326aa808"
+    },
+    {
+      "path": "logs/g02_receipt.json",
+      "bytes": 1885,
+      "sha256": "eba613230fe598e1718c98c746f9385526dc1034d090138e52368a1aec0b35be"
+    },
+    {
+      "path": "logs/g03_FairUpdate_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g03_Geometry_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g03_Moments_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g03_axioms.log",
+      "bytes": 45292,
+      "sha256": "07052dad83209cb2250b4e9a15342fdef37243b18479acddccf2eaac10d789e0"
+    },
+    {
+      "path": "logs/g03_receipt.json",
+      "bytes": 1888,
+      "sha256": "0f404dd735ca69629e5b7c232468863fb10d3065d7ffd17263589b37b57712f4"
+    },
+    {
+      "path": "logs/g04_FairUpdate_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g04_Geometry_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g04_Moments_compiler.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/g04_axioms.log",
+      "bytes": 47282,
+      "sha256": "207d653209c49f7d35a1f6c16b5c3052c81f14065c9bdf98104970c83393e6f0"
+    },
+    {
+      "path": "logs/g04_receipt.json",
+      "bytes": 1888,
+      "sha256": "22a7cafeb5faab983d23648e1807128bf75b3ffc2343200fb257f5d2723a8fef"
+    },
+    {
+      "path": "proof/AxiomAudit.lean",
+      "bytes": 10200,
+      "sha256": "818f2759bd468cdb09729ab5a67719bddf4eacc1f845459009863fd33a9f3830"
+    },
+    {
+      "path": "proof/FairUpdate.lean",
+      "bytes": 14961,
+      "sha256": "b27df75db35d9f9aad2efe8e00c2fb28ce10514cde89054c319e141e4b4a04d3"
+    },
+    {
+      "path": "proof/Geometry.lean",
+      "bytes": 13764,
+      "sha256": "040ae55c98d76ce541621503148d1f2aa81d707fa2a36ce4eaa9524229dcdb46"
+    },
+    {
+      "path": "proof/Moments.lean",
+      "bytes": 26657,
+      "sha256": "8c730f928fe762742967f590954bc647f95da19db050c2c98e1d8f54d5f4eb9b"
+    }
+  ],
+  "excludes": [
+    "private/",
+    "build/",
+    "archive itself",
+    "STATUS.json"
+  ],
+  "note": "Manifest does not hash itself."
+}

@@ -1,0 +1,51 @@
+{
+  "accepted_manifest_path": "[private-path-omitted]",
+  "accepted_manifest_sha256": "f3bc4786137ce1415ec4f2205c6ab5340137adf8f9fa8531d28e8bb51121f54f",
+  "files": {
+    "adult": {
+      "C": 100,
+      "clip": 175.0,
+      "d": 103,
+      "group_counts": [
+        9782,
+        20380
+      ],
+      "identity_path": "[private-path-omitted]",
+      "identity_sha256": "d2dd527b1ae19aff4f304f7afef445aa96d130702c6763ea43a70c3f7ae02e58",
+      "n": 30162,
+      "path": "[private-path-omitted]",
+      "selected_client": 0,
+      "sha256": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e"
+    },
+    "bank": {
+      "C": 20,
+      "clip": 121.0,
+      "d": 42,
+      "group_counts": [
+        17997,
+        27214
+      ],
+      "identity_path": "[private-path-omitted]",
+      "identity_sha256": "97a4e59bf2fa6e56241c95ed1b490165c4e1a62e88fefb4377c94836277461c7",
+      "n": 45211,
+      "path": "[private-path-omitted]",
+      "selected_client": 0,
+      "sha256": "a56946270c4de9f80fdd1b87ffd583eff6f4e711ac5efee52898e8c9b1c34255"
+    },
+    "credit": {
+      "C": 100,
+      "clip": 74.0,
+      "d": 23,
+      "group_counts": [
+        5385,
+        24615
+      ],
+      "identity_path": "[private-path-omitted]",
+      "identity_sha256": "a365fc2d2f88eef5b7e03b6e90f31e0e8de716abcad1aa6e51574808ce7abe68",
+      "n": 30000,
+      "path": "[private-path-omitted]",
+      "selected_client": 0,
+      "sha256": "3a0c55f4ac6068753781ff4c47fac2a965c0841aba663065db34419d22e87065"
+    }
+  }
+}

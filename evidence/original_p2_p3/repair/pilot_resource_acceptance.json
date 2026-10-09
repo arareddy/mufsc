@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "run_manifest_sha256": "dc6cf84b8520aa5f5ea67fc291f17785384f15e2eb1c6be33251c017c3d8022d",
+  "pilot_completed_receipts": {
+    "P3_design15_seed0": "27d87cb5ddd7f50a2b14de4469aa1d0258e5947db7a8f4a78da2715f6cd299b9",
+    "P3_design15_seed1": "3915801647886d974f7e35a9010947b090cc720d5c1c71d1e9890dd0f4114518",
+    "P3_design15_seed2": "ccbe258c9df1df87c00338a045282ef8cc826eb7ca173866c5c022d364fbaa24",
+    "P3_design15_seed3": "5249df893e49d65fae62c5681a56963ab6c48de7792eaa54184e78ef795c83e1",
+    "P3_design15_seed4": "9c9cf77868319b8403ba97c11f1a03e44ba147a688f79f4b350719ef670eb854",
+    "P3_design16_seed0": "1444ee55e8735583bd98a26f80aba814931d030984ee1c85934d29407a49fc0b",
+    "P3_design16_seed1": "264ee03815f9d2ebb353c78c8157944aa2d81063145a083b7f2addaf1596c7fa",
+    "P3_design16_seed2": "87a35182146d71d080c793986f024d0ff26855410f346f67dd05bde9c086c272",
+    "P3_design16_seed3": "3c12de3dc03a46be1fbbfc04d472f184301d02d4bae2300d6e550c4ef45d895e",
+    "P3_design16_seed4": "3cec1025ba21ca6266f804e2fd12ab9ff7d8c4186c379adbf6b9e63fdce6f0fe"
+  },
+  "pilot_verifier_sha256": "06bc3f9e2347f0fc8e5f2075ec1cb9f29d8e7185f97a51cd5a172418db626414",
+  "resources": {
+    "available_disk_bytes": 375096324096,
+    "P2_projected_seconds_from_pilot_mean": 1754.4247169750029,
+    "P2_conservative_seconds_x4": 7017.6988679000115,
+    "P3_conservative_seconds_from_max_factor_scaling": 2220.9982037005607,
+    "reserve_bytes": 53687091200,
+    "memory_note": "Pilot RSS plus a conservative tenfold population scaling remains within 16 GB host RAM; serial only. Largest 1M federation represented float/int coordinates each128MB; cache/runs remain local. Estimates are conservative resource budgets, not scientific measurements.",
+    "pilot_units": [
+      {
+        "trial": "P2_adult_k4_t0",
+        "seconds": 11.532598666000013,
+        "bytes": 109634518
+      },
+      {
+        "trial": "P2_bank_k10_t0",
+        "seconds": 12.57252787500056,
+        "bytes": 84693902
+      },
+      {
+        "trial": "P2_credit_k4_t0",
+        "seconds": 5.970725749999474,
+        "bytes": 42567851
+      },
+      {
+        "trial": "P3_design15_seed2",
+        "seconds": 6.255125374999807,
+        "bytes": 71672979
+      },
+      {
+        "trial": "P3_design15_seed3",
+        "seconds": 6.282385125000474,
+        "bytes": 71674417
+      },
+      {
+        "trial": "P3_design15_seed4",
+        "seconds": 4.695686000000023,
+        "bytes": 71677264
+      },
+      {
+        "trial": "P3_design16_seed2",
+        "seconds": 6.48724995900011,
+        "bytes": 71680286
+      },
+      {
+        "trial": "P3_design16_seed4",
+        "seconds": 6.473825666000266,
+        "bytes": 71676047
+      },
+      {
+        "trial": "P3_design16_seed3",
+        "seconds": 6.494384083000114,
+        "bytes": 71682285
+      },
+      {
+        "trial": "P3_design15_seed1",
+        "seconds": 4.61983920900002,
+        "bytes": 71682268
+      },
+      {
+        "trial": "P3_design15_seed0",
+        "seconds": 4.646968959000333,
+        "bytes": 71680531
+      },
+      {
+        "trial": "P3_design16_seed1",
+        "seconds": 6.414361959000416,
+        "bytes": 71681507
+      },
+      {
+        "trial": "P3_design16_seed0",
+        "seconds": 6.464563167000051,
+        "bytes": 71680719
+      }
+    ]
+  }
+}

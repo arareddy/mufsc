@@ -1,0 +1,12 @@
+{
+  "source": "proof/WorkProbability.lean",
+  "sha256": "72adc023a2a4dec88f3b929a33d86c8a7f825c89a6d1cab63cadf86a12d6038d",
+  "started_utc": "2026-09-26T10:07:58.801676+00:00",
+  "finished_utc": "2026-09-26T10:08:01.888458+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "trust": 0,
+  "threads": 1,
+  "compiler_output": "logs/final_WorkProbability.log"
+}

@@ -1,0 +1,86 @@
+{
+  "dataset": "n100000_C25",
+  "kind": "acs",
+  "format": "safe compressed NumPy arrays; allow_pickle=False",
+  "scientific_metadata": {
+    "name": "n100000_C25",
+    "version": "acs2018-ftf1-p3-v1",
+    "clip": 8,
+    "d": 16,
+    "original_npy_sha256": {
+      "X": "a07a7e11cc390e6a024957e575658e733832db6e9a12e401bbef3fd660d22865",
+      "groups": "156a71eada4f8e16509ccbcfc55f96bd540bb330435f2c75102dde6d1c7101fd",
+      "offsets": "e349e8c0169709881e5f22e628191589bfb26ab6035ba80df62db7a306cb18dc",
+      "row_ids": "ebf571b1b663b572476f4858ace48054bfcd9f90c715fb7ef80fe123b93c585d"
+    },
+    "geography": {
+      "0": "MA",
+      "1": "MO",
+      "10": "AL",
+      "11": "IA",
+      "12": "WI",
+      "13": "MN",
+      "14": "HI",
+      "15": "VT",
+      "16": "NJ",
+      "17": "ND",
+      "18": "CT",
+      "19": "MI",
+      "2": "OR",
+      "20": "RI",
+      "21": "MD",
+      "22": "UT",
+      "23": "KY",
+      "24": "PA",
+      "3": "CA",
+      "4": "AR",
+      "5": "AZ",
+      "6": "OH",
+      "7": "MS",
+      "8": "ME",
+      "9": "NC"
+    },
+    "sample_hash": null
+  },
+  "arrays": {
+    "X": {
+      "dtype": "float64",
+      "shape": [
+        100000,
+        16
+      ],
+      "raw_C_order_sha256": "e62931bf67de2c886e5b101d574a88941af08560ddaae781cf495e0f08efacc5"
+    },
+    "groups": {
+      "dtype": "int64",
+      "shape": [
+        100000
+      ],
+      "raw_C_order_sha256": "ea52ced3a168f4f3cffd5241606589b9360d1c09cc559891eec4a422564273e6"
+    },
+    "offsets": {
+      "dtype": "int64",
+      "shape": [
+        26
+      ],
+      "raw_C_order_sha256": "b00bc9827b9d59234f35e4d224fe50721b78527271911680cb345a2a28245321"
+    },
+    "row_ids": {
+      "dtype": "int64",
+      "shape": [
+        100000
+      ],
+      "raw_C_order_sha256": "dfd1fb4d5674e660b19b7a6bf2c59a91b1bfef655c3d75f2d9136f9fcbb769be"
+    },
+    "client_ids": {
+      "dtype": "int64",
+      "shape": [
+        25
+      ],
+      "raw_C_order_sha256": "2a0a16a7ce85c211f6b6e8a758e7ec09f9fd77e230e81d74c30a857dd51e2de6"
+    }
+  },
+  "release_file": "data/acs/n100000_C25.npz",
+  "release_sha256": "396c55d37b1c3df1afd1ecd0fb98d4a139651da962163e21f2964921cbdeb063",
+  "verified_lossless": true
+}

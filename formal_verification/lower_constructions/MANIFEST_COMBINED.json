@@ -1,0 +1,175 @@
+{
+  "scope": "Checked matched-slot and Merged-1k finite lower constructions; 96 exported theorems, explicit implementation bridges, no whole-paper verification claim.",
+  "files": [
+    {
+      "path": "MatchedBudget.lean",
+      "bytes": 15480,
+      "sha256": "8db793c72bd4240335bcb3e73ff61cd62f85168ae29260c27bb3dde3a72186e7"
+    },
+    {
+      "path": "FiniteRecords.lean",
+      "bytes": 18694,
+      "sha256": "b08b1bc8cc1feaf53a0199c3816f344629809132d4900f07c26e23123f5ad54d"
+    },
+    {
+      "path": "Axioms.lean",
+      "bytes": 3318,
+      "sha256": "ff9320e18c13394d180849d64292957556f1b3ab951ee568263ac1b8879d8cee"
+    },
+    {
+      "path": "build.py",
+      "bytes": 1546,
+      "sha256": "3da7a59420ee2ac0e0209eb735554ded645eb89dca7a1cef310d47c3b32e53a2"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "requirements.json",
+      "bytes": 4377,
+      "sha256": "8234f826a2d1e22e3c188d183a65f4a4bd91a9c47c0d117728cf64cae23f4243"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 8000,
+      "sha256": "63dda188b1a0580332c4f4913d27e6385a94e992e58fff9c9930dd33a277600a"
+    },
+    {
+      "path": "VERIFIED_THEOREMS.md",
+      "bytes": 7987,
+      "sha256": "a1fbc27dbbd7b9fb91c7628d237ed2d00871da29cf605d1bfdc9ca503aaf2865"
+    },
+    {
+      "path": "BUILD.md",
+      "bytes": 2071,
+      "sha256": "f16946bb9b4b56367aa8222b603525374e01dadabb8a7ae826d552c5708eac89"
+    },
+    {
+      "path": "PAPER_INPUTS.json",
+      "bytes": 797,
+      "sha256": "32617fc2c5884bcbe9d9829e9a06288e4b611c4a707e1c3a7082d7d3db62e04c"
+    },
+    {
+      "path": "evidence/Axioms.receipt.json",
+      "bytes": 398,
+      "sha256": "595e192f540602c61e5924160464e3f7cb6f804b6dec30c06e390bbb3eaa3f97"
+    },
+    {
+      "path": "evidence/FiniteRecords.receipt.json",
+      "bytes": 406,
+      "sha256": "cadd4c1f5c1a87daf57b3a1134c48749c1df3d715131d134781d5dabf4194f0f"
+    },
+    {
+      "path": "evidence/FiniteRecords.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/MatchedBudget.receipt.json",
+      "bytes": 403,
+      "sha256": "8a0d161a4158812f3053529262199f426c49e393323abe908a2f69079de72610"
+    },
+    {
+      "path": "evidence/MatchedBudget.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/axioms.stdout.log",
+      "bytes": 6447,
+      "sha256": "43add1476ffd89bb371e3f38c5819ae032ef098825419f2f190c9139c47fc086"
+    },
+    {
+      "path": "evidence/integrity_audit.json",
+      "bytes": 206,
+      "sha256": "2deae2a01f44327c64700307d1bf22f8296197120042c2c38cd002130e6a0281"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 2780,
+      "sha256": "518716a8be5c249cb920fc79b4c2771e01bbdaf28972336524544cce43592505"
+    },
+    {
+      "path": "MergedOne.lean",
+      "bytes": 13224,
+      "sha256": "42dd0ec85ef742b3b13852169898513835fa4e3048760bba3577e49117dbc267"
+    },
+    {
+      "path": "MergedOneAxioms.lean",
+      "bytes": 1015,
+      "sha256": "7028d1a4bde32f6c5dab6d06ecd2efd8c6d40ad3148b0b334bc80f146088e87a"
+    },
+    {
+      "path": "MERGED_ONE_REPORT.md",
+      "bytes": 5763,
+      "sha256": "f4047755742e0bb4d64209c0382ce82e36efd4645a35e3cca0b2bb03d8959441"
+    },
+    {
+      "path": "MERGED_ONE_VERIFIED_THEOREMS.md",
+      "bytes": 2589,
+      "sha256": "365d23ccb37c01c666bbd920ea56fdaccddff95f4fb0299a7c346184a78f3a25"
+    },
+    {
+      "path": "TRUST_AUDIT.md",
+      "bytes": 1123,
+      "sha256": "9a948d8d14e016dba624c83fd0a24c4bb02211e28d83e99cdc09343bd3594a5c"
+    },
+    {
+      "path": "build_trust0.py",
+      "bytes": 1594,
+      "sha256": "0e43ff553a2868bd5e05bfb9e3245cbc6788b1771e74355be671358506647211"
+    },
+    {
+      "path": "evidence_merged_one/MergedOne.receipt.json",
+      "bytes": 405,
+      "sha256": "dddae5a86cbbeab230b98417a89fb948b682d4d0aeb03d896149646038bca07e"
+    },
+    {
+      "path": "evidence_merged_one/MergedOneAxioms.receipt.json",
+      "bytes": 418,
+      "sha256": "d47500aed2584b1ee20291a0af48ba79a368e083c0b6716cb6e7dbe9857abfc8"
+    },
+    {
+      "path": "evidence_merged_one/merged_one.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence_merged_one/merged_one_axioms.stdout.log",
+      "bytes": 2125,
+      "sha256": "51556f0eb3833c22ebb5fc5a4db67e5e91ea8c62ae658ddfed83b15fb5481828"
+    },
+    {
+      "path": "evidence_trust0/FiniteRecords.receipt.json",
+      "bytes": 433,
+      "sha256": "11be01fbb7858860c57dd858113edca3559297f15f8e194b49f46d4b9c567c14"
+    },
+    {
+      "path": "evidence_trust0/MatchedBudget.receipt.json",
+      "bytes": 433,
+      "sha256": "7bcefeab7f51ad3a0f3ac48d7ca65dcedde36133d187e0b888869a1e1e498e91"
+    },
+    {
+      "path": "evidence_trust0/MergedOne.receipt.json",
+      "bytes": 432,
+      "sha256": "4f0b23d22ef7ce2843518047d436c2a4982d31a3f4763082e26cec20d66fba07"
+    },
+    {
+      "path": "evidence_trust0/matched.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence_trust0/merged_one.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence_trust0/records.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

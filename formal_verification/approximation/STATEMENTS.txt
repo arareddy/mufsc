@@ -1,0 +1,517 @@
+@FTF.expect_nonneg : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) {f : Ω → ℝ},
+  (∀ (o : Ω), 0 ≤ f o) → 0 ≤ FTF.expect p f
+@FTF.expect_mono : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) {f g : Ω → ℝ},
+  (∀ (o : Ω), f o ≤ g o) → FTF.expect p f ≤ FTF.expect p g
+@FTF.expect_const : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (a : ℝ), (FTF.expect p fun x => a) = a
+@FTF.expect_add : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (f g : Ω → ℝ),
+  (FTF.expect p fun o => f o + g o) = FTF.expect p f + FTF.expect p g
+@FTF.expect_mul : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (a : ℝ) (f : Ω → ℝ),
+  (FTF.expect p fun o => a * f o) = a * FTF.expect p f
+@FTF.expect_sum : ∀ {Ω : Type u_1} {I : Type u_2} [inst : Fintype Ω] [inst_1 : Fintype I] (p : FTF.Law Ω)
+  (f : I → Ω → ℝ), (FTF.expect p fun o => ∑ i, f i o) = ∑ i, FTF.expect p (f i)
+@FTF.tower : ∀ {Ω : Type u_1} [inst : Fintype Ω] {S : Type u_2} [inst_1 : Fintype S] (p : FTF.Law Ω) (q : Ω → FTF.Law S)
+  (f : Ω → S → ℝ), (FTF.expect (FTF.joint p q) fun o => f o.1 o.2) = FTF.expect p fun o => FTF.expect (q o) (f o)
+@FTF.local_sum_bound : ∀ {Ω : Type u_1} {I : Type u_2} [inst : Fintype Ω] [inst_1 : Fintype I] (p : FTF.Law Ω)
+  (weight : I → ℝ) (cost : I → Ω → ℝ) (reference : I → ℝ) (α : ℝ),
+  (∀ (i : I), 0 ≤ weight i) →
+    (∀ (i : I), FTF.expect p (cost i) ≤ α * reference i) →
+      (FTF.expect p fun o => ∑ i, weight i * cost i o) ≤ α * ∑ i, weight i * reference i
+FTF.weight_sandwich : ∀ (a b A B : ℝ),
+  0 ≤ A → 0 ≤ B → min a b * (A + B) ≤ a * A + b * B ∧ a * A + b * B ≤ max a b * (A + B)
+FTF.max_weight_le_kappa : ∀ (a b : ℝ), 0 < a → 0 < b → max a b ≤ max (a / b) (b / a) * min a b
+@FTF.merged_client_bound : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (a b α : ℝ),
+  0 < a →
+    0 < b →
+      0 ≤ α →
+        ∀ (A B : Ω → ℝ),
+          (∀ (o : Ω), 0 ≤ A o) →
+            (∀ (o : Ω), 0 ≤ B o) →
+              ∀ (A₀ B₀ : ℝ),
+                0 ≤ A₀ →
+                  0 ≤ B₀ →
+                    (FTF.expect p fun o => A o + B o) ≤ α * (A₀ + B₀) →
+                      (FTF.expect p fun o => a * A o + b * B o) ≤ α * max (a / b) (b / a) * (a * A₀ + b * B₀)
+@FTF.energy_nonneg : ∀ {I : Type u_1} [inst : Fintype I] (w f : I → ℝ), (∀ (i : I), 0 ≤ w i) → 0 ≤ FTF.energy w f
+@FTF.root_nonneg : ∀ {I : Type u_1} [inst : Fintype I] (w f : I → ℝ), 0 ≤ FTF.root w f
+@FTF.root_sq : ∀ {I : Type u_1} [inst : Fintype I] (w f : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → FTF.root w f ^ 2 = FTF.energy w f
+@FTF.weighted_cauchy : ∀ {I : Type u_1} [inst : Fintype I] (w f g : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∑ i, w i * f i * g i ≤ FTF.root w f * FTF.root w g
+@FTF.root_add : ∀ {I : Type u_1} [inst : Fintype I] (w f g : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → (FTF.root w fun i => f i + g i) ≤ FTF.root w f + FTF.root w g
+@FTF.root_mono : ∀ {I : Type u_1} [inst : Fintype I] (w f g : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → (∀ (i : I), 0 ≤ f i) → (∀ (i : I), f i ≤ g i) → FTF.root w f ≤ FTF.root w g
+@FTF.root_scale : ∀ {I : Type u_1} [inst : Fintype I] (w f : I → ℝ) (a : ℝ),
+  0 ≤ a → (FTF.root w fun i => a * f i) = a * FTF.root w f
+@FTF.root_const : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (c : ℝ), 0 ≤ c → (FTF.root p.mass fun x => c) = c
+@FTF.root_of_sqrt : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (f : Ω → ℝ),
+  (∀ (o : Ω), 0 ≤ f o) → (FTF.root p.mass fun o => √(f o)) = √(FTF.expect p f)
+@FTF.sqrt_expect_affine : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (f g : Ω → ℝ),
+  (∀ (o : Ω), 0 ≤ f o) →
+    (∀ (o : Ω), 0 ≤ g o) →
+      ∀ (a b : ℝ), 0 ≤ a → 0 ≤ b → (∀ (o : Ω), √(f o) ≤ a * √(g o) + b) → √(FTF.expect p f) ≤ a * √(FTF.expect p g) + b
+FTF.young : ∀ (a b η : ℝ), 0 < η → (a + b) ^ 2 ≤ (1 + η) * a ^ 2 + (1 + 1 / η) * b ^ 2
+@FTF.sqrt_expect_two : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (f g h : Ω → ℝ),
+  (∀ (o : Ω), 0 ≤ f o) →
+    (∀ (o : Ω), 0 ≤ g o) →
+      (∀ (o : Ω), 0 ≤ h o) →
+        (∀ (o : Ω), √(f o) ≤ √(g o) + √(h o)) → √(FTF.expect p f) ≤ √(FTF.expect p g) + √(FTF.expect p h)
+@FTF.near_nonneg : ∀ {K : Type u_1} {E : Type u_2} [inst : Fintype K] [inst_1 : Nonempty K] [inst_2 : MetricSpace E]
+  (x : E) (C : K → E), 0 ≤ FTF.near x C
+@FTF.near_le : ∀ {K : Type u_1} {E : Type u_2} [inst : Fintype K] [inst_1 : Nonempty K] [inst_2 : MetricSpace E] (x : E)
+  (C : K → E) (j : K), FTF.near x C ≤ dist x (C j)
+@FTF.near_triangle : ∀ {K : Type u_1} {E : Type u_2} [inst : Fintype K] [inst_1 : Nonempty K] [inst_2 : MetricSpace E]
+  (x y : E) (C : K → E), FTF.near x C ≤ dist x y + FTF.near y C
+@FTF.cost_nonneg : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype I] [inst_1 : Fintype K]
+  [inst_2 : Nonempty K] [inst_3 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∀ (x : I → E) (C : K → E), 0 ≤ FTF.cost w x C
+@FTF.distortion_nonneg : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∀ (x q : I → E), 0 ≤ FTF.distortion w x q
+@FTF.distortion_symm : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : MetricSpace E] (w : I → ℝ)
+  (x q : I → E), FTF.distortion w x q = FTF.distortion w q x
+@FTF.cost_root_transfer : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype I] [inst_1 : Fintype K]
+  [inst_2 : Nonempty K] [inst_3 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∀ (x q : I → E) (C : K → E), √(FTF.cost w x C) ≤ √(FTF.distortion w x q) + √(FTF.cost w q C)
+@FTF.distortion_root_triangle : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∀ (x z q : I → E), √(FTF.distortion w x q) ≤ √(FTF.distortion w x z) + √(FTF.distortion w z q)
+@FTF.distortion_bound : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (x q : I → E) (B : ℝ), (∀ (i : I), dist (x i) (q i) ^ 2 ≤ B) → FTF.distortion w x q ≤ (∑ i, w i) * B
+@FTF.normalized_group_mass : ∀ {G : Type u_1} [inst : Fintype G] (n : G → ℕ),
+  (∀ (g : G), 0 < n g) → ∑ i, 1 / ↑(n i.fst) = ↑(Fintype.card G)
+@FTF.represented_snap_bound : ∀ {I : Type u_1} {E : Type u_2} [inst : Fintype I] [inst_1 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (z grid q : I → E) (B R : ℝ),
+      (∀ (i : I), dist (z i) (grid i) ^ 2 ≤ B) →
+        (∀ (i : I), dist (grid i) (q i) ^ 2 ≤ R) → √(FTF.distortion w z q) ≤ √((∑ i, w i) * B) + √((∑ i, w i) * R)
+@FTF.near_mono_centers : ∀ {K : Type u_1} {K' : Type u_2} {E : Type u_3} [inst : Fintype K] [inst_1 : Nonempty K]
+  [inst_2 : Fintype K'] [inst_3 : Nonempty K'] [inst_4 : MetricSpace E] (x : E) (C : K → E) (C' : K' → E),
+  (∀ (j : K), ∃ j', C' j' = C j) → FTF.near x C' ≤ FTF.near x C
+@FTF.cost_mono_centers : ∀ {I : Type u_1} {K : Type u_2} {K' : Type u_3} {E : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : Fintype K'] [inst_4 : Nonempty K'] [inst_5 : MetricSpace E]
+  (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (x : I → E) (C : K → E) (C' : K' → E), (∀ (j : K), ∃ j', C' j' = C j) → FTF.cost w x C' ≤ FTF.cost w x C
+@FTF.zero_cost_completion : ∀ {I : Type u_1} {K : Type u_2} {K' : Type u_3} {E : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : Fintype K'] [inst_4 : Nonempty K'] [inst_5 : MetricSpace E]
+  (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (x : I → E) (C : K → E) (C' : K' → E), (∀ (j : K), ∃ j', C' j' = C j) → FTF.cost w x C = 0 → FTF.cost w x C' = 0
+@FTF.cost_zero_of_covered : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype I] [inst_1 : Fintype K]
+  [inst_2 : Nonempty K] [inst_3 : MetricSpace E] (w : I → ℝ) (x : I → E) (C : K → E),
+  (∀ (i : I), ∃ j, C j = x i) → FTF.cost w x C = 0
+@FTF.conditional_server_root : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} {S : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : MetricSpace E] [inst_4 : Fintype S] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (x q : I → E) (ref : K → E) (p : FTF.Law S) (C : S → K → E) (α : ℝ),
+      0 ≤ α →
+        (FTF.expect p fun s => FTF.cost w q (C s)) ≤ α * FTF.cost w q ref →
+          √(FTF.expect p fun s => FTF.cost w x (C s)) ≤ (1 + √α) * √(FTF.distortion w x q) + √α * √(FTF.cost w x ref)
+@FTF.finite_geometric_transfer : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} {L : Type u_4} {S : Type u_5}
+  [inst : Fintype I] [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : MetricSpace E] [inst_4 : Fintype L]
+  [inst_5 : Fintype S] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (x : I → E) (z q : L → I → E) (ref : K → E) (localLaw : FTF.Law L) (serverLaw : L → FTF.Law S) (C : L → S → K → E)
+      (α β : ℝ),
+      0 ≤ α →
+        0 ≤ β →
+          (FTF.expect localLaw fun l => FTF.distortion w x (z l)) ≤ β * FTF.cost w x ref →
+            (∀ (l : L), (FTF.expect (serverLaw l) fun s => FTF.cost w (q l) (C l s)) ≤ α * FTF.cost w (q l) ref) →
+              √(FTF.expect (FTF.joint localLaw serverLaw) fun o => FTF.cost w x (C o.1 o.2)) ≤
+                ((1 + √α) * √β + √α) * √(FTF.cost w x ref) +
+                  (1 + √α) * √(FTF.expect localLaw fun l => FTF.distortion w (z l) (q l))
+@FTF.split_root : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} {L : Type u_4} {S : Type u_5} [inst : Fintype I]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : MetricSpace E] [inst_4 : Fintype L] [inst_5 : Fintype S]
+  (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (x : I → E) (z q : L → I → E) (ref : K → E) (p : FTF.Law L) (r : L → FTF.Law S) (C : L → S → K → E) (α Q : ℝ),
+      0 ≤ α →
+        (FTF.expect p fun l => FTF.distortion w x (z l)) ≤ α * FTF.cost w x ref →
+          (FTF.expect p fun l => FTF.distortion w (z l) (q l)) ≤ Q →
+            (∀ (l : L), (FTF.expect (r l) fun s => FTF.cost w (q l) (C l s)) ≤ α * FTF.cost w (q l) ref) →
+              √(FTF.expect (FTF.joint p r) fun o => FTF.cost w x (C o.1 o.2)) ≤
+                √α * (√α + 2) * √(FTF.cost w x ref) + (1 + √α) * √Q
+@FTF.merged_root : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} {L : Type u_4} {S : Type u_5} [inst : Fintype I]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : MetricSpace E] [inst_4 : Fintype L] [inst_5 : Fintype S]
+  (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (x : I → E) (z q : L → I → E) (ref : K → E) (p : FTF.Law L) (r : L → FTF.Law S) (C : L → S → K → E) (α κ Q : ℝ),
+      0 ≤ α →
+        0 ≤ κ →
+          (FTF.expect p fun l => FTF.distortion w x (z l)) ≤ α * κ * FTF.cost w x ref →
+            (FTF.expect p fun l => FTF.distortion w (z l) (q l)) ≤ Q →
+              (∀ (l : L), (FTF.expect (r l) fun s => FTF.cost w (q l) (C l s)) ≤ α * FTF.cost w (q l) ref) →
+                √(FTF.expect (FTF.joint p r) fun o => FTF.cost w x (C o.1 o.2)) ≤
+                  √α * ((1 + √α) * √κ + 1) * √(FTF.cost w x ref) + (1 + √α) * √Q
+@FTF.server_nonincrease_preserves : ∀ {I : Type u_1} {K : Type u_2} {E : Type u_3} {S : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : MetricSpace E] [inst_4 : Fintype S] (w : I → ℝ) (q : I → E)
+  (ref : K → E) (p : FTF.Law S) (C C' : S → K → E) (α : ℝ),
+  (FTF.expect p fun s => FTF.cost w q (C s)) ≤ α * FTF.cost w q ref →
+    (∀ (s : S), FTF.cost w q (C' s) ≤ FTF.cost w q (C s)) →
+      (FTF.expect p fun s => FTF.cost w q (C' s)) ≤ α * FTF.cost w q ref
+FTF.split_zero_constant : ∀ (E α g : ℝ), 0 ≤ α → 0 ≤ g → √E ≤ √α * (√α + 2) * √g → E ≤ α * (√α + 2) ^ 2 * g
+FTF.split_additive_constant : ∀ (E α g Q η : ℝ),
+  0 ≤ α →
+    0 ≤ g →
+      0 ≤ Q →
+        0 < η →
+          √E ≤ √α * (√α + 2) * √g + (1 + √α) * √Q → E ≤ (1 + η) * α * (√α + 2) ^ 2 * g + (1 + 1 / η) * (1 + √α) ^ 2 * Q
+FTF.merged_zero_constant : ∀ (E α κ g : ℝ),
+  0 ≤ α → 0 ≤ g → √E ≤ √α * ((1 + √α) * √κ + 1) * √g → E ≤ α * ((1 + √α) * √κ + 1) ^ 2 * g
+@FTF.groupCost_nonneg : ∀ {G : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype K] [inst_1 : Nonempty K]
+  [inst_2 : MetricSpace E] (n : G → ℕ) (x : FTF.GroupRecords n → E) (g : G) (C : K → E), 0 ≤ FTF.groupCost n x g C
+@FTF.group_cost_sum : ∀ {G : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype G] [inst_1 : Fintype K]
+  [inst_2 : Nonempty K] [inst_3 : MetricSpace E] (n : G → ℕ) (x : FTF.GroupRecords n → E) (C : K → E),
+  FTF.cost (fun i => 1 / ↑(n i.fst)) x C = ∑ g, FTF.groupCost n x g C
+@FTF.fair_le_total : ∀ {G : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : MetricSpace E] (n : G → ℕ) (x : FTF.GroupRecords n → E)
+  (C : K → E), FTF.fairCost n x C ≤ FTF.cost (fun i => 1 / ↑(n i.fst)) x C
+@FTF.total_le_card_fair : ∀ {G : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : MetricSpace E] (n : G → ℕ) (x : FTF.GroupRecords n → E)
+  (C : K → E), FTF.cost (fun i => 1 / ↑(n i.fst)) x C ≤ ↑(Fintype.card G) * FTF.fairCost n x C
+@FTF.optimal_total_le_card_fair : ∀ {G : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype G]
+  [inst_1 : Nonempty G] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : MetricSpace E] (n : G → ℕ)
+  (x : FTF.GroupRecords n → E) (CG CP : K → E),
+  (∀ (C : K → E), FTF.cost (fun i => 1 / ↑(n i.fst)) x CG ≤ FTF.cost (fun i => 1 / ↑(n i.fst)) x C) →
+    FTF.cost (fun i => 1 / ↑(n i.fst)) x CG ≤ ↑(Fintype.card G) * FTF.fairCost n x CP
+@FTF.expect_fair_le_total : ∀ {G : Type u_1} {K : Type u_2} {E : Type u_3} [inst : Fintype G] [inst_1 : Nonempty G]
+  [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : MetricSpace E] {Ω : Type u_4} [inst_5 : Fintype Ω]
+  (p : FTF.Law Ω) (n : G → ℕ) (x : FTF.GroupRecords n → E) (C : Ω → K → E),
+  (FTF.expect p fun o => FTF.fairCost n x (C o)) ≤ FTF.expect p fun o => FTF.cost (fun i => 1 / ↑(n i.fst)) x (C o)
+@FTF.nearestIndex_spec : ∀ {E : Type u_1} {K : Type u_2} [inst : MetricSpace E] [inst_1 : Fintype K]
+  [inst_2 : Nonempty K] (x : E) (C : K → E), dist x (C (FTF.nearestIndex x C)) = FTF.near x C
+@FTF.slice_cost_decomposition : ∀ {E : Type u_1} {K : Type u_2} {A : Type u_3} [inst : MetricSpace E]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : Fintype A] (n : A → ℕ) (ω : A → ℝ) (x : FTF.SliceRecords n → E)
+  (C : K → E), FTF.cost (fun i => ω i.fst) x C = ∑ a, ω a * FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) C
+@FTF.local_rep_decomposition : ∀ {E : Type u_1} {K : Type u_2} {A : Type u_3} [inst : MetricSpace E]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : Fintype A] (n : A → ℕ) (ω : A → ℝ) (x : FTF.SliceRecords n → E)
+  (Z : A → K → E),
+  FTF.distortion (fun i => ω i.fst) x (FTF.localRep n x Z) = ∑ a, ω a * FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) (Z a)
+@FTF.split_local_bound : ∀ {E : Type u_1} {K : Type u_2} {A : Type u_3} {L : Type u_4} [inst : MetricSpace E]
+  [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : Fintype A] [inst_4 : Fintype L] (n : A → ℕ) (ω : A → ℝ),
+  (∀ (a : A), 0 ≤ ω a) →
+    ∀ (x : FTF.SliceRecords n → E) (Z : L → A → K → E) (ref : K → E) (p : FTF.Law L) (α : ℝ),
+      (∀ (a : A),
+          (FTF.expect p fun l => FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) (Z l a)) ≤
+            α * FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) ref) →
+        (FTF.expect p fun l => FTF.distortion (fun i => ω i.fst) x (FTF.localRep n x (Z l))) ≤
+          α * FTF.cost (fun i => ω i.fst) x ref
+@FTF.split_warm_start : ∀ {E : Type u_1} {K : Type u_2} {A : Type u_3} {L : Type u_4} {S : Type u_5}
+  [inst : MetricSpace E] [inst_1 : Fintype K] [inst_2 : Nonempty K] [inst_3 : Fintype A] [inst_4 : Fintype L]
+  [inst_5 : Fintype S] (n : A → ℕ) (ω : A → ℝ),
+  (∀ (a : A), 0 ≤ ω a) →
+    ∀ (x : FTF.SliceRecords n → E) (Z : L → A → K → E) (q : L → FTF.SliceRecords n → E) (ref : K → E) (p : FTF.Law L)
+      (r : L → FTF.Law S) (C : L → S → K → E) (α Q : ℝ),
+      0 ≤ α →
+        (∀ (a : A),
+            (FTF.expect p fun l => FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) (Z l a)) ≤
+              α * FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) ref) →
+          (FTF.expect p fun l => FTF.distortion (fun i => ω i.fst) (FTF.localRep n x (Z l)) (q l)) ≤ Q →
+            (∀ (l : L),
+                (FTF.expect (r l) fun s => FTF.cost (fun i => ω i.fst) (q l) (C l s)) ≤
+                  α * FTF.cost (fun i => ω i.fst) (q l) ref) →
+              √(FTF.expect (FTF.joint p r) fun o => FTF.cost (fun i => ω i.fst) x (C o.1 o.2)) ≤
+                √α * (√α + 2) * √(FTF.cost (fun i => ω i.fst) x ref) + (1 + √α) * √Q
+@FTF.merged_client_uniform : ∀ {Ω : Type u_1} [inst : Fintype Ω] (p : FTF.Law Ω) (a b α κ : ℝ),
+  0 ≤ a →
+    0 ≤ b →
+      0 ≤ α →
+        1 ≤ κ →
+          ∀ (A B : Ω → ℝ),
+            (∀ (o : Ω), 0 ≤ A o) →
+              (∀ (o : Ω), 0 ≤ B o) →
+                ∀ (A₀ B₀ : ℝ),
+                  0 ≤ A₀ →
+                    0 ≤ B₀ →
+                      (a = 0 → A₀ = 0) →
+                        (b = 0 → B₀ = 0) →
+                          (0 < a → 0 < b → max (a / b) (b / a) ≤ κ) →
+                            (FTF.expect p fun o => A o + B o) ≤ α * (A₀ + B₀) →
+                              (FTF.expect p fun o => a * A o + b * B o) ≤ α * κ * (a * A₀ + b * B₀)
+@FTF.merged_sum_bound : ∀ {Ω : Type u_1} {A : Type u_2} [inst : Fintype Ω] [inst_1 : Fintype A] (p : FTF.Law Ω)
+  (a b : A → ℝ) (α κ : ℝ),
+  (∀ (c : A), 0 ≤ a c) →
+    (∀ (c : A), 0 ≤ b c) →
+      0 ≤ α →
+        1 ≤ κ →
+          ∀ (Ac Bc : A → Ω → ℝ),
+            (∀ (c : A) (o : Ω), 0 ≤ Ac c o) →
+              (∀ (c : A) (o : Ω), 0 ≤ Bc c o) →
+                ∀ (A₀ B₀ : A → ℝ),
+                  (∀ (c : A), 0 ≤ A₀ c) →
+                    (∀ (c : A), 0 ≤ B₀ c) →
+                      (∀ (c : A), a c = 0 → A₀ c = 0) →
+                        (∀ (c : A), b c = 0 → B₀ c = 0) →
+                          (∀ (c : A), 0 < a c → 0 < b c → max (a c / b c) (b c / a c) ≤ κ) →
+                            (∀ (c : A), (FTF.expect p fun o => Ac c o + Bc c o) ≤ α * (A₀ c + B₀ c)) →
+                              (FTF.expect p fun o => ∑ c, (a c * Ac c o + b c * Bc c o)) ≤
+                                α * κ * ∑ c, (a c * A₀ c + b c * B₀ c)
+@FTF.globalWeight_nonneg : ∀ {A : Type u_1} (nA nB : A → ℕ) (a b : A → ℝ),
+  (∀ (c : A), 0 ≤ a c) → (∀ (c : A), 0 ≤ b c) → ∀ (i : FTF.ClientRecords nA nB), 0 ≤ FTF.globalWeight nA nB a b i
+@FTF.merged_cost_decomposition : ∀ {A : Type u_1} {E : Type u_2} {K : Type u_3} [inst : Fintype A]
+  [inst_1 : MetricSpace E] [inst_2 : Fintype K] [inst_3 : Nonempty K] (nA nB : A → ℕ) (a b : A → ℝ)
+  (x : FTF.ClientRecords nA nB → E) (C : K → E),
+  FTF.cost (FTF.globalWeight nA nB a b) x C = ∑ c, (a c * FTF.clientA nA nB x c C + b c * FTF.clientB nA nB x c C)
+@FTF.merged_rep_decomposition : ∀ {A : Type u_1} {E : Type u_2} {K : Type u_3} [inst : Fintype A]
+  [inst_1 : MetricSpace E] [inst_2 : Fintype K] [inst_3 : Nonempty K] (nA nB : A → ℕ) (a b : A → ℝ)
+  (x : FTF.ClientRecords nA nB → E) (Z : A → K → E),
+  FTF.distortion (FTF.globalWeight nA nB a b) x (FTF.mergedRep nA nB x Z) =
+    ∑ c, (a c * FTF.clientA nA nB x c (Z c) + b c * FTF.clientB nA nB x c (Z c))
+@FTF.merged_local_geometric_bound : ∀ {A : Type u_1} {E : Type u_2} {K : Type u_3} {L : Type u_4} [inst : Fintype A]
+  [inst_1 : MetricSpace E] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : Fintype L] (nA nB : A → ℕ)
+  (a b : A → ℝ),
+  (∀ (c : A), 0 ≤ a c) →
+    (∀ (c : A), 0 ≤ b c) →
+      (∀ (c : A), a c = 0 → nA c = 0) →
+        (∀ (c : A), b c = 0 → nB c = 0) →
+          ∀ (x : FTF.ClientRecords nA nB → E) (Z : L → A → K → E) (ref : K → E) (p : FTF.Law L) (α κ : ℝ),
+            0 ≤ α →
+              1 ≤ κ →
+                (∀ (c : A), 0 < a c → 0 < b c → max (a c / b c) (b c / a c) ≤ κ) →
+                  (∀ (c : A),
+                      (FTF.expect p fun l => FTF.clientA nA nB x c (Z l c) + FTF.clientB nA nB x c (Z l c)) ≤
+                        α * (FTF.clientA nA nB x c ref + FTF.clientB nA nB x c ref)) →
+                    (FTF.expect p fun l =>
+                        FTF.distortion (FTF.globalWeight nA nB a b) x (FTF.mergedRep nA nB x (Z l))) ≤
+                      α * κ * FTF.cost (FTF.globalWeight nA nB a b) x ref
+FTF.share_zero_implies_empty : ∀ (n : ℕ) (N : ℝ), N ≠ 0 → ↑n / N = 0 → n = 0
+@FTF.quantization_expectation_bound : ∀ {I : Type u_1} {L : Type u_2} {E : Type u_3} [inst : Fintype I]
+  [inst_1 : Fintype L] [inst_2 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (p : FTF.Law L) (z q : L → I → E) (B : ℝ),
+      (∀ (l : L) (i : I), dist (z l i) (q l i) ^ 2 ≤ B) →
+        (FTF.expect p fun l => FTF.distortion w (z l) (q l)) ≤ (∑ i, w i) * B
+@FTF.binary_grid_bound : ∀ {I : Type u_1} {L : Type u_2} {E : Type u_3} [inst : Fintype I] [inst_1 : Fintype L]
+  [inst_2 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∑ i, w i = 2 →
+      ∀ (p : FTF.Law L) (z q : L → I → E) (d γ : ℝ),
+        (∀ (l : L) (i : I), dist (z l i) (q l i) ^ 2 ≤ d * γ ^ 2 / 4) →
+          (FTF.expect p fun l => FTF.distortion w (z l) (q l)) ≤ d * γ ^ 2 / 2
+@FTF.multigroup_grid_bound : ∀ {I : Type u_1} {L : Type u_2} {E : Type u_3} [inst : Fintype I] [inst_1 : Fintype L]
+  [inst_2 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (m : ℝ),
+      ∑ i, w i = m →
+        ∀ (p : FTF.Law L) (z q : L → I → E) (d γ : ℝ),
+          (∀ (l : L) (i : I), dist (z l i) (q l i) ^ 2 ≤ d * γ ^ 2 / 4) →
+            (FTF.expect p fun l => FTF.distortion w (z l) (q l)) ≤ m * d * γ ^ 2 / 4
+@FTF.represented_quantization : ∀ {I : Type u_1} {L : Type u_2} {E : Type u_3} [inst : Fintype I] [inst_1 : Fintype L]
+  [inst_2 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∑ i, w i = 2 →
+      ∀ (p : FTF.Law L) (z grid q : L → I → E) (d γ ρ : ℝ),
+        0 ≤ ρ →
+          (∀ (l : L) (i : I), dist (z l i) (grid l i) ^ 2 ≤ d * γ ^ 2 / 4) →
+            (∀ (l : L) (i : I), dist (grid l i) (q l i) ≤ ρ) →
+              (FTF.expect p fun l => FTF.distortion w (z l) (q l)) ≤ (√(d * γ ^ 2 / 2) + √2 * ρ) ^ 2
+@FTF.groupPart_nonneg : ∀ {I : Type u_1} {G : Type u_2} {K : Type u_3} {E : Type u_4} [inst : Fintype I]
+  [inst_1 : DecidableEq G] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∀ (group : I → G) (x : I → E) (C : K → E) (g : G), 0 ≤ FTF.groupPart w group x C g
+@FTF.groupPart_sum : ∀ {I : Type u_1} {G : Type u_2} {K : Type u_3} {E : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype G] [inst_2 : DecidableEq G] [inst_3 : Fintype K] [inst_4 : Nonempty K] [inst_5 : MetricSpace E]
+  (w : I → ℝ) (group : I → G) (x : I → E) (C : K → E), ∑ g, FTF.groupPart w group x C g = FTF.cost w x C
+@FTF.fairOn_le_cost : ∀ {I : Type u_1} {G : Type u_2} {K : Type u_3} {E : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype G] [inst_2 : Nonempty G] [inst_3 : DecidableEq G] [inst_4 : Fintype K] [inst_5 : Nonempty K]
+  [inst_6 : MetricSpace E] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∀ (group : I → G) (x : I → E) (C : K → E), FTF.fairOn w group x C ≤ FTF.cost w x C
+@FTF.cost_le_card_fairOn : ∀ {I : Type u_1} {G : Type u_2} {K : Type u_3} {E : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype G] [inst_2 : Nonempty G] [inst_3 : DecidableEq G] [inst_4 : Fintype K] [inst_5 : Nonempty K]
+  [inst_6 : MetricSpace E] (w : I → ℝ) (group : I → G) (x : I → E) (C : K → E),
+  FTF.cost w x C ≤ ↑(Fintype.card G) * FTF.fairOn w group x C
+@FTF.fair_additive_from_root : ∀ {I : Type u_1} {G : Type u_2} {K : Type u_3} {E : Type u_4} {Ω : Type u_5}
+  [inst : Fintype I] [inst_1 : Fintype G] [inst_2 : Nonempty G] [inst_3 : DecidableEq G] [inst_4 : Fintype K]
+  [inst_5 : Nonempty K] [inst_6 : MetricSpace E] [inst_7 : Fintype Ω] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (group : I → G) (x : I → E) (ref : K → E) (p : FTF.Law Ω) (C : Ω → K → E) (α Q η : ℝ),
+      0 ≤ α →
+        0 ≤ Q →
+          0 < η →
+            √(FTF.expect p fun o => FTF.cost w x (C o)) ≤ √α * (√α + 2) * √(FTF.cost w x ref) + (1 + √α) * √Q →
+              (FTF.expect p fun o => FTF.fairOn w group x (C o)) ≤
+                ↑(Fintype.card G) * (1 + η) * α * (√α + 2) ^ 2 * FTF.fairOn w group x ref +
+                  (1 + 1 / η) * (1 + √α) ^ 2 * Q
+@FTF.fair_zero_from_root : ∀ {I : Type u_1} {G : Type u_2} {K : Type u_3} {E : Type u_4} {Ω : Type u_5}
+  [inst : Fintype I] [inst_1 : Fintype G] [inst_2 : Nonempty G] [inst_3 : DecidableEq G] [inst_4 : Fintype K]
+  [inst_5 : Nonempty K] [inst_6 : MetricSpace E] [inst_7 : Fintype Ω] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (group : I → G) (x : I → E) (ref : K → E) (p : FTF.Law Ω) (C : Ω → K → E) (α : ℝ),
+      0 ≤ α →
+        √(FTF.expect p fun o => FTF.cost w x (C o)) ≤ √α * (√α + 2) * √(FTF.cost w x ref) →
+          (FTF.expect p fun o => FTF.fairOn w group x (C o)) ≤
+            ↑(Fintype.card G) * α * (√α + 2) ^ 2 * FTF.fairOn w group x ref
+@FTF.copies_sum : ∀ {I : Type u_1} [inst : Fintype I] (n : I → ℕ) (f : I → ℝ), ∑ c, f c.fst = ∑ i, ↑(n i) * f i
+@FTF.rational_copy_counts : ∀ {I : Type u_1} [inst : Fintype I] (w : I → ℚ),
+  (∀ (i : I), 0 ≤ w i) → ∃ M, 0 < M ∧ ∃ n, ∀ (i : I), ↑(n i) = ↑M * ↑(w i)
+@FTF.copies_objective : ∀ {I : Type u_1} [inst : Fintype I] (w : I → ℝ) (M : ℝ) (n : I → ℕ),
+  (∀ (i : I), ↑(n i) = M * w i) → ∀ (cost : I → ℝ), ∑ c, cost c.fst = M * ∑ i, w i * cost i
+@FTF.copies_category_probability : ∀ {I : Type u_1} [inst : Fintype I] (w potential : I → ℝ) (M : ℝ),
+  M ≠ 0 →
+    ∀ (n : I → ℕ),
+      (∀ (i : I), ↑(n i) = M * w i) →
+        ∀ (i : I), ∑ _j, potential i / ∑ c, potential c.fst = w i * potential i / ∑ j, w j * potential j
+@FTF.unweighted_to_weighted_bound : ∀ {I : Type u_1} [inst : Fintype I] {Ω : Type u_2} [inst_1 : Fintype Ω]
+  (p : FTF.Law Ω) (w : I → ℝ) (M : ℝ),
+  0 < M →
+    ∀ (n : I → ℕ),
+      (∀ (i : I), ↑(n i) = M * w i) →
+        ∀ (cost : Ω → I → ℝ) (reference : I → ℝ) (α : ℝ),
+          (FTF.expect p fun o => ∑ c, cost o c.fst) ≤ α * ∑ c, reference c.fst →
+            (FTF.expect p fun o => ∑ i, w i * cost o i) ≤ α * ∑ i, w i * reference i
+@FTF.copies_draw_expectation : ∀ {I : Type u_1} [inst : Fintype I] (w potential f : I → ℝ) (M : ℝ),
+  M ≠ 0 →
+    ∀ (n : I → ℕ),
+      (∀ (i : I), ↑(n i) = M * w i) →
+        ∑ c, (potential c.fst / ∑ d, potential d.fst) * f c.fst =
+          ∑ i, (w i * potential i / ∑ j, w j * potential j) * f i
+@FTF.copies_run_eq : ∀ {I : Type u_1} {T : Type u_2} [inst : Fintype I] (w : I → ℝ) (M : ℝ),
+  M ≠ 0 →
+    ∀ (n : I → ℕ),
+      (∀ (i : I), ↑(n i) = M * w i) →
+        ∀ (potential : T → I → ℝ) (step : T → I → T) (complete : T → T) (test : T → ℝ) (t : ℕ) (state : T),
+          FTF.copiesRun n potential step complete test t state = FTF.weightedRun w potential step complete test t state
+@FTF.weightedRun_scale : ∀ {I : Type u_1} {T : Type u_2} [inst : Fintype I] (w : I → ℝ) (potential : T → I → ℝ)
+  (step : T → I → T) (complete : T → T) (test : T → ℝ) (a : ℝ) (t : ℕ) (state : T),
+  FTF.weightedRun w potential step complete (fun s => a * test s) t state =
+    a * FTF.weightedRun w potential step complete test t state
+@FTF.weightedRun_sum : ∀ {I : Type u_1} {T : Type u_2} {J : Type u_3} [inst : Fintype I] [inst_1 : Fintype J]
+  (w : I → ℝ) (potential : T → I → ℝ) (step : T → I → T) (complete : T → T) (test : J → T → ℝ) (t : ℕ) (state : T),
+  FTF.weightedRun w potential step complete (fun s => ∑ j, test j s) t state =
+    ∑ j, FTF.weightedRun w potential step complete (test j) t state
+@FTF.weightedRun_one : ∀ {I : Type u_1} {T : Type u_2} [inst : Fintype I] (w : I → ℝ) (potential : T → I → ℝ)
+  (step : T → I → T) (complete : T → T) (t : ℕ) (state : T),
+  FTF.weightedRun w potential step complete (fun x => 1) t state = 1
+@FTF.weightedRun_nonneg : ∀ {I : Type u_1} {T : Type u_2} [inst : Fintype I] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∀ (potential : T → I → ℝ),
+      (∀ (s : T) (i : I), 0 ≤ potential s i) →
+        ∀ (step : T → I → T) (complete : T → T) (test : T → ℝ),
+          (∀ (s : T), 0 ≤ test s) → ∀ (t : ℕ) (state : T), 0 ≤ FTF.weightedRun w potential step complete test t state
+@FTF.weightedRun_expect : ∀ {I : Type u_1} {T : Type u_2} [inst : Fintype I] [inst_1 : Fintype T]
+  [inst_2 : DecidableEq T] (w : I → ℝ) (hw : ∀ (i : I), 0 ≤ w i) (potential : T → I → ℝ)
+  (hp : ∀ (s : T) (i : I), 0 ≤ potential s i) (step : T → I → T) (complete : T → T) (t : ℕ) (state : T) (test : T → ℝ),
+  FTF.expect (FTF.weightedRunLaw w hw potential hp step complete t state) test =
+    FTF.weightedRun w potential step complete test t state
+@FTF.anchorWeight_nonneg : ∀ {I : Type u_1} {J : Type u_2} [inst : Fintype I] [inst_1 : DecidableEq J] (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) → ∀ (bucket : I → J) (j : J), 0 ≤ FTF.anchorWeight w bucket j
+@FTF.aggregate_weighted_sum : ∀ {I : Type u_1} {J : Type u_2} [inst : Fintype I] [inst_1 : Fintype J]
+  [inst_2 : DecidableEq J] (w : I → ℝ) (bucket : I → J) (f : J → ℝ),
+  ∑ j, FTF.anchorWeight w bucket j * f j = ∑ i, w i * f (bucket i)
+@FTF.anchor_total_mass : ∀ {I : Type u_1} {J : Type u_2} [inst : Fintype I] [inst_1 : Fintype J]
+  [inst_2 : DecidableEq J] (w : I → ℝ) (bucket : I → J), ∑ j, FTF.anchorWeight w bucket j = ∑ i, w i
+@FTF.anchor_cost_identity : ∀ {I : Type u_1} {J : Type u_2} {K : Type u_3} {E : Type u_4} [inst : Fintype I]
+  [inst_1 : Fintype J] [inst_2 : DecidableEq J] [inst_3 : Fintype K] [inst_4 : Nonempty K] [inst_5 : MetricSpace E]
+  (w : I → ℝ) (bucket : I → J) (q : J → E) (C : K → E),
+  FTF.cost (FTF.anchorWeight w bucket) q C = FTF.cost w (fun i => q (bucket i)) C
+@FTF.anchor_count_weight : ∀ {I : Type u_1} {J : Type u_2} [inst : Fintype I] [inst_1 : DecidableEq J] (w : I → ℝ)
+  (bucket : I → J) (v : J → ℝ),
+  (∀ (i : I), w i = v (bucket i)) → ∀ (j : J), FTF.anchorWeight w bucket j = ↑{i | bucket i = j}.card * v j
+@FTF.client_group_normalized_mass : ∀ {A : Type u_1} {G : Type u_2} [inst : Fintype A] [inst_1 : Fintype G]
+  (n : A → G → ℕ), (∀ (g : G), 0 < ∑ a, ↑(n a g)) → ∑ i, 1 / ∑ a, ↑(n a i.fst.2) = ↑(Fintype.card G)
+@FTF.anchor_count_divisor : ∀ {I : Type u_1} {J : Type u_2} [inst : Fintype I] [inst_1 : DecidableEq J] (bucket : I → J)
+  (N : J → ℝ) (j : J), FTF.anchorWeight (fun i => 1 / N (bucket i)) bucket j = ↑{i | bucket i = j}.card / N j
+@FTF.expect_sum_on : ∀ {I : Type u_1} {Ω : Type u_2} [inst : Fintype Ω] (p : FTF.Law Ω) (s : Finset I) (f : I → Ω → ℝ),
+  (FTF.expect p fun o => ∑ i ∈ s, f i o) = ∑ i ∈ s, FTF.expect p (f i)
+@FTF.deletedIndicator_nonneg : ∀ {I : Type u_1} {Ω : Type u_2} (d : Ω → I → Prop) (o : Ω) (i : I),
+  0 ≤ FTF.deletedIndicator d o i
+@FTF.touch_le_indicators : ∀ {I : Type u_1} {Ω : Type u_2} (d : Ω → I → Prop) (s : Finset I) (o : Ω),
+  FTF.touchedIndicator d s o ≤ ∑ i ∈ s, FTF.deletedIndicator d o i
+@FTF.touch_probability_bound : ∀ {I : Type u_1} {Ω : Type u_2} [inst : Fintype Ω] (p : FTF.Law Ω) (d : Ω → I → Prop)
+  (s : Finset I) (h : ℝ),
+  (∀ i ∈ s, (FTF.expect p fun o => FTF.deletedIndicator d o i) ≤ h) →
+    FTF.expect p (FTF.touchedIndicator d s) ≤ ↑s.card * h
+@FTF.expected_touched_mass : ∀ {I : Type u_1} {Ω : Type u_2} {C : Type u_3} [inst : Fintype Ω] [inst_1 : Fintype C]
+  (p : FTF.Law Ω) (d : Ω → I → Prop) (s : C → Finset I) (h : ℝ),
+  (∀ (i : I), (FTF.expect p fun o => FTF.deletedIndicator d o i) ≤ h) →
+    (FTF.expect p fun o => ∑ c, ↑(s c).card * FTF.touchedIndicator d (s c) o) ≤ h * ∑ c, ↑(s c).card ^ 2
+@FTF.slice_square_bound : ∀ {I : Type u_1} {C : Type u_2} [inst : Fintype C] (s : C → Finset I) (smax : ℝ),
+  (∀ (c : C), ↑(s c).card ≤ smax) → ∑ c, ↑(s c).card ^ 2 ≤ smax * ∑ c, ↑(s c).card
+@FTF.expected_touched_mass_max : ∀ {I : Type u_1} {Ω : Type u_2} {C : Type u_3} [inst : Fintype Ω] [inst_1 : Fintype C]
+  (p : FTF.Law Ω) (d : Ω → I → Prop) (s : C → Finset I) (n r smax : ℝ),
+  0 < n →
+    0 ≤ r →
+      ∑ c, ↑(s c).card = n →
+        (∀ (c : C), ↑(s c).card ≤ smax) →
+          (∀ (i : I), (FTF.expect p fun o => FTF.deletedIndicator d o i) ≤ r / n) →
+            (FTF.expect p fun o => ∑ c, ↑(s c).card * FTF.touchedIndicator d (s c) o) ≤ r * smax
+FTF.mrsAlpha_nonneg : ∀ (k : ℕ), 1 ≤ k → 0 ≤ FTF.mrsAlpha k
+@FTF.warm_start_binary_grid : ∀ {A : Type u_1} {E : Type u_2} {K : Type u_3} {L : Type u_4} {S : Type u_5}
+  [inst : Fintype A] [inst_1 : MetricSpace E] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : Fintype L]
+  [inst_5 : Fintype S] (n : A → ℕ) (ω : A → ℝ),
+  (∀ (a : A), 0 ≤ ω a) →
+    ∀ (x : FTF.SliceRecords n → E) (Z : L → A → K → E) (q : L → FTF.SliceRecords n → E) (ref : K → E) (p : FTF.Law L)
+      (r : L → FTF.Law S) (C : L → S → K → E) (k : ℕ),
+      1 ≤ k →
+        ∀ (d γ : ℝ),
+          ∑ i, ω i.fst = 2 →
+            (∀ (a : A),
+                (FTF.expect p fun l => FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) (Z l a)) ≤
+                  FTF.mrsAlpha k * FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) ref) →
+              (∀ (l : L) (i : FTF.SliceRecords n), dist (FTF.localRep n x (Z l) i) (q l i) ^ 2 ≤ d * γ ^ 2 / 4) →
+                (∀ (l : L),
+                    (FTF.expect (r l) fun s => FTF.cost (fun i => ω i.fst) (q l) (C l s)) ≤
+                      FTF.mrsAlpha k * FTF.cost (fun i => ω i.fst) (q l) ref) →
+                  √(FTF.expect (FTF.joint p r) fun o => FTF.cost (fun i => ω i.fst) x (C o.1 o.2)) ≤
+                    √(FTF.mrsAlpha k) * (√(FTF.mrsAlpha k) + 2) * √(FTF.cost (fun i => ω i.fst) x ref) +
+                      (1 + √(FTF.mrsAlpha k)) * √(d * γ ^ 2 / 2)
+@FTF.merged_warm_start : ∀ {A : Type u_1} {E : Type u_2} {K : Type u_3} {L : Type u_4} {S : Type u_5} [inst : Fintype A]
+  [inst_1 : MetricSpace E] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : Fintype L] [inst_5 : Fintype S]
+  (nA nB : A → ℕ) (a b : A → ℝ),
+  (∀ (c : A), 0 ≤ a c) →
+    (∀ (c : A), 0 ≤ b c) →
+      (∀ (c : A), a c = 0 → nA c = 0) →
+        (∀ (c : A), b c = 0 → nB c = 0) →
+          ∀ (x : FTF.ClientRecords nA nB → E) (Z : L → A → K → E) (q : L → FTF.ClientRecords nA nB → E) (ref : K → E)
+            (p : FTF.Law L) (r : L → FTF.Law S) (C : L → S → K → E) (α κ Q : ℝ),
+            0 ≤ α →
+              1 ≤ κ →
+                (∀ (c : A), 0 < a c → 0 < b c → max (a c / b c) (b c / a c) ≤ κ) →
+                  (∀ (c : A),
+                      (FTF.expect p fun l => FTF.clientA nA nB x c (Z l c) + FTF.clientB nA nB x c (Z l c)) ≤
+                        α * (FTF.clientA nA nB x c ref + FTF.clientB nA nB x c ref)) →
+                    (FTF.expect p fun l =>
+                          FTF.distortion (FTF.globalWeight nA nB a b) (FTF.mergedRep nA nB x (Z l)) (q l)) ≤
+                        Q →
+                      (∀ (l : L),
+                          (FTF.expect (r l) fun s => FTF.cost (FTF.globalWeight nA nB a b) (q l) (C l s)) ≤
+                            α * FTF.cost (FTF.globalWeight nA nB a b) (q l) ref) →
+                        √(FTF.expect (FTF.joint p r) fun o => FTF.cost (FTF.globalWeight nA nB a b) x (C o.1 o.2)) ≤
+                          √α * ((1 + √α) * √κ + 1) * √(FTF.cost (FTF.globalWeight nA nB a b) x ref) + (1 + √α) * √Q
+@FTF.warm_start_binary_fair : ∀ {A : Type u_1} {E : Type u_2} {K : Type u_3} {L : Type u_4} {S : Type u_5}
+  [inst : Fintype A] [inst_1 : MetricSpace E] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : Fintype L]
+  [inst_5 : Fintype S] (n : A → ℕ) (ω : A → ℝ),
+  (∀ (a : A), 0 ≤ ω a) →
+    ∀ (group : FTF.SliceRecords n → Bool) (x : FTF.SliceRecords n → E) (Z : L → A → K → E)
+      (q : L → FTF.SliceRecords n → E) (ref : K → E) (p : FTF.Law L) (r : L → FTF.Law S) (C : L → S → K → E) (k : ℕ),
+      1 ≤ k →
+        ∀ (d γ η : ℝ),
+          0 ≤ d →
+            0 < η →
+              ∑ i, ω i.fst = 2 →
+                (∀ (a : A),
+                    (FTF.expect p fun l => FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) (Z l a)) ≤
+                      FTF.mrsAlpha k * FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) ref) →
+                  (∀ (l : L) (i : FTF.SliceRecords n), dist (FTF.localRep n x (Z l) i) (q l i) ^ 2 ≤ d * γ ^ 2 / 4) →
+                    (∀ (l : L),
+                        (FTF.expect (r l) fun s => FTF.cost (fun i => ω i.fst) (q l) (C l s)) ≤
+                          FTF.mrsAlpha k * FTF.cost (fun i => ω i.fst) (q l) ref) →
+                      (FTF.expect (FTF.joint p r) fun o => FTF.fairOn (fun i => ω i.fst) group x (C o.1 o.2)) ≤
+                        2 * (1 + η) * FTF.mrsAlpha k * (√(FTF.mrsAlpha k) + 2) ^ 2 *
+                            FTF.fairOn (fun i => ω i.fst) group x ref +
+                          (1 + 1 / η) * (1 + √(FTF.mrsAlpha k)) ^ 2 / 2 * d * γ ^ 2
+@FTF.warm_start_binary_fair_zero : ∀ {A : Type u_1} {E : Type u_2} {K : Type u_3} {L : Type u_4} {S : Type u_5}
+  [inst : Fintype A] [inst_1 : MetricSpace E] [inst_2 : Fintype K] [inst_3 : Nonempty K] [inst_4 : Fintype L]
+  [inst_5 : Fintype S] (n : A → ℕ) (ω : A → ℝ),
+  (∀ (a : A), 0 ≤ ω a) →
+    ∀ (group : FTF.SliceRecords n → Bool) (x : FTF.SliceRecords n → E) (Z : L → A → K → E)
+      (q : L → FTF.SliceRecords n → E) (ref : K → E) (p : FTF.Law L) (r : L → FTF.Law S) (C : L → S → K → E) (k : ℕ),
+      1 ≤ k →
+        (∀ (a : A),
+            (FTF.expect p fun l => FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) (Z l a)) ≤
+              FTF.mrsAlpha k * FTF.cost (fun x => 1) (fun j => x ⟨a, j⟩) ref) →
+          (FTF.expect p fun l => FTF.distortion (fun i => ω i.fst) (FTF.localRep n x (Z l)) (q l)) ≤ 0 →
+            (∀ (l : L),
+                (FTF.expect (r l) fun s => FTF.cost (fun i => ω i.fst) (q l) (C l s)) ≤
+                  FTF.mrsAlpha k * FTF.cost (fun i => ω i.fst) (q l) ref) →
+              (FTF.expect (FTF.joint p r) fun o => FTF.fairOn (fun i => ω i.fst) group x (C o.1 o.2)) ≤
+                2 * FTF.mrsAlpha k * (√(FTF.mrsAlpha k) + 2) ^ 2 * FTF.fairOn (fun i => ω i.fst) group x ref

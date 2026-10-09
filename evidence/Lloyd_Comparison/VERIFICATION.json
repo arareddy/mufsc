@@ -1,0 +1,104 @@
+{
+  "cases": 30,
+  "comparisons": {
+    "1": {
+      "G": {
+        "fair_higher": 15,
+        "fair_lower": 15,
+        "ties": 0
+      },
+      "Phi": {
+        "fair_higher": 0,
+        "fair_lower": 30,
+        "ties": 0
+      },
+      "Phi_A": {
+        "fair_higher": 0,
+        "fair_lower": 30,
+        "ties": 0
+      },
+      "Phi_B": {
+        "fair_higher": 30,
+        "fair_lower": 0,
+        "ties": 0
+      },
+      "pooled_SSE": {
+        "fair_higher": 30,
+        "fair_lower": 0,
+        "ties": 0
+      },
+      "population_average": {
+        "fair_higher": 30,
+        "fair_lower": 0,
+        "ties": 0
+      }
+    },
+    "2": {
+      "G": {
+        "fair_higher": 16,
+        "fair_lower": 14,
+        "ties": 0
+      },
+      "Phi": {
+        "fair_higher": 0,
+        "fair_lower": 30,
+        "ties": 0
+      },
+      "Phi_A": {
+        "fair_higher": 0,
+        "fair_lower": 30,
+        "ties": 0
+      },
+      "Phi_B": {
+        "fair_higher": 30,
+        "fair_lower": 0,
+        "ties": 0
+      },
+      "pooled_SSE": {
+        "fair_higher": 30,
+        "fair_lower": 0,
+        "ties": 0
+      },
+      "population_average": {
+        "fair_higher": 30,
+        "fair_lower": 0,
+        "ties": 0
+      }
+    }
+  },
+  "exclusions": [],
+  "fixture_status": "PASS",
+  "fresh_fair_witnesses_reproduced": 90,
+  "independent_full_label_checks": 150,
+  "independent_objective_checks": 150,
+  "inputs_unchanged": 209,
+  "method_budget_rows": 180,
+  "paired_metric_rows": 540,
+  "reporting_script_sha256": "6a502d2c077997629f8af6cb88df023d1a35e96a79bf8f7243e60284c4332daa",
+  "saved_fair_objectives_recomputed": 90,
+  "scope": "New full-population recomputation and independently written scoring; canonical trajectory kernels and Python/NumPy runtime shared as documented",
+  "source_files_unchanged": 27,
+  "status": "PASS",
+  "step_increase_counts": {
+    "fair": {
+      "G": 0,
+      "Phi": 0,
+      "Phi_A": 0,
+      "Phi_B": 5,
+      "pooled_SSE": 2,
+      "population_average": 2
+    },
+    "lloyd": {
+      "G": 0,
+      "Phi": 1,
+      "Phi_A": 1,
+      "Phi_B": 0,
+      "pooled_SSE": 0,
+      "population_average": 0
+    }
+  },
+  "total_ambiguous_point_evaluations": 0,
+  "unresolved_correctness": [],
+  "utc": "2026-09-26T08:12:55.760088+00:00",
+  "within_method_metric_rows": 1080
+}

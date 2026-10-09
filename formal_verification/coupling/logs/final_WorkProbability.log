@@ -1,0 +1,5 @@
+'Coupling.wide_event_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.narrow_event_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.beta_gt_sixteenth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.linear_work_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.obstruction_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,161 @@
+{
+  "completed_core_cases": [
+    "adult_k10_seed10000",
+    "adult_k10_seed10001",
+    "adult_k10_seed10002",
+    "adult_k10_seed10003",
+    "adult_k10_seed10004",
+    "bank_k10_seed10000",
+    "bank_k10_seed10001",
+    "bank_k10_seed10002",
+    "bank_k10_seed10003",
+    "bank_k10_seed10004",
+    "credit_k10_seed10000",
+    "credit_k10_seed10001",
+    "credit_k10_seed10002",
+    "credit_k10_seed10003",
+    "credit_k10_seed10004"
+  ],
+  "core_verification": [
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "adult_k10_seed10000",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "adult_k10_seed10001",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "adult_k10_seed10002",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "adult_k10_seed10003",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "adult_k10_seed10004",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "bank_k10_seed10000",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "bank_k10_seed10001",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "bank_k10_seed10002",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "bank_k10_seed10003",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "bank_k10_seed10004",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "credit_k10_seed10000",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "credit_k10_seed10001",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "credit_k10_seed10002",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "credit_k10_seed10003",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    },
+    {
+      "all_model_witnesses_equal": true,
+      "balanced_order_verified": true,
+      "case_id": "credit_k10_seed10004",
+      "component_times_sum_to_algorithm": true,
+      "extra_state_receipt_and_hash_verified": true,
+      "request_components_sum_to_e2e": true,
+      "saved_model_witnesses_verified": 9
+    }
+  ],
+  "missing_core_cases": [],
+  "quality_rows": 45,
+  "raw_observations": 135,
+  "run_id": "client-c0-20260926-v1",
+  "scope": "Saved output bytes/receipts/time identities/order rechecked. Extra state values were compared in worker; their saved reference hash is rechecked here. No independent arithmetic or Task C approval."
+}

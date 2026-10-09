@@ -1,0 +1,481 @@
+{
+  "date_utc": "2026-09-26T09:39:53.187265+00:00",
+  "status": "PASS",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "pytest": "9.1.1",
+    "matplotlib": "3.10.8",
+    "OS": "macOS arm64",
+    "CPU_only": true,
+    "numerical_threads": 1
+  },
+  "initial_smoke_commands": [
+    {
+      "name": "verify",
+      "returncode": 0,
+      "seconds": 0.4415583749942016,
+      "command": [
+        "verify"
+      ]
+    },
+    {
+      "name": "fixtures",
+      "returncode": 0,
+      "seconds": 13.430136040988145,
+      "command": [
+        "fixtures"
+      ]
+    },
+    {
+      "name": "aggregate",
+      "returncode": 0,
+      "seconds": 0.2381739580014255,
+      "command": [
+        "aggregate"
+      ]
+    },
+    {
+      "name": "P1",
+      "returncode": 0,
+      "seconds": 0.2255883339967113,
+      "command": [
+        "run",
+        "--study",
+        "P1",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "P4",
+      "returncode": 0,
+      "seconds": 3.6987249169906136,
+      "command": [
+        "run",
+        "--study",
+        "P4",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "P2",
+      "returncode": 0,
+      "seconds": 12.952835167001467,
+      "command": [
+        "run",
+        "--study",
+        "P2",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "P3",
+      "returncode": 0,
+      "seconds": 4.353939291002462,
+      "command": [
+        "run",
+        "--study",
+        "P3",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "Round_Budgets",
+      "returncode": 0,
+      "seconds": 1.3438691250048578,
+      "command": [
+        "run",
+        "--study",
+        "Round_Budgets",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "Client_Deletion",
+      "returncode": 0,
+      "seconds": 1.2147582079924177,
+      "command": [
+        "run",
+        "--study",
+        "Client_Deletion",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "Client_Refinement",
+      "returncode": 0,
+      "seconds": 2.294019416993251,
+      "command": [
+        "run",
+        "--study",
+        "Client_Refinement",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "Client_Diversity",
+      "returncode": 0,
+      "seconds": 1.1890496659907512,
+      "command": [
+        "run",
+        "--study",
+        "Client_Diversity",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "Client_Sequences",
+      "returncode": 0,
+      "seconds": 1.9831457500113174,
+      "command": [
+        "run",
+        "--study",
+        "Client_Sequences",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "Multigroup",
+      "returncode": 0,
+      "seconds": 1.3632901249802671,
+      "command": [
+        "run",
+        "--study",
+        "Multigroup",
+        "--limit",
+        "1"
+      ]
+    },
+    {
+      "name": "Lloyd_Comparison",
+      "returncode": 0,
+      "seconds": 3.937104625016218,
+      "command": [
+        "run",
+        "--study",
+        "Lloyd_Comparison",
+        "--limit",
+        "1"
+      ]
+    }
+  ],
+  "isolated_commands": [
+    {
+      "name": "fixtures",
+      "script": "reproduce.py",
+      "args": [
+        "fixtures"
+      ],
+      "returncode": 0,
+      "seconds": 15.785510000016075,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "verify",
+      "script": "reproduce.py",
+      "args": [
+        "verify"
+      ],
+      "returncode": 0,
+      "seconds": 0.40785812499234453,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "aggregate",
+      "script": "reproduce.py",
+      "args": [
+        "aggregate"
+      ],
+      "returncode": 0,
+      "seconds": 0.22497358298278414,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "plots",
+      "script": "plots.py",
+      "args": [],
+      "returncode": 0,
+      "seconds": 64.41556070899242,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "P4",
+      "script": "reproduce.py",
+      "args": [
+        "run",
+        "--study",
+        "P4",
+        "--case",
+        "P4_bank_splitgroup_2k_g0.1"
+      ],
+      "returncode": 0,
+      "seconds": 19.667681165999966,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "Round_Budgets",
+      "script": "reproduce.py",
+      "args": [
+        "run",
+        "--study",
+        "Round_Budgets",
+        "--case",
+        "bank_s10000_T2"
+      ],
+      "returncode": 0,
+      "seconds": 6.591162333992543,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "Client_Refinement",
+      "script": "reproduce.py",
+      "args": [
+        "run",
+        "--study",
+        "Client_Refinement",
+        "--case",
+        "bank_k10_seed10000_T2"
+      ],
+      "returncode": 0,
+      "seconds": 6.864619792002486,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "Client_Diversity",
+      "script": "reproduce.py",
+      "args": [
+        "run",
+        "--study",
+        "Client_Diversity",
+        "--case",
+        "credit_c99_k10_seed10000"
+      ],
+      "returncode": 0,
+      "seconds": 1.0324200839968398,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "Multigroup",
+      "script": "reproduce.py",
+      "args": [
+        "run",
+        "--study",
+        "Multigroup",
+        "--case",
+        "acs_race9_seed10000_T2"
+      ],
+      "returncode": 0,
+      "seconds": 5.550049041979946,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "Lloyd_Comparison",
+      "script": "reproduce.py",
+      "args": [
+        "run",
+        "--study",
+        "Lloyd_Comparison",
+        "--case",
+        "record_bank_s10000"
+      ],
+      "returncode": 0,
+      "seconds": 2.9812913330097217,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "timing-P2",
+      "script": "benchmarks.py",
+      "args": [
+        "run",
+        "--study",
+        "P2",
+        "--limit",
+        "1",
+        "--repeats",
+        "2"
+      ],
+      "returncode": 0,
+      "seconds": 21.408785750012612,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "timing-P3",
+      "script": "benchmarks.py",
+      "args": [
+        "run",
+        "--study",
+        "P3",
+        "--limit",
+        "1",
+        "--repeats",
+        "2"
+      ],
+      "returncode": 0,
+      "seconds": 24.545150166988606,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "timing-Client_Deletion",
+      "script": "benchmarks.py",
+      "args": [
+        "run",
+        "--study",
+        "Client_Deletion",
+        "--limit",
+        "1",
+        "--repeats",
+        "2"
+      ],
+      "returncode": 0,
+      "seconds": 1.0882475829857867,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "timing-Client_Refinement",
+      "script": "benchmarks.py",
+      "args": [
+        "run",
+        "--study",
+        "Client_Refinement",
+        "--limit",
+        "1",
+        "--repeats",
+        "2"
+      ],
+      "returncode": 0,
+      "seconds": 3.7026966669945978,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "timing-Client_Sequences",
+      "script": "benchmarks.py",
+      "args": [
+        "run",
+        "--study",
+        "Client_Sequences",
+        "--limit",
+        "1",
+        "--repeats",
+        "2"
+      ],
+      "returncode": 0,
+      "seconds": 2.1286386669962667,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    },
+    {
+      "name": "timing-Multigroup",
+      "script": "benchmarks.py",
+      "args": [
+        "run",
+        "--study",
+        "Multigroup",
+        "--limit",
+        "1",
+        "--repeats",
+        "2"
+      ],
+      "returncode": 0,
+      "seconds": 1.6734734580095392,
+      "original_tree_access": "blocked except interpreter environment",
+      "network": "blocked"
+    }
+  ],
+  "timing_smoke_commands": [
+    {
+      "study": "P2",
+      "returncode": 0,
+      "seconds": 21.35420187501586
+    },
+    {
+      "study": "Round_Budgets",
+      "returncode": 0,
+      "seconds": 5.944897709006909
+    },
+    {
+      "study": "Client_Deletion",
+      "returncode": 0,
+      "seconds": 1.0419938340201043
+    },
+    {
+      "study": "Client_Refinement",
+      "returncode": 0,
+      "seconds": 3.5678999579977244
+    },
+    {
+      "study": "Client_Diversity",
+      "returncode": 0,
+      "seconds": 1.0148962910170667
+    },
+    {
+      "study": "Client_Sequences",
+      "returncode": 0,
+      "seconds": 2.0533759589889087
+    },
+    {
+      "study": "Multigroup",
+      "returncode": 0,
+      "seconds": 1.6417727500083856
+    }
+  ],
+  "P3_timing_final": "PASS in isolated_commands after current-runtime validation gate was added",
+  "executable_python_files_unchanged_since_isolated_test": 187,
+  "full_grids_rerun": false,
+  "raw_ACS_download_rebuild_rerun": false,
+  "optional_Lean_compiler_rerun_by_packager": false,
+  "figure_QA": {
+    "saved_pdfs": 11,
+    "metadata_removed": true,
+    "page_content_unchanged": true,
+    "regenerated_pdfs": 11,
+    "visually_reviewed": true
+  },
+  "test_counts": {
+    "core_and_independent_pytest": 193,
+    "P1_literal_comparisons": 96,
+    "Lloyd_scalar_and_rounding_fixtures": 7,
+    "multigroup_T0_comparisons": 120,
+    "multigroup_T1_T2_comparisons": 48,
+    "multigroup_sequence_steps": 54,
+    "multigroup_invalid_rejections": 271,
+    "multigroup_optimizer_cases": 6
+  },
+  "isolation": "Original research Projects/Documents opens denied except the Python environment itself; network connects/name resolution denied. Hook self-tested. This is a Python I/O audit guard, not OS-level hermetic virtualization.",
+  "multigroup_administrative_growth": {
+    "status": "PASS",
+    "m": [
+      2,
+      3,
+      5,
+      9
+    ],
+    "repeats": 3,
+    "observations": 12,
+    "original_tree_and_network_blocked": true,
+    "source_sha256": "4bc8a9f0255f6bdd98334f5d386f76b9994dfa491dec158c19e35949a702f6dd"
+  }
+}

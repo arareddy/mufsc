@@ -1,0 +1,4 @@
+'Replay.patch_exact' depends on axioms: [propext, Quot.sound]
+'Replay.label_patch_exact' depends on axioms: [propext, Quot.sound]
+'Replay.abandonment_exact' depends on axioms: [propext, Quot.sound]
+'Replay.changed_label_rejects' does not depend on any axioms

@@ -1,0 +1,71 @@
+{
+  "dataset": "n100000_C10",
+  "kind": "acs",
+  "format": "safe compressed NumPy arrays; allow_pickle=False",
+  "scientific_metadata": {
+    "name": "n100000_C10",
+    "version": "acs2018-ftf1-p3-v1",
+    "clip": 8,
+    "d": 16,
+    "original_npy_sha256": {
+      "X": "b0a8e8d2e1b4cf51607c722c26629ecd5a6be3dbd1ba9af8e357bf0bee391174",
+      "groups": "473c1b787354eb66ae7c4d7d05835f2a9ca883a04f5f7cb9937c1f2d59b4a4f9",
+      "offsets": "53c32947ae01cc9aee62c0af90616b72900c62274038ea5b571fa8453b42a3d7",
+      "row_ids": "dfb07597bd6f897df4685cad563dc66c8fd2663394bce1591ff655bee056fc60"
+    },
+    "geography": {
+      "0": "MA",
+      "1": "MO",
+      "2": "OR",
+      "3": "CA",
+      "4": "AR",
+      "5": "AZ",
+      "6": "OH",
+      "7": "MS",
+      "8": "ME",
+      "9": "NC"
+    },
+    "sample_hash": null
+  },
+  "arrays": {
+    "X": {
+      "dtype": "float64",
+      "shape": [
+        100000,
+        16
+      ],
+      "raw_C_order_sha256": "68bceaca49e10c5ff6b50450fbe2037f1fd011f5bc4384d7a1d86c476a730655"
+    },
+    "groups": {
+      "dtype": "int64",
+      "shape": [
+        100000
+      ],
+      "raw_C_order_sha256": "f422e31830ca5bf58e64a75fc82e11691ada0628c723a40098327b27676a539a"
+    },
+    "offsets": {
+      "dtype": "int64",
+      "shape": [
+        11
+      ],
+      "raw_C_order_sha256": "442b027c7b3fbaaa3fc36e619f65b75071a44800b9ebac4b75ebefa7bdcef4fc"
+    },
+    "row_ids": {
+      "dtype": "int64",
+      "shape": [
+        100000
+      ],
+      "raw_C_order_sha256": "0c2f4785a704391bcfc4b9692f661b956323d6a960a54fb69ad4db993f32f98c"
+    },
+    "client_ids": {
+      "dtype": "int64",
+      "shape": [
+        10
+      ],
+      "raw_C_order_sha256": "23c379d6c0f22ef64cdef873fd530df1f1419b4a3935e9323d5f1d82ca697b6a"
+    }
+  },
+  "release_file": "data/acs/n100000_C10.npz",
+  "release_sha256": "b15b5fe3e1ad856511a664da1bf562593d9c6f8e711595a20fcfddef63ea4125",
+  "verified_lossless": true
+}

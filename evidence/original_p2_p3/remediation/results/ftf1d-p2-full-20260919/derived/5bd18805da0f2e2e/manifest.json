@@ -1,0 +1,29 @@
+{
+  "complete_units": 175,
+  "completion_receipts_sha256": "a7ea03e77665a308a2ab993ff884ae5193df800effe229370331ede5d3285566",
+  "counts": {
+    "P1_seed_method_outcomes": 0,
+    "P4_settings": 0,
+    "deletion_method_rows": 700
+  },
+  "declared_units": 175,
+  "definitions": {
+    "A": "point-rounds where a certificate was attempted",
+    "J": "duplicate failed-point assignments redone by same-round global fallback",
+    "N": "retained point-rounds over the complete requested trajectory",
+    "P": "attempted certificate passes, including passes discarded by same-round fallback",
+    "S": "point-round assignments usefully skipped after accounting for same-round fallback",
+    "rates": "P/A attempted pass; P/N whole-trajectory certified fraction; S/N useful skips; assignments N-S+J",
+    "timing": "elapsed: measured serial call; modeled: client critical path + server; end-to-end: call + input load + checkpoint load + survivor materialization + witness output; no network measurement",
+    "uncertainty": "SE of arithmetic paired speedup mean; single-trial settings have no SE; aggregate dataset rows combine declared k levels and are not independent-population estimates"
+  },
+  "independent_verification": {
+    "receipt_file": "repair/p2_full_gate.json",
+    "sha256": "9f4250805b1c533d60b2baf3b9f37818ccf667c9ce286c05a5557f5bb55c8fca",
+    "status": "PASS"
+  },
+  "independently_verified": true,
+  "missing_units": 0,
+  "snapshot": "5bd18805da0f2e2e",
+  "source_run_manifest_sha256": "374a32f76786c099db13c49679a64f49833132d30d5e3c61c37046b8461f8fa8"
+}

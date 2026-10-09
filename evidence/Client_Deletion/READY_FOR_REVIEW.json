@@ -1,0 +1,28 @@
+{
+  "candidate": "[private-path-omitted]",
+  "claimed_guarantee": "For a valid whole-client request on trusted compact state produced from canonical FTF-1D T=0 training, preserve persistent survivor IDs, return the exact same indexed C0 model as canonical fresh T=0 on survivors; exact global counts, surviving summary values and ordered rational-weight anchor table also match. Induction extends to valid whole-client sequences. No equality of all caches, erasure or adaptive independent-law guarantee.",
+  "correctness_receipt": "[private-path-omitted]",
+  "created_utc": "2026-09-26T06:51:36.411174+00:00",
+  "known_limitations": [
+    "Only T=0; no record-level deletion path.",
+    "State is trusted in-process data and must not be externally mutated.",
+    "Shared canonical numerical reference; focused tests are not an independent rational oracle.",
+    "Real-data timings and matched T=1/T=2 quality pending at snapshot creation.",
+    "Dataset/preprocessing provenance limitations retained.",
+    "Resident-data local serial timings do not measure cold load, physical federation or secure erasure."
+  ],
+  "protocol": "[private-path-omitted]",
+  "review_status": "Task C has not been counted as approval.",
+  "snapshot_directory": "[private-path-omitted]",
+  "snapshot_manifest": "[private-path-omitted]",
+  "snapshot_manifest_sha256": "62bab6126a5708acc4d18902fe72bdae960b9d3e6582b0446cbafe7e97ea19c8",
+  "snapshot_version": "v1",
+  "status": "READY_NOT_INDEPENDENT_APPROVAL",
+  "tests": "[private-path-omitted]",
+  "tests_actually_run": {
+    "elapsed_seconds": 0.04536066699074581,
+    "saved_exact_comparison_cases": 22,
+    "status": "PASS",
+    "unittest_tests": 10
+  }
+}

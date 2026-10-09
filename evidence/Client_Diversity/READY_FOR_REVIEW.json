@@ -1,0 +1,18 @@
+{
+  "status": "COMPLETE_READY_FOR_REVIEW",
+  "run": "diversity-v1",
+  "completed_cases": 30,
+  "unique_dataset_clients": 6,
+  "timed_observations": 270,
+  "scientific_scope": "Unchanged reviewed T0; same-seed indexed model and declared compact-state equality; resident request output boundary",
+  "no_new_manuscript_integration": true,
+  "no_positive_refinement_inputs": true,
+  "no_failed_or_discarded_cases": true,
+  "verification_files": [
+    "VERIFICATION.json",
+    "TABLE_VERIFICATION.json",
+    "SOURCE_VERIFICATION.json",
+    "FIGURE_VERIFICATION.json"
+  ],
+  "candidate_sha256": "6d7b8d993ed9e9fcda896192ee6e6299a434ab7cdc25ab9907fc6b4bc1cf3dde"
+}

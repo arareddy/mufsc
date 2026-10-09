@@ -1,0 +1,422 @@
+[
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.expect_nonneg"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.expect_mono"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.expect_const"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.expect_add"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.expect_mul"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.expect_sum"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.tower"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.local_sum_bound"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.weight_sandwich"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.max_weight_le_kappa"
+  },
+  {
+    "module": "FiniteLaw",
+    "declaration": "FTF.merged_client_bound"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.energy_nonneg"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.root_nonneg"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.root_sq"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.weighted_cauchy"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.root_add"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.root_mono"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.root_scale"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.root_const"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.root_of_sqrt"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.sqrt_expect_affine"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.young"
+  },
+  {
+    "module": "WeightedRoot",
+    "declaration": "FTF.sqrt_expect_two"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.near_nonneg"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.near_le"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.near_triangle"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.cost_nonneg"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.distortion_nonneg"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.distortion_symm"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.cost_root_transfer"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.distortion_root_triangle"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.distortion_bound"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.normalized_group_mass"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.represented_snap_bound"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.near_mono_centers"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.cost_mono_centers"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.zero_cost_completion"
+  },
+  {
+    "module": "Geometry",
+    "declaration": "FTF.cost_zero_of_covered"
+  },
+  {
+    "module": "Transfer",
+    "declaration": "FTF.conditional_server_root"
+  },
+  {
+    "module": "Transfer",
+    "declaration": "FTF.finite_geometric_transfer"
+  },
+  {
+    "module": "Transfer",
+    "declaration": "FTF.split_root"
+  },
+  {
+    "module": "Transfer",
+    "declaration": "FTF.merged_root"
+  },
+  {
+    "module": "Transfer",
+    "declaration": "FTF.server_nonincrease_preserves"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.split_zero_constant"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.split_additive_constant"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.merged_zero_constant"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.groupCost_nonneg"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.group_cost_sum"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.fair_le_total"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.total_le_card_fair"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.optimal_total_le_card_fair"
+  },
+  {
+    "module": "Corollaries",
+    "declaration": "FTF.expect_fair_le_total"
+  },
+  {
+    "module": "SplitSlices",
+    "declaration": "FTF.nearestIndex_spec"
+  },
+  {
+    "module": "SplitSlices",
+    "declaration": "FTF.slice_cost_decomposition"
+  },
+  {
+    "module": "SplitSlices",
+    "declaration": "FTF.local_rep_decomposition"
+  },
+  {
+    "module": "SplitSlices",
+    "declaration": "FTF.split_local_bound"
+  },
+  {
+    "module": "SplitSlices",
+    "declaration": "FTF.split_warm_start"
+  },
+  {
+    "module": "MergedClients",
+    "declaration": "FTF.merged_client_uniform"
+  },
+  {
+    "module": "MergedClients",
+    "declaration": "FTF.merged_sum_bound"
+  },
+  {
+    "module": "MergedClients",
+    "declaration": "FTF.globalWeight_nonneg"
+  },
+  {
+    "module": "MergedClients",
+    "declaration": "FTF.merged_cost_decomposition"
+  },
+  {
+    "module": "MergedClients",
+    "declaration": "FTF.merged_rep_decomposition"
+  },
+  {
+    "module": "MergedClients",
+    "declaration": "FTF.merged_local_geometric_bound"
+  },
+  {
+    "module": "MergedClients",
+    "declaration": "FTF.share_zero_implies_empty"
+  },
+  {
+    "module": "Quantization",
+    "declaration": "FTF.quantization_expectation_bound"
+  },
+  {
+    "module": "Quantization",
+    "declaration": "FTF.binary_grid_bound"
+  },
+  {
+    "module": "Quantization",
+    "declaration": "FTF.multigroup_grid_bound"
+  },
+  {
+    "module": "Quantization",
+    "declaration": "FTF.represented_quantization"
+  },
+  {
+    "module": "GroupComparison",
+    "declaration": "FTF.groupPart_nonneg"
+  },
+  {
+    "module": "GroupComparison",
+    "declaration": "FTF.groupPart_sum"
+  },
+  {
+    "module": "GroupComparison",
+    "declaration": "FTF.fairOn_le_cost"
+  },
+  {
+    "module": "GroupComparison",
+    "declaration": "FTF.cost_le_card_fairOn"
+  },
+  {
+    "module": "GroupComparison",
+    "declaration": "FTF.fair_additive_from_root"
+  },
+  {
+    "module": "GroupComparison",
+    "declaration": "FTF.fair_zero_from_root"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.copies_sum"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.rational_copy_counts"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.copies_objective"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.copies_category_probability"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.unweighted_to_weighted_bound"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.copies_draw_expectation"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.copies_run_eq"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.weightedRun_scale"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.weightedRun_sum"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.weightedRun_one"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.weightedRun_nonneg"
+  },
+  {
+    "module": "RationalCopies",
+    "declaration": "FTF.weightedRun_expect"
+  },
+  {
+    "module": "AnchorAggregation",
+    "declaration": "FTF.anchorWeight_nonneg"
+  },
+  {
+    "module": "AnchorAggregation",
+    "declaration": "FTF.aggregate_weighted_sum"
+  },
+  {
+    "module": "AnchorAggregation",
+    "declaration": "FTF.anchor_total_mass"
+  },
+  {
+    "module": "AnchorAggregation",
+    "declaration": "FTF.anchor_cost_identity"
+  },
+  {
+    "module": "AnchorAggregation",
+    "declaration": "FTF.anchor_count_weight"
+  },
+  {
+    "module": "Normalization",
+    "declaration": "FTF.client_group_normalized_mass"
+  },
+  {
+    "module": "Normalization",
+    "declaration": "FTF.anchor_count_divisor"
+  },
+  {
+    "module": "TouchedMass",
+    "declaration": "FTF.expect_sum_on"
+  },
+  {
+    "module": "TouchedMass",
+    "declaration": "FTF.deletedIndicator_nonneg"
+  },
+  {
+    "module": "TouchedMass",
+    "declaration": "FTF.touch_le_indicators"
+  },
+  {
+    "module": "TouchedMass",
+    "declaration": "FTF.touch_probability_bound"
+  },
+  {
+    "module": "TouchedMass",
+    "declaration": "FTF.expected_touched_mass"
+  },
+  {
+    "module": "TouchedMass",
+    "declaration": "FTF.slice_square_bound"
+  },
+  {
+    "module": "TouchedMass",
+    "declaration": "FTF.expected_touched_mass_max"
+  },
+  {
+    "module": "WarmStart",
+    "declaration": "FTF.mrsAlpha_nonneg"
+  },
+  {
+    "module": "WarmStart",
+    "declaration": "FTF.warm_start_binary_grid"
+  },
+  {
+    "module": "WarmStart",
+    "declaration": "FTF.merged_warm_start"
+  },
+  {
+    "module": "WarmStart",
+    "declaration": "FTF.warm_start_binary_fair"
+  },
+  {
+    "module": "WarmStart",
+    "declaration": "FTF.warm_start_binary_fair_zero"
+  }
+]

@@ -1,0 +1,29 @@
+# Checked approximation transfer and manuscript coverage
+
+The deliverable contains **105 checked theorem/helper declarations across 14 proof modules**, plus an exhaustive statement/axiom audit. All 15 final compilation units pass Lean 4.19.0 with `--trust=0 -j1` and warnings as errors. Source hashes match the final receipts. Every audited declaration uses only `propext`, `Classical.choice`, and `Quot.sound`. The source contains no admitted proof, domain-specific axiom, native proof shortcut or unsafe escape.
+
+The substantial result is the sharp two-stage transfer for actual finite weighted clustering geometry. Record locations, finite center tuples, selected nearest representatives, group/client slices, quantized anchors, normalized finite local laws and conditional server laws are explicit. Weighted Cauchy–Schwarz/Minkowski, spatial nearest-center comparison, both L2 conditioning steps and the exact constants are conclusions. The final split and merged theorems derive local replacement error from named per-call k-means++ literature inputs rather than assuming the desired global bound.
+
+The split wrappers recover alpha=5(log k+2), coefficient sqrt alpha(sqrt alpha+2), the zero-quantization factor 2 alpha(sqrt alpha+2)² for Phi, and the displayed arbitrary-eta additive term. The merged wrapper derives its local alpha*kappa factor from actual finite client A/B geometry, handles pure clients, and yields sqrt alpha((1+sqrt alpha)sqrt kappa+1). The square corollary has the exact manuscript constant. Arbitrary reference-center statements can be applied to an intended optimizer; optimizer existence is not separately formalized.
+
+The supplement also checks the exact compressed-anchor/expanded-record objective identity and integer h/n weights; normalized mass across client/group slices; geometric represented-snap residual and its expected-cost form; m-group conversion; preservation under any nonincreasing anchor postprocessing; zero-cost saturation/completion; and finite-law touched-slice union/expected-mass bounds under r/n marginal premises.
+
+The rational-weight reduction constructs actual positive common-denominator copy counts for any finite nonnegative rational weights. It proves objective scaling, projected categorical probabilities, and equality of terminal observables after every finite number of adaptive draws under common geometric completion. The adaptive recursion is connected to an explicitly normalized finite terminal-state probability law. This is more than asserting that two expected-cost scalars coincide.
+
+## What remains conditional or unverified
+
+The exact-k k-means++ approximation theorem is intentionally an imported **named input hypothesis**. Its literature proof is not formalized here. The generic adaptive-copy reduction is not yet specialized to one complete literal k-means++ history/completion machine and then used to discharge every per-call input automatically. The complete ideal infinite-bit execution-to-finite-law correspondence is also open. These are explicit mathematical/model bridges; the final ledger marks the full paper warm-start and upper heterogeneity claims partial, while recognizing the verified original transfer mathematics.
+
+Uniform-r-subset marginal r/n and the exact hypergeometric avoidance ratio are not proved. The finite union-bound and expected-mass consequences of those marginals are proved. Big-O notation, optimum attainment, and concrete operational cost models are not introduced. Python/NumPy/PCG64, representation, fixed preprocessing, binary64 grid arithmetic, interval production, serialization and original research code are outside the formalization. No empirical measurements were recomputed or kernel-verified.
+
+## Complete manuscript inventory
+
+`THEOREM_COVERAGE.md` inventories all 13 theorem/lemma/proposition environments, their labels, and 37 groups of substantive unnumbered proof claims across all 33 final recursively included sources. It separates verified mathematical models, partial claims, unstarted obligations, imported literature, and empirical assertions. It incorporates inspected exact statements and receipts from matched/lower constructions, fair moments and its geometry extension, replay/certificates, and coupling. Other task ownership alone never upgraded a status. The full paper is **not** claimed formally verified.
+
+Initial and final source-hash manifests are both preserved. Authorized editorial commit `733a1a790872f86b647a492ac3d66e6c7c8ef186` moved the root/additive bounds beside the appendix proofs. Their labels and formulas were reread and remain aligned. This task did not edit manuscript or research sources. No mathematical error was found in the scoped approximation passages; that is not validation of every unformalized claim. One editorial precision recommendation from the inspected fair-update extension remains: ideal f_A/f_B curve “decreases/increases” means **nonincreasing/nondecreasing**, not strict monotonicity.
+
+## Reproducibility and storage
+
+`STATEMENTS.txt`, `THEOREM_INDEX.json`, `SCOPE.md`, `COMPILER_RECEIPTS.json`, `AXIOM_AUDIT.json`, and the final raw portable logs contain the exact evidence. `DEPENDENCIES.json` freezes Lean, mathlib and package revisions. `README.md` gives tested check commands using the separately supplied pinned shared environment. Compiler invocations hold the shared flock only for one single-worker compilation and release it before waiting or unrelated work. Actual failure logs remain private, outside the anonymous archive; successes do not conceal those attempts.
+
+The bundle includes only portable small sources, documentation and final evidence. No duplicate toolchain/mathlib, bulk archives, datasets or experiment runs were made by this task. No publication, external sharing, manuscript edit, history rewrite, storage cleanup or disk-savings claim occurred. Local files need a separately chosen backup.

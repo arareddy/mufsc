@@ -1,0 +1,11 @@
+{
+  "core_pytest_returncode": 0,
+  "multigroup": "full fixture/oracle/negative suite",
+  "runtime": {
+    "network": "disabled",
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "threads": 1
+  },
+  "status": "PASS"
+}

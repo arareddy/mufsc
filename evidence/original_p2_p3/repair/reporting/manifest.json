@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "accepted_method_outputs": 1080,
+  "P2_trials": 175,
+  "P3_trials": 95,
+  "failed_or_retry_files": [],
+  "source_runs": {
+    "P2": {
+      "path": "remediation/results/ftf1d-p2-full-20260919",
+      "manifest_sha256": "374a32f76786c099db13c49679a64f49833132d30d5e3c61c37046b8461f8fa8"
+    },
+    "P3": {
+      "path": "remediation/p3/results/ftf1d-p3-full-20260919",
+      "manifest_sha256": "dc6cf84b8520aa5f5ea67fc291f17785384f15e2eb1c6be33251c017c3d8022d"
+    }
+  },
+  "files": {
+    "accepted_outputs.csv": "5ef2aeae809d47533ab46aca764ae9e7b62e8ded58f92704339bf97292df8fe2",
+    "costs.csv": "a22dbbb99abe1de51f1a9329da42c17b14e68e112f4a9ca2463e19311bef91fe",
+    "counter_summary.csv": "867e34e9339eed53c21137203e1ebe25ee9fee39f6c5bc56227a33c98927c1fd",
+    "historical_and_new_timing_comparison.csv": "c5323d817b99918f8d7a166b2866bf2b5270c701fb0201798c0622461ee28746",
+    "p2_accepted_metadata.json": "6822b028bb91cf3fabcbca04b88e31c5ba328afbda180bc7e53df29678905484",
+    "trial_counters.csv": "1e14f36371a964d2b26376b2fac6bc62f854ca92ebd26d375a60c44d7e3e41e5"
+  },
+  "scope": "Cost and counter reporting from accepted hash-bound artifacts; no kernel imports or new timings. P2 assignment count is derived N-S+J; P3 raw observer agreement is independently verified. Metadata projection omits only full P2 witness arrays, preserved in bulk evidence."
+}

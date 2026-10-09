@@ -1,0 +1,233 @@
+{
+  "copied_gate_exact_comparisons": 22,
+  "copied_gate_methods": 10,
+  "elapsed_seconds": 0.04783654198399745,
+  "exact_fraction_definition_fixture": {
+    "G": "27",
+    "Phi": "25",
+    "Phi0": "2",
+    "Phi1": "25"
+  },
+  "invalid_request_rejections": 30,
+  "invalid_requests": [
+    "[400]",
+    "[-1]",
+    "[True]",
+    "[1.0]",
+    "[99, 99]",
+    "[777]",
+    "[[99]]",
+    "array([[99]])",
+    "{'client': 99}",
+    "[3, 17, 99]",
+    "[17]",
+    "[-1]",
+    "[True]",
+    "[1.0]",
+    "[99, 99]",
+    "[777]",
+    "[[99]]",
+    "array([[99]])",
+    "{'client': 99}",
+    "[3, 99]",
+    "[3]",
+    "[-1]",
+    "[True]",
+    "[1.0]",
+    "[99, 99]",
+    "[777]",
+    "[[99]]",
+    "array([[99]])",
+    "{'client': 99}",
+    "[99]"
+  ],
+  "malformed_pickle_rejected": true,
+  "new_serialized_sequence_steps": [
+    {
+      "full_model": {
+        "final_centers": {
+          "bytes_hex": "000000000000f03f000000000000f03f0000000000000040000000000000f03f00000000000000c00000000000000000",
+          "dtype": "<f8",
+          "shape": [
+            3,
+            2
+          ],
+          "values_hex": [
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+1",
+            "0x1.0000000000000p+0",
+            "-0x1.0000000000000p+1",
+            "0x0.0p+0"
+          ]
+        },
+        "map_version": "FTF-1",
+        "per_round_stats": [],
+        "trajectory": [
+          {
+            "bytes_hex": "000000000000f03f000000000000f03f0000000000000040000000000000f03f00000000000000c00000000000000000",
+            "dtype": "<f8",
+            "shape": [
+              3,
+              2
+            ],
+            "values_hex": [
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+1",
+              "0x1.0000000000000p+0",
+              "-0x1.0000000000000p+1",
+              "0x0.0p+0"
+            ]
+          }
+        ]
+      },
+      "input_state_hash": "7e511ad125ebe3308b2b134e8a01080b6d559233eb70d17e0c34dc9176f17da5",
+      "next_state_hash": "d4deaf5ef3402a218f3559d24c96ecb7c2bcf928fd5a6b5d91f9e3db30e3b806",
+      "persistence": {
+        "deserialize_seconds": 4.0583021473139524e-05,
+        "persistence_seconds": 0.0006007089978083968,
+        "read_seconds": 0.00029174998053349555,
+        "reload_validated": true,
+        "reload_validation_seconds": 4.158398951403797e-05,
+        "serialization_seconds": 5.154201062396169e-05,
+        "state_bytes": 1315,
+        "state_sha256": "e529d1946fd9008b0baeba02b963fd9c6675f15d40193c4a50a9ba7f5bf6b7ed",
+        "storage_contract": "ordinary buffered local write/close/read; no fsync; trusted bytes",
+        "write_seconds": 0.0001752499956637621
+      },
+      "survivors": [
+        3,
+        17,
+        99
+      ],
+      "withdrawal": 400
+    },
+    {
+      "full_model": {
+        "final_centers": {
+          "bytes_hex": "000000000000f03f000000000000000000000000000000c00000000000000000000000000000f03f000000000000f03f",
+          "dtype": "<f8",
+          "shape": [
+            3,
+            2
+          ],
+          "values_hex": [
+            "0x1.0000000000000p+0",
+            "0x0.0p+0",
+            "-0x1.0000000000000p+1",
+            "0x0.0p+0",
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+0"
+          ]
+        },
+        "map_version": "FTF-1",
+        "per_round_stats": [],
+        "trajectory": [
+          {
+            "bytes_hex": "000000000000f03f000000000000000000000000000000c00000000000000000000000000000f03f000000000000f03f",
+            "dtype": "<f8",
+            "shape": [
+              3,
+              2
+            ],
+            "values_hex": [
+              "0x1.0000000000000p+0",
+              "0x0.0p+0",
+              "-0x1.0000000000000p+1",
+              "0x0.0p+0",
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+0"
+            ]
+          }
+        ]
+      },
+      "input_state_hash": "d4deaf5ef3402a218f3559d24c96ecb7c2bcf928fd5a6b5d91f9e3db30e3b806",
+      "next_state_hash": "94840dcd956e37551709b91c4efdcbdef94799215efc5bb02886a71f9c76b402",
+      "persistence": {
+        "deserialize_seconds": 1.866600359790027e-05,
+        "persistence_seconds": 0.00019320801948197186,
+        "read_seconds": 2.1208979887887836e-05,
+        "reload_validated": true,
+        "reload_validation_seconds": 2.1292013116180897e-05,
+        "serialization_seconds": 3.1458010198548436e-05,
+        "state_bytes": 1005,
+        "state_sha256": "343024c1c7079bdad2241499a4e198db383cf01fb94f2c43eb72c04f9e202744",
+        "storage_contract": "ordinary buffered local write/close/read; no fsync; trusted bytes",
+        "write_seconds": 0.00010058301268145442
+      },
+      "survivors": [
+        3,
+        99
+      ],
+      "withdrawal": 17
+    },
+    {
+      "full_model": {
+        "final_centers": {
+          "bytes_hex": "000000000000f03f000000000000f03f000000000000f03f000000000000f03f000000000000f03f000000000000f03f",
+          "dtype": "<f8",
+          "shape": [
+            3,
+            2
+          ],
+          "values_hex": [
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+0",
+            "0x1.0000000000000p+0"
+          ]
+        },
+        "map_version": "FTF-1",
+        "per_round_stats": [],
+        "trajectory": [
+          {
+            "bytes_hex": "000000000000f03f000000000000f03f000000000000f03f000000000000f03f000000000000f03f000000000000f03f",
+            "dtype": "<f8",
+            "shape": [
+              3,
+              2
+            ],
+            "values_hex": [
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+0",
+              "0x1.0000000000000p+0"
+            ]
+          }
+        ]
+      },
+      "input_state_hash": "94840dcd956e37551709b91c4efdcbdef94799215efc5bb02886a71f9c76b402",
+      "next_state_hash": "3250424f3aac56de83e0ceb19e7f23d476388685b01f59bc7f1f34f187cdcd2e",
+      "persistence": {
+        "deserialize_seconds": 1.362498733215034e-05,
+        "persistence_seconds": 0.00015391598572023213,
+        "read_seconds": 4.4917018385604024e-05,
+        "reload_validated": true,
+        "reload_validation_seconds": 1.420799526385963e-05,
+        "serialization_seconds": 1.841600169427693e-05,
+        "state_bytes": 694,
+        "state_sha256": "8a8fd91cfd340f697dce36dac2987120fba6b75e45438b1e97a041cfceeba697",
+        "storage_contract": "ordinary buffered local write/close/read; no fsync; trusted bytes",
+        "write_seconds": 6.27499830443412e-05
+      },
+      "survivors": [
+        99
+      ],
+      "withdrawal": 3
+    }
+  ],
+  "scope": "Trusted local state only; canonical shared-kernel reference; not independent arithmetic oracle.",
+  "source_hashes": {
+    "client_c0.py": "6d7b8d993ed9e9fcda896192ee6e6299a434ab7cdc25ab9907fc6b4bc1cf3dde",
+    "common.py": "3477dd901d56bce89392b437c78bba3155ddffb607f939f14852344c5340991d",
+    "fixtures.py": "5476ec77a9f04d7dda070cd8ebcddac4c5e90317ce80f2fdca6122c8c17bba57",
+    "service.py": "da97557713af25c085934edcf87a88b38334d8696e82a4d390aeba079788346d",
+    "test_client_c0.py": "9a151423ba191c5038f070be03f7b8275f9b476b430397be997a8e12cd36a927"
+  },
+  "status": "PASS"
+}

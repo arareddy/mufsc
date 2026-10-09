@@ -1,0 +1,20 @@
+{
+  "scope": "Saved table fragments only; final prose edits may be concurrent. Stable labels used for navigation.",
+  "files": [
+    {
+      "path": "table1.tex",
+      "manuscript_relative_source": "generated/final_replay_main.tex",
+      "sha256": "01d05054141232a47d47c944b4899424675ab28548df6119c5b275d843ed1c78"
+    },
+    {
+      "path": "table2.tex",
+      "manuscript_relative_source": "generated/consolidation20260926/client_main.tex",
+      "sha256": "185cebaf3444742464ada06e38062a64d2901418c3153941e3a0ef9c41f874aa"
+    },
+    {
+      "path": "table3.tex",
+      "manuscript_relative_source": "generated/editorial20260926/lloyd_main.tex",
+      "sha256": "61f256693f4483e8393687e4b6d2b75e7b33f68ffa56a36d24831491eaa46c15"
+    }
+  ]
+}

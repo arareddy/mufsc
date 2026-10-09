@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "trial_units": 175,
+  "method_rows": 700,
+  "summary_rows": 9,
+  "checked_fields": 288,
+  "source_rows_sha256": "695703d5637198062818856f777143c031bd4471dfc7014099f86f7517cab027",
+  "metrics_sha256": "372cbf387a6ea0017ba7bc7981627f59a44b0a4b939b3fe1b0984a395d7cf0ff",
+  "checker_sha256": "b6ab3ffee5e0103ee3aecaab92eac5192110637b6e83c39b6b895b4accdd158e",
+  "scope": "Independent summary arithmetic and sorted linear percentiles from saved paired rows, using declared NumPy PCG64 stream; exact integers, timing-report float tolerance 3e-13 relative / 3e-12 absolute. Numerical witnesses verified separately, without tolerance."
+}

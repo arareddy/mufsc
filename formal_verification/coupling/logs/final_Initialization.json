@@ -1,0 +1,12 @@
+{
+  "source": "proof/Initialization.lean",
+  "sha256": "12d361d8e1da3cbdd38ee65bcafb93ec88899e2ad68c2e54d4eda81365bccaf1",
+  "started_utc": "2026-09-26T10:07:53.035006+00:00",
+  "finished_utc": "2026-09-26T10:07:58.769018+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "trust": 0,
+  "threads": 1,
+  "compiler_output": "logs/final_Initialization.log"
+}

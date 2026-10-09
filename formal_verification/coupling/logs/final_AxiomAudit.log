@@ -1,0 +1,376 @@
+Coupling.primitive_old : ∀ (m : ℕ), 0 < m → m / m.gcd m = 1
+'Coupling.primitive_old' depends on axioms: [propext]
+Coupling.primitive_new : ∀ (m : ℕ), 1 ≤ m → m.gcd (m - 1) = 1
+'Coupling.primitive_new' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.count_odd : ∀ (t : ℕ), (∑ u ∈ Finset.range (2 * t), if u % 2 = 1 then 1 else 0) = t
+'Coupling.count_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.count_even : ∀ (t : ℕ), (∑ u ∈ Finset.range (2 * t), if u % 2 = 0 then 1 else 0) = t
+'Coupling.count_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.accepted_mismatch_bridge : ∀ (m u : ℕ),
+  u < 2 * m → (Coupling.acceptedMismatch m u = 1 ↔ ∃ c, Coupling.newProposal m u = some c ∧ Coupling.oldCategory u ≠ c)
+'Coupling.accepted_mismatch_bridge' depends on axioms: [propext, Quot.sound]
+Coupling.accepted_mismatch_count : ∀ (t : ℕ),
+  ∑ u ∈ Finset.range (2 * (2 * t)), Coupling.acceptedMismatch (2 * t) u = 2 * t
+'Coupling.accepted_mismatch_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.first_disagreement_half : ∀ (t : ℕ), 0 < t → Coupling.firstDisagreement (2 * t) = 1 / 2
+'Coupling.first_disagreement_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.rejection_shape : ∀ (m u : ℕ),
+  0 < m → u < 2 * m → (Coupling.newProposal m u = none ↔ u = 2 * m - 1) ∧ (u = 2 * m - 1 → Coupling.oldCategory u = 1)
+'Coupling.rejection_shape' depends on axioms: [propext, Quot.sound]
+Coupling.proposal_width : ∀ (h : ℕ), 2 * 2 ^ h = 2 ^ (h + 1)
+'Coupling.proposal_width' depends on axioms: [propext]
+Coupling.power_is_even : ∀ (h : ℕ), 1 ≤ h → ∃ t, 0 < t ∧ 2 ^ h = 2 * t
+'Coupling.power_is_even' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.assembled_low_bit : ∀ (first high : ℕ), (first + 2 ^ 64 * high) % 2 = first % 2
+'Coupling.assembled_low_bit' depends on axioms: [propext, Quot.sound]
+Coupling.low_bits_count : ∀ (b q c : ℕ), c < b → (∑ u ∈ Finset.range (b * q), if u % b = c then 1 else 0) = q
+'Coupling.low_bits_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.uniform_low_bits : ∀ (b q c : ℕ),
+  0 < b → 0 < q → c < b → ↑(∑ u ∈ Finset.range (b * q), if u % b = c then 1 else 0) / ↑(b * q) = 1 / ↑b
+'Coupling.uniform_low_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.word_low_bits_uniform : ∀ (w c : ℕ),
+  w ≤ 64 → c < 2 ^ w → ↑(∑ u ∈ Finset.range (2 ^ 64), if u % 2 ^ w = c then 1 else 0) / ↑(2 ^ 64) = 1 / ↑(2 ^ w)
+'Coupling.word_low_bits_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.primitive_scaled_new : ∀ (scale m : ℕ),
+  0 < scale →
+    1 ≤ m →
+      scale * m / (scale * m).gcd (scale * (m - 1)) = m ∧ scale * (m - 1) / (scale * m).gcd (scale * (m - 1)) = m - 1
+'Coupling.primitive_scaled_new' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.primitive_scaled_old : ∀ (scale m : ℕ), 0 < scale → 0 < m → scale * m / (scale * m).gcd (scale * m) = 1
+'Coupling.primitive_scaled_old' depends on axioms: [propext]
+@Coupling.assembly_formula : ∀ {ell : ℕ} (words : Fin ell → Coupling.Word),
+  ↑(Coupling.assemble words) = ∑ i, ↑(words i) * (2 ^ 64) ^ ↑i
+'Coupling.assembly_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.assembly_bijective : ∀ (ell : ℕ), Function.Bijective Coupling.assemble
+'Coupling.assembly_bijective' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.block_low_bits_count : ∀ (ell w c : ℕ),
+  w ≤ 64 * ell → c < 2 ^ w → (∑ words, if ↑(Coupling.assemble words) % 2 ^ w = c then 1 else 0) = 2 ^ (64 * ell - w)
+'Coupling.block_low_bits_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.block_low_bits_uniform : ∀ (ell w c : ℕ),
+  w ≤ 64 * ell →
+    c < 2 ^ w →
+      ↑(∑ words, if ↑(Coupling.assemble words) % 2 ^ w = c then 1 else 0) / ↑(Fintype.card (Fin ell → Coupling.Word)) =
+        1 / ↑(2 ^ w)
+'Coupling.block_low_bits_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.block_first_low_bit : ∀ (ell : ℕ) (words : Fin (ell + 1) → Coupling.Word),
+  ↑(Coupling.assemble words) % 2 = ↑(words 0) % 2
+'Coupling.block_first_low_bit' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.word_consumption : ∀ (w : ℕ),
+  (Coupling.wordsNeeded w = 0 ↔ w = 0) ∧
+    (Coupling.wordsNeeded w = 1 ↔ 0 < w ∧ w ≤ 64) ∧
+      w ≤ 64 * Coupling.wordsNeeded w ∧ (64 < w → 2 ≤ Coupling.wordsNeeded w)
+'Coupling.word_consumption' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.proposal_inverse_bounds : ∀ (m : ℕ), 1 ≤ m → 0 ≤ 1 / (2 * ↑m) ∧ 1 / (2 * ↑m) < 1
+'Coupling.proposal_inverse_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.rejection_tail_zero : ∀ (m : ℕ), 1 ≤ m → Filter.Tendsto (Coupling.rejectTail m) Filter.atTop (nhds 0)
+'Coupling.rejection_tail_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.accepted_trace_sum : ∀ (m : ℕ),
+  1 ≤ m → ∀ (c : ℝ), HasSum (fun r => c * Coupling.traceWeight m r) (c / (2 * ↑m - 1))
+'Coupling.accepted_trace_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.rejection_terminates_total_mass : ∀ (m : ℕ),
+  1 ≤ m → HasSum (fun r => (2 * ↑m - 1) * Coupling.traceWeight m r) 1
+'Coupling.rejection_terminates_total_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.category_law : ∀ (m c : ℕ), 1 ≤ m → Coupling.categoryLaw m c = ↑c / (2 * ↑m - 1)
+'Coupling.category_law' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.first_category_count : ∀ (m : ℕ), 1 ≤ m → (∑ u ∈ Finset.range (2 * m - 1), if u < m then 1 else 0) = m
+'Coupling.first_category_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.exact_coupling_disagreement : ∀ (t : ℕ),
+  0 < t → Coupling.coupledDisagreement (2 * t) = ↑(2 * t) / (2 * ↑(2 * t) - 1)
+'Coupling.exact_coupling_disagreement' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.binary_total_variation : ∀ (m : ℕ),
+  1 ≤ m → Coupling.binaryTV (1 / 2) (Coupling.categoryLaw m m) = 1 / (2 * (2 * ↑m - 1))
+'Coupling.binary_total_variation' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.disagreement_decomposition : ∀ (m : ℝ), 1 ≤ m → m / (2 * m - 1) = 1 / 2 + 1 / (2 * (2 * m - 1))
+'Coupling.disagreement_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.trace_runs : ∀ (m r u : ℕ),
+  u < 2 * m - 1 → Coupling.runProposals m (Coupling.acceptedTrace m r u) = some (Coupling.category m u)
+'Coupling.trace_runs' depends on axioms: [propext]
+Coupling.trace_length : ∀ (m r u : ℕ), (Coupling.acceptedTrace m r u).length = r + 1
+'Coupling.trace_length' depends on axioms: [propext]
+Coupling.trace_weight_from_cylinder : ∀ (m r u : ℕ),
+  Coupling.cylinderWeight m (Coupling.acceptedTrace m r u) = Coupling.traceWeight m r
+'Coupling.trace_weight_from_cylinder' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.old_trace_zero : ∀ (m u : ℕ), Coupling.traceOldCategory m 0 u = u % 2
+'Coupling.old_trace_zero' depends on axioms: [propext]
+Coupling.old_trace_after_reject : ∀ (m r u : ℕ), 0 < m → Coupling.traceOldCategory m (r + 1) u = 1
+'Coupling.old_trace_after_reject' depends on axioms: [propext, Quot.sound]
+Coupling.accepted_count_without_reject : ∀ (t : ℕ),
+  0 < t → ∑ u ∈ Finset.range (2 * (2 * t) - 1), Coupling.acceptedMismatch (2 * t) u = 2 * t
+'Coupling.accepted_count_without_reject' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.trace_mismatch_count : ∀ (t r : ℕ), 0 < t → Coupling.traceMismatchCount (2 * t) r = 2 * t
+'Coupling.trace_mismatch_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.trace_disagreement_exact : ∀ (t : ℕ),
+  0 < t → Coupling.traceDisagreementLaw (2 * t) = ↑(2 * t) / (2 * ↑(2 * t) - 1)
+'Coupling.trace_disagreement_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.trace_and_decomposition_agree : ∀ (t : ℕ),
+  0 < t → Coupling.traceDisagreementLaw (2 * t) = Coupling.coupledDisagreement (2 * t)
+'Coupling.trace_and_decomposition_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.successful_prefix_classification : ∀ (m : ℕ),
+  0 < m →
+    ∀ (xs : List ℕ),
+      (∀ u ∈ xs, u < 2 * m) →
+        ∀ (c : ℕ),
+          Coupling.runProposals m xs = some c →
+            ∃ r u rest, xs = List.replicate r (2 * m - 1) ++ u :: rest ∧ u < 2 * m - 1 ∧ Coupling.category m u = c
+'Coupling.successful_prefix_classification' depends on axioms: [propext, Quot.sound]
+Coupling.old_first_trace_count : ∀ (m r : ℕ), 0 < m → Coupling.traceOldFirstCount m r = if r = 0 then m else 0
+'Coupling.old_first_trace_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.old_trace_marginal_half : ∀ (m : ℕ), 0 < m → Coupling.traceOldFirstLaw m = 1 / 2
+'Coupling.old_trace_marginal_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.trace_binary_total_variation : ∀ (m : ℕ),
+  1 ≤ m → Coupling.binaryTV (Coupling.traceOldFirstLaw m) (Coupling.categoryLaw m m) = 1 / (2 * (2 * ↑m - 1))
+'Coupling.trace_binary_total_variation' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.four_block_count : ∀ (t : ℕ), Coupling.prefixCount (4 * t) = 2 * t
+'Coupling.four_block_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.prefix_minus_one : ∀ (t : ℕ), 0 < t → Coupling.prefixCount (4 * t - 1) = 2 * t - 1
+'Coupling.prefix_minus_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.prefix_minus_two : ∀ (t : ℕ), 0 < t → Coupling.prefixCount (4 * t - 2) = 2 * t - 2
+'Coupling.prefix_minus_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.sum_cutoff : ∀ (f : ℕ → ℕ) (k n : ℕ),
+  k ≤ n → (∑ u ∈ Finset.range n, if u < k then f u else 0) = ∑ u ∈ Finset.range k, f u
+'Coupling.sum_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.prefix_event_count : ∀ (t : ℕ),
+  0 < t → (∑ u ∈ Finset.range (4 * (2 * t)), if Coupling.prefixEvent (2 * t) u then 1 else 0) = 2 * t - 1
+'Coupling.prefix_event_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.prefix_common_zero_slot : ∀ (m u : ℕ),
+  2 ≤ m → Coupling.prefixEvent m u → Coupling.oldFirstSlot u = 4 ∧ Coupling.newFirstSlot m u = some 4
+'Coupling.prefix_common_zero_slot' depends on axioms: [propext, Quot.sound]
+Coupling.prefix_probability : ∀ (t : ℕ), 0 < t → Coupling.prefixProbability (2 * t) = ↑(2 * t - 1) / (4 * ↑(2 * t))
+'Coupling.prefix_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.retained_six_slot_mapping : ∀ (m u : ℕ),
+  1 ≤ m → Coupling.sixSlotSelect m (m - 1) (2 * m - 1) u = Coupling.newFirstSlot m u
+'Coupling.retained_six_slot_mapping' depends on axioms: [propext, Quot.sound]
+Coupling.old_six_slot_mapping : ∀ (u : ℕ), Coupling.sixSlotSelect 1 1 2 (u % 4) = some (Coupling.oldFirstSlot u)
+'Coupling.old_six_slot_mapping' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.retainID_injective : ∀ (m : ℕ), Function.Injective Coupling.retainID
+'Coupling.retainID_injective' depends on axioms: [propext]
+Coupling.retained_exactly_not_deleted : ∀ (m : ℕ) (hm : 0 < m) (x : Coupling.Original m),
+  (∃ r, Coupling.retainID r = x) ↔ x ≠ Coupling.deletedID m hm
+'Coupling.retained_exactly_not_deleted' depends on axioms: [propext, Quot.sound]
+Coupling.dataset_sizes : ∀ (m : ℕ),
+  4 ≤ m →
+    Fintype.card (Coupling.Original m) = 3 * m ∧
+      Fintype.card (Coupling.Retained m) = 3 * m - 1 ∧
+        (∑ r, if Coupling.groupA r = true then 1 else 0) = 2 * m - 1 ∧
+          (∑ r, if Coupling.groupA r = true then 0 else 1) = m ∧ 3 ≤ m - 1
+'Coupling.dataset_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.endpoint_labels : ∀ (x : Coupling.Location),
+  Coupling.label Coupling.Location.neg x ≠ Coupling.label Coupling.Location.pos x ↔ x ≠ Coupling.Location.zero
+'Coupling.endpoint_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.ideal_certificate_decisions : ∀ (e x : Coupling.Location),
+  e ≠ Coupling.Location.zero → ¬Coupling.basicPass e x ∧ (Coupling.runnerPass e x ↔ x = Coupling.Location.zero)
+'Coupling.ideal_certificate_decisions' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Coupling.sound_certificate_rejects_changed_label : ∀ {R : Type u_1} {S : Type u_2} (oldLabel : R → ℕ)
+  (assign : S → R → ℕ) (state : S) (keep accepted : R → Bool),
+  (∀ (r : R), keep r = true → accepted r = true → oldLabel r = assign state r) →
+    ∀ (r : R), keep r = true → oldLabel r ≠ assign state r → accepted r = false
+'Coupling.sound_certificate_rejects_changed_label' does not depend on any axioms
+Coupling.failure_counts : ∀ (m : ℕ),
+  1 ≤ m →
+    ∀ (e : Coupling.Location),
+      e ≠ Coupling.Location.zero →
+        Coupling.failures m Coupling.Variant.basic e = 3 * m - 1 ∧
+          Coupling.failures m Coupling.Variant.runner e = 2 * m - 1
+'Coupling.failure_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.round_zero_policy : ∀ (m : ℕ),
+  4 ≤ m →
+    ∀ (e : Coupling.Location),
+      e ≠ Coupling.Location.zero →
+        Coupling.abandons (3 * m - 1) (Coupling.failures m Coupling.Variant.basic e) = true ∧
+          Coupling.abandons (3 * m - 1) (Coupling.failures m Coupling.Variant.runner e) = true ∧
+            Coupling.saved (3 * m - 1) (Coupling.failures m Coupling.Variant.basic e) = 0 ∧
+              Coupling.saved (3 * m - 1) (Coupling.failures m Coupling.Variant.runner e) = 0 ∧
+                Coupling.duplicated (3 * m - 1) (Coupling.failures m Coupling.Variant.basic e) = 3 * m - 1 ∧
+                  Coupling.duplicated (3 * m - 1) (Coupling.failures m Coupling.Variant.runner e) = 2 * m - 1
+'Coupling.round_zero_policy' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.actual_indexed_shifts : ∀ (i : Fin 2),
+  |Coupling.indexedCenter Coupling.Location.neg i - Coupling.indexedCenter Coupling.Location.pos i| =
+    if i = 0 then 0 else 2
+'Coupling.actual_indexed_shifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.unit_cached_margins : ∀ (e x : Coupling.Location),
+  e ≠ Coupling.Location.zero → Coupling.runnerDistance e x - Coupling.winnerDistance e x = 1
+'Coupling.unit_cached_margins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.actual_changed_record_count : ∀ (m : ℕ),
+  1 ≤ m →
+    (∑ r,
+        if
+            Coupling.label Coupling.Location.neg (Coupling.location r) ≠
+              Coupling.label Coupling.Location.pos (Coupling.location r) then
+          1
+        else 0) =
+      2 * m - 1
+'Coupling.actual_changed_record_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.table_is_d2_sampling : ∀ (a : ℝ),
+  0 < a →
+    a < 1 → ∀ (i : Fin 6), Coupling.initPair a (Coupling.pairAt i).1 (Coupling.pairAt i).2 = Coupling.pairTable a i
+'Coupling.table_is_d2_sampling' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.diagonal_zero : ∀ (a : ℝ) (x : Coupling.Location), Coupling.initPair a x x = 0
+'Coupling.diagonal_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.local_representatives_fixed : ∀ (x : ℝ) (r first second : ℕ),
+  (if |x - x| ≤ |x - x| then 0 else 1) = 0 ∧ (fun x_1 => x) first = x ∧ (fun x_1 => x) second = x ∧ (fun x_1 => x) r = x
+'Coupling.local_representatives_fixed' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.record_location_counts : ∀ (m : ℕ) (x : Coupling.Location),
+  (∑ r, if Coupling.location r = x then 1 else 0) = Coupling.survivorCount m x
+'Coupling.record_location_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.transferred_weights : ∀ (m : ℕ),
+  1 ≤ m → ∀ (x : Coupling.Location), Coupling.transferredWeight m x = Coupling.serverWeight (↑m / (2 * ↑m - 1)) x
+'Coupling.transferred_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.old_transferred_weights : ∀ (m : ℝ), 0 < m → m / (2 * m) = 1 / 2 ∧ m / m = 1
+'Coupling.old_transferred_weights' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.table_probability_sum : ∀ (a : ℝ), 0 < a → a < 1 → ∑ i, Coupling.pairTable a i = 1
+'Coupling.table_probability_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.table_nonnegative : ∀ (a : ℝ), 0 < a → a < 1 → ∀ (i : Fin 6), 0 ≤ Coupling.pairTable a i
+'Coupling.table_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.six_table_signs : ∀ (a : ℝ),
+  1 / 2 < a →
+    a ≤ 4 / 7 →
+      0 ≤ a / 2 - 1 / 4 ∧
+        (1 - a) / 2 - 1 / 4 ≤ 0 ∧
+          0 ≤ a / (2 * (1 + 4 * (1 - a))) - 1 / 12 ∧
+            0 ≤ 2 * a * (1 - a) / (1 + 4 * (1 - a)) - 1 / 6 ∧
+              (1 - a) / (2 * (1 + 4 * a)) - 1 / 12 ≤ 0 ∧ 2 * a * (1 - a) / (1 + 4 * a) - 1 / 6 ≤ 0
+'Coupling.six_table_signs' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.initialization_tuple_TV : ∀ (a : ℝ), 1 / 2 < a → a ≤ 4 / 7 → Coupling.tupleTV a = a - 1 / 2
+'Coupling.initialization_tuple_TV' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.retained_parameter_range : ∀ (m : ℕ), 4 ≤ m → 1 / 2 < ↑m / (2 * ↑m - 1) ∧ ↑m / (2 * ↑m - 1) ≤ 4 / 7
+'Coupling.retained_parameter_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.retained_tuple_TV : ∀ (m : ℕ), 4 ≤ m → Coupling.tupleTV (↑m / (2 * ↑m - 1)) = 1 / (2 * (2 * ↑m - 1))
+'Coupling.retained_tuple_TV' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.opposite_probability_lower : ∀ (m : ℕ),
+  1 ≤ m → ∀ (bit : ℕ), (↑m - 1) / (2 * ↑m - 1) ≤ Coupling.oppositeProbability m bit
+'Coupling.opposite_probability_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.prefix_probability_real : ∀ (t : ℕ),
+  0 < t → Coupling.prefixProbability (2 * t) = (↑(2 * t) - 1) / (4 * ↑(2 * t))
+'Coupling.prefix_probability_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.wide_event_lower : ∀ (t : ℕ),
+  0 < t → ∀ (oldBit : ℕ → ℕ), Coupling.beta ↑(2 * t) ≤ Coupling.wideEventProbability (2 * t) oldBit
+'Coupling.wide_event_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.narrow_event_lower : ∀ (t : ℕ), 0 < t → Coupling.beta ↑(2 * t) ≤ Coupling.narrowEventProbability (2 * t)
+'Coupling.narrow_event_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.beta_gt_sixteenth : ∀ (m : ℝ), 4 ≤ m → 1 / 16 < Coupling.beta m
+'Coupling.beta_gt_sixteenth' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.beta_times_failed : ∀ (m : ℝ), 4 ≤ m → Coupling.beta m * (2 * m - 1) = (m - 1) ^ 2 / (4 * m)
+'Coupling.beta_times_failed' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.linear_work_constant : ∀ (m : ℝ), 4 ≤ m → 3 * m / 32 ≤ (m - 1) ^ 2 / (4 * m)
+'Coupling.linear_work_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Coupling.expectation_event_lower : ∀ {Ω : Type u_1} [inst : Fintype Ω] (weight work : Ω → ℝ) (event : Ω → Prop)
+  [inst_1 : DecidablePred event],
+  (∀ (x : Ω), 0 ≤ weight x) →
+    (∀ (x : Ω), 0 ≤ work x) →
+      ∀ (c p : ℝ),
+        0 ≤ c →
+          (∀ (x : Ω), event x → c ≤ work x) →
+            (p ≤ ∑ x, if event x then weight x else 0) → p * c ≤ ∑ x, weight x * work x
+'Coupling.expectation_event_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Coupling.obstruction_expectation : ∀ {Ω : Type u_1} [inst : Fintype Ω] (m : ℕ),
+  4 ≤ m →
+    ∀ (weight F J : Ω → ℝ) (event : Ω → Prop) [inst_1 : DecidablePred event],
+      (∀ (x : Ω), 0 ≤ weight x) →
+        (∀ (x : Ω), 0 ≤ F x) →
+          (∀ (x : Ω), 0 ≤ J x) →
+            (Coupling.beta ↑m ≤ ∑ x, if event x then weight x else 0) →
+              (∀ (x : Ω), event x → 2 * ↑m - 1 ≤ F x) →
+                (∀ (x : Ω), event x → 2 * ↑m - 1 ≤ J x) →
+                  (↑m - 1) ^ 2 / (4 * ↑m) ≤ ∑ x, weight x * F x ∧ (↑m - 1) ^ 2 / (4 * ↑m) ≤ ∑ x, weight x * J x
+'Coupling.obstruction_expectation' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.power_parameter : ∀ (h : ℕ), 2 ≤ h → 4 ≤ 2 ^ h ∧ ∃ t, 0 < t ∧ 2 ^ h = 2 * t
+'Coupling.power_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.event_probability_lower : ∀ (h : ℕ),
+  2 ≤ h → Coupling.beta ↑(2 ^ h) ≤ Coupling.deletionEventProbability h ∧ 1 / 16 < Coupling.deletionEventProbability h
+'Coupling.event_probability_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.initialization_word_offsets : ∀ (h : ℕ),
+  Coupling.wordsNeeded 2 = 1 ∧
+    (h + 2 ≤ 64 → Coupling.wordsNeeded (h + 2) = 1) ∧ (64 < h + 2 → 1 < Coupling.wordsNeeded (h + 2))
+'Coupling.initialization_word_offsets' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.each_variant_event_counts : ∀ (m : ℕ),
+  4 ≤ m →
+    ∀ (v : Coupling.Variant),
+      2 * m - 1 ≤ Coupling.failures m v Coupling.Location.neg ∧
+        Coupling.saved (3 * m - 1) (Coupling.failures m v Coupling.Location.neg) = 0 ∧
+          Coupling.duplicated (3 * m - 1) (Coupling.failures m v Coupling.Location.neg) =
+            Coupling.failures m v Coupling.Location.neg
+'Coupling.each_variant_event_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.event_work_contribution : ∀ (h : ℕ),
+  2 ≤ h →
+    ∀ (v : Coupling.Variant),
+      (↑(2 ^ h) - 1) ^ 2 / (4 * ↑(2 ^ h)) ≤
+          Coupling.deletionEventProbability h * ↑(Coupling.failures (2 ^ h) v Coupling.Location.neg) ∧
+        (↑(2 ^ h) - 1) ^ 2 / (4 * ↑(2 ^ h)) ≤
+          Coupling.deletionEventProbability h *
+            ↑(Coupling.duplicated (3 * 2 ^ h - 1) (Coupling.failures (2 ^ h) v Coupling.Location.neg))
+'Coupling.event_work_contribution' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Coupling.finite_law_expected_work : ∀ {Ω : Type u_1} [inst : Fintype Ω] (h : ℕ),
+  2 ≤ h →
+    ∀ (v : Coupling.Variant) (weight : Ω → ℝ) (event : Ω → Prop) [inst_1 : DecidablePred event] (F J : Ω → ℝ),
+      (∀ (x : Ω), 0 ≤ weight x) →
+        (∀ (x : Ω), 0 ≤ F x) →
+          (∀ (x : Ω), 0 ≤ J x) →
+            (Coupling.deletionEventProbability h ≤ ∑ x, if event x then weight x else 0) →
+              (∀ (x : Ω), event x → F x = ↑(Coupling.failures (2 ^ h) v Coupling.Location.neg)) →
+                (∀ (x : Ω),
+                    event x →
+                      J x =
+                        ↑(Coupling.duplicated (3 * 2 ^ h - 1) (Coupling.failures (2 ^ h) v Coupling.Location.neg))) →
+                  (↑(2 ^ h) - 1) ^ 2 / (4 * ↑(2 ^ h)) ≤ ∑ x, weight x * F x ∧
+                    (↑(2 ^ h) - 1) ^ 2 / (4 * ↑(2 ^ h)) ≤ ∑ x, weight x * J x
+'Coupling.finite_law_expected_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.deletion_witness_summary : ∀ (h : ℕ),
+  2 ≤ h →
+    Fintype.card (Coupling.Original (2 ^ h)) = 3 * 2 ^ h ∧
+      Fintype.card (Coupling.Retained (2 ^ h)) = 3 * 2 ^ h - 1 ∧
+        Coupling.tupleTV (↑(2 ^ h) / (2 * ↑(2 ^ h) - 1)) = 1 / (2 * (2 * ↑(2 ^ h) - 1)) ∧
+          Coupling.beta ↑(2 ^ h) ≤ Coupling.deletionEventProbability h ∧
+            1 / 16 < Coupling.deletionEventProbability h ∧
+              ∀ (v : Coupling.Variant),
+                Coupling.saved (3 * 2 ^ h - 1) (Coupling.failures (2 ^ h) v Coupling.Location.neg) = 0 ∧
+                  (↑(2 ^ h) - 1) ^ 2 / (4 * ↑(2 ^ h)) ≤
+                    Coupling.deletionEventProbability h *
+                      ↑(Coupling.duplicated (3 * 2 ^ h - 1) (Coupling.failures (2 ^ h) v Coupling.Location.neg))
+'Coupling.deletion_witness_summary' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Coupling.countable_expectation_event_lower : ∀ {Ω : Type u_1} (weight work : Ω → ℝ) (event : Ω → Prop)
+  [inst : DecidablePred event],
+  (∀ (x : Ω), 0 ≤ weight x) →
+    Summable weight →
+      ∀ (M : ℝ),
+        (∀ (x : Ω), 0 ≤ work x ∧ work x ≤ M) →
+          ∀ (c p : ℝ),
+            0 ≤ c →
+              (∀ (x : Ω), event x → c ≤ work x) →
+                (p ≤ ∑' (x : Ω), if event x then weight x else 0) → p * c ≤ ∑' (x : Ω), weight x * work x
+'Coupling.countable_expectation_event_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Coupling.countable_law_expected_work : ∀ {Ω : Type u_1} (h : ℕ),
+  2 ≤ h →
+    ∀ (v : Coupling.Variant) (weight : Ω → ℝ) (event : Ω → Prop) [inst : DecidablePred event] (work : Ω → ℝ),
+      (∀ (x : Ω), 0 ≤ weight x) →
+        Summable weight →
+          ∀ (M : ℝ),
+            (∀ (x : Ω), 0 ≤ work x ∧ work x ≤ M) →
+              (Coupling.deletionEventProbability h ≤ ∑' (x : Ω), if event x then weight x else 0) →
+                (∀ (x : Ω), event x → work x = ↑(Coupling.failures (2 ^ h) v Coupling.Location.neg)) →
+                  (↑(2 ^ h) - 1) ^ 2 / (4 * ↑(2 ^ h)) ≤ ∑' (x : Ω), weight x * work x
+'Coupling.countable_law_expected_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.narrow_joint_count : ∀ (t r : ℕ), 0 < t → Coupling.narrowJointCount (2 * t) r = (2 * t - 1) * (2 * t)
+'Coupling.narrow_joint_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.narrow_joint_trace_mass : ∀ (t : ℕ),
+  0 < t →
+    HasSum (fun r => ↑(Coupling.narrowJointCount (2 * t) r) / (4 * ↑(2 * t)) * Coupling.traceWeight (2 * t) r)
+      (Coupling.narrowEventProbability (2 * t))
+'Coupling.narrow_joint_trace_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.second_category_count : ∀ (m : ℕ), 1 ≤ m → (∑ u ∈ Finset.range (2 * m - 1), if u < m then 0 else 1) = m - 1
+'Coupling.second_category_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.wide_opposite_count : ∀ (m bit : ℕ), 1 ≤ m → Coupling.wideOppositeCount m bit = if bit = 0 then m - 1 else m
+'Coupling.wide_opposite_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.wide_opposite_trace_mass : ∀ (m bit : ℕ),
+  1 ≤ m →
+    HasSum (fun r => ↑(Coupling.wideOppositeCount m bit) * Coupling.traceWeight m r)
+      (Coupling.oppositeProbability m bit)
+'Coupling.wide_opposite_trace_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.local_product_trace_normalized : ∀ (m : ℕ),
+  1 ≤ m → HasSum (fun r => 4 * ↑m * (2 * ↑m - 1) / (4 * ↑m) * Coupling.traceWeight m r) 1
+'Coupling.local_product_trace_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+Coupling.wide_joint_trace_mass : ∀ (m : ℕ),
+  1 ≤ m →
+    ∀ (oldBit : ℕ → ℕ),
+      HasSum (fun r => ↑(Coupling.wideJointCount m oldBit) / (4 * ↑m) * Coupling.traceWeight m r)
+        (Coupling.wideEventProbability m oldBit)
+'Coupling.wide_joint_trace_mass' depends on axioms: [propext, Classical.choice, Quot.sound]

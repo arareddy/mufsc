@@ -1,0 +1,202 @@
+{
+  ".gitignore": {
+    "bytes": 42,
+    "sha256": "3154bf320b36e8b744b85609af619768040009ae9b3b8018eb3738707fd46f04"
+  },
+  "AXIOM_AUDIT.json": {
+    "bytes": 220,
+    "sha256": "955a9563299a3d501968c89d3317ed8751a3a987bb70b37d0be45d1613a05d05"
+  },
+  "COVERAGE.md": {
+    "bytes": 11974,
+    "sha256": "32ffad2002f55a52903554560a6700ca854a21991a3ab7c797a8c4a4b5c44edc"
+  },
+  "DEPENDENCIES.json": {
+    "bytes": 3520,
+    "sha256": "4576babd6fa78c0197e32e9b9e750c6449fb3f0b7516a36dc7ad1bb299cda0b1"
+  },
+  "PAPER_INPUTS.json": {
+    "bytes": 543,
+    "sha256": "d0bde3b96c9101055e222da313da720df3cf315baa1613a6ac7ff6d4250e9f2b"
+  },
+  "PAPER_INPUTS_AT_FINISH.json": {
+    "bytes": 1057,
+    "sha256": "9e3271b5cee1fc737012e5bb753adba79434a95ae3bf9ac91c141de57d047c18"
+  },
+  "README.md": {
+    "bytes": 2703,
+    "sha256": "2bd03c24116489e70afe3eddcaae3d4287a2ab4f38007fb8475d39375c3305bd"
+  },
+  "REPORT.md": {
+    "bytes": 2633,
+    "sha256": "ef2e7d9a989c366f60452a3b9e340ee14765e2244cb25f12f5c2ade91c077c7e"
+  },
+  "STATUS.json": {
+    "bytes": 832,
+    "sha256": "1960d5fd38cb158d949c7dde7153fe5d0e052a8969905a87eecdba272496ab1d"
+  },
+  "THEOREM_INDEX.json": {
+    "bytes": 9352,
+    "sha256": "0e9da39f06a97f9355e45215953e0ed626a0bf6fc61dcdc3d97a116bf1004e87"
+  },
+  "build.py": {
+    "bytes": 1629,
+    "sha256": "1e742355a8702209360a3c70a98774c14e95b9a9131541664c04d39d9998abe8"
+  },
+  "configure.py": {
+    "bytes": 1279,
+    "sha256": "c74bb0535f19aab12859a85e2322fe36272f63679a4036c481044f8666476826"
+  },
+  "lean-toolchain": {
+    "bytes": 25,
+    "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+  },
+  "logs/final_AxiomAudit.json": {
+    "bytes": 490,
+    "sha256": "da4278e042012b07fa1b37abaab5e7ce9723ea71e397a616a2173f3b13a9feaa"
+  },
+  "logs/final_AxiomAudit.log": {
+    "bytes": 28113,
+    "sha256": "c407d5fe88cecd3ecf4f91e5b9522bf637def873662b11ffe3add4c4d9bec2c5"
+  },
+  "logs/final_Coupling.json": {
+    "bytes": 486,
+    "sha256": "d90d5965948f500ba45dd7e679176970bfec3dda0ff2a9f15e02c0d471615d89"
+  },
+  "logs/final_Coupling.log": {
+    "bytes": 880,
+    "sha256": "5308a99442c4c4b12c2323d7e30991820f812a853eac72fbc6832a6e84db19ef"
+  },
+  "logs/final_Deletion.json": {
+    "bytes": 486,
+    "sha256": "0f3c50efc1d3c0084b0a85512d06e1633a13dda37ae9e43934528ddc8a7df719"
+  },
+  "logs/final_Deletion.log": {
+    "bytes": 942,
+    "sha256": "6bdea3c441bb6240eea88c3a8f4bb1722002c9b6e397631d5cc3ee705590602d"
+  },
+  "logs/final_InfiniteExpectation.json": {
+    "bytes": 508,
+    "sha256": "eae97adc4139562cfe0b36df52d39013ba536480cfece0b29128622f5121c83a"
+  },
+  "logs/final_InfiniteExpectation.log": {
+    "bytes": 202,
+    "sha256": "1838f97c3b2398db009080db88999a04df7a4e0acbd31c7c903bd4435a728bb6"
+  },
+  "logs/final_Initialization.json": {
+    "bytes": 498,
+    "sha256": "7afd47897bc6a7b32285656072f8ff4de816256fe253789421c084384a0c9b4b"
+  },
+  "logs/final_Initialization.log": {
+    "bytes": 826,
+    "sha256": "2a5f4b43d2c035fac6d154c12859a3fb3450c250acb48227d0bf2dcc14cdbf02"
+  },
+  "logs/final_JointTrace.json": {
+    "bytes": 490,
+    "sha256": "b895933a2576eab17eb3c88d39e58aa08eeb172e431d8b557fee72207e402762"
+  },
+  "logs/final_JointTrace.log": {
+    "bytes": 561,
+    "sha256": "f4d0cd9e4a65bc06992c2ef01ac77272bf4a576f7b2da1696cf298498c604dfe"
+  },
+  "logs/final_Obstruction.json": {
+    "bytes": 492,
+    "sha256": "5ac7b0e17e1bf96f0c4b86071a89cc70fac9ad1f22d69435f74a95f081c94d2f"
+  },
+  "logs/final_Obstruction.log": {
+    "bytes": 476,
+    "sha256": "b10e8245022cb0147b779f02d3727248454b1c1d13b844b010acb937fee747d0"
+  },
+  "logs/final_PrefixEvent.json": {
+    "bytes": 492,
+    "sha256": "f591dcc8b598a4fe8ae2b395ca386fd9abaca3043641ed0e52331b9b325d1739"
+  },
+  "logs/final_PrefixEvent.log": {
+    "bytes": 611,
+    "sha256": "0c02f4a3f19e263a25a213dd76f472aabe90fd1ae6d97a87815ad28d2fcdc437"
+  },
+  "logs/final_Rejection.json": {
+    "bytes": 488,
+    "sha256": "ca10c291521b0915b4f03115ad8e9a3ff01c13f28278cc01e48b2b12d11df475"
+  },
+  "logs/final_Rejection.log": {
+    "bytes": 563,
+    "sha256": "31a7b9fe71bfdca64c2daf8201c1d9fecd15f34bb966b96281d89cd12b617bc5"
+  },
+  "logs/final_Traces.json": {
+    "bytes": 482,
+    "sha256": "790921ccb417e3887a949fbfde7fc729f55b67832052bc2c2594329aeb360328"
+  },
+  "logs/final_Traces.log": {
+    "bytes": 804,
+    "sha256": "7f894fa62b9737414fe47859f445cfd0d6a7c20be5bc4bbc5cf2d2cb636c5c95"
+  },
+  "logs/final_WordBlocks.json": {
+    "bytes": 490,
+    "sha256": "9ad99512342bc7088fb4803ad0b9a4206ed256c6c12ad30802dad1180026e441"
+  },
+  "logs/final_WordBlocks.log": {
+    "bytes": 450,
+    "sha256": "4798e8211eefb51f77218d21e06033ebfa6458ea05ac6fecd48f07b90b5f07fc"
+  },
+  "logs/final_WorkProbability.json": {
+    "bytes": 500,
+    "sha256": "5a5ee3071a1581a0bb42f78226d6be05cb8529c62d6ad48b3c29b63d1d9c0434"
+  },
+  "logs/final_WorkProbability.log": {
+    "bytes": 449,
+    "sha256": "0d072523ed272dbf247ab8794eb1d8050b71474447c00d562527a0d6e506d5b1"
+  },
+  "proof/AxiomAudit.lean": {
+    "bytes": 8582,
+    "sha256": "21950da3489058afaa1528203a451e7fb1cbdc1b36e11aa2231f0a27a4bc25cb"
+  },
+  "proof/Coupling.lean": {
+    "bytes": 6780,
+    "sha256": "c094fe9c9309a4435bfa9162ecf6cdf45b16d7b027402fa3283d2a0c85b44bfa"
+  },
+  "proof/Deletion.lean": {
+    "bytes": 7737,
+    "sha256": "e6f7c126675d0a4ab3224a8b9a4e3b36db8811700ab6b41adb258309f8a7387c"
+  },
+  "proof/InfiniteExpectation.lean": {
+    "bytes": 2841,
+    "sha256": "6b6f2c0ea686a42739fcbf87aaaabafeebb0c570b9739a1d3344152196cac779"
+  },
+  "proof/Initialization.lean": {
+    "bytes": 6199,
+    "sha256": "12d361d8e1da3cbdd38ee65bcafb93ec88899e2ad68c2e54d4eda81365bccaf1"
+  },
+  "proof/JointTrace.lean": {
+    "bytes": 5618,
+    "sha256": "d6c1e5e4173a0cd61f0bda95157a97bd6f920ed152edb090710ec0cfb3457ab7"
+  },
+  "proof/Obstruction.lean": {
+    "bytes": 6043,
+    "sha256": "07d6389a634738bf86dc564ee4411f83b34fa4bfc8ef111741c9f1d804a7d031"
+  },
+  "proof/PrefixEvent.lean": {
+    "bytes": 5013,
+    "sha256": "491ad213ab43e9efbe79632f398bbeafe75f0c10f46cec533646766b2c2ab7fb"
+  },
+  "proof/Rejection.lean": {
+    "bytes": 4940,
+    "sha256": "39c724a9471a64082c219eb0818c7637b2ff2c2fc471207ac8aa65b2652c5f2e"
+  },
+  "proof/Traces.lean": {
+    "bytes": 6713,
+    "sha256": "5961145e102e7128289680f481946645feb2e44cbaf5bf1bddfc704c13ae5fc3"
+  },
+  "proof/WordBlocks.lean": {
+    "bytes": 3109,
+    "sha256": "b6128dd6f9708327304130feab437855899c557f7e7e0c82fa072a2cdfb65d93"
+  },
+  "proof/WorkProbability.lean": {
+    "bytes": 6045,
+    "sha256": "72adc023a2a4dec88f3b929a33d86c8a7f825c89a6d1cab63cadf86a12d6038d"
+  },
+  "verify.py": {
+    "bytes": 1944,
+    "sha256": "d900b19fa20f072f61e823ab6f8f8d5df811fec060f98be718bdb80f085efa32"
+  }
+}

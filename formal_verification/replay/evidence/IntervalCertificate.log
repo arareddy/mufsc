@@ -1,0 +1,3 @@
+'Replay.intervalGap_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.outward_runner_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.outward_basic_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]

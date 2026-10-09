@@ -1,0 +1,64 @@
+{
+  "dataset": "credit",
+  "kind": "tabular",
+  "format": "safe compressed NumPy arrays; allow_pickle=False",
+  "scientific_metadata": {
+    "name": "credit",
+    "version": "p124-unique-source-v2",
+    "num_clients": 100,
+    "n_total": 30000,
+    "d": 23,
+    "clip": 74.0,
+    "source_sha256": "3a0c55f4ac6068753781ff4c47fac2a965c0841aba663065db34419d22e87065",
+    "selection_seed": 0,
+    "source_record_id_scope": "zero-based row of immutable processed full_data; verified seed42 partition"
+  },
+  "arrays": {
+    "X": {
+      "dtype": "float64",
+      "shape": [
+        30000,
+        23
+      ],
+      "raw_C_order_sha256": "dd25a62f817b005d7edccfe6e71b82a46bec54acd5c824a7a7615960c2ed7d0c"
+    },
+    "groups": {
+      "dtype": "int64",
+      "shape": [
+        30000
+      ],
+      "raw_C_order_sha256": "a80887dcbd2f763b4b2ba6a596b8fbadfb68c42db95362a83cf9a48f60c3e321"
+    },
+    "offsets": {
+      "dtype": "int64",
+      "shape": [
+        101
+      ],
+      "raw_C_order_sha256": "52e7bff298977025ca247b3427f3809a79bbb9b9c8d1dc95a977b88c7118ffd4"
+    },
+    "client_ids": {
+      "dtype": "int64",
+      "shape": [
+        100
+      ],
+      "raw_C_order_sha256": "96bdba67cd0b5e6dc0f9e399f66b17eae627eac812d0620119e87687d789546a"
+    },
+    "row_ids": {
+      "dtype": "int64",
+      "shape": [
+        30000
+      ],
+      "raw_C_order_sha256": "5418fdc2deb249cbcedabdbce8b34fda25e12d82a0568d40437460f739834967"
+    },
+    "source_clients": {
+      "dtype": "int64",
+      "shape": [
+        100
+      ],
+      "raw_C_order_sha256": "96bdba67cd0b5e6dc0f9e399f66b17eae627eac812d0620119e87687d789546a"
+    }
+  },
+  "release_file": "data/tabular/credit.npz",
+  "release_sha256": "25a6a834e1c3140443cc226d9577499ea95ebf83fea433bfcff3b651cfcdb1a3",
+  "verified_lossless": true
+}

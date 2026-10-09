@@ -1,0 +1,317 @@
+[
+  {
+    "source": "proof/FiniteLaw.lean",
+    "sha256": "89eb6426fa12f9d4a207a8cbce29c2a513192e33e9213130c7e021aba7ee056c",
+    "started_utc": "2026-09-26T10:14:16.696319+00:00",
+    "finished_utc": "2026-09-26T10:14:18.372193+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/FiniteLaw.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/FiniteLaw.olean",
+      "proof/FiniteLaw.lean"
+    ]
+  },
+  {
+    "source": "proof/WeightedRoot.lean",
+    "sha256": "a75bddc2d3a698450b8b81506cea5b65d689fb6711235b9fb1dee1bb9c92f18e",
+    "started_utc": "2026-09-26T10:14:18.406742+00:00",
+    "finished_utc": "2026-09-26T10:14:19.992429+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/WeightedRoot.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/WeightedRoot.olean",
+      "proof/WeightedRoot.lean"
+    ]
+  },
+  {
+    "source": "proof/Geometry.lean",
+    "sha256": "4ae3594196384bd2e42275673d7aa75b97a9ce4abd82b405dc768a54156e591c",
+    "started_utc": "2026-09-26T10:14:20.025122+00:00",
+    "finished_utc": "2026-09-26T10:14:21.172492+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/Geometry.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/Geometry.olean",
+      "proof/Geometry.lean"
+    ]
+  },
+  {
+    "source": "proof/Transfer.lean",
+    "sha256": "c8ac849c8ff371967c9acb0e7e77eba5ccfec1a584adecf1abbd4ec3afa61eba",
+    "started_utc": "2026-09-26T10:14:21.204890+00:00",
+    "finished_utc": "2026-09-26T10:14:22.795951+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/Transfer.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/Transfer.olean",
+      "proof/Transfer.lean"
+    ]
+  },
+  {
+    "source": "proof/Corollaries.lean",
+    "sha256": "41b7cf9bd05ebc667e554e2a5d3a324dfeea3d442fd06f63676dfccb9ec0e382",
+    "started_utc": "2026-09-26T10:14:22.834692+00:00",
+    "finished_utc": "2026-09-26T10:14:25.034311+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/Corollaries.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/Corollaries.olean",
+      "proof/Corollaries.lean"
+    ]
+  },
+  {
+    "source": "proof/SplitSlices.lean",
+    "sha256": "137ec5885d054b47865822be85d7e8548654e56fc63c9b738abc86885b14ed6b",
+    "started_utc": "2026-09-26T10:14:25.072807+00:00",
+    "finished_utc": "2026-09-26T10:14:26.109586+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/SplitSlices.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/SplitSlices.olean",
+      "proof/SplitSlices.lean"
+    ]
+  },
+  {
+    "source": "proof/MergedClients.lean",
+    "sha256": "6006363edbd2a4562ec816714f1ea4a7d03b976ab2baf5caec5f78fe354d696c",
+    "started_utc": "2026-09-26T10:14:26.143052+00:00",
+    "finished_utc": "2026-09-26T10:14:28.278309+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/MergedClients.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/MergedClients.olean",
+      "proof/MergedClients.lean"
+    ]
+  },
+  {
+    "source": "proof/Quantization.lean",
+    "sha256": "5b8c353c19675af2f1dcab9e5599abb6b448d08624bff9a0157d83aa115310ab",
+    "started_utc": "2026-09-26T10:14:28.315304+00:00",
+    "finished_utc": "2026-09-26T10:14:29.729106+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/Quantization.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/Quantization.olean",
+      "proof/Quantization.lean"
+    ]
+  },
+  {
+    "source": "proof/GroupComparison.lean",
+    "sha256": "f10216043f060442a2b1adf8b9c7a244028d62c59ebf36a6fee87427d3ae8ad3",
+    "started_utc": "2026-09-26T10:14:29.767373+00:00",
+    "finished_utc": "2026-09-26T10:14:31.714714+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/GroupComparison.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/GroupComparison.olean",
+      "proof/GroupComparison.lean"
+    ]
+  },
+  {
+    "source": "proof/RationalCopies.lean",
+    "sha256": "3b3cdfc91aa5a0d415d3bbe74c11769c9209fc6139d9fa683f92021df7f70095",
+    "started_utc": "2026-09-26T10:14:31.751783+00:00",
+    "finished_utc": "2026-09-26T10:14:33.292458+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/RationalCopies.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/RationalCopies.olean",
+      "proof/RationalCopies.lean"
+    ]
+  },
+  {
+    "source": "proof/AnchorAggregation.lean",
+    "sha256": "33889b27e3d029f120201864cae5cf62ad075975a51e4563e40bc86c87befee7",
+    "started_utc": "2026-09-26T10:14:33.327097+00:00",
+    "finished_utc": "2026-09-26T10:14:34.487487+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/AnchorAggregation.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/AnchorAggregation.olean",
+      "proof/AnchorAggregation.lean"
+    ]
+  },
+  {
+    "source": "proof/Normalization.lean",
+    "sha256": "1364604b85778e37bb39a758cb1dc36f6fffec3b965fe0a565a947838ebe1a74",
+    "started_utc": "2026-09-26T10:14:34.522858+00:00",
+    "finished_utc": "2026-09-26T10:14:35.620838+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/Normalization.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/Normalization.olean",
+      "proof/Normalization.lean"
+    ]
+  },
+  {
+    "source": "proof/TouchedMass.lean",
+    "sha256": "e150cb95ebb1f8c621212ffb919bb5d75c5deeec7fb75bfeb5846fc69fc15dea",
+    "started_utc": "2026-09-26T10:14:35.658597+00:00",
+    "finished_utc": "2026-09-26T10:14:36.877525+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/TouchedMass.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/TouchedMass.olean",
+      "proof/TouchedMass.lean"
+    ]
+  },
+  {
+    "source": "proof/WarmStart.lean",
+    "sha256": "6d60fa261394ce5a0b61580d5fcddc57b8f2d4cf7a4aa194449fe579150e9d99",
+    "started_utc": "2026-09-26T10:14:36.914681+00:00",
+    "finished_utc": "2026-09-26T10:14:38.450518+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/WarmStart.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/WarmStart.olean",
+      "proof/WarmStart.lean"
+    ]
+  },
+  {
+    "source": "proof/Audit.lean",
+    "sha256": "52f97e7b17ddb1a6391ebec53580fa237bbe0293a742bcc5225daa366f2bcf6d",
+    "started_utc": "2026-09-26T10:16:27.284483+00:00",
+    "finished_utc": "2026-09-26T10:16:39.004786+00:00",
+    "exit_code": 0,
+    "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+    "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "threads": 1,
+    "trust": 0,
+    "compiler_output": "logs/Audit.log",
+    "command": [
+      "<LEAN>",
+      "-j1",
+      "--trust=0",
+      "-DwarningAsError=true",
+      "-o",
+      "build/Audit.olean",
+      "proof/Audit.lean"
+    ]
+  }
+]

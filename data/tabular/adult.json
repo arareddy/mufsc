@@ -1,0 +1,64 @@
+{
+  "dataset": "adult",
+  "kind": "tabular",
+  "format": "safe compressed NumPy arrays; allow_pickle=False",
+  "scientific_metadata": {
+    "name": "adult",
+    "version": "p124-unique-source-v2",
+    "num_clients": 100,
+    "n_total": 30162,
+    "d": 103,
+    "clip": 175.0,
+    "source_sha256": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e",
+    "selection_seed": 0,
+    "source_record_id_scope": "zero-based row of immutable processed full_data; verified seed42 partition"
+  },
+  "arrays": {
+    "X": {
+      "dtype": "float64",
+      "shape": [
+        30162,
+        103
+      ],
+      "raw_C_order_sha256": "6b437cfdb1ebf154012fc53aa2ae5a225c2a29905560f8149d61dec9f1eb746d"
+    },
+    "groups": {
+      "dtype": "int64",
+      "shape": [
+        30162
+      ],
+      "raw_C_order_sha256": "0eecd31ba3d71f366f18a4a013af89cf27ae6c1fb3ba91ed2fd7252709532d4c"
+    },
+    "offsets": {
+      "dtype": "int64",
+      "shape": [
+        101
+      ],
+      "raw_C_order_sha256": "c029eb6e93b19a904b7e87f8155b15c9e4a08232d779287ac487bfd60b255d23"
+    },
+    "client_ids": {
+      "dtype": "int64",
+      "shape": [
+        100
+      ],
+      "raw_C_order_sha256": "96bdba67cd0b5e6dc0f9e399f66b17eae627eac812d0620119e87687d789546a"
+    },
+    "row_ids": {
+      "dtype": "int64",
+      "shape": [
+        30162
+      ],
+      "raw_C_order_sha256": "c77633d826e5f7b15bf687d80032923f51b5f88ada541050f65e7febc78ecfe1"
+    },
+    "source_clients": {
+      "dtype": "int64",
+      "shape": [
+        100
+      ],
+      "raw_C_order_sha256": "96bdba67cd0b5e6dc0f9e399f66b17eae627eac812d0620119e87687d789546a"
+    }
+  },
+  "release_file": "data/tabular/adult.npz",
+  "release_sha256": "9be111335b4f9d371607c4971de45a1766e6949dff54a64933c8d2b59de3e047",
+  "verified_lossless": true
+}

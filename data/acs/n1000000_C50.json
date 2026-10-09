@@ -1,0 +1,111 @@
+{
+  "dataset": "n1000000_C50",
+  "kind": "acs",
+  "format": "safe compressed NumPy arrays; allow_pickle=False",
+  "scientific_metadata": {
+    "name": "n1000000_C50",
+    "version": "acs2018-ftf1-p3-v1",
+    "clip": 8,
+    "d": 16,
+    "original_npy_sha256": {
+      "X": "b6898cb836dcefc0f0433e4cb9aac0e93832c9292fc7c703d27fbaf2335c083b",
+      "groups": "6d85a0766fbe46e0f86c59fb86a09beeec4b7e75f6b4783181b00400d585931b",
+      "offsets": "1a65c222e5a4af7511d3060b3651f4fa1361d212c3309d214b0a39f48c832c35",
+      "row_ids": "40c7089e6b4537d03d9da93abc8610b3aea8117ebe3383ec90c583097c916456"
+    },
+    "geography": {
+      "0": "MA",
+      "1": "MO",
+      "10": "AL",
+      "11": "IA",
+      "12": "WI",
+      "13": "MN",
+      "14": "HI",
+      "15": "VT",
+      "16": "NJ",
+      "17": "ND",
+      "18": "CT",
+      "19": "MI",
+      "2": "OR",
+      "20": "RI",
+      "21": "MD",
+      "22": "UT",
+      "23": "KY",
+      "24": "PA",
+      "25": "OK",
+      "26": "NE",
+      "27": "AK",
+      "28": "FL",
+      "29": "WA",
+      "3": "CA",
+      "30": "WV",
+      "31": "LA",
+      "32": "NV",
+      "33": "MT",
+      "34": "VA",
+      "35": "GA",
+      "36": "SD",
+      "37": "TX",
+      "38": "IL",
+      "39": "ID",
+      "4": "AR",
+      "40": "DE",
+      "41": "SC",
+      "42": "WY",
+      "43": "CO",
+      "44": "IN",
+      "45": "NH",
+      "46": "TN",
+      "47": "NY",
+      "48": "KS",
+      "49": "NM",
+      "5": "AZ",
+      "6": "OH",
+      "7": "MS",
+      "8": "ME",
+      "9": "NC"
+    },
+    "sample_hash": null
+  },
+  "arrays": {
+    "X": {
+      "dtype": "float64",
+      "shape": [
+        1000000,
+        16
+      ],
+      "raw_C_order_sha256": "db9f6f7d49e8036bcbf3321a6ce8423110d078452e006e9c72cba9265482c07e"
+    },
+    "groups": {
+      "dtype": "int64",
+      "shape": [
+        1000000
+      ],
+      "raw_C_order_sha256": "88f28305e7d4f5bba1c217eb83643fcc92c9032017a7eb7934f2bcc0a0b34654"
+    },
+    "offsets": {
+      "dtype": "int64",
+      "shape": [
+        51
+      ],
+      "raw_C_order_sha256": "d653d92a00abc5a9469544e4348d45e0c1ff2b979603cc37fcca6df51ab979bb"
+    },
+    "row_ids": {
+      "dtype": "int64",
+      "shape": [
+        1000000
+      ],
+      "raw_C_order_sha256": "a4a917aed64cb2d3e0a000f3647d2de30c234c8781233ddcad1eaebec91dca2d"
+    },
+    "client_ids": {
+      "dtype": "int64",
+      "shape": [
+        50
+      ],
+      "raw_C_order_sha256": "c202d9cfc7858fd49d522047e16948359bbbb2eda2d3825d552e45a78d5f8585"
+    }
+  },
+  "release_file": "data/acs/n1000000_C50.npz",
+  "release_sha256": "04f46333052636a0c65232542e2ebdba94bed2c6cea2a5701b6b41cd48d09fa3",
+  "verified_lossless": true
+}

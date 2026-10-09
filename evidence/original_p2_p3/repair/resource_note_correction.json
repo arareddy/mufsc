@@ -1,0 +1,4 @@
+{
+  "correction": "Pilot resource note mistakenly called a 16 GiB conservative capacity budget the host RAM. Actual measured hw.memsize is 51539607552 bytes (48 GiB), Apple M3 Max. The hardware manifest was already correct. This correction strengthens available capacity; it changes no numerical input, gate, run manifest or measurement.",
+  "source": "remediation/p3/execution/hardware_observation.json"
+}

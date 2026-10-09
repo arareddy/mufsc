@@ -1,0 +1,10 @@
+{
+  "theorems_inspected": 72,
+  "reported_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "forbidden_proof_construct_scan": "passed",
+  "final_source_receipt_hashes_match": true
+}

@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "elapsed_seconds": 0.1562551670067478,
+      "name": "scalar_grid_and_sequences",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.001440249994629994,
+      "name": "request_validation",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.0012100409949198365,
+      "name": "no_raw_access",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.0007050830172374845,
+      "name": "trusted_alias_scope",
+      "status": "PASS"
+    }
+  ],
+  "details": {
+    "no_raw_access": {
+      "compaction_keys": [
+        "T",
+        "anchor_lloyd_iters",
+        "client_ids",
+        "gamma",
+        "group_sizes",
+        "k",
+        "map_version",
+        "seed",
+        "slice_results"
+      ],
+      "no_local_training_or_encoding": true,
+      "raw_and_cache_keys_not_read": true,
+      "state_fields": [
+        "anchor_lloyd_iters",
+        "client_counts",
+        "client_ids",
+        "gamma",
+        "group_sizes",
+        "k",
+        "map_version",
+        "seed",
+        "slice_results"
+      ]
+    },
+    "request_validation": {
+      "bad_initial_state_or_checkpoint": 4,
+      "invalid_requests": 16,
+      "one_each_group_rejections": 3,
+      "valid_request_forms": 8
+    },
+    "scalar_grid_and_sequences": {
+      "invalid_empty_subsets": 28,
+      "read_only_independent_array_copies_checked": 336,
+      "sequential_steps": 84,
+      "valid_independent_cases": 196
+    },
+    "trusted_alias_scope": {
+      "conclusion": "Do not mutate returned summary/group dictionaries; frozen dataclass is shallow. Within explicit trusted-state scope this is nonblocking.",
+      "group_sizes_alias": true,
+      "slice_dict_alias": true,
+      "surviving_summary_alias": true
+    }
+  }
+}

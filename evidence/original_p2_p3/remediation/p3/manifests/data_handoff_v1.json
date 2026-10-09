@@ -1,0 +1,39 @@
+{
+  "bound_small_artifacts": {
+    "DATA_README.md": "a210584f6541447168dfe2f35731976d246ac3b27d2bbb639d8aad1fa8d689e8",
+    "data/acs2018-ftf1-p3-v1/manifest.json": "8202b957bf78dc860dec497af3e45039738fda61845f9264d9e6b447de144f48",
+    "logs/refetch/partial-wy-validation-v1/report.json": "2d744104ce8a0da6785964a0712daec43579ee48408820e66587e18143cd3db7",
+    "manifests/deterministic_regeneration_v1.json": "eea1d95ac17d0abef8818bafaaa4ce26cc8fb652e8e05877556befccef49bfae",
+    "manifests/environment_v1.json": "8f8145d2a7a2af07d22ff9cf5b8b64fe473c9ad4d37f9b306a80f468c3120d49",
+    "manifests/requirements_lock_v1.txt": "0a8342d914dc279d1756a7e577feb2b33e6b519e56c02b870757dac889c964e7",
+    "manifests/source_manifest_v1.json": "c23101b1e2ad28ac66f7cca69390d30368d1a6e7eb43257511b7f8ac27e03fa6",
+    "metadata_comparison/v1/cohort_metadata_comparison.csv": "2ad9c2e86aeb94b530effc926be085b107d37fe8a37b2e81679745d1742e58fa",
+    "metadata_comparison/v1/executed_script.py": "857c2322960e3e4f0d00e4eeb9d0e5b059b4a9187ee9fbcb864593ba5a229a93",
+    "metadata_comparison/v1/manifest.json": "c7a1442e18b251e2724c239a9a44f57da5f6aa5edc0b4112c05c58a08f6b97e6",
+    "scripts/compare_historical_metadata.py": "43d58878d0a234a3e16c994d33e86377a2a6eeacd643ba58f76fcf08817346c9",
+    "scripts/download_acs2018.py": "0f88c496598308013fcbcdd66574a3094c60c060e48707d2451ed38cf1ade4e1",
+    "scripts/prepare_acs2018_v1.py": "8fabeda98e5caec0b2922ddd1f5cb1aa58a0c651ac1c70b3a9f8ad42cb5318ac",
+    "scripts/refetch_sources.py": "961272014507ea54ec964a928f6f6bb83e0a1953a209c1e46e45f3fb3bd48c8f",
+    "specification/PROTOCOL_v1.json": "2698bb7c630e42fa75ebbd162523117f0696135b0ddb8b6f4863bbdef1d31a4f",
+    "specification/PROTOCOL_v1.md": "bb84abc518a8469c01b10ec26bfb8693bea30e8bc9ef4728f2f8f0ffa8473dcd",
+    "validation/data_gate.json": "7ef077111b4a19cc88f3aaf457bc8878d3f22bee19c9fb47fcbd2b9dc8461635",
+    "validation/frozen_map_gate.json": "92804dd6cdf085db0370451f437c94200fb5d750e80d7c4d44f7ff0fe60f4313"
+  },
+  "dataset_version": "acs2018-ftf1-p3-v1",
+  "deletion_requests": 95,
+  "design_points": 19,
+  "eligible_full_pool": 3207990,
+  "fixed_clip": 8,
+  "historical_scope": "Post-freeze cohort metadata comparison agrees for all8 populations; historical feature/transform/source identity and oldseed1 cause remain unestablished.",
+  "package_requirement": "Retain frozen source receipts and original HTTP headers even when choosing to restore bulky archives/CSVs on demand.",
+  "populations": 8,
+  "preservation": "Frozen numerical source/map and earlier result packages were not edited by new P3 data work. Source/data/protocol scientific manifests remain immutable; newly retrieved source observations are separate.",
+  "represented_dimension": 16,
+  "scale_bits": 12,
+  "scope": "New public Census data preparation, deterministic regeneration, independent dataset validation and reproducible source restoration. Empirical pilot/full completion is owned by execution receipts and is not asserted by this handoff.",
+  "status": "DATA_HANDOFF_COMPLETE",
+  "transient_directories": [
+    "environment",
+    "refetch_probe_cache"
+  ]
+}

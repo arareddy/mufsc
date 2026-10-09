@@ -1,0 +1,23 @@
+{
+  "status": "completed_scoped_subset",
+  "completed_utc": "2026-09-26T10:09:11.457478+00:00",
+  "manuscript_labels": [
+    "lem:s2-word-coupling",
+    "prop:s2-deletion-work"
+  ],
+  "theorems": 101,
+  "proof_modules": 11,
+  "compiler_units_including_audit": 12,
+  "lean": "4.19.0",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "trust": 0,
+  "threads": 1,
+  "all_final_compiler_exits_zero": true,
+  "unexpected_axioms": [],
+  "compiler_style_warning_count": 2,
+  "scope": "Finite-word, normalized rejection-trace, finite-record, ideal certificate, and scoped policy model; global infinite shared-stream and executable/numerical refinement remain unproved.",
+  "bundle": "Coupling_Lean_ProofBundle_20260926.zip",
+  "manuscript_modified_by_this_task": false,
+  "experiments_run": false,
+  "published": false
+}

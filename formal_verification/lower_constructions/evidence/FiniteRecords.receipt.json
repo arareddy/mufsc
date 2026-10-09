@@ -1,0 +1,10 @@
+{
+  "source": "FiniteRecords.lean",
+  "sha256": "b08b1bc8cc1feaf53a0199c3816f344629809132d4900f07c26e23123f5ad54d",
+  "started_utc": "2026-09-26T09:37:31.425214+00:00",
+  "finished_utc": "2026-09-26T09:37:41.024041+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "threads": 1,
+  "compiler_output": "build/records.stdout.log"
+}

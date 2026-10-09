@@ -1,0 +1,25 @@
+{
+  "note": "Saved manuscript sources read for independent formal definitions; paths are relative source identifiers, not a manuscript modification receipt.",
+  "files": [
+    {
+      "file": "s2_matched_budget_statement.tex",
+      "bytes": 1377,
+      "sha256": "6968f728b5f066f7c96dacf6f63ca4f0bf329824fe2c7fef2562afa123c40299"
+    },
+    {
+      "file": "s2_matched_budget_proof.tex",
+      "bytes": 4699,
+      "sha256": "89361799aa5908ced97aae596f0c8a2aa50963e3afd925120ee8ad587684f119"
+    },
+    {
+      "file": "main.tex",
+      "bytes": 43346,
+      "sha256": "7e79d6aef9457b1cc5d760fc46341545773f6082bab8fcccf5cde48a5c9cbbba"
+    },
+    {
+      "file": "appendix.tex",
+      "bytes": 48401,
+      "sha256": "b06b6f191bf4a00763157302bccacc8edfa83f426cf1694975a6ea096d667cd7"
+    }
+  ]
+}

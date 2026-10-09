@@ -1,0 +1,78 @@
+{
+  "label": "final",
+  "started_utc": "2026-09-26T10:13:02.806257+00:00",
+  "source_sha256": "040ae55c98d76ce541621503148d1f2aa81d707fa2a36ce4eaa9524229dcdb46",
+  "single_worker": true,
+  "lock_unlinked": false,
+  "theorem_count": 100,
+  "commands": [
+    [
+      "<LEAN>",
+      "--trust=0",
+      "-j1",
+      "--root=proof",
+      "-o",
+      "build/FairUpdate.olean",
+      "proof/FairUpdate.lean"
+    ],
+    [
+      "<LEAN>",
+      "--trust=0",
+      "-j1",
+      "--root=proof",
+      "-o",
+      "build/Moments.olean",
+      "proof/Moments.lean"
+    ],
+    [
+      "<LEAN>",
+      "--trust=0",
+      "-j1",
+      "--root=proof",
+      "-o",
+      "build/Geometry.olean",
+      "proof/Geometry.lean"
+    ],
+    [
+      "<LEAN>",
+      "--trust=0",
+      "-j1",
+      "--root=proof",
+      "proof/AxiomAudit.lean"
+    ]
+  ],
+  "results": [
+    {
+      "exit_code": 0,
+      "lock_acquired_utc": "2026-09-26T10:13:02.806567+00:00",
+      "held_seconds": 1.685409958998207,
+      "log": "logs/final_FairUpdate_compiler.log"
+    },
+    {
+      "exit_code": 0,
+      "lock_acquired_utc": "2026-09-26T10:13:04.492279+00:00",
+      "held_seconds": 3.2145974580198526,
+      "log": "logs/final_Moments_compiler.log"
+    },
+    {
+      "exit_code": 0,
+      "lock_acquired_utc": "2026-09-26T10:13:07.707305+00:00",
+      "held_seconds": 3.154699167003855,
+      "log": "logs/final_Geometry_compiler.log"
+    },
+    {
+      "exit_code": 0,
+      "lock_acquired_utc": "2026-09-26T10:13:10.862400+00:00",
+      "held_seconds": 8.506693833012832,
+      "log": "logs/final_axioms.log"
+    }
+  ],
+  "source_hashes": {
+    "FairUpdate": "b27df75db35d9f9aad2efe8e00c2fb28ce10514cde89054c319e141e4b4a04d3",
+    "Moments": "8c730f928fe762742967f590954bc647f95da19db050c2c98e1d8f54d5f4eb9b",
+    "Geometry": "040ae55c98d76ce541621503148d1f2aa81d707fa2a36ce4eaa9524229dcdb46"
+  },
+  "trust_level": 0,
+  "finished_utc": "2026-09-26T10:13:19.369637+00:00",
+  "exit_code": 0
+}

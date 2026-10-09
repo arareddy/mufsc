@@ -1,0 +1,71 @@
+{
+  "captured_utc": "2026-09-26T10:04:13.490189+00:00",
+  "initial_observed_hashes": {
+    "main.tex": "7e79d6aef9457b1cc5d760fc46341545773f6082bab8fcccf5cde48a5c9cbbba",
+    "appendix.tex": "b06b6f191bf4a00763157302bccacc8edfa83f426cf1694975a6ea096d667cd7",
+    "generated/september26/client_proposition.tex": "26900bb0f78ca84bb06264a56ca046f4452bac31760f99fb54c623d7cda167d5",
+    "AGENTS.md": "293fa32c19087f9fe9d8dde13fe000ebf680a28ebd368c66594fddfbb9be6804",
+    "LIVE_EDITING_RULES.md": "c366576166caecf7c3141b8e7460c889cd19880a95917b712fbc68a9a476954a",
+    "numerical_contract.tex": "46df96b0c8adff8d66eb192dc0ae8deb7d99cc999e1bf22cc26412b32eb6fe3e"
+  },
+  "reviewed_snapshot_hashes": {
+    "main.tex": "ad7d71315574644404d3f54ab3d2c211db66cc7e19269577208a1d4568ebaf85",
+    "appendix.tex": "62b7087c7de4bf84b9a40975360075c9d079014673f64c7b0f4f5ac733eedc32",
+    "generated/september26/client_proposition.tex": "26900bb0f78ca84bb06264a56ca046f4452bac31760f99fb54c623d7cda167d5",
+    "AGENTS.md": "293fa32c19087f9fe9d8dde13fe000ebf680a28ebd368c66594fddfbb9be6804",
+    "LIVE_EDITING_RULES.md": "c366576166caecf7c3141b8e7460c889cd19880a95917b712fbc68a9a476954a",
+    "numerical_contract.tex": "46df96b0c8adff8d66eb192dc0ae8deb7d99cc999e1bf22cc26412b32eb6fe3e"
+  },
+  "changed_during_task": [
+    "main.tex",
+    "appendix.tex"
+  ],
+  "notes": [
+    "main.tex and appendix.tex were concurrently edited by the authorized manuscript integrator; this task never edited manuscript files.",
+    "Initial hashes were captured when first reading the main, appendix and client proposition; numerical_contract.tex was added when first read later.",
+    "Target statements and the exactness/numerical-contract proof content were re-read after editorial moves. No target semantic mismatch was found.",
+    "This mapping refers to the reviewed snapshot hashes, not any future manuscript edits."
+  ],
+  "label_mapping": {
+    "lem:basic-cert": {
+      "file": "main.tex",
+      "statement_sha256": "ca685d1ef89300b9a3d77787b093600e659fde3bdc2403216977f405aa2ad8d9",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    },
+    "eq:basic-cert": {
+      "file": "main.tex",
+      "statement_sha256": "3c236d8c9ef57cbdf4cad881a11909a6ab0510f42931fe931ef8c9f912f7a09b",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    },
+    "eq:runner-cert": {
+      "file": "appendix.tex",
+      "statement_sha256": "afd6acd431ea482d02164780d30a4a841df4db1fd45362ba8a1dd645c8af9d33",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    },
+    "prop:cert-tight": {
+      "file": "appendix.tex",
+      "statement_sha256": "b318e13c46373b96c4f42c0013905b007af0884bec2c8ddca4638acd173fc43d",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    },
+    "thm:exactness": {
+      "file": "main.tex",
+      "statement_sha256": "082cccecdd5f011fcee7220df4b6dc1e8f9adbec20b4e83662e811a4fdd4e388",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    },
+    "eq:same-seed": {
+      "file": "main.tex",
+      "statement_sha256": "afc9158b70e9d5b59bf991edfe440e998e5242afc5cad3308a70200698ca7f84",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    },
+    "prop:client-summary": {
+      "file": "generated/september26/client_proposition.tex",
+      "statement_sha256": "163079aec6b1c6771822bcc1cb6c59007ded29b5cc20f0d412adf305ea96faa4",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    },
+    "prop:stable-replay": {
+      "file": "appendix.tex",
+      "statement_sha256": "f0df540a37098fc39aff87dcd8019b675d50220da36f8a284f961cf3db1c92f8",
+      "status": "reviewed; no semantic mismatch found with stated formal scope"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "accepted_validity_attempt": 0,
+  "data_version": "acs2018-ftf1-p3-v1",
+  "deletion_seed": 15649322627808199434,
+  "design_index": 15,
+  "master_seed": 1,
+  "protocol_sha256": "2698bb7c630e42fa75ebbd162523117f0696135b0ddb8b6f4863bbdef1d31a4f",
+  "removal_source_hash": "ee2aed24e07e1daf1c31053dc23eb6d999521fa71aa0ee28e27a44ca22831c61",
+  "removed": {
+    "29": [
+      1547
+    ]
+  },
+  "source_records": [
+    {
+      "SERIALNO": "2018HU0880804",
+      "SPORDER": 1,
+      "client_id": 29,
+      "dataset_config_id": "0ce0d980010f69bf4d46",
+      "declaration_sha256": "5f9644338fd1ffb661753079b4934480b3eeda0e0c9d645343ee506a34070007",
+      "deletion_batch_hash": "ee2aed24e07e1daf1c31053dc23eb6d999521fa71aa0ee28e27a44ca22831c61",
+      "deletion_seed": 15649322627808199434,
+      "design_index": 15,
+      "flat_sample_index": 61060,
+      "geography": "WA",
+      "local_sample_index": 1547,
+      "master_seed": 1,
+      "native_id": "2018:53:2018HU0880804:1",
+      "r": 1,
+      "requested_deletion_fraction": "0.00001",
+      "source_csv_sha256": "a6a28a87ba6ef2b2a87b7b8bb4f199c26a529fb816af0d197f4bb643256a4a47",
+      "source_row_id": 48914,
+      "stable_record_id": "WA:source-row:48914",
+      "state_fips": 53
+    }
+  ],
+  "unconditional_validity_proof": {
+    "group_A": 49033,
+    "group_B": 50967,
+    "r": 1,
+    "r_less_than_both_groups": true
+  }
+}

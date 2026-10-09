@@ -1,0 +1,35 @@
+{
+  "analysis_directory": "remediation/p3/analysis/68af22b8eac14f50",
+  "analysis_manifest_sha256": "fe565014b91e623836f752780f763736278379afd9c2ab54766a4eea3830f560",
+  "checks": "Every CSV field reconstructed from accepted raw outputs; unique trial/round keys; trial-mean versus pooled rates; undefined denominators; fallback/discarded passes; observed point-assignment totals; paired timing ratios/wins/losses; paired-seed bootstrap with independently implemented sorted linear interpolation.",
+  "code_sha256": "d76d7c0606512c458147955aff2a0afea992c87246ce30e4c43cc28003602c31",
+  "completed_receipt_set_sha256": "68af22b8eac14f509d7c1dad66e45ff7d9ceb6dc98ef3111488f1623f6cfc76c",
+  "created_utc": "20260919T091542Z",
+  "dataset_manifest_sha256": "8202b957bf78dc860dec497af3e45039738fda61845f9264d9e6b447de144f48",
+  "files": {
+    "design_metrics.csv": "be8469bd184ef98e5709162ed91293a8b1779f7ba7b79d6a5a0a8948c6e8a724",
+    "pilot_seed_metrics.csv": "6861cb2ff326bb9b3f16c6cc2bf20ebb07dcd56cc0f22d2524cfa692f22dc9ba",
+    "rounds.csv": "006e74affa97089da1b7d94bb2ba477a0e21f8d6af3a3e56bacc25a3c559fd65",
+    "suite_metrics.csv": "73743c097180b72e59423ef13c6a81c4fdc5ed50950b1b0893d26462213a2c33",
+    "trials.csv": "7ad1eb22d1b4143fb608ebe80ea51731e25634982d86f7a45216c63eb5795e7d"
+  },
+  "independence": "No aggregate or production helper imports. Exact Fraction scalar means and declared NumPy reduction/PCG64 APIs; no tolerance-based CSV comparisons. Full numerical map exactness is checked separately from timings and statistical summaries.",
+  "map_sha256": "7c25a7f41af39859cc4cc254b3a70525380285904e7f67cd45ca8efbe3633d52",
+  "phase": "full",
+  "run_manifest_sha256": "dc6cf84b8520aa5f5ea67fc291f17785384f15e2eb1c6be33251c017c3d8022d",
+  "seconds": 4.604969459000131,
+  "source_verification_sha256": "293d3ea0795424840828c79fba065645acd6a2f3f7d87210938d040df01e8c19",
+  "status": "PASS",
+  "validation_source_sha256": {
+    "numeric_evidence.py": "44e6a4c00f3016db167fcb9d5e17295b5e622228464d1b742928d5ca38a19684",
+    "verify_tables.py": "b3c13398aa415666c71a7f4ac75c68b5dc4c8740559a09e1cdaa927cd00d232a"
+  },
+  "verified_rows": {
+    "design_metrics.csv": 76,
+    "pilot_seed_metrics.csv": 40,
+    "rounds.csv": 3000,
+    "suite_metrics.csv": 4,
+    "trials.csv": 380
+  },
+  "verifier_sha256": "b3c13398aa415666c71a7f4ac75c68b5dc4c8740559a09e1cdaa927cd00d232a"
+}

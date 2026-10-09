@@ -1,0 +1,302 @@
+{
+  "status": "passed",
+  "theorem_count": 63,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "theorems": {
+    "Replay.patch_exact": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.label_patch_exact": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.abandonment_exact": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.unchanged_correction": [
+      "propext"
+    ],
+    "Replay.changed_label_rejects": [],
+    "Replay.summaries_equal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.initialized_state_equal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.canonical_active_congr": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.whole_client_initializer": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.summary_counts_exact": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.whole_client_compact": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.minimizers_nonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.nearest_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.nearest_tie_smallest": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.strict_winner_nearest": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.nearest_square": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.le_maxOn": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.reverse_triangle_shift": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.basic_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.runner_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.outward_bounds_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.basic_certified_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.runner_certified_label": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.integer_stats_patch": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.integer_stats_abandonment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.owner_partition_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.local_multiplicity_conservation": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.direct_stays_direct": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.replayStep_equal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.trajectory_equal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.finite_trajectory_equal": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.zero_round": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.basicModel_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.basic_full_trajectory": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.runnerModel_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.runner_full_trajectory": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.Initializer.same_seed": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.seeded_full_trajectory": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Replay.seeded_basic_exactness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.seeded_runner_exactness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.same_seed_event_law": [
+      "Quot.sound"
+    ],
+    "Replay.intervalGap_lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.outward_runner_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.outward_basic_certificate": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.maxOn_le": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.basic_implies_runner": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.three_leave_one": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.top_three_suffice": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.overshoot_strict_improvement": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.runner_only_counterexample": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.radii_obstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.exact_norm_obstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.two_center_exact_obstruction": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.maxOn_attained": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.exists_third": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.competitor_nonempty": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.exact_norm_full_tightness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.radii_full_tightness": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.stable_recurrence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.maxOn_bounded": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.basic_failure_margin": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.margin_failure_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Replay.stable_failure_scale": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  }
+}

@@ -1,0 +1,368 @@
+@Replay.patch_exact : ∀ {R : Type u_1} {M : Type u_2} [inst : Fintype R] [inst_1 : AddCommGroup M]
+  (keep accepted : R → Bool) (old fresh : R → M),
+  (∀ (r : R), keep r = true → accepted r = true → old r = fresh r) →
+    Replay.patched keep accepted old fresh = Replay.retainedSum keep fresh
+@Replay.label_patch_exact : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} [inst : Fintype R] [inst_1 : AddCommGroup M]
+  (keep accepted : R → Bool) (oldLabel newLabel : R → L) (contribution : R → L → M),
+  (∀ (r : R), keep r = true → accepted r = true → oldLabel r = newLabel r) →
+    (Replay.patched keep accepted (fun r => contribution r (oldLabel r)) fun r => contribution r (newLabel r)) =
+      Replay.retainedSum keep fun r => contribution r (newLabel r)
+@Replay.abandonment_exact : ∀ {R : Type u_1} {M : Type u_2} [inst : Fintype R] [inst_1 : AddCommGroup M]
+  (abandon : Bool) (keep accepted : R → Bool) (old fresh : R → M),
+  (∀ (r : R), keep r = true → accepted r = true → old r = fresh r) →
+    Replay.roundStats abandon keep accepted old fresh = Replay.retainedSum keep fresh
+@Replay.unchanged_correction : ∀ {M : Type u_1} [inst : AddCommGroup M] (v : M), v - v = 0
+@Replay.changed_label_rejects : ∀ {R : Type u_1} {L : Type u_2} (keep accepted : R → Bool) (oldLabel newLabel : R → L),
+  (∀ (r : R), keep r = true → accepted r = true → oldLabel r = newLabel r) →
+    ∀ (r : R), keep r = true → oldLabel r ≠ newLabel r → accepted r = false
+@Replay.summaries_equal : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} (localMap : Slice → Tape → List Record → List (Replay.Anchor Point))
+  (streams : Seed → Replay.StreamKey Slice → Tape) (seed : Seed) (oldInput retainedInput : Slice → List Record)
+  (touched : Slice → Bool),
+  (∀ (e : Slice), touched e = false → oldInput e = retainedInput e) →
+    Replay.replaySummaries localMap streams seed oldInput retainedInput touched =
+      Replay.freshSummaries localMap streams seed retainedInput
+@Replay.initialized_state_equal : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} {State : Type u_6} {Group : Type u_7} [inst : DecidableEq Group]
+  (localMap : Slice → Tape → List Record → List (Replay.Anchor Point))
+  (serverMap : Tape → (Group → ℕ) → List (Replay.WeightedAnchor Slice Point) → State)
+  (streams : Seed → Replay.StreamKey Slice → Tape) (seed : Seed) (keys : List Slice) (active : Slice → Bool)
+  (group : Slice → Group) (oldInput retainedInput : Slice → List Record) (touched : Slice → Bool),
+  (∀ (e : Slice), touched e = false → oldInput e = retainedInput e) →
+    serverMap (streams seed Replay.StreamKey.server) (Replay.groupCounts keys active group retainedInput)
+        (Replay.canonicalAnchors keys active group (Replay.groupCounts keys active group retainedInput)
+          (Replay.replaySummaries localMap streams seed oldInput retainedInput touched)) =
+      serverMap (streams seed Replay.StreamKey.server) (Replay.groupCounts keys active group retainedInput)
+        (Replay.canonicalAnchors keys active group (Replay.groupCounts keys active group retainedInput)
+          (Replay.freshSummaries localMap streams seed retainedInput))
+@Replay.canonical_active_congr : ∀ {Slice : Type u_1} {Point : Type u_2} {Group : Type u_3} (keys : List Slice)
+  (active : Slice → Bool) (group : Slice → Group) (counts : Group → ℕ) (old fresh : Slice → List (Replay.Anchor Point)),
+  (∀ (e : Slice), active e = true → old e = fresh e) →
+    Replay.canonicalAnchors keys active group counts old = Replay.canonicalAnchors keys active group counts fresh
+@Replay.whole_client_initializer : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} {State : Type u_6} {Group : Type u_7} [inst : DecidableEq Group]
+  (localMap : Slice → Tape → List Record → List (Replay.Anchor Point))
+  (serverMap : Tape → (Group → ℕ) → List (Replay.WeightedAnchor Slice Point) → State)
+  (streams : Seed → Replay.StreamKey Slice → Tape) (seed : Seed) (keys : List Slice) (active : Slice → Bool)
+  (group : Slice → Group) (oldInput retainedInput : Slice → List Record),
+  (∀ (e : Slice), active e = true → oldInput e = retainedInput e) →
+    serverMap (streams seed Replay.StreamKey.server) (Replay.groupCounts keys active group retainedInput)
+        (Replay.canonicalAnchors keys active group (Replay.groupCounts keys active group retainedInput)
+          (Replay.freshSummaries localMap streams seed oldInput)) =
+      serverMap (streams seed Replay.StreamKey.server) (Replay.groupCounts keys active group retainedInput)
+        (Replay.canonicalAnchors keys active group (Replay.groupCounts keys active group retainedInput)
+          (Replay.freshSummaries localMap streams seed retainedInput))
+@Replay.summary_counts_exact : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Group : Type u_4}
+  [inst : DecidableEq Group] (keys : List Slice) (active : Slice → Bool) (group : Slice → Group)
+  (summaries : Slice → List (Replay.Anchor Point)) (input : Slice → List Record),
+  (∀ (e : Slice), active e = true → (List.map Replay.Anchor.mass (summaries e)).sum = (input e).length) →
+    Replay.summaryGroupCounts keys active group summaries = Replay.groupCounts keys active group input
+@Replay.whole_client_compact : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} {State : Type u_6} {Group : Type u_7} [inst : DecidableEq Group]
+  (localMap : Slice → Tape → List Record → List (Replay.Anchor Point))
+  (serverMap : Tape → (Group → ℕ) → List (Replay.WeightedAnchor Slice Point) → State)
+  (streams : Seed → Replay.StreamKey Slice → Tape) (seed : Seed) (keys : List Slice) (active : Slice → Bool)
+  (group : Slice → Group) (oldInput retainedInput : Slice → List Record),
+  (∀ (e : Slice), active e = true → oldInput e = retainedInput e) →
+    (∀ (e : Slice),
+        active e = true →
+          (List.map Replay.Anchor.mass (Replay.freshSummaries localMap streams seed oldInput e)).sum =
+            (oldInput e).length) →
+      let cached := Replay.freshSummaries localMap streams seed oldInput;
+      let counts := Replay.summaryGroupCounts keys active group cached;
+      serverMap (streams seed Replay.StreamKey.server) counts
+          (Replay.canonicalAnchors keys active group counts cached) =
+        serverMap (streams seed Replay.StreamKey.server) (Replay.groupCounts keys active group retainedInput)
+          (Replay.canonicalAnchors keys active group (Replay.groupCounts keys active group retainedInput)
+            (Replay.freshSummaries localMap streams seed retainedInput))
+@Replay.minimizers_nonempty : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : Nonempty L] (score : L → ℝ),
+  (Replay.minimizers score).Nonempty
+@Replay.nearest_le : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : LinearOrder L] [inst_2 : Nonempty L] (score : L → ℝ)
+  (m : L), score (Replay.nearest score) ≤ score m
+@Replay.nearest_tie_smallest : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : LinearOrder L] [inst_2 : Nonempty L]
+  (score : L → ℝ) (m : L), score m = score (Replay.nearest score) → Replay.nearest score ≤ m
+@Replay.strict_winner_nearest : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : LinearOrder L] [inst_2 : Nonempty L]
+  (score : L → ℝ) (j : L), (∀ (m : L), m ≠ j → score j < score m) → Replay.nearest score = j
+@Replay.nearest_square : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : LinearOrder L] [inst_2 : Nonempty L]
+  (score : L → ℝ), (∀ (j : L), 0 ≤ score j) → (Replay.nearest fun j => score j ^ 2) = Replay.nearest score
+@Replay.le_maxOn : ∀ {L : Type u_1} (s : Finset L) (f : L → ℝ), ∀ m ∈ s, f m ≤ Replay.maxOn s f
+@Replay.reverse_triangle_shift : ∀ {P : Type u_1} [inst : PseudoMetricSpace P] (x a b : P),
+  |dist x a - dist a b| ≤ dist x b
+@Replay.basic_certificate : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] [inst_1 : Fintype L]
+  [inst_2 : DecidableEq L] (x : P) (old new : L → P) (j : L) (d₂ : ℝ),
+  (∀ (m : L), m ≠ j → d₂ ≤ dist x (old m)) →
+    Replay.shift old new j + Replay.maxOn (Replay.competitors j) (Replay.shift old new) < d₂ - dist x (old j) →
+      ∀ (m : L), m ≠ j → dist x (new j) < dist x (new m)
+@Replay.runner_certificate : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] [inst_1 : Fintype L]
+  [inst_2 : DecidableEq L] (x : P) (old new : L → P) (j r : L) (d₂ : ℝ),
+  dist x (old r) = d₂ →
+    (∀ (m : L), m ≠ j → d₂ ≤ dist x (old m)) →
+      Replay.runnerTest x old new j r d₂ → ∀ (m : L), m ≠ j → dist x (new j) < dist x (new m)
+@Replay.outward_bounds_sound : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] (x : P) (new : L → P)
+  (j : L) (upper : ℝ) (lower : L → ℝ),
+  dist x (new j) ≤ upper →
+    (∀ (m : L), m ≠ j → lower m ≤ dist x (new m)) →
+      (∀ (m : L), m ≠ j → upper < lower m) → ∀ (m : L), m ≠ j → dist x (new j) < dist x (new m)
+@Replay.basic_certified_label : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] [inst_1 : Fintype L]
+  [inst_2 : LinearOrder L] [inst_3 : Nonempty L] (x : P) (old new : L → P) (j : L) (d₂ : ℝ),
+  (∀ (m : L), m ≠ j → d₂ ≤ dist x (old m)) →
+    Replay.shift old new j + Replay.maxOn (Replay.competitors j) (Replay.shift old new) < d₂ - dist x (old j) →
+      (Replay.nearest fun m => dist x (new m)) = j
+@Replay.runner_certified_label : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] [inst_1 : Fintype L]
+  [inst_2 : LinearOrder L] [inst_3 : Nonempty L] (x : P) (old new : L → P) (j r : L) (d₂ : ℝ),
+  dist x (old r) = d₂ →
+    (∀ (m : L), m ≠ j → d₂ ≤ dist x (old m)) →
+      Replay.runnerTest x old new j r d₂ → (Replay.nearest fun m => dist x (new m)) = j
+@Replay.integer_stats_patch : ∀ {R : Type u_1} {G : Type u_2} {L : Type u_3} [inst : Fintype R] [inst_1 : DecidableEq G]
+  [inst_2 : DecidableEq L] {d : ℕ} (group : R → G) (coord : R → Fin d → ℤ) (keep accepted : R → Bool)
+  (oldLabel freshLabel : R → L),
+  (∀ (r : R), keep r = true → accepted r = true → oldLabel r = freshLabel r) →
+    (Replay.patched keep accepted (fun r => Replay.integerContribution group coord r (oldLabel r)) fun r =>
+        Replay.integerContribution group coord r (freshLabel r)) =
+      Replay.retainedSum keep fun r => Replay.integerContribution group coord r (freshLabel r)
+@Replay.integer_stats_abandonment : ∀ {R : Type u_1} {G : Type u_2} {L : Type u_3} [inst : Fintype R]
+  [inst_1 : DecidableEq G] [inst_2 : DecidableEq L] {d : ℕ} (group : R → G) (coord : R → Fin d → ℤ) (abandon : Bool)
+  (keep accepted : R → Bool) (oldLabel freshLabel : R → L),
+  (∀ (r : R), keep r = true → accepted r = true → oldLabel r = freshLabel r) →
+    (Replay.roundStats abandon keep accepted (fun r => Replay.integerContribution group coord r (oldLabel r)) fun r =>
+        Replay.integerContribution group coord r (freshLabel r)) =
+      Replay.retainedSum keep fun r => Replay.integerContribution group coord r (freshLabel r)
+@Replay.owner_partition_sum : ∀ {R : Type u_1} {C : Type u_2} {M : Type u_3} [inst : Fintype R] [inst_1 : Fintype C]
+  [inst_2 : DecidableEq C] [inst_3 : AddCommMonoid M] (owner : R → C) (f : R → M),
+  (∑ c, ∑ r, if owner r = c then f r else 0) = ∑ r, f r
+@Replay.local_multiplicity_conservation : ∀ {R : Type u_1} {L : Type u_2} [inst : Fintype R] [inst_1 : Fintype L]
+  [inst_2 : DecidableEq L] (label : R → L), (∑ j, ∑ r, if label r = j then 1 else 0) = Fintype.card R
+@Replay.direct_stays_direct : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {S : Type u_4} [inst : Fintype R]
+  [inst_1 : AddCommGroup M] (model : Replay.RoundModel R L M S) (t : ℕ) (s : S),
+  (Replay.replayStep model t (s, true)).2 = true
+@Replay.replayStep_equal : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {S : Type u_4} [inst : Fintype R]
+  [inst_1 : AddCommGroup M] (model : Replay.RoundModel R L M S) (t : ℕ) (st : S × Bool),
+  (∀ (r : R), model.keep r = true → model.accepted t st.1 r = true → model.cachedLabel t r = model.assign st.1 r) →
+    (Replay.replayStep model t st).1 = Replay.freshStep model t st.1
+@Replay.trajectory_equal : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {S : Type u_4} [inst : Fintype R]
+  [inst_1 : AddCommGroup M] (model : Replay.RoundModel R L M S) (initialReplay initialFresh : S) (initialDirect : Bool),
+  initialReplay = initialFresh →
+    (∀ (t : ℕ) (s : S) (r : R),
+        model.keep r = true → model.accepted t s r = true → model.cachedLabel t r = model.assign s r) →
+      ∀ (t : ℕ), (Replay.replayRun model initialReplay initialDirect t).1 = Replay.freshRun model initialFresh t
+@Replay.finite_trajectory_equal : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {S : Type u_4} [inst : Fintype R]
+  [inst_1 : AddCommGroup M] (model : Replay.RoundModel R L M S) (initialReplay initialFresh : S) (initialDirect : Bool),
+  initialReplay = initialFresh →
+    (∀ (t : ℕ) (s : S) (r : R),
+        model.keep r = true → model.accepted t s r = true → model.cachedLabel t r = model.assign s r) →
+      ∀ (T : ℕ),
+        (fun t => (Replay.replayRun model initialReplay initialDirect ↑t).1) = fun t =>
+          Replay.freshRun model initialFresh ↑t
+@Replay.zero_round : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {S : Type u_4} [inst : Fintype R]
+  [inst_1 : AddCommGroup M] (model : Replay.RoundModel R L M S) (initial : S) (initialDirect : Bool),
+  (Replay.replayRun model initial initialDirect 0).1 = initial ∧ Replay.freshRun model initial 0 = initial
+@Replay.basicModel_sound : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {P : Type u_4} [inst : Fintype L]
+  [inst_1 : LinearOrder L] [inst_2 : Nonempty L] [inst_3 : PseudoMetricSpace P] (keep : R → Bool) (point : R → P)
+  (contribution : R → L → M) (cachedCenters : ℕ → L → P) (cachedLabel : ℕ → R → L) (second : ℕ → R → ℝ)
+  (update : ℕ → (L → P) → M → L → P),
+  (∀ (t : ℕ) (r : R) (m : L), m ≠ cachedLabel t r → second t r ≤ dist (point r) (cachedCenters t m)) →
+    ∀ (t : ℕ) (centers : L → P) (r : R),
+      (Replay.basicModel keep point contribution cachedCenters cachedLabel second update).accepted t centers r = true →
+        cachedLabel t r = Replay.nearest fun j => dist (point r) (centers j)
+@Replay.basic_full_trajectory : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {P : Type u_4} [inst : Fintype R]
+  [inst_1 : AddCommGroup M] [inst_2 : Fintype L] [inst_3 : LinearOrder L] [inst_4 : Nonempty L]
+  [inst_5 : PseudoMetricSpace P] (keep : R → Bool) (point : R → P) (contribution : R → L → M)
+  (cachedCenters : ℕ → L → P) (cachedLabel : ℕ → R → L) (second : ℕ → R → ℝ) (update : ℕ → (L → P) → M → L → P),
+  (∀ (t : ℕ) (r : R) (m : L), m ≠ cachedLabel t r → second t r ≤ dist (point r) (cachedCenters t m)) →
+    ∀ (initialReplay initialFresh : L → P) (initialDirect : Bool),
+      initialReplay = initialFresh →
+        ∀ (T : ℕ),
+          let model := Replay.basicModel keep point contribution cachedCenters cachedLabel second update;
+          (fun t => (Replay.replayRun model initialReplay initialDirect ↑t).1) = fun t =>
+            Replay.freshRun model initialFresh ↑t
+@Replay.runnerModel_sound : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {P : Type u_4} [inst : Fintype L]
+  [inst_1 : LinearOrder L] [inst_2 : Nonempty L] [inst_3 : PseudoMetricSpace P] (keep : R → Bool) (point : R → P)
+  (contribution : R → L → M) (cachedCenters : ℕ → L → P) (cachedLabel runner : ℕ → R → L) (second : ℕ → R → ℝ)
+  (update : ℕ → (L → P) → M → L → P),
+  (∀ (t : ℕ) (r : R) (m : L), m ≠ cachedLabel t r → second t r ≤ dist (point r) (cachedCenters t m)) →
+    (∀ (t : ℕ) (r : R), dist (point r) (cachedCenters t (runner t r)) = second t r) →
+      ∀ (t : ℕ) (centers : L → P) (r : R),
+        (Replay.runnerModel keep point contribution cachedCenters cachedLabel runner second update).accepted t centers
+              r =
+            true →
+          cachedLabel t r = Replay.nearest fun j => dist (point r) (centers j)
+@Replay.runner_full_trajectory : ∀ {R : Type u_1} {L : Type u_2} {M : Type u_3} {P : Type u_4} [inst : Fintype R]
+  [inst_1 : AddCommGroup M] [inst_2 : Fintype L] [inst_3 : LinearOrder L] [inst_4 : Nonempty L]
+  [inst_5 : PseudoMetricSpace P] (keep : R → Bool) (point : R → P) (contribution : R → L → M)
+  (cachedCenters : ℕ → L → P) (cachedLabel runner : ℕ → R → L) (second : ℕ → R → ℝ) (update : ℕ → (L → P) → M → L → P),
+  (∀ (t : ℕ) (r : R) (m : L), m ≠ cachedLabel t r → second t r ≤ dist (point r) (cachedCenters t m)) →
+    (∀ (t : ℕ) (r : R), dist (point r) (cachedCenters t (runner t r)) = second t r) →
+      ∀ (initialReplay initialFresh : L → P) (initialDirect : Bool),
+        initialReplay = initialFresh →
+          ∀ (T : ℕ),
+            let model := Replay.runnerModel keep point contribution cachedCenters cachedLabel runner second update;
+            (fun t => (Replay.replayRun model initialReplay initialDirect ↑t).1) = fun t =>
+              Replay.freshRun model initialFresh ↑t
+@Replay.Initializer.same_seed : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} {Group : Type u_6} {State : Type u_7} [inst : DecidableEq Group]
+  (cfg : Replay.Initializer Slice Record Point Seed Tape Group State),
+  (∀ (e : Slice), cfg.touched e = false → cfg.oldInput e = cfg.retainedInput e) →
+    ∀ (seed : Seed), cfg.replay seed = cfg.fresh seed
+@Replay.seeded_full_trajectory : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} {Group : Type u_6} {State : Type u_7} [inst : DecidableEq Group] {R : Type u_8} {L : Type u_9}
+  {M : Type u_10} [inst_1 : Fintype R] [inst_2 : AddCommGroup M]
+  (cfg : Replay.Initializer Slice Record Point Seed Tape Group State),
+  (∀ (e : Slice), cfg.touched e = false → cfg.oldInput e = cfg.retainedInput e) →
+    ∀ (model : Seed → Replay.RoundModel R L M State),
+      (∀ (seed : Seed) (t : ℕ) (state : State) (r : R),
+          (model seed).keep r = true →
+            (model seed).accepted t state r = true → (model seed).cachedLabel t r = (model seed).assign state r) →
+        ∀ (seed : Seed) (initialDirect : Bool) (T : ℕ),
+          (fun t => (Replay.replayRun (model seed) (cfg.replay seed) initialDirect ↑t).1) = fun t =>
+            Replay.freshRun (model seed) (cfg.fresh seed) ↑t
+@Replay.seeded_basic_exactness : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} {Group : Type u_6} [inst : DecidableEq Group] {R : Type u_7} {L : Type u_8} {M : Type u_9}
+  [inst_1 : Fintype R] [inst_2 : AddCommGroup M] {P : Type u_10} [inst_3 : PseudoMetricSpace P] [inst_4 : Fintype L]
+  [inst_5 : LinearOrder L] [inst_6 : Nonempty L] (cfg : Replay.Initializer Slice Record Point Seed Tape Group (L → P)),
+  (∀ (e : Slice), cfg.touched e = false → cfg.oldInput e = cfg.retainedInput e) →
+    ∀ (keep : R → Bool) (point : R → P) (contribution : R → L → M) (cachedCenters : Seed → ℕ → L → P)
+      (cachedLabel : Seed → ℕ → R → L) (second : Seed → ℕ → R → ℝ) (update : ℕ → (L → P) → M → L → P),
+      (∀ (seed : Seed) (t : ℕ) (r : R) (m : L),
+          m ≠ cachedLabel seed t r → second seed t r ≤ dist (point r) (cachedCenters seed t m)) →
+        ∀ (seed : Seed) (initialDirect : Bool) (T : ℕ),
+          let model :=
+            Replay.basicModel keep point contribution (cachedCenters seed) (cachedLabel seed) (second seed) update;
+          (fun t => (Replay.replayRun model (cfg.replay seed) initialDirect ↑t).1) = fun t =>
+            Replay.freshRun model (cfg.fresh seed) ↑t
+@Replay.seeded_runner_exactness : ∀ {Slice : Type u_1} {Record : Type u_2} {Point : Type u_3} {Seed : Type u_4}
+  {Tape : Type u_5} {Group : Type u_6} [inst : DecidableEq Group] {R : Type u_7} {L : Type u_8} {M : Type u_9}
+  [inst_1 : Fintype R] [inst_2 : AddCommGroup M] {P : Type u_10} [inst_3 : PseudoMetricSpace P] [inst_4 : Fintype L]
+  [inst_5 : LinearOrder L] [inst_6 : Nonempty L] (cfg : Replay.Initializer Slice Record Point Seed Tape Group (L → P)),
+  (∀ (e : Slice), cfg.touched e = false → cfg.oldInput e = cfg.retainedInput e) →
+    ∀ (keep : R → Bool) (point : R → P) (contribution : R → L → M) (cachedCenters : Seed → ℕ → L → P)
+      (cachedLabel runner : Seed → ℕ → R → L) (second : Seed → ℕ → R → ℝ) (update : ℕ → (L → P) → M → L → P),
+      (∀ (seed : Seed) (t : ℕ) (r : R) (m : L),
+          m ≠ cachedLabel seed t r → second seed t r ≤ dist (point r) (cachedCenters seed t m)) →
+        (∀ (seed : Seed) (t : ℕ) (r : R), dist (point r) (cachedCenters seed t (runner seed t r)) = second seed t r) →
+          ∀ (seed : Seed) (initialDirect : Bool) (T : ℕ),
+            let model :=
+              Replay.runnerModel keep point contribution (cachedCenters seed) (cachedLabel seed) (runner seed)
+                (second seed) update;
+            (fun t => (Replay.replayRun model (cfg.replay seed) initialDirect ↑t).1) = fun t =>
+              Replay.freshRun model (cfg.fresh seed) ↑t
+@Replay.same_seed_event_law : ∀ {Seed : Type u_1} {Output : Type u_2} {Value : Type u_3} (law : Set Seed → Value)
+  (fresh replay : Seed → Output),
+  (∀ (seed : Seed), replay seed = fresh seed) → ∀ (event : Set Output), law (replay ⁻¹' event) = law (fresh ⁻¹' event)
+Replay.intervalGap_lower : ∀ (a b aLo aHi bLo bHi : ℝ),
+  aLo ≤ a → a ≤ aHi → bLo ≤ b → b ≤ bHi → Replay.intervalGap aLo aHi bLo bHi ≤ |a - b|
+@Replay.outward_runner_certificate : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] [inst_1 : Fintype L]
+  [inst_2 : DecidableEq L] (x : P) (old new : L → P) (j r : L) (d₂ winnerHi secondLo secondHi runnerShiftLo : ℝ)
+  (shiftHi : L → ℝ),
+  dist x (old j) ≤ winnerHi →
+    secondLo ≤ d₂ ∧ d₂ ≤ secondHi →
+      (∀ (m : L), Replay.shift old new m ≤ shiftHi m) →
+        runnerShiftLo ≤ Replay.shift old new r →
+          dist x (old r) = d₂ →
+            (∀ (m : L), m ≠ j → d₂ ≤ dist x (old m)) →
+              winnerHi + shiftHi j < Replay.intervalGap secondLo secondHi runnerShiftLo (shiftHi r) →
+                ((Replay.nonRunners j r).Nonempty →
+                    winnerHi + shiftHi j < max 0 (secondLo - Replay.maxOn (Replay.nonRunners j r) shiftHi)) →
+                  ∀ (m : L), m ≠ j → dist x (new j) < dist x (new m)
+@Replay.outward_basic_certificate : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] [inst_1 : Fintype L]
+  [inst_2 : DecidableEq L] (x : P) (old new : L → P) (j : L) (winnerHi secondLo : ℝ) (shiftHi : L → ℝ),
+  dist x (old j) ≤ winnerHi →
+    (∀ (m : L), m ≠ j → secondLo ≤ dist x (old m)) →
+      (∀ (m : L), Replay.shift old new m ≤ shiftHi m) →
+        winnerHi + shiftHi j < max 0 (secondLo - Replay.maxOn (Replay.competitors j) shiftHi) →
+          ∀ (m : L), m ≠ j → dist x (new j) < dist x (new m)
+@Replay.maxOn_le : ∀ {L : Type u_1} (s : Finset L) (f : L → ℝ),
+  s.Nonempty → ∀ (B : ℝ), (∀ m ∈ s, f m ≤ B) → Replay.maxOn s f ≤ B
+@Replay.basic_implies_runner : ∀ {P : Type u_1} {L : Type u_2} [inst : PseudoMetricSpace P] [inst_1 : Fintype L]
+  [inst_2 : DecidableEq L] (x : P) (old new : L → P) (j r : L) (d₂ : ℝ),
+  r ≠ j →
+    Replay.shift old new j + Replay.maxOn (Replay.competitors j) (Replay.shift old new) < d₂ - dist x (old j) →
+      Replay.runnerTest x old new j r d₂
+@Replay.three_leave_one : ∀ {L : Type u_1} [inst : DecidableEq L] (a b c j r : L),
+  a ≠ b → a ≠ c → b ≠ c → ∃ m ∈ {a, b, c}, m ≠ j ∧ m ≠ r
+@Replay.top_three_suffice : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : DecidableEq L] (f : L → ℝ) (a b c j r : L),
+  a ≠ b →
+    a ≠ c →
+      b ≠ c →
+        f b ≤ f a →
+          f c ≤ f b →
+            (∀ (m : L), m ≠ a → m ≠ b → m ≠ c → f m ≤ f c) →
+              Replay.maxOn (Replay.nonRunners j r) f = Replay.maxOn ({m ∈ {a, b, c} | m ≠ j ∧ m ≠ r}) f
+Replay.overshoot_strict_improvement : ¬0 + 100 < 1 - 0 ∧ 0 + 0 < |1 - 100|
+Replay.runner_only_counterexample : 0 < 10 ∧ 10 < 11 ∧ |1 / 2| < |10 - 0| ∧ |1 / 10| < |1 / 2|
+Replay.radii_obstruction : ∀ (d₁ d₂ w D : ℝ),
+  0 ≤ d₁ →
+    0 ≤ d₂ →
+      0 ≤ w →
+        0 ≤ D →
+          d₂ - D ≤ d₁ + w → ∃ winner competitor, |winner - d₁| ≤ w ∧ |competitor - d₂| ≤ D ∧ |competitor| ≤ |winner|
+@Replay.exact_norm_obstruction : ∀ {L : Type u_1} [inst : DecidableEq L] (j q r : L),
+  q ≠ j →
+    r ≠ j →
+      r ≠ q →
+        ∀ (d₁ d₂ : ℝ),
+          0 ≤ d₁ →
+            d₁ < d₂ →
+              ∀ (δ : L → ℝ),
+                (∀ (m : L), 0 ≤ δ m) →
+                  d₂ - δ q ≤ d₁ + δ j →
+                    ∃ old new,
+                      |old j| = d₁ ∧
+                        |old r| = d₂ ∧
+                          (∀ (m : L), m ≠ j → d₂ ≤ |old m|) ∧
+                            (∀ (m : L), m ≠ j → |old j| < |old m|) ∧
+                              (∀ (m : L), |new m - old m| = δ m) ∧ |new q| ≤ |new j|
+Replay.two_center_exact_obstruction : ∀ (d₁ d₂ w D : ℝ),
+  0 ≤ d₁ →
+    0 ≤ w →
+      0 ≤ D →
+        |d₂ - D| ≤ d₁ + w → ∃ winner competitor, |winner - d₁| = w ∧ |competitor - d₂| = D ∧ |competitor| ≤ |winner|
+@Replay.maxOn_attained : ∀ {L : Type u_1} (s : Finset L) (f : L → ℝ), s.Nonempty → ∃ q ∈ s, f q = Replay.maxOn s f
+@Replay.exists_third : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : DecidableEq L] (j q : L),
+  3 ≤ Fintype.card L → ∃ r, r ≠ j ∧ r ≠ q
+@Replay.competitor_nonempty : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : DecidableEq L] (j : L),
+  2 ≤ Fintype.card L → (Replay.competitors j).Nonempty
+@Replay.exact_norm_full_tightness : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : DecidableEq L],
+  3 ≤ Fintype.card L →
+    ∀ (j : L) (d₁ d₂ : ℝ),
+      0 ≤ d₁ →
+        d₁ < d₂ →
+          ∀ (δ : L → ℝ),
+            (∀ (m : L), 0 ≤ δ m) →
+              ¬δ j + Replay.maxOn (Replay.competitors j) δ < d₂ - d₁ →
+                ∃ q r old new,
+                  q ≠ j ∧
+                    r ≠ j ∧
+                      |old j| = d₁ ∧
+                        |old r| = d₂ ∧
+                          (∀ (m : L), m ≠ j → d₂ ≤ |old m|) ∧
+                            (∀ (m : L), m ≠ j → |old j| < |old m|) ∧
+                              (∀ (m : L), |new m - old m| = δ m) ∧ |new q| ≤ |new j|
+@Replay.radii_full_tightness : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : DecidableEq L],
+  2 ≤ Fintype.card L →
+    ∀ (j : L) (d₁ d₂ : ℝ),
+      0 ≤ d₁ →
+        d₁ < d₂ →
+          ∀ (δ : L → ℝ),
+            (∀ (m : L), 0 ≤ δ m) →
+              ¬δ j + Replay.maxOn (Replay.competitors j) δ < d₂ - d₁ →
+                ∃ q old new,
+                  q ≠ j ∧
+                    |old j| = d₁ ∧
+                      |old q| = d₂ ∧
+                        (∀ (m : L), m ≠ j → |old m| = d₂) ∧ (∀ (m : L), |new m - old m| ≤ δ m) ∧ |new q| ≤ |new j|
+Replay.stable_recurrence : ∀ (δ : ℕ → ℝ) (q a₀ a h : ℝ),
+  0 ≤ q →
+    q < 1 →
+      0 ≤ a₀ →
+        0 ≤ a →
+          0 ≤ h → δ 0 ≤ a₀ * h → (∀ (t : ℕ), δ (t + 1) ≤ q * δ t + a * h) → ∀ (t : ℕ), δ t ≤ (a₀ + a / (1 - q)) * h
+@Replay.maxOn_bounded : ∀ {L : Type u_1} (s : Finset L) (f : L → ℝ) (ε : ℝ),
+  0 ≤ ε → (∀ m ∈ s, f m ≤ ε) → Replay.maxOn s f ≤ ε
+@Replay.basic_failure_margin : ∀ {L : Type u_1} [inst : Fintype L] [inst_1 : DecidableEq L] (j : L) (δ : L → ℝ)
+  (d₁ d₂ ε : ℝ), 0 ≤ ε → (∀ (m : L), δ m ≤ ε) → ¬δ j + Replay.maxOn (Replay.competitors j) δ < d₂ - d₁ → d₂ - d₁ ≤ 2 * ε
+@Replay.margin_failure_count : ∀ {R : Type u_1} [inst : Fintype R] [inst_1 : DecidableEq R] (F : Finset R) (gap : R → ℝ)
+  (μ ε : ℝ),
+  (∀ r ∈ F, gap r ≤ 2 * ε) →
+    ↑{r | gap r ≤ 2 * ε}.card ≤ μ * ↑(Fintype.card R) * (2 * ε) →
+      ↑F.card ≤ min (↑(Fintype.card R)) (2 * μ * ε * ↑(Fintype.card R))
+Replay.stable_failure_scale : ∀ (n r μ B : ℝ), 0 < n → 0 ≤ μ → ∀ δ ≤ B * (r / n), 2 * μ * δ * n ≤ 2 * μ * B * r

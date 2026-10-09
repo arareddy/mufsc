@@ -1,0 +1,653 @@
+{
+  "client_selection": "Sort all state names lexicographically or all state:PUMA:five-digit-PUMA keys lexicographically. Use PCG64 default_rng(SeedSequence([0,role])),role0 state or1 PUMA; permute once, take first C. States C10/25/50; PUMA C100/250.",
+  "clipping": "Fix clip=ceil(max absolute standardized coordinate over entire eligible50-state pool)+1; b=12; one canonical ties-to-even encoding. Archive raw standardized float64 and exact encoded int64 arrays; all initialization/refinement/quality use the represented map.",
+  "code_and_map": {
+    "code_sha256": "6f613c76ba4fffccf3815fc2deadf58ae00eb9e57feb83fc8e7f2236308ae909",
+    "files": {
+      "src/assignment.py": "9212661f84865d190d9681c915410fb212b63228c9de5e02c43086f77500d9cd",
+      "src/centralized.py": "d3b80befe2562ade83231071dda89d03f3003c9dd492a8725633eb83b8a6daac",
+      "src/certificates.py": "a56c1e4f977aecda0e43ca5e2570d2a0bc784dd0af3c97a5d44ba9f8d79d16f1",
+      "src/datasets.py": "9c6d8b2a4efeda7143258ea3d92392faf81ef5231e61bf08af5352751a172c83",
+      "src/digest.py": "32b811b98214d8829b89f3597a8c6b6eed10888f7379d04b217254221af6876b",
+      "src/exact_numeric.py": "9baed40c7f34f5078b2b4787492e4bf04ce25b76461017bab616082185702bd1",
+      "src/fair_update.py": "bb116060e8211f20e87921ba9c276894d70acb70996be1c8fe50aca01ccf57bd",
+      "src/fixedpoint.py": "377278da46b1688019cb6190d47d11f9a6c86a5b6d32b516e239554425f83f32",
+      "src/kmeanspp.py": "1628050e73e3dfe01926d285ff769c3a58815821e6dd334a233a73dcb9c02151",
+      "src/merged_baseline.py": "ad0dc0b0f0df72e3f93a21e01fb0e28ca1412515dcd86debe66df175a3b177ba",
+      "src/objective.py": "28a73a22ae99c4e2e851404b4de10ba62617445d9937accfc652a3f35fb95903",
+      "src/rng.py": "259be03f9ea19091f4b201d70f354a082cfe821fe61314ec13c1a44c7dd40f67",
+      "src/splitgroup.py": "f5a10cddebd921e2a53d3b224035d6507262933e5ca99b4cd914aba824ddcc03",
+      "src/timing.py": "1ae4bbba3f7f9a1461a3bb7d672b60cad76b19b3ea8975302973918f7f67fad0",
+      "src/train.py": "85ec56fdbebf644800ee88cb1594a56245850ee2496c33951d4c5bab3c81a4e5",
+      "src/unlearn.py": "264a3ca2326f35fec11d77eff707675c63fea9e4de2928ef7319ccf79b48a717",
+      "src/validation.py": "7c0a8ed77fa100e65e0d46086ae762965d8213f632e02601644805f6ccd2a5e4"
+    },
+    "map_sha256": "7c25a7f41af39859cc4cc254b3a70525380285904e7f67cd45ca8efbe3633d52"
+  },
+  "created_utc": "2026-09-06T02:45:29.837143+00:00",
+  "csv_parsing": "pandas2.3.3 C parser, low_memory=False, float64 numeric selected columns, SERIALNO pandas string; preserve file row order and zero-based source row index",
+  "dataset_version": "acs2018-ftf1-p3-v1",
+  "deletion_sampling": "r=max(1,ROUND_HALF_UP(n*fraction)); derive seed(2,uniform-deletion,master_seed,n,C,k,T,format(fraction,f)); for attempt0 derive seed(deletion_seed,validity-attempt,0), sorted uniform size-r choice from pooled client-order rows without replacement. Requests independent and noncumulative.",
+  "deletion_validity": "Reference helper permits up to100 fresh attempts if a global group disappears; require r<min(n_A,n_B) for every new request, proving all candidates valid and attempt0 always accepted. Otherwise stop before outcomes; never silently condition a claimed unconditional law.",
+  "derived_seed": "SHA256 of ASCII str(base) then NUL+UTF8(role), then NUL+UTF8(str(value)) for each value; first8digest bytes interpreted unsigned little-endian",
+  "eligibility": "Require ST equal file FIPS; retain finite SEX in{1,2} and finite positive PUMA; require eligible PUMA integral; identity prefilter; no age/employment/income threshold",
+  "encoded_hash_contract": "Sorted client IDs; for each client concatenate little-endian int64[client,n,d], C-order encoded X int64 bytes, group int64 bytes, source-row int64 bytes. Geography and native-ID files have separate hashes.",
+  "environment_manifest_sha256": "8f8145d2a7a2af07d22ff9cf5b8b64fe473c9ad4d37f9b306a80f468c3120d49",
+  "excluded": [
+    "DC",
+    "PR"
+  ],
+  "execution": {
+    "L": 6,
+    "abandon_threshold": 0.5,
+    "anchor_lloyd_iters": 0,
+    "b": 12,
+    "gamma": 0.0,
+    "indexed_centers": true,
+    "methods": [
+      "fresh",
+      "none",
+      "basic",
+      "runnerup"
+    ],
+    "pilot_order": "design15 seeds0..4 (r1), then design16 seeds0..4 (r10), before remaining matrix"
+  },
+  "feature_columns": [
+    "AGEP",
+    "SCHL",
+    "MAR",
+    "RELP",
+    "DIS",
+    "ESP",
+    "CIT",
+    "MIG",
+    "MIL",
+    "ANC",
+    "NATIVITY",
+    "DEAR",
+    "DEYE",
+    "DREM",
+    "SEX",
+    "RAC1P"
+  ],
+  "feature_encoding": "Keep all categorical integer codes as numeric coordinates, including SEX; no one-hot expansion, weighting, learned ordering or target column",
+  "folktables_scope": "Pinned ACSEmployment sixteen-feature schema and identity prefilter only; do not call df_to_numpy or its postprocessor. Our group is SEX, not default RAC1P.",
+  "group_definition": "A=SEX1 maps0; B=SEX2 maps1",
+  "matrix": [
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 0,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "reference; n sweep; C sweep; k sweep; T sweep; deletion fraction sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 1,
+      "k": 4,
+      "n": 250000,
+      "r": 250,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "n sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 2,
+      "k": 4,
+      "n": 500000,
+      "r": 500,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "n sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 3,
+      "k": 4,
+      "n": 1000000,
+      "r": 1000,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "n sweep"
+    },
+    {
+      "C": 10,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 4,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "C sweep"
+    },
+    {
+      "C": 25,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 5,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "C sweep"
+    },
+    {
+      "C": 100,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 6,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "C sweep"
+    },
+    {
+      "C": 250,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 7,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "C sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 8,
+      "k": 8,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "k sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 9,
+      "k": 16,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "k sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 10,
+      "k": 32,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "k sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.001",
+      "design_index": 11,
+      "k": 64,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "k sweep"
+    },
+    {
+      "C": 50,
+      "T": 10,
+      "deletion_fraction": "0.001",
+      "design_index": 12,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "T sweep"
+    },
+    {
+      "C": 50,
+      "T": 20,
+      "deletion_fraction": "0.001",
+      "design_index": 13,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "T sweep"
+    },
+    {
+      "C": 50,
+      "T": 40,
+      "deletion_fraction": "0.001",
+      "design_index": 14,
+      "k": 4,
+      "n": 100000,
+      "r": 100,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "T sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.00001",
+      "design_index": 15,
+      "k": 4,
+      "n": 100000,
+      "r": 1,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "deletion fraction sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.0001",
+      "design_index": 16,
+      "k": 4,
+      "n": 100000,
+      "r": 10,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "deletion fraction sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.01",
+      "design_index": 17,
+      "k": 4,
+      "n": 100000,
+      "r": 1000,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "deletion fraction sweep"
+    },
+    {
+      "C": 50,
+      "T": 5,
+      "deletion_fraction": "0.05",
+      "design_index": 18,
+      "k": 4,
+      "n": 100000,
+      "r": 5000,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "selection_reason": "deletion fraction sweep"
+    }
+  ],
+  "missing_values": "After eligibility, replace feature NaN with numeric-1; reject remaining feature infinity. Require nonmissing SERIALNO and integral positive SPORDER; do not silently filter invalid native IDs.",
+  "native_identity": "(2018,stateFIPS,SERIALNO,SPORDER); additionally bind source CSV SHA256 and zero-based CSV row. Geography/PUMA is lineage, not a replacement native identity.",
+  "populations": [
+    {
+      "C": 10,
+      "n": 100000
+    },
+    {
+      "C": 25,
+      "n": 100000
+    },
+    {
+      "C": 50,
+      "n": 100000
+    },
+    {
+      "C": 100,
+      "n": 100000
+    },
+    {
+      "C": 250,
+      "n": 100000
+    },
+    {
+      "C": 50,
+      "n": 250000
+    },
+    {
+      "C": 50,
+      "n": 500000
+    },
+    {
+      "C": 50,
+      "n": 1000000
+    }
+  ],
+  "preparer_sha256": "8fabeda98e5caec0b2922ddd1f5cb1aa58a0c651ac1c70b3a9f8ad42cb5318ac",
+  "quota": "Exact integer largest-remainder allocation proportional to eligible client size; ties by selected prefix position. Require n<=capacity and all quotas positive; no population tuning.",
+  "record_sampling": "For geography: derived_seed(1,record-subsample,n,C,client_type,geography); PCG64 default_rng(seed).choice(size,quota,replace=False), sort indices; if quota==size use all rows without a draw.",
+  "reference_helper_sha256": "2f071225cbecc2376d9eb3abe1cfd42896de54572540bf4c0e6c4ac9fdc874f0",
+  "requirements_lock_sha256": "0a8342d914dc279d1756a7e577feb2b33e6b519e56c02b870757dac889c964e7",
+  "schema_version": 1,
+  "scientific_scope": "New authorized public ACS population; no historical count/hash matching, original recovery, or old seed1 causal diagnosis",
+  "source_manifest_sha256": "c23101b1e2ad28ac66f7cca69390d30368d1a6e7eb43257511b7f8ac27e03fa6",
+  "standardization": "Convert each eligible raw feature array to C-contiguous float64; concatenate states in state_concatenation_order and within-state original file row order into one C-contiguous array. NumPy2.3.5 mean(axis=0,dtype=float64) and std(axis=0,ddof=0,dtype=float64); replace zero std by1. Apply (X-mean)/std before client selection; never refit after sampling or deletion.",
+  "state_concatenation_order": [
+    {
+      "fips": 1,
+      "state": "AL"
+    },
+    {
+      "fips": 2,
+      "state": "AK"
+    },
+    {
+      "fips": 4,
+      "state": "AZ"
+    },
+    {
+      "fips": 5,
+      "state": "AR"
+    },
+    {
+      "fips": 6,
+      "state": "CA"
+    },
+    {
+      "fips": 8,
+      "state": "CO"
+    },
+    {
+      "fips": 9,
+      "state": "CT"
+    },
+    {
+      "fips": 10,
+      "state": "DE"
+    },
+    {
+      "fips": 12,
+      "state": "FL"
+    },
+    {
+      "fips": 13,
+      "state": "GA"
+    },
+    {
+      "fips": 15,
+      "state": "HI"
+    },
+    {
+      "fips": 16,
+      "state": "ID"
+    },
+    {
+      "fips": 17,
+      "state": "IL"
+    },
+    {
+      "fips": 18,
+      "state": "IN"
+    },
+    {
+      "fips": 19,
+      "state": "IA"
+    },
+    {
+      "fips": 20,
+      "state": "KS"
+    },
+    {
+      "fips": 21,
+      "state": "KY"
+    },
+    {
+      "fips": 22,
+      "state": "LA"
+    },
+    {
+      "fips": 23,
+      "state": "ME"
+    },
+    {
+      "fips": 24,
+      "state": "MD"
+    },
+    {
+      "fips": 25,
+      "state": "MA"
+    },
+    {
+      "fips": 26,
+      "state": "MI"
+    },
+    {
+      "fips": 27,
+      "state": "MN"
+    },
+    {
+      "fips": 28,
+      "state": "MS"
+    },
+    {
+      "fips": 29,
+      "state": "MO"
+    },
+    {
+      "fips": 30,
+      "state": "MT"
+    },
+    {
+      "fips": 31,
+      "state": "NE"
+    },
+    {
+      "fips": 32,
+      "state": "NV"
+    },
+    {
+      "fips": 33,
+      "state": "NH"
+    },
+    {
+      "fips": 34,
+      "state": "NJ"
+    },
+    {
+      "fips": 35,
+      "state": "NM"
+    },
+    {
+      "fips": 36,
+      "state": "NY"
+    },
+    {
+      "fips": 37,
+      "state": "NC"
+    },
+    {
+      "fips": 38,
+      "state": "ND"
+    },
+    {
+      "fips": 39,
+      "state": "OH"
+    },
+    {
+      "fips": 40,
+      "state": "OK"
+    },
+    {
+      "fips": 41,
+      "state": "OR"
+    },
+    {
+      "fips": 42,
+      "state": "PA"
+    },
+    {
+      "fips": 44,
+      "state": "RI"
+    },
+    {
+      "fips": 45,
+      "state": "SC"
+    },
+    {
+      "fips": 46,
+      "state": "SD"
+    },
+    {
+      "fips": 47,
+      "state": "TN"
+    },
+    {
+      "fips": 48,
+      "state": "TX"
+    },
+    {
+      "fips": 49,
+      "state": "UT"
+    },
+    {
+      "fips": 50,
+      "state": "VT"
+    },
+    {
+      "fips": 51,
+      "state": "VA"
+    },
+    {
+      "fips": 53,
+      "state": "WA"
+    },
+    {
+      "fips": 54,
+      "state": "WV"
+    },
+    {
+      "fips": 55,
+      "state": "WI"
+    },
+    {
+      "fips": 56,
+      "state": "WY"
+    }
+  ],
+  "survey": {
+    "horizon": "1-Year",
+    "type": "person",
+    "year": 2018
+  }
+}

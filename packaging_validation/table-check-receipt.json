@@ -1,0 +1,20 @@
+{
+  "paired_ratio_groups": 10,
+  "quality_checks": {
+    "exact_summary_rows": 360,
+    "paired_Lloyd_summary_rows": 108,
+    "quality_rows_verified": {
+      "Group_Quality": 90,
+      "Lloyd_Comparison": 180
+    }
+  },
+  "runtime": {
+    "network": "disabled",
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "threads": 1
+  },
+  "scope": "reaggregates saved paired ratios; frozen timing observations are not new measurements",
+  "status": "PASS",
+  "tables_read": 98
+}

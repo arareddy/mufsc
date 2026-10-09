@@ -1,0 +1,90 @@
+{
+  "scope": "Frozen checked matched-anchor-budget construction; see REPORT.md for remaining implementation bridges.",
+  "files": [
+    {
+      "path": "MatchedBudget.lean",
+      "bytes": 15480,
+      "sha256": "8db793c72bd4240335bcb3e73ff61cd62f85168ae29260c27bb3dde3a72186e7"
+    },
+    {
+      "path": "FiniteRecords.lean",
+      "bytes": 18694,
+      "sha256": "b08b1bc8cc1feaf53a0199c3816f344629809132d4900f07c26e23123f5ad54d"
+    },
+    {
+      "path": "Axioms.lean",
+      "bytes": 3318,
+      "sha256": "ff9320e18c13394d180849d64292957556f1b3ab951ee568263ac1b8879d8cee"
+    },
+    {
+      "path": "build.py",
+      "bytes": 1546,
+      "sha256": "3da7a59420ee2ac0e0209eb735554ded645eb89dca7a1cef310d47c3b32e53a2"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "path": "requirements.json",
+      "bytes": 4377,
+      "sha256": "8234f826a2d1e22e3c188d183a65f4a4bd91a9c47c0d117728cf64cae23f4243"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 8000,
+      "sha256": "63dda188b1a0580332c4f4913d27e6385a94e992e58fff9c9930dd33a277600a"
+    },
+    {
+      "path": "VERIFIED_THEOREMS.md",
+      "bytes": 7987,
+      "sha256": "a1fbc27dbbd7b9fb91c7628d237ed2d00871da29cf605d1bfdc9ca503aaf2865"
+    },
+    {
+      "path": "BUILD.md",
+      "bytes": 2071,
+      "sha256": "f16946bb9b4b56367aa8222b603525374e01dadabb8a7ae826d552c5708eac89"
+    },
+    {
+      "path": "PAPER_INPUTS.json",
+      "bytes": 797,
+      "sha256": "32617fc2c5884bcbe9d9829e9a06288e4b611c4a707e1c3a7082d7d3db62e04c"
+    },
+    {
+      "path": "evidence/Axioms.receipt.json",
+      "bytes": 398,
+      "sha256": "595e192f540602c61e5924160464e3f7cb6f804b6dec30c06e390bbb3eaa3f97"
+    },
+    {
+      "path": "evidence/FiniteRecords.receipt.json",
+      "bytes": 406,
+      "sha256": "cadd4c1f5c1a87daf57b3a1134c48749c1df3d715131d134781d5dabf4194f0f"
+    },
+    {
+      "path": "evidence/FiniteRecords.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/MatchedBudget.receipt.json",
+      "bytes": 403,
+      "sha256": "8a0d161a4158812f3053529262199f426c49e393323abe908a2f69079de72610"
+    },
+    {
+      "path": "evidence/MatchedBudget.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/axioms.stdout.log",
+      "bytes": 6447,
+      "sha256": "43add1476ffd89bb371e3f38c5819ae032ef098825419f2f190c9139c47fc086"
+    },
+    {
+      "path": "evidence/integrity_audit.json",
+      "bytes": 206,
+      "sha256": "2deae2a01f44327c64700307d1bf22f8296197120042c2c38cd002130e6a0281"
+    }
+  ]
+}

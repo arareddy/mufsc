@@ -1,0 +1,12 @@
+{
+  "source": "proof/Rejection.lean",
+  "sha256": "39c724a9471a64082c219eb0818c7637b2ff2c2fc471207ac8aa65b2652c5f2e",
+  "started_utc": "2026-09-26T10:07:42.385135+00:00",
+  "finished_utc": "2026-09-26T10:07:45.247291+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "trust": 0,
+  "threads": 1,
+  "compiler_output": "logs/final_Rejection.log"
+}

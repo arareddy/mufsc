@@ -1,0 +1,19 @@
+{
+  "final_live_commit": "733a1a790872f86b647a492ac3d66e6c7c8ef186",
+  "initial_source_files": 32,
+  "final_source_files": 33,
+  "changed_or_added": [
+    "appendix.tex",
+    "consolidated_studies_20260926.tex",
+    "experiment_evidence.tex",
+    "generated/consolidation20260926/client_main.tex",
+    "generated/corrected_p2_counters.tex",
+    "generated/editorial20260926/lloyd_main.tex",
+    "generated/final_replay_main.tex",
+    "main.tex",
+    "september26_evidence.tex"
+  ],
+  "theorem_environment_count": 13,
+  "unnumbered_obligation_groups": 37,
+  "interpretation": "Authorized editorial integration moved approximation displays from main to appendix. Labels and formulas reread; mappings agree. Initial hashes do not certify final files. No manuscript writes by this task."
+}

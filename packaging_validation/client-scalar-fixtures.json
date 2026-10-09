@@ -1,0 +1,260 @@
+{
+  "checks": [
+    {
+      "elapsed_seconds": 0.23339325000415556,
+      "name": "whole_client_grid_scalar_vs_frozen",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.0007346670026890934,
+      "name": "invalid_requests",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.0011472500045783818,
+      "name": "degeneracies",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.0012601249909494072,
+      "name": "counterexamples",
+      "status": "PASS"
+    },
+    {
+      "elapsed_seconds": 0.0006527079967781901,
+      "name": "ideal_law_enumeration",
+      "status": "PASS"
+    }
+  ],
+  "details": {
+    "counterexamples": {
+      "global_weights_in_mixed_local_sampler": {
+        "after_P_row0": "1/2",
+        "after_nA_nB": [
+          1,
+          1
+        ],
+        "before_P_row0": "1/3",
+        "before_nA_nB": [
+          2,
+          1
+        ],
+        "row_groups": [
+          0,
+          1
+        ],
+        "untouched_rows": [
+          0,
+          1
+        ]
+      },
+      "record_miss_changes_count": {
+        "old_mult": [
+          4
+        ],
+        "removed_unselected": 0,
+        "required_new_total": 3,
+        "selected": [
+          1
+        ]
+      },
+      "refitted_preprocessing": {
+        "encoded_before": [
+          [
+            -3.25
+          ]
+        ],
+        "encoded_refit": [
+          [
+            0.0
+          ]
+        ],
+        "original_mean": "10/3",
+        "retained_mean": "0/1",
+        "retained_raw_point": 0
+      },
+      "renumbering": [
+        {
+          "persistent_42": [
+            1,
+            5
+          ],
+          "renumbered_0": [
+            5,
+            0
+          ],
+          "seed": 0
+        },
+        {
+          "persistent_42": [
+            2,
+            5
+          ],
+          "renumbered_0": [
+            2,
+            3
+          ],
+          "seed": 1
+        },
+        {
+          "persistent_42": [
+            5,
+            0
+          ],
+          "renumbered_0": [
+            1,
+            4
+          ],
+          "seed": 2
+        },
+        {
+          "persistent_42": [
+            0,
+            5
+          ],
+          "renumbered_0": [
+            0,
+            3
+          ],
+          "seed": 4
+        },
+        {
+          "persistent_42": [
+            5,
+            0
+          ],
+          "renumbered_0": [
+            5,
+            2
+          ],
+          "seed": 7
+        },
+        {
+          "persistent_42": [
+            3,
+            0
+          ],
+          "renumbered_0": [
+            2,
+            4
+          ],
+          "seed": 11
+        },
+        {
+          "persistent_42": [
+            3,
+            5
+          ],
+          "renumbered_0": [
+            2,
+            5
+          ],
+          "seed": 19
+        }
+      ],
+      "row_order": {
+        "original": [
+          [
+            1.0
+          ]
+        ],
+        "reversed": [
+          [
+            4.0
+          ]
+        ]
+      },
+      "stale_denominators": {
+        "correct_P_A": "1/2",
+        "correct_weights": [
+          "1/1",
+          "1/1"
+        ],
+        "owners": [
+          [
+            42,
+            0,
+            0
+          ],
+          [
+            105,
+            1,
+            0
+          ]
+        ],
+        "stale_P_A": "1/3",
+        "stale_weights": [
+          "1/2",
+          "1/1"
+        ]
+      }
+    },
+    "degeneracies": {
+      "categorical_sampler_comparisons": 24,
+      "cyclic_C0": [
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ]
+      ]
+    },
+    "ideal_law_enumeration": {
+      "fresh": {
+        "(0, 1)": "1/15",
+        "(0, 2)": "4/15",
+        "(1, 0)": "1/6",
+        "(1, 2)": "1/6",
+        "(2, 0)": "4/15",
+        "(2, 1)": "1/15"
+      },
+      "fresh_unordered_01": "7/30",
+      "prefix": {
+        "(0, 1)": "1/15",
+        "(0, 2)": "4/15",
+        "(1, 0)": "1/6",
+        "(1, 2)": "1/6",
+        "(2, 0)": "4/15",
+        "(2, 1)": "1/15"
+      },
+      "restart": {
+        "(0, 1)": "149/2520",
+        "(0, 2)": "149/630",
+        "(1, 0)": "73/504",
+        "(1, 2)": "73/504",
+        "(2, 0)": "209/630",
+        "(2, 1)": "209/2520"
+      },
+      "restart_unordered_01": "257/1260",
+      "saturation_fresh": {
+        "(0, 1)": "1/1"
+      },
+      "saturation_prefix": {
+        "(0, 1)": "2/3",
+        "(1, 0)": "1/3"
+      },
+      "scope": "Exact enumeration on stated tiny populations, not a global law proof."
+    },
+    "invalid_requests": {
+      "frozen_record_api_invalid": 8,
+      "oracle_invalid": 9,
+      "oracle_valid": 4
+    },
+    "whole_client_grid_scalar_vs_frozen": {
+      "baseline_replay_cases": 14,
+      "configurations": 14,
+      "invalid_subsets": 28,
+      "valid_subsets": 196
+    }
+  }
+}

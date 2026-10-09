@@ -1,0 +1,10 @@
+{
+  "source": "MergedOneAxioms.lean",
+  "sha256": "7028d1a4bde32f6c5dab6d06ecd2efd8c6d40ad3148b0b334bc80f146088e87a",
+  "started_utc": "2026-09-26T09:50:23.665187+00:00",
+  "finished_utc": "2026-09-26T09:50:26.106153+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "threads": 1,
+  "compiler_output": "build/merged_one_axioms.stdout.log"
+}

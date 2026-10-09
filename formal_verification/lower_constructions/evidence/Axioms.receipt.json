@@ -1,0 +1,10 @@
+{
+  "source": "Axioms.lean",
+  "sha256": "ff9320e18c13394d180849d64292957556f1b3ab951ee568263ac1b8879d8cee",
+  "started_utc": "2026-09-26T09:38:21.128418+00:00",
+  "finished_utc": "2026-09-26T09:38:24.747051+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "threads": 1,
+  "compiler_output": "build/axioms.stdout.log"
+}

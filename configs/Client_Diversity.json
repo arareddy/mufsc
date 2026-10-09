@@ -1,0 +1,1082 @@
+[
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c0_k10_seed10000",
+    "case_index": 0,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "34f4a56b859b9d6120276ebec4ea7aebe2e2cad4fd036c3e9c535b47164af5cd",
+    "removed_group_counts": [
+      97,
+      203
+    ],
+    "removed_n": 300,
+    "retained_group_counts": [
+      9685,
+      20177
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10000,
+    "source_client_id": 0,
+    "id": "adult_c0_k10_seed10000",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c99_k10_seed10000",
+    "case_index": 1,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "b07d8d63c1f1a96503de686b99feaa198013190061904cbd3c754b405757ec21",
+    "removed_group_counts": [
+      179,
+      283
+    ],
+    "removed_n": 462,
+    "retained_group_counts": [
+      9603,
+      20097
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10000,
+    "source_client_id": 99,
+    "id": "adult_c99_k10_seed10000",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c0_k10_seed10001",
+    "case_index": 2,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "34f4a56b859b9d6120276ebec4ea7aebe2e2cad4fd036c3e9c535b47164af5cd",
+    "removed_group_counts": [
+      97,
+      203
+    ],
+    "removed_n": 300,
+    "retained_group_counts": [
+      9685,
+      20177
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10001,
+    "source_client_id": 0,
+    "id": "adult_c0_k10_seed10001",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c99_k10_seed10001",
+    "case_index": 3,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "b07d8d63c1f1a96503de686b99feaa198013190061904cbd3c754b405757ec21",
+    "removed_group_counts": [
+      179,
+      283
+    ],
+    "removed_n": 462,
+    "retained_group_counts": [
+      9603,
+      20097
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10001,
+    "source_client_id": 99,
+    "id": "adult_c99_k10_seed10001",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c0_k10_seed10002",
+    "case_index": 4,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "34f4a56b859b9d6120276ebec4ea7aebe2e2cad4fd036c3e9c535b47164af5cd",
+    "removed_group_counts": [
+      97,
+      203
+    ],
+    "removed_n": 300,
+    "retained_group_counts": [
+      9685,
+      20177
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10002,
+    "source_client_id": 0,
+    "id": "adult_c0_k10_seed10002",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c99_k10_seed10002",
+    "case_index": 5,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "b07d8d63c1f1a96503de686b99feaa198013190061904cbd3c754b405757ec21",
+    "removed_group_counts": [
+      179,
+      283
+    ],
+    "removed_n": 462,
+    "retained_group_counts": [
+      9603,
+      20097
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10002,
+    "source_client_id": 99,
+    "id": "adult_c99_k10_seed10002",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c0_k10_seed10003",
+    "case_index": 6,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "34f4a56b859b9d6120276ebec4ea7aebe2e2cad4fd036c3e9c535b47164af5cd",
+    "removed_group_counts": [
+      97,
+      203
+    ],
+    "removed_n": 300,
+    "retained_group_counts": [
+      9685,
+      20177
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10003,
+    "source_client_id": 0,
+    "id": "adult_c0_k10_seed10003",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c99_k10_seed10003",
+    "case_index": 7,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "b07d8d63c1f1a96503de686b99feaa198013190061904cbd3c754b405757ec21",
+    "removed_group_counts": [
+      179,
+      283
+    ],
+    "removed_n": 462,
+    "retained_group_counts": [
+      9603,
+      20097
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10003,
+    "source_client_id": 99,
+    "id": "adult_c99_k10_seed10003",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c0_k10_seed10004",
+    "case_index": 8,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "34f4a56b859b9d6120276ebec4ea7aebe2e2cad4fd036c3e9c535b47164af5cd",
+    "removed_group_counts": [
+      97,
+      203
+    ],
+    "removed_n": 300,
+    "retained_group_counts": [
+      9685,
+      20177
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10004,
+    "source_client_id": 0,
+    "id": "adult_c0_k10_seed10004",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "adult_c99_k10_seed10004",
+    "case_index": 9,
+    "clip": 175.0,
+    "d": 103,
+    "dataset": "adult",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30162,
+    "ordered_removed_row_ids_sha256": "b07d8d63c1f1a96503de686b99feaa198013190061904cbd3c754b405757ec21",
+    "removed_group_counts": [
+      179,
+      283
+    ],
+    "removed_n": 462,
+    "retained_group_counts": [
+      9603,
+      20097
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10004,
+    "source_client_id": 99,
+    "id": "adult_c99_k10_seed10004",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c0_k10_seed10000",
+    "case_index": 10,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "c3a167cee665cf12d4a71dcf00cfce7bab5c6384c113df2a8062ae129fcc8896",
+    "removed_group_counts": [
+      899,
+      1360
+    ],
+    "removed_n": 2259,
+    "retained_group_counts": [
+      17098,
+      25854
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10000,
+    "source_client_id": 0,
+    "id": "bank_c0_k10_seed10000",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c19_k10_seed10000",
+    "case_index": 11,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 19,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "7905f6a1dc53ef1ca8096e62cdf27b8e33bdf005a230387bd0b1549bf15755fc",
+    "removed_group_counts": [
+      916,
+      1374
+    ],
+    "removed_n": 2290,
+    "retained_group_counts": [
+      17081,
+      25840
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10000,
+    "source_client_id": 19,
+    "id": "bank_c19_k10_seed10000",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c0_k10_seed10001",
+    "case_index": 12,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "c3a167cee665cf12d4a71dcf00cfce7bab5c6384c113df2a8062ae129fcc8896",
+    "removed_group_counts": [
+      899,
+      1360
+    ],
+    "removed_n": 2259,
+    "retained_group_counts": [
+      17098,
+      25854
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10001,
+    "source_client_id": 0,
+    "id": "bank_c0_k10_seed10001",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c19_k10_seed10001",
+    "case_index": 13,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 19,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "7905f6a1dc53ef1ca8096e62cdf27b8e33bdf005a230387bd0b1549bf15755fc",
+    "removed_group_counts": [
+      916,
+      1374
+    ],
+    "removed_n": 2290,
+    "retained_group_counts": [
+      17081,
+      25840
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10001,
+    "source_client_id": 19,
+    "id": "bank_c19_k10_seed10001",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c0_k10_seed10002",
+    "case_index": 14,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "c3a167cee665cf12d4a71dcf00cfce7bab5c6384c113df2a8062ae129fcc8896",
+    "removed_group_counts": [
+      899,
+      1360
+    ],
+    "removed_n": 2259,
+    "retained_group_counts": [
+      17098,
+      25854
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10002,
+    "source_client_id": 0,
+    "id": "bank_c0_k10_seed10002",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c19_k10_seed10002",
+    "case_index": 15,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 19,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "7905f6a1dc53ef1ca8096e62cdf27b8e33bdf005a230387bd0b1549bf15755fc",
+    "removed_group_counts": [
+      916,
+      1374
+    ],
+    "removed_n": 2290,
+    "retained_group_counts": [
+      17081,
+      25840
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10002,
+    "source_client_id": 19,
+    "id": "bank_c19_k10_seed10002",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c0_k10_seed10003",
+    "case_index": 16,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "c3a167cee665cf12d4a71dcf00cfce7bab5c6384c113df2a8062ae129fcc8896",
+    "removed_group_counts": [
+      899,
+      1360
+    ],
+    "removed_n": 2259,
+    "retained_group_counts": [
+      17098,
+      25854
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10003,
+    "source_client_id": 0,
+    "id": "bank_c0_k10_seed10003",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c19_k10_seed10003",
+    "case_index": 17,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 19,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "7905f6a1dc53ef1ca8096e62cdf27b8e33bdf005a230387bd0b1549bf15755fc",
+    "removed_group_counts": [
+      916,
+      1374
+    ],
+    "removed_n": 2290,
+    "retained_group_counts": [
+      17081,
+      25840
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10003,
+    "source_client_id": 19,
+    "id": "bank_c19_k10_seed10003",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c0_k10_seed10004",
+    "case_index": 18,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "c3a167cee665cf12d4a71dcf00cfce7bab5c6384c113df2a8062ae129fcc8896",
+    "removed_group_counts": [
+      899,
+      1360
+    ],
+    "removed_n": 2259,
+    "retained_group_counts": [
+      17098,
+      25854
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10004,
+    "source_client_id": 0,
+    "id": "bank_c0_k10_seed10004",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 20,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "bank_c19_k10_seed10004",
+    "case_index": 19,
+    "clip": 121.0,
+    "d": 42,
+    "dataset": "bank",
+    "dataset_selection_seed": 0,
+    "deleted_client": 19,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 45211,
+    "ordered_removed_row_ids_sha256": "7905f6a1dc53ef1ca8096e62cdf27b8e33bdf005a230387bd0b1549bf15755fc",
+    "removed_group_counts": [
+      916,
+      1374
+    ],
+    "removed_n": 2290,
+    "retained_group_counts": [
+      17081,
+      25840
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10004,
+    "source_client_id": 19,
+    "id": "bank_c19_k10_seed10004",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c0_k10_seed10000",
+    "case_index": 20,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "e55aa1c4f1b08c743dbcac73ccc7b596a78d9a09f9da2bb52432ef5e0f14f61c",
+    "removed_group_counts": [
+      53,
+      246
+    ],
+    "removed_n": 299,
+    "retained_group_counts": [
+      5332,
+      24369
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10000,
+    "source_client_id": 0,
+    "id": "credit_c0_k10_seed10000",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c99_k10_seed10000",
+    "case_index": 21,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "0fd22423c3f0c7e864fcbfb6c1eebae071b4aee91fa2e7f4b98891bef1ebd6a2",
+    "removed_group_counts": [
+      138,
+      261
+    ],
+    "removed_n": 399,
+    "retained_group_counts": [
+      5247,
+      24354
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10000,
+    "source_client_id": 99,
+    "id": "credit_c99_k10_seed10000",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c0_k10_seed10001",
+    "case_index": 22,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "e55aa1c4f1b08c743dbcac73ccc7b596a78d9a09f9da2bb52432ef5e0f14f61c",
+    "removed_group_counts": [
+      53,
+      246
+    ],
+    "removed_n": 299,
+    "retained_group_counts": [
+      5332,
+      24369
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10001,
+    "source_client_id": 0,
+    "id": "credit_c0_k10_seed10001",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c99_k10_seed10001",
+    "case_index": 23,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "0fd22423c3f0c7e864fcbfb6c1eebae071b4aee91fa2e7f4b98891bef1ebd6a2",
+    "removed_group_counts": [
+      138,
+      261
+    ],
+    "removed_n": 399,
+    "retained_group_counts": [
+      5247,
+      24354
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10001,
+    "source_client_id": 99,
+    "id": "credit_c99_k10_seed10001",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c0_k10_seed10002",
+    "case_index": 24,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "e55aa1c4f1b08c743dbcac73ccc7b596a78d9a09f9da2bb52432ef5e0f14f61c",
+    "removed_group_counts": [
+      53,
+      246
+    ],
+    "removed_n": 299,
+    "retained_group_counts": [
+      5332,
+      24369
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10002,
+    "source_client_id": 0,
+    "id": "credit_c0_k10_seed10002",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c99_k10_seed10002",
+    "case_index": 25,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "0fd22423c3f0c7e864fcbfb6c1eebae071b4aee91fa2e7f4b98891bef1ebd6a2",
+    "removed_group_counts": [
+      138,
+      261
+    ],
+    "removed_n": 399,
+    "retained_group_counts": [
+      5247,
+      24354
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10002,
+    "source_client_id": 99,
+    "id": "credit_c99_k10_seed10002",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c0_k10_seed10003",
+    "case_index": 26,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "e55aa1c4f1b08c743dbcac73ccc7b596a78d9a09f9da2bb52432ef5e0f14f61c",
+    "removed_group_counts": [
+      53,
+      246
+    ],
+    "removed_n": 299,
+    "retained_group_counts": [
+      5332,
+      24369
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10003,
+    "source_client_id": 0,
+    "id": "credit_c0_k10_seed10003",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c99_k10_seed10003",
+    "case_index": 27,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "0fd22423c3f0c7e864fcbfb6c1eebae071b4aee91fa2e7f4b98891bef1ebd6a2",
+    "removed_group_counts": [
+      138,
+      261
+    ],
+    "removed_n": 399,
+    "retained_group_counts": [
+      5247,
+      24354
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10003,
+    "source_client_id": 99,
+    "id": "credit_c99_k10_seed10003",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c0_k10_seed10004",
+    "case_index": 28,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 0,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "e55aa1c4f1b08c743dbcac73ccc7b596a78d9a09f9da2bb52432ef5e0f14f61c",
+    "removed_group_counts": [
+      53,
+      246
+    ],
+    "removed_n": 299,
+    "retained_group_counts": [
+      5332,
+      24369
+    ],
+    "roles": [
+      "smallest",
+      "median_size",
+      "min_group0_fraction"
+    ],
+    "scale_bits": 12,
+    "seed": 10004,
+    "source_client_id": 0,
+    "id": "credit_c0_k10_seed10004",
+    "stage": "Client_Diversity"
+  },
+  {
+    "C": 100,
+    "L": 6,
+    "T": 0,
+    "anchor_lloyd_iters": 0,
+    "case_id": "credit_c99_k10_seed10004",
+    "case_index": 29,
+    "clip": 74.0,
+    "d": 23,
+    "dataset": "credit",
+    "dataset_selection_seed": 0,
+    "deleted_client": 99,
+    "gamma": 0.0,
+    "k": 10,
+    "n": 30000,
+    "ordered_removed_row_ids_sha256": "0fd22423c3f0c7e864fcbfb6c1eebae071b4aee91fa2e7f4b98891bef1ebd6a2",
+    "removed_group_counts": [
+      138,
+      261
+    ],
+    "removed_n": 399,
+    "retained_group_counts": [
+      5247,
+      24354
+    ],
+    "roles": [
+      "largest",
+      "max_group0_fraction",
+      "min_surviving_smaller_group"
+    ],
+    "scale_bits": 12,
+    "seed": 10004,
+    "source_client_id": 99,
+    "id": "credit_c99_k10_seed10004",
+    "stage": "Client_Diversity"
+  }
+]

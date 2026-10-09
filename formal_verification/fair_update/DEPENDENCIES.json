@@ -1,0 +1,105 @@
+{
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "lean_binary_sha256": "5c1fe58db7d10b1cd0ddff1a1cbc49db2396fff9c6c983cc3b49f1c5c1ae241b",
+  "lean_toolchain": "leanprover/lean4:v4.19.0",
+  "mathlib_repository": "https://github.com/leanprover-community/mathlib4",
+  "mathlib_revision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "tracked_mathlib_sources_clean": true,
+  "untracked_shared_setup_helper": "CacheFetch.lean (not imported by proof)",
+  "packages": [
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "revision": "77e08eddc486491d7b9e470926b3dbe50319451a"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "revision": "25078369972d295301f5a1e53c3e5850cf6d9d4c"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "revision": "e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "revision": "c4919189477c3221e6a204008998b0d724f49904"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "revision": "5d50b08dedd7d69b3d9b3176e0d58a23af228884"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "revision": "fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "revision": "f5d04a9c4973d401c8c92500711518f7c656f034"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "revision": "02dbd02bc00ec4916e99b04b2245b30200e200d0"
+    }
+  ],
+  "direct_imports": [
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+      "source_sha256": "4230d51ee93a5228a7a606be8a1b0d3e37d403ea88f4ae53e18499e6adec7056",
+      "olean_sha256": "588d88d662770b69e0904075eee416de5711a85b5a0cf6c9c3425e1e9e0aefe1"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "source_sha256": "b5f6e00176a4e6d7796c8badf94326ca39af0a83fd41d8808369fbe4f9aaed18",
+      "olean_sha256": "3c7d9d83d664823b640ad03451d4bd7c2460b5dbf703a19b033107b0043fbfce"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Lattice.Fold",
+      "source_sha256": "9beff53307586344439df7a87b3697107cf763de3a1c8740a59afc56d06c827b",
+      "olean_sha256": "180f1ecc4b8ed58835a54fd7b500e13366c86997c2c5b552caa9bc53692e8c45"
+    },
+    {
+      "module": "Mathlib.Data.Fintype.BigOperators",
+      "source_sha256": "007241ebb2b7028ceb0ef4c500f2f1e9f62ac82d95b7f72e625d5f39dd7db74f",
+      "olean_sha256": "b2d753cb17e7101080babb43f72b87ace5e61d5cb3e13a1bcc4b20b789f3f233"
+    },
+    {
+      "module": "Mathlib.Data.Real.Archimedean",
+      "source_sha256": "64430ef905056869ac26912cf28c9440f0438b65784fdead87eabe40481db2bb",
+      "olean_sha256": "134025ac02cad34c939d5d99e673db40c58ebeb175fdf7fbb053baa6784fd818"
+    },
+    {
+      "module": "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+      "source_sha256": "77267735a6f11099f3c6f8883a43e79df259108003ffe75d136023b085bf620a",
+      "olean_sha256": "7d0095017d454f6b356169ae258a332b9b3d665a697ed9ffee2981fbab1c7a5a"
+    },
+    {
+      "module": "Mathlib.Tactic.FieldSimp",
+      "source_sha256": "0aba984ef5fe1c69a23f747507896102f9de74cd8a068e0db1a787a780a5ca13",
+      "olean_sha256": "f6a57153d90b8cd0a4c235a40782ae25698c1e8b33044a404ea2361f39452d18"
+    },
+    {
+      "module": "Mathlib.Tactic.Linarith",
+      "source_sha256": "1080aa2ac21e7cee050f2c4cb14dc5ad82c4bfb5f1dc5a99336005c222fca025",
+      "olean_sha256": "b9438f24d9d07ebcf4314313cb6b49a64377c977b5f6bbc13afb95c9937cf6e4"
+    },
+    {
+      "module": "Mathlib.Tactic.Positivity",
+      "source_sha256": "28ab4f96310cef731fed4678339fce6e4f4156a4cf1af573f1d47b884b28af26",
+      "olean_sha256": "debb071bb55b465caafae17a49df20a87de26462ce9db7972ec15cb57b810e67"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring",
+      "source_sha256": "5a3e267047718ad293e87d1d6fde600e704d3a7d280ed921bd605f5d2a4a6e2c",
+      "olean_sha256": "2015b24085b72aacda36e59effce13c0162c79e66ac5182e20e3d44659a0705f"
+    }
+  ],
+  "shared_environment_smoke_exit_code": 0,
+  "new_dependency_downloads_by_this_pass": false
+}

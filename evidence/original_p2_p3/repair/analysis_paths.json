@@ -1,0 +1,8 @@
+{
+  "version": "FTF-1D-descriptor-v1",
+  "P2_rows": "remediation/results/ftf1d-p2-full-20260919/derived/5bd18805da0f2e2e",
+  "P2_metrics": "remediation/results/ftf1d-p2-full-20260919/analysis/d9a50725403ea49e",
+  "P3_analysis": "remediation/p3/analysis/68af22b8eac14f50",
+  "P2_run": "remediation/results/ftf1d-p2-full-20260919",
+  "P3_run": "remediation/p3/results/ftf1d-p3-full-20260919"
+}

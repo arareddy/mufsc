@@ -1,0 +1,308 @@
+{
+  "data_sha256": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e",
+  "dataset": "adult",
+  "deletion_seed": 516003,
+  "historical_identity_warning": "Historical local indices address duplicated source-client mapping and are not reusable source identities.",
+  "historical_local_index_hash": "2f25c7f1176e71c6",
+  "historical_request_file_sha256": "056b971c9188355f0af1b1b6181061c65e186d0ee5bb726a5491da6981b72b4b",
+  "k": 16,
+  "removal_local_index_hash": "2f25c7f1176e71c6",
+  "removal_source_identity_hash": "aa5446c0832c440e0af3819a005cff9cc3b74b7c7cdf169263f37fd492e6e0fc",
+  "removed": {
+    "16": [
+      63,
+      210
+    ],
+    "2": [
+      5
+    ],
+    "22": [
+      208
+    ],
+    "27": [
+      86
+    ],
+    "28": [
+      129
+    ],
+    "3": [
+      98
+    ],
+    "34": [
+      171
+    ],
+    "41": [
+      95,
+      199
+    ],
+    "45": [
+      108
+    ],
+    "46": [
+      59
+    ],
+    "47": [
+      80
+    ],
+    "49": [
+      155
+    ],
+    "54": [
+      239
+    ],
+    "58": [
+      18,
+      33
+    ],
+    "59": [
+      274
+    ],
+    "61": [
+      43,
+      140,
+      250,
+      265
+    ],
+    "65": [
+      223
+    ],
+    "67": [
+      96
+    ],
+    "74": [
+      36
+    ],
+    "75": [
+      271
+    ],
+    "76": [
+      188
+    ],
+    "79": [
+      10
+    ],
+    "92": [
+      38
+    ],
+    "95": [
+      251
+    ]
+  },
+  "removed_source_records": [
+    {
+      "client_id": 2,
+      "local_row": 5,
+      "processed_full_row": 10364,
+      "source_client_id": 2,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:10364"
+    },
+    {
+      "client_id": 3,
+      "local_row": 98,
+      "processed_full_row": 18786,
+      "source_client_id": 3,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:18786"
+    },
+    {
+      "client_id": 16,
+      "local_row": 63,
+      "processed_full_row": 21639,
+      "source_client_id": 16,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:21639"
+    },
+    {
+      "client_id": 16,
+      "local_row": 210,
+      "processed_full_row": 21476,
+      "source_client_id": 16,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:21476"
+    },
+    {
+      "client_id": 22,
+      "local_row": 208,
+      "processed_full_row": 1784,
+      "source_client_id": 22,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:1784"
+    },
+    {
+      "client_id": 27,
+      "local_row": 86,
+      "processed_full_row": 13074,
+      "source_client_id": 27,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:13074"
+    },
+    {
+      "client_id": 28,
+      "local_row": 129,
+      "processed_full_row": 15713,
+      "source_client_id": 28,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:15713"
+    },
+    {
+      "client_id": 34,
+      "local_row": 171,
+      "processed_full_row": 8865,
+      "source_client_id": 34,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:8865"
+    },
+    {
+      "client_id": 41,
+      "local_row": 95,
+      "processed_full_row": 11439,
+      "source_client_id": 41,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:11439"
+    },
+    {
+      "client_id": 41,
+      "local_row": 199,
+      "processed_full_row": 9254,
+      "source_client_id": 41,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:9254"
+    },
+    {
+      "client_id": 45,
+      "local_row": 108,
+      "processed_full_row": 2588,
+      "source_client_id": 45,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:2588"
+    },
+    {
+      "client_id": 46,
+      "local_row": 59,
+      "processed_full_row": 2878,
+      "source_client_id": 46,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:2878"
+    },
+    {
+      "client_id": 47,
+      "local_row": 80,
+      "processed_full_row": 10852,
+      "source_client_id": 47,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:10852"
+    },
+    {
+      "client_id": 49,
+      "local_row": 155,
+      "processed_full_row": 5540,
+      "source_client_id": 49,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:5540"
+    },
+    {
+      "client_id": 54,
+      "local_row": 239,
+      "processed_full_row": 17610,
+      "source_client_id": 54,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:17610"
+    },
+    {
+      "client_id": 58,
+      "local_row": 18,
+      "processed_full_row": 13052,
+      "source_client_id": 58,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:13052"
+    },
+    {
+      "client_id": 58,
+      "local_row": 33,
+      "processed_full_row": 16751,
+      "source_client_id": 58,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:16751"
+    },
+    {
+      "client_id": 59,
+      "local_row": 274,
+      "processed_full_row": 17517,
+      "source_client_id": 59,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:17517"
+    },
+    {
+      "client_id": 61,
+      "local_row": 43,
+      "processed_full_row": 25715,
+      "source_client_id": 61,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:25715"
+    },
+    {
+      "client_id": 61,
+      "local_row": 140,
+      "processed_full_row": 16476,
+      "source_client_id": 61,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:16476"
+    },
+    {
+      "client_id": 61,
+      "local_row": 250,
+      "processed_full_row": 8135,
+      "source_client_id": 61,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:8135"
+    },
+    {
+      "client_id": 61,
+      "local_row": 265,
+      "processed_full_row": 27146,
+      "source_client_id": 61,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:27146"
+    },
+    {
+      "client_id": 65,
+      "local_row": 223,
+      "processed_full_row": 28483,
+      "source_client_id": 65,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:28483"
+    },
+    {
+      "client_id": 67,
+      "local_row": 96,
+      "processed_full_row": 22693,
+      "source_client_id": 67,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:22693"
+    },
+    {
+      "client_id": 74,
+      "local_row": 36,
+      "processed_full_row": 17889,
+      "source_client_id": 74,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:17889"
+    },
+    {
+      "client_id": 75,
+      "local_row": 271,
+      "processed_full_row": 14128,
+      "source_client_id": 75,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:14128"
+    },
+    {
+      "client_id": 76,
+      "local_row": 188,
+      "processed_full_row": 29064,
+      "source_client_id": 76,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:29064"
+    },
+    {
+      "client_id": 79,
+      "local_row": 10,
+      "processed_full_row": 7085,
+      "source_client_id": 79,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:7085"
+    },
+    {
+      "client_id": 92,
+      "local_row": 38,
+      "processed_full_row": 25494,
+      "source_client_id": 92,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:25494"
+    },
+    {
+      "client_id": 95,
+      "local_row": 251,
+      "processed_full_row": 5595,
+      "source_client_id": 95,
+      "stable_record_id": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e:full-row:5595"
+    }
+  ],
+  "request_rule": "NumPy PCG64 seed+500000 pooled without-replacement; conditional both retained groups nonempty",
+  "seed": 16003,
+  "source_identity_sha256": "d2dd527b1ae19aff4f304f7afef445aa96d130702c6763ea43a70c3f7ae02e58",
+  "trial": 3,
+  "version": "p2-corrected-request-v2"
+}

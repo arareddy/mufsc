@@ -1,0 +1,39 @@
+# Coverage and assumptions
+
+All rows marked checked refer to kernel-checked mathematical statements under the pinned environment. `STATEMENTS.txt` gives exact types; theorem names are in namespace `Replay`.
+
+| Manuscript label / scope | Principal Lean statements | Checked content | Boundary / gap |
+|---|---|---|---|
+| `lem:basic-cert`, `eq:basic-cert` | `basic_certificate`, `basic_certified_label` | Finite all-competitor maximum, metric triangle bounds, strict unique winner, exact chosen label | Cached second-distance lower bound is an authentic-cache input fact |
+| `eq:runner-cert` | `reverse_triangle_shift`, `runner_certificate`, `runner_certified_label` | Absolute reverse-triangle overshoot bound, all non-runner competitors, empty non-runner convention | Uses exact distances and exact shifts |
+| `prop:cert-tight`: strength and lookup | `basic_implies_runner`, `top_three_suffice`, `three_leave_one` | Basic passes imply runner passes; sorted top three contain a surviving maximum after two exclusions | Sorting's correctness contract is explicit; no machine O(1) runtime proof |
+| `prop:cert-tight`: radius tightness | `radii_full_tightness` | Every failed basic scalar test with finite k≥2 has a 1D consistent radius-bounded tie/loss witness | Scalar cache means winner identity and nearest/second distances, without runner identity |
+| `prop:cert-tight`: exact norms | `exact_norm_full_tightness`, `two_center_exact_obstruction` | k≥3 witnesses realize all prescribed norms and old unique winner; k=2 reverse-triangle lower bound is attained | The k=2 scalar obstruction and generic soundness are separate checked statements |
+| `app:certificates` examples | `overshoot_strict_improvement`, `runner_only_counterexample` | Explicit scalar inequalities establishing overshoot improvement and third-center danger | Examples are exact 1D arithmetic, not executable program tests |
+| `app:implementation`, numerical certificate paragraph | `intervalGap_lower`, `outward_basic_certificate`, `outward_runner_certificate` | Strict separated interval tests imply unique winner | Enclosures are explicit hypotheses; no binary64/underflow routine verification |
+| `app:implementation`, indexed assignment | `nearest_le`, `nearest_tie_smallest`, `nearest_square` | Finite nearest map, smallest-index tie choice, equivalence of distances and squared distances | Noncomputable mathematical specification; no extraction or executable linkage |
+| `app:exactness`, `alg:unlearn` | `patch_exact`, `label_patch_exact`, `abandonment_exact` | Cached sum minus deleted old contributions plus survivor relabel corrections equals fresh retained sum; rebuild discards all patches | Abstract exact additive group; cache sums are defined from original records |
+| `app:exactness`, exact N/S/SS | `integer_stats_patch`, `integer_stats_abandonment` | Concrete group/cluster integer count, integer coordinate vector and squared-norm sum instance | Fixed common scale encoding and overflow rejection are not verified |
+| `prop:central-equivalence`, additive part | `owner_partition_sum` | Sum of exact client ownership-fiber sums equals centralized reduction | Guard geometry and update internals are supplied by separate work; not proved here |
+| `thm:exactness`, initialization | `summaries_equal`, `initialized_state_equal`, `Initializer.same_seed` | Unchanged ordered slices reuse same keyed local output; touched slices recompute; server receives equal canonical indexed anchors, counts, rational weights and server tape | Local D² sampler, quantizer, optional anchor-Lloyd and server procedure are deterministic map interfaces |
+| `thm:exactness`, indexed trajectory | `trajectory_equal`, `finite_trajectory_equal` | Induction through actual patch/rebuild recurrence; strict-majority abandonment; persistent direct mode | Generic theorem assumes sound labels; the next rows discharge this from metric tests |
+| `thm:exactness`, `eq:same-seed` | `seeded_basic_exactness`, `seeded_runner_exactness` | Composed keyed initialization, proved certificate soundness, exact patching and full finite indexed trajectory equality | Valid-data correspondence, authentic cache facts and deterministic algorithm maps remain input contracts; not a proof of the research executable |
+| `prop:client-summary` | `whole_client_compact`, `summary_counts_exact`, `local_multiplicity_conservation`, `zero_round` | Unchanged survivor summary reuse; counts from retained summary multiplicities; canonical rational weighting; same server seed; T=0 is the initializer | Client removal is represented by an active-slice mask; conservation is proved for assignment counts and required of the localMap interface |
+| Distributional corollary in `thm:exactness` / `prop:client-summary` | `same_seed_event_law` | Equal seed-to-output maps give equal values on every output event under an arbitrary seed-event law | Apply with fixed/seed-independent deletion. No adaptive fresh-independent claim; measure-law well-formedness is external and unnecessary for this equality |
+| `app:margin`, algebra in `prop:stable-replay` | `stable_recurrence`, `basic_failure_margin`, `margin_failure_count`, `stable_failure_scale` | Uniform recurrence bound, failure⇒small margin, finite density count bound, cancellation of r/n | Contractive recurrence and empirical density remain genuine hypotheses. No runtime, bit-complexity, B_t or speedup proof |
+
+## What the composed replay theorem does and does not assume
+
+It does not assume target trajectory equality or equal per-round outputs. Initialization equality is derived from equal untouched slice inputs and explicitly recomputed touched slices. The label bridge is derived from metric triangle inequalities and exact scalar tests. The aggregate identity is proved from finite sums, including deleted records' old labels and zero corrections for sound certified survivors. Recurrence equality follows by induction and congruence of the same deterministic update.
+
+Pure-function interfaces are appropriate to the manuscript's deterministic-map theorem, but they do not implement all details of FTF-1. Input slice lists, persistent record identities, active masks, exact point representations, cached assignments and checkpoint provenance must correspond to the actual program. The model allows arbitrary deterministic updates, even outside the manuscript's valid domain; applicability to FTF-1 is restricted to valid batches with both groups nonempty and all declared rules defined. Rational division at zero in Lean is total; this does not legalize deleting a global group in the manuscript.
+
+The recurrences specify mathematical values, not operational laziness or time saved: fresh labels appear in the correction expression even when its certified branch is zero. Full API dictionaries, fresh replay caches, sequential deletion services, memory erasure, storage costs, network costs and empirical timing are outside scope.
+
+## Dependency classification
+
+- Kernel mathematics: Lean foundations plus pinned mathlib finite sums, ordered real arithmetic, metric-space definitions/triangle inequalities, finite maxima/minima, and tactic-generated proof terms.
+- Imported literature theorems: none specific to clustering are assumed or imported in this bundle. No approximation, coreset or k-means++ expectation result is claimed here.
+- Algorithm interfaces: deterministic local sampler/summary map, keyed stream factory, server map, deterministic center update, authentic cache and input correspondence; local summary mass conservation is an explicit interface law.
+- Executable linkage: unverified for PCG64/SeedSequence, rational categorical rejection implementation, Python integer paths, NumPy arrays, binary64 encoding/quantization/rounding, interval enclosure production, source identity resolution and serialization.
+- Empirical claims: no experiments were rerun or validated by these Lean proofs.

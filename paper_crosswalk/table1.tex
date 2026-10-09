@@ -1,0 +1,19 @@
+% Derived from canonical saved reporting CSVs; see generated/editorial20260926/TABLE_VERIFICATION.json.
+\begin{table}[t]
+\centering
+\caption{Does replay save time? Total ratios divide summed fresh times by summed replay times over all trials; values above one favor replay. Algorithm time measures the call; E2E also includes input materialization, checkpoint loading and equal output writing. Losses count algorithm-time comparisons with fresh. Useful coverage is pooled $S/N$, the share of survivor point-rounds whose assignments certification actually saved. All 525 P2 and 285 P3 replay comparisons match exactly.}
+\label{tab:replay-main}
+\begin{tabular}{llrrrr}
+\toprule
+Suite & Method & Total algorithm & Total E2E & Algorithm losses & $S/N$ (\%)\\
+\midrule
+P2 & Direct & 1.061 & 1.049 & 2/175 & 0.00 \\
+P2 & Basic & 1.006 & 0.996 & 68/175 & 0.76 \\
+P2 & Runner-up & 1.005 & 0.995 & 67/175 & 0.76 \\
+\midrule
+P3 & Direct & 1.056 & 1.043 & 15/95 & 0.00 \\
+P3 & Basic & 0.938 & 0.930 & 74/95 & 1.35 \\
+P3 & Runner-up & 0.940 & 0.931 & 76/95 & 1.35 \\
+\bottomrule
+\end{tabular}
+\end{table}

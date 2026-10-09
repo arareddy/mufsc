@@ -1,0 +1,28 @@
+proof/Geometry.lean:43:22: error: no goals to be solved
+proof/Geometry.lean:90:2: error: tactic 'apply' failed, failed to unify
+  Finset.sum ?m.7465 ?m.7461 = Finset.sum ?m.7465 ?m.7462
+with
+  ∑ d, (x d - a d) ^ 2 =
+    ∑ x_1, ((x x_1 - (a x_1 + t * (b x_1 - a x_1))) ^ 2 + (a x_1 + t * (b x_1 - a x_1) - a x_1) ^ 2) +
+      2 * t * (∑ d, (x d - a d) * (b d - a d) - ∑ i, t * (b i - a i) ^ 2)
+D : Type u_1
+inst✝ : Fintype D
+x a b : D → ℝ
+t : ℝ
+⊢ ∑ d, (x d - a d) ^ 2 =
+    ∑ x_1, ((x x_1 - (a x_1 + t * (b x_1 - a x_1))) ^ 2 + (a x_1 + t * (b x_1 - a x_1) - a x_1) ^ 2) +
+      2 * t * (∑ d, (x d - a d) * (b d - a d) - ∑ i, t * (b i - a i) ^ 2)
+proof/Geometry.lean:99:2: error: tactic 'apply' failed, failed to unify
+  Finset.sum ?m.7863 ?m.7859 = Finset.sum ?m.7863 ?m.7860
+with
+  ∑ d, (x d - b d) ^ 2 =
+    ∑ x_1, ((x x_1 - (a x_1 + t * (b x_1 - a x_1))) ^ 2 + (a x_1 + t * (b x_1 - a x_1) - b x_1) ^ 2) +
+      2 * (t - 1) * (∑ d, (x d - a d) * (b d - a d) - ∑ i, t * (b i - a i) ^ 2)
+D : Type u_1
+inst✝ : Fintype D
+x a b : D → ℝ
+t : ℝ
+⊢ ∑ d, (x d - b d) ^ 2 =
+    ∑ x_1, ((x x_1 - (a x_1 + t * (b x_1 - a x_1))) ^ 2 + (a x_1 + t * (b x_1 - a x_1) - b x_1) ^ 2) +
+      2 * (t - 1) * (∑ d, (x d - a d) * (b d - a d) - ∑ i, t * (b i - a i) ^ 2)
+proof/Geometry.lean:116:48: error: no goals to be solved

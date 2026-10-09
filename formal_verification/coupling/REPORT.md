@@ -1,0 +1,13 @@
+# Verified result
+
+101 named theorems in 11 source modules, plus the exhaustive audit module, pass Lean 4.19.0 with `--trust=0 -j1` and pinned mathlib. No `sorry`, `admit`, domain axiom, `native_decide`, or unsafe proof escape is present. Every audited theorem depends only on a subset of `propext`, `Classical.choice`, and `Quot.sound`; the sound-certificate rejection lemma uses no axioms.
+
+For `lem:s2-word-coupling`, the finite low-bit proposal counts, arbitrary-width least-significant-first assembly, primitive mass reduction, operational rejection traces, normalization/zero residual tail, exact joint disagreement m/(2m−1), and marginal TV 1/[2(2m−1)] are checked in the explicit independent-proposal trace model. The old marginal 1/2 is derived from those same traces.
+
+For `prop:s2-deletion-work`, the bundle checks actual distinct record identities and the fixed deletion; the record-derived server weights; six-slot threshold semantics including zero weights; the E event count; narrow and wide joint trace masses; beta>1/16; the six-outcome D² marginal table and TV; changed labels, shifts, margins, ideal certificate decisions; strict-majority fallback; exact saved/duplicated counts; finite and countable expectation bridges; and an explicit n/32 linear constant. `deletion_witness_summary` collects the central mathematical witness.
+
+**This is not a claim that the full manuscript proposition or executable FTF-1 has been verified.** The infinite shared-word stream's adaptive execution-to-law refinement, full local/server initialization linkage, and outward numerical bounds remain explicit obligations. Actual F0/J0 expectation linkage requires those interfaces. `COVERAGE.md` distinguishes each proved component from each remaining obligation. No universal unlearning impossibility, production PRNG, wall-clock, or empirical claim is verified here.
+
+All 12 final compiler receipts have exit code 0 and source hashes matching the delivered files. The final logs contain two nonsemantic tactic-style warnings. Real failed development/audit attempts are retained privately and excluded from the anonymous package. The bundle includes portable reproduction scripts, exact theorem statements and axiom receipts, dependency pins, and a file-hash manifest.
+
+The central coupling fragments remained byte-identical. Main/appendix saved hashes changed during authorized concurrent editorial integration; both snapshots and the reread of current surrounding assumptions are recorded. This task did not edit manuscript/research sources, run experiments, download dependencies, publish, or modify other proof workspaces.

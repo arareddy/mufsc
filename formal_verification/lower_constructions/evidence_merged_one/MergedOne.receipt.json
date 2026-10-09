@@ -1,0 +1,10 @@
+{
+  "source": "MergedOne.lean",
+  "sha256": "42dd0ec85ef742b3b13852169898513835fa4e3048760bba3577e49117dbc267",
+  "started_utc": "2026-09-26T09:50:00.794802+00:00",
+  "finished_utc": "2026-09-26T09:50:05.269799+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "threads": 1,
+  "compiler_output": "build/merged_one.stdout.log"
+}

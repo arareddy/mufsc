@@ -1,0 +1,11 @@
+'Coupling.actual_indexed_shifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.unit_cached_margins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.actual_changed_record_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.retainID_injective' depends on axioms: [propext]
+'Coupling.retained_exactly_not_deleted' depends on axioms: [propext, Quot.sound]
+'Coupling.dataset_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.endpoint_labels' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.ideal_certificate_decisions' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.sound_certificate_rejects_changed_label' does not depend on any axioms
+'Coupling.failure_counts' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.round_zero_policy' depends on axioms: [propext, Classical.choice, Quot.sound]

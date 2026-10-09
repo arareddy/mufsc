@@ -1,0 +1,5 @@
+'Replay.Initializer.same_seed' depends on axioms: [propext, Quot.sound]
+'Replay.seeded_full_trajectory' depends on axioms: [propext, Quot.sound]
+'Replay.seeded_basic_exactness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.seeded_runner_exactness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.same_seed_event_law' depends on axioms: [Quot.sound]

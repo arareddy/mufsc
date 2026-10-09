@@ -1,0 +1,6 @@
+'Coupling.wide_joint_trace_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.narrow_joint_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.narrow_joint_trace_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.wide_opposite_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.wide_opposite_trace_mass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Coupling.local_product_trace_normalized' depends on axioms: [propext, Classical.choice, Quot.sound]

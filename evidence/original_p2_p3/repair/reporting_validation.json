@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "trial_method_rows": 1080,
+  "checked_fields": 10920,
+  "manifest_sha256": "ee14485aa08c924d214e4a07abb983f7f0b386e78aec02e19efb7af45f4d0388",
+  "checker_sha256": "18c69dc9ec9d00bf75e26a58c677d43d6ddc109d962120f7ae5bed3cfc27ccec",
+  "scope": "Independent reconciliation of new compact cost/counter derivatives with separately verified original analysis rows. Direct mode has zero certificate transitions; its raw zero sentinel is not treated as an abandonment. No new measurements."
+}

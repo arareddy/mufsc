@@ -1,0 +1,11 @@
+{
+  "source": "MatchedBudget.lean",
+  "sha256": "8db793c72bd4240335bcb3e73ff61cd62f85168ae29260c27bb3dde3a72186e7",
+  "started_utc": "2026-09-26T09:51:53.551726+00:00",
+  "finished_utc": "2026-09-26T09:52:00.268973+00:00",
+  "exit_code": 0,
+  "lean_version": "Lean (version 4.19.0, arm64-apple-darwin23.6.0, commit 6caaee842e94, Release)",
+  "threads": 1,
+  "trust_level": 0,
+  "compiler_output": "build_trust0/matched.stdout.log"
+}

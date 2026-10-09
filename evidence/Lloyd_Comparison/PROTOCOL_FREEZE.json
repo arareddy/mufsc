@@ -1,0 +1,9 @@
+{
+  "bindings": {
+    "study://Lloyd_Comparison/FROZEN_GRID.json": "777ba6a93eddcedf91c61854de5705f66bcdb4adc82acb9947d08fcbfe97b253",
+    "study://Lloyd_Comparison/INPUT_MANIFEST.json": "95b3721cd650a7aa320d22d5b791e67f1e6395a18f348c5f8501b531990b0243",
+    "study://Lloyd_Comparison/PROTOCOL.md": "e5d03ae94952c2cbf78f8f8a445321bc90b65fb735c374e783f442ce0fcf51d0",
+    "study://Lloyd_Comparison/SOURCE_MANIFEST.json": "aae31d7a308d73f43205b393b8aa9628754b9b65982775e877c8778a91db2110"
+  },
+  "utc": "2026-09-26T08:09:44.812779+00:00"
+}

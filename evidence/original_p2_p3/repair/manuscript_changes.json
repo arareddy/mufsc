@@ -1,0 +1,134 @@
+[
+  {
+    "issue": "version header",
+    "file": "main.tex",
+    "before": "Editorial candidate --- 17 September 2026",
+    "after": "FTF-1D candidate --- 19 September 2026"
+  },
+  {
+    "issue": "minimal abstract timing correction",
+    "file": "main.tex",
+    "before": "In local simulations on tabular and public Census data, every tested replay matches retraining, but both assignment-certification methods take longer than fresh training in nearly all trials.",
+    "after": "In local simulations on tabular and public Census data, every tested replay matches retraining; direct replay usually saves algorithm time, while assignment-certification methods have mixed timing outcomes."
+  },
+  {
+    "issue": "introduction interpretation",
+    "file": "main.tex",
+    "before": "ACS diagnostics show several initialization-change mechanisms, and certification usually loses elapsed time despite exact replay.",
+    "after": "ACS diagnostics show several initialization-change mechanisms; certification saves few assignments and has mixed timing outcomes despite exact replay."
+  },
+  {
+    "issue": "new gate version",
+    "file": "main.tex",
+    "before": "The saved small-instance validation records 196 tests and 84 process executions",
+    "after": "The current small-instance validation records 213 tests and 84 process executions"
+  },
+  {
+    "issue": "results heading",
+    "file": "main.tex",
+    "before": "\\paragraph{P2/P3: exact replay usually costs more.}",
+    "after": "\\paragraph{P2/P3: direct reuse and certification have different costs.}"
+  },
+  {
+    "issue": "new full-panel and pilot outcomes",
+    "file": "main.tex",
+    "before": "Mean paired ratios average $t_{i,\\rm fresh}/t_{i,m}$; total ratios divide summed times. P3's three large gains raise its certificate means above one while total ratios remain below one. Both certificates lose in 174/175 P2 trials and 92/95 P3 trials. In P3's $r=1$ panel, seeds 0, 1, and 4 benefit, while 2 and 3 fall back; all five $r=10$ seeds fall back. The successful basic ratios range from 14.455 to 18.480, but the two losses are 0.882 and 0.900. Every pilot seed and comparable end-to-end ratio is reported in \\cref{tab:pilot-compact}; five seeds cannot establish reliability or a universal deletion threshold.",
+    "after": "Mean paired ratios average $t_{i,\\rm fresh}/t_{i,m}$; total ratios divide summed times. Direct wins algorithm time in 173/175 P2 and 80/95 P3 trials. P2 certificates slightly reduce total algorithm time but slightly increase total E2E time. P3 certificate means exceed one while total ratios remain below one; Basic/Runner-up lose 74/95 and 76/95 algorithm comparisons. In the $r=1$ panel, seeds 0, 1, and 4 retain assignments; their Basic ratios span 14.438--17.331. Seeds 2/3 fall back yet have ratios 1.145/1.151. All five $r=10$ seeds also fall back and favor replay in these measurements. Every pilot algorithm/E2E ratio is in \\cref{tab:pilot-compact}; five seeds cannot establish reliability or a universal deletion threshold."
+  },
+  {
+    "issue": "conclusion timing scope",
+    "file": "main.tex",
+    "before": "Across the evaluated trials, certification usually adds elapsed time.",
+    "after": "Direct replay wins most timed comparisons; certificate gains depend on the panel and timing boundary."
+  },
+  {
+    "issue": "AI disclosure",
+    "file": "main.tex",
+    "before": "This editorial pass revised exposition and checked document builds without rerunning experiments or diagnostics.",
+    "after": "This revision normalized an equivalent integer-array descriptor in the shared statistics path, validated numerical equivalence, reran P2/P3, and updated their reporting; earlier mechanism diagnostics were retained, not rerun."
+  },
+  {
+    "issue": "current artifact boundary",
+    "file": "main.tex",
+    "before": "The local release provides (A) complete accepted timing/accounting data, aggregation code and expected tables, (B) archived processed tabular inputs, memberships, requests and loader, and (C) detailed seven-case point/trace evidence with its verification dependencies. A separate inventory identifies the existing full witness/checkpoint archive. Clean extraction checks regenerate reporting statistics without retraining.",
+    "after": "The current release provides repaired source, complete P2/P3 reporting data, independent checks and expected tables. Its evidence index identifies the new full witness/checkpoint records and the preserved packages containing processed inputs, P1/P4 results and seven-case diagnostic evidence. Document rebuilding and table generation use included saved reporting inputs without retraining."
+  },
+  {
+    "issue": "implementation and experiment lineage",
+    "file": "experiment_evidence.tex",
+    "before": "The frozen FTF-1 evidence versions are \\texttt{corrected-v2-full-2bff36fecd98fbb3} (P1/P2/P4) and \\texttt{ACS2018-ftf1-p3-v1} (public ACS). The following are preserved validation results, not checks rerun during this writing pass.",
+    "after": "P1/P4 retain the source and evidence version \\texttt{corrected-v2-full-2bff36fecd98fbb3}. P2/P3 are newly measured with implementation \\texttt{FTF-1D-descriptor-v1}, in runs \\texttt{ftf1d-p2-full-20260919} and \\texttt{ftf1d-p3-full-20260919}. The numerical FTF-1 map, tabular inputs and \\texttt{acs2018-ftf1-p3-v1} population, ordered identities, requests and seeds are unchanged.\n\nThe shared statistic accumulator now canonicalizes valid native-int64 array descriptors after the original validation and overflow checks. Pickle-restored arrays can have equivalent but different descriptor objects. Six predefined same-buffer checks on this runtime reproduce a roughly five- to six-fold change in the feature-sum reduction, reversible by restoring the alternate descriptor, without changing values, layout or precision. This is a local reduction measurement, not a full-algorithm speed factor or attribution of historical timings. All four methods use the same corrected path within existing timers; sampling, updates, certificates and fallback are unchanged. Historical timings remain a separate source/environment record.\n\nSeventy focused old/new process comparisons and 1,350 saved full-grid checkpoint/method comparisons preserve exact numerical outputs; the latter also preserve P3 initializers and accounting. P1/P4 were not rerun. The following current numerical checks are distinct from reused historical stress and diagnostic evidence."
+  },
+  {
+    "issue": "gate counts and regression scope",
+    "file": "experiment_evidence.tex",
+    "before": "The small-instance validation records 196 passing tests (54 regression and 142 independent).",
+    "after": "The current small-instance validation records 213 passing tests: the previous 196 plus 17 descriptor regressions covering pickle restoration, strided/empty inputs and rejection semantics."
+  },
+  {
+    "issue": "stress evidence reused",
+    "file": "experiment_evidence.tex",
+    "before": "Separate reports cover 33 exact-Fraction distance-filter stress tests",
+    "after": "Preserved earlier reports cover 33 exact-Fraction distance-filter stress tests"
+  },
+  {
+    "issue": "timing control",
+    "file": "experiment_evidence.tex",
+    "before": "Some early P2 measurements overlap manuscript preparation; P3 pauses heavy validation/rendering.",
+    "after": "The new P2/P3 runs are sequential, with no concurrent experiment jobs, profiling, heavy validation or rendering; light document preparation and ordinary desktop activity remain possible."
+  },
+  {
+    "issue": "P2 reductions and distinct E2E outcomes",
+    "file": "experiment_evidence.tex",
+    "before": "Pooled elapsed reductions for direct/basic/runner-up are $-16.514\\%,-24.403\\%,-24.559\\%$: negative means slower.",
+    "after": "Pooled algorithm-time reductions for Direct/Basic/Runner-up are $5.730\\%,0.567\\%,0.492\\%$. Their E2E total-time ratios are $1.049,0.996,0.995$, with wins in $170,69,70$ of 175 trials, respectively; there are no ties. Thus the certificates' small algorithm-time gains do not extend to total E2E time."
+  },
+  {
+    "issue": "work versus elapsed time",
+    "file": "experiment_evidence.tex",
+    "before": "Four fewer duplicated assignments improve neither its mean paired nor pooled elapsed ratio.",
+    "after": "These four work units do not determine elapsed-time ordering."
+  },
+  {
+    "issue": "P3 measured environment",
+    "file": "experiment_evidence.tex",
+    "before": "macOS 26.6.2 arm64, Apple M3 Max",
+    "after": "macOS 27.0 arm64, Apple M3 Max"
+  },
+  {
+    "issue": "checkpoint timing",
+    "file": "experiment_evidence.tex",
+    "before": "mean construction time is 2.3745\\,s and mean serialization is 0.0245\\,s",
+    "after": "mean construction time is 2.4395\\,s and mean serialization is 0.0271\\,s"
+  },
+  {
+    "issue": "method timing means",
+    "file": "experiment_evidence.tex",
+    "before": "mean algorithm seconds are 2.3699/2.6037/2.9736/2.9889 and mean comparable E2E seconds are 2.4058/2.6650/3.0348/3.0502",
+    "after": "mean algorithm seconds are 2.4261/2.2982/2.5861/2.5823 and mean comparable E2E seconds are 2.4624/2.3598/2.6480/2.6440"
+  },
+  {
+    "issue": "new bootstrap interval lineage",
+    "file": "experiment_evidence.tex",
+    "before": "retains all 19 designs' algorithm ratios and existing intervals",
+    "after": "reports all 19 designs' new algorithm ratios and intervals"
+  },
+  {
+    "issue": "diagnostic lineage",
+    "file": "experiment_evidence.tex",
+    "before": "These original-checkpoint versus retained-training comparisons measure stability, separately from the replay-versus-fresh equality tests.",
+    "after": "These preserved FTF-1 original-checkpoint versus retained-training comparisons measure stability, separately from replay-versus-fresh equality. Their arithmetic/trace analysis was not rerun; exact old/new initializer, trajectory and accounting agreement supports retaining their numerical conclusions."
+  },
+  {
+    "issue": "distinct P2 and historical P4 environments",
+    "file": "stage1_protocol.tex",
+    "before": "The run uses one local worker, arm64 macOS 26.6.2, Python 3.12.14, NumPy 2.3.5, and five numerical-library thread settings fixed to one.",
+    "after": "The new P2 run uses one local worker on Apple M3 Max with 48\\,GiB memory, arm64 macOS 27.0, Python 3.12.14 and NumPy 2.3.5; five numerical-library thread settings are fixed to one. P4 retains its earlier macOS 26.6.2 execution; its exact CPU model was not recorded."
+  },
+  {
+    "issue": "artifact version pointer",
+    "file": "stage1_protocol.tex",
+    "before": "The artifact index identifies the unchanged executable documentation and raw-source gaps.",
+    "after": "The artifact index identifies both implementation versions, reporting code and raw-source gaps."
+  }
+]

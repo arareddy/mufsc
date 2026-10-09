@@ -1,0 +1,94 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-26T07:45:55.030916+00:00",
+  "analysis_sha256": "ac6d1e8513096703d98c06a7e620865476dbdfb94113b87c14cdaee536f2e7c8",
+  "protocol_sha256": "0ad89ab3f9b5f03022eac55cbba3efaf87d9a8105ab6e0d6398698e5270bce4d",
+  "input_manifest_sha256": "79c47706a5441aab5e93844947e4118775668fd2742e0586993a308ccbdbfd4f",
+  "frozen_files_hash_size_mtime_verified": 702,
+  "source_copy_checks": 51,
+  "unique_quality_rows": 90,
+  "group_rows": 180,
+  "scientific_seed_cases": 30,
+  "seeds_per_population_dataset": 5,
+  "record_gate_quality_model_checks": 180,
+  "client_quality_checks": 45,
+  "client_T0_core_links": 15,
+  "prefix_checks": 60,
+  "paired_transitions": 90,
+  "all_transitions_Phi_strictly_decreases": true,
+  "group_increase_events": [
+    {
+      "population": "record",
+      "dataset": "adult",
+      "seed": 10000,
+      "T_from": 1,
+      "T_to": 2,
+      "Phi_decreases": true,
+      "group0_increases": false,
+      "group1_increases": true,
+      "any_group_increase_while_Phi_decreases": true
+    },
+    {
+      "population": "record",
+      "dataset": "adult",
+      "seed": 10002,
+      "T_from": 1,
+      "T_to": 2,
+      "Phi_decreases": true,
+      "group0_increases": false,
+      "group1_increases": true,
+      "any_group_increase_while_Phi_decreases": true
+    },
+    {
+      "population": "record",
+      "dataset": "adult",
+      "seed": 10004,
+      "T_from": 1,
+      "T_to": 2,
+      "Phi_decreases": true,
+      "group0_increases": false,
+      "group1_increases": true,
+      "any_group_increase_while_Phi_decreases": true
+    },
+    {
+      "population": "client",
+      "dataset": "adult",
+      "seed": 10002,
+      "T_from": 1,
+      "T_to": 2,
+      "Phi_decreases": true,
+      "group0_increases": false,
+      "group1_increases": true,
+      "any_group_increase_while_Phi_decreases": true
+    },
+    {
+      "population": "client",
+      "dataset": "adult",
+      "seed": 10003,
+      "T_from": 1,
+      "T_to": 2,
+      "Phi_decreases": true,
+      "group0_increases": false,
+      "group1_increases": true,
+      "any_group_increase_while_Phi_decreases": true
+    }
+  ],
+  "distinct_cases_with_event": 5,
+  "undefined_observed_group_ratios": 0,
+  "mean_vs_max_nonzero_rows": 12,
+  "fixtures": [
+    "mean_of_maxima_distinct_from_max_of_means",
+    "unequal_count_weighting",
+    "zero_denominator_undefined",
+    "incorrect_Phi_rejected"
+  ],
+  "new_training_runs": 0,
+  "new_timing_observations": 0,
+  "exclusions": [],
+  "limitations": [
+    "Exact scoring fractions are verified and recombined, not independently rescored from raw coordinates.",
+    "A group counts come from saved positive-T N witnesses; input pickle contents are hash-bound but not unpickled.",
+    "B group counts are cross-bound among frozen grid, saved core state and quality witnesses; original raw provenance is not recreated.",
+    "Existing source review and past arithmetic gates remain historical; this analysis does not re-prove numerical kernels."
+  ]
+}

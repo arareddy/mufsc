@@ -1,0 +1,2038 @@
+{
+  "byte_contract": "ascending client IDs; per client concatenate little-endian int64 [client,n,d], row-major encoded X, group vector, processed full_data row IDs; no floating tolerance",
+  "code_and_map": {
+    "code_sha256": "6f613c76ba4fffccf3815fc2deadf58ae00eb9e57feb83fc8e7f2236308ae909",
+    "files": {
+      "src/assignment.py": "9212661f84865d190d9681c915410fb212b63228c9de5e02c43086f77500d9cd",
+      "src/centralized.py": "d3b80befe2562ade83231071dda89d03f3003c9dd492a8725633eb83b8a6daac",
+      "src/certificates.py": "a56c1e4f977aecda0e43ca5e2570d2a0bc784dd0af3c97a5d44ba9f8d79d16f1",
+      "src/datasets.py": "9c6d8b2a4efeda7143258ea3d92392faf81ef5231e61bf08af5352751a172c83",
+      "src/digest.py": "32b811b98214d8829b89f3597a8c6b6eed10888f7379d04b217254221af6876b",
+      "src/exact_numeric.py": "9baed40c7f34f5078b2b4787492e4bf04ce25b76461017bab616082185702bd1",
+      "src/fair_update.py": "bb116060e8211f20e87921ba9c276894d70acb70996be1c8fe50aca01ccf57bd",
+      "src/fixedpoint.py": "377278da46b1688019cb6190d47d11f9a6c86a5b6d32b516e239554425f83f32",
+      "src/kmeanspp.py": "1628050e73e3dfe01926d285ff769c3a58815821e6dd334a233a73dcb9c02151",
+      "src/merged_baseline.py": "ad0dc0b0f0df72e3f93a21e01fb0e28ca1412515dcd86debe66df175a3b177ba",
+      "src/objective.py": "28a73a22ae99c4e2e851404b4de10ba62617445d9937accfc652a3f35fb95903",
+      "src/rng.py": "259be03f9ea19091f4b201d70f354a082cfe821fe61314ec13c1a44c7dd40f67",
+      "src/splitgroup.py": "f5a10cddebd921e2a53d3b224035d6507262933e5ca99b4cd914aba824ddcc03",
+      "src/timing.py": "1ae4bbba3f7f9a1461a3bb7d672b60cad76b19b3ea8975302973918f7f67fad0",
+      "src/train.py": "85ec56fdbebf644800ee88cb1594a56245850ee2496c33951d4c5bab3c81a4e5",
+      "src/unlearn.py": "264a3ca2326f35fec11d77eff707675c63fea9e4de2928ef7319ccf79b48a717",
+      "src/validation.py": "7c0a8ed77fa100e65e0d46086ae762965d8213f632e02601644805f6ccd2a5e4"
+    },
+    "map_sha256": "7c25a7f41af39859cc4cc254b3a70525380285904e7f67cd45ca8efbe3633d52"
+  },
+  "datasets": [
+    {
+      "clients": [
+        {
+          "client": 0,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "be048f19892e5ea4d6feac6f766899b1fd343389de16eab516520f20078327b7",
+          "source_client": 0
+        },
+        {
+          "client": 1,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "9df55b3a9d10d1212f30163d83d14bb0b5d4da0b6c0093cd68bcabd339fe77fe",
+          "source_client": 1
+        },
+        {
+          "client": 2,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "20f3d35301f10518e0ee48d93898fe21aa4b7f17276f4600a92e920d36e7eb26",
+          "source_client": 2
+        },
+        {
+          "client": 3,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "9983249ecbf5eea83231cce1954bf45989ca65eeafe4fd627895c46af85ad395",
+          "source_client": 3
+        },
+        {
+          "client": 4,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "87a1139664133bd6bb43c055b1a63a309140a48d377123d989ee253366b4865b",
+          "source_client": 4
+        },
+        {
+          "client": 5,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "7f3b2fc5f4a7c051e5b6ffb374a7cd266d404d164fc06fc1ad24bfe5b34b4827",
+          "source_client": 5
+        },
+        {
+          "client": 6,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "393320eb4642afdd2d2a8bd22f2d3dc2214c50acc85a472b5402d397f319551e",
+          "source_client": 6
+        },
+        {
+          "client": 7,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "ab67dc126348b08d41298d2789c75f6f110fdfe0f58d9eff3bc1916a3d729b5c",
+          "source_client": 7
+        },
+        {
+          "client": 8,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "29c0dd2a43a6a8de6a448c6bcb5904c539a96d773a9c4080cc706edc4f243718",
+          "source_client": 8
+        },
+        {
+          "client": 9,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "9c6e7e471bf40b85ee27cbfe27e1ab1c787c6b70a20d2e24173e5dc3c74fe769",
+          "source_client": 9
+        },
+        {
+          "client": 10,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "72befcf65add81c8fb47f2df013b481b0ef9c11ef0ad0d30c13934ce3813816f",
+          "source_client": 10
+        },
+        {
+          "client": 11,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "8bafc6e204081060920d4b9f1aa36fc03125f6869b170af5e1f50e79248de917",
+          "source_client": 11
+        },
+        {
+          "client": 12,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "f0bdda9726ca3c25f334ee8040b562e72008aad71918c9e079d41414a25d36ed",
+          "source_client": 12
+        },
+        {
+          "client": 13,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "0ce0cb1ada6a3f24ae435144d413e0ae1896ddbd089ce1dcf00fb5f3c0da51bd",
+          "source_client": 13
+        },
+        {
+          "client": 14,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "1928baabeee8aa321b9796105b29c5b7cc50d9fafb3f764932c0911246e580e9",
+          "source_client": 14
+        },
+        {
+          "client": 15,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "221ad2c8e43ecd8387a30b6d1359b126df432878dda4962efc5ea9e5124f3fb3",
+          "source_client": 15
+        },
+        {
+          "client": 16,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "205c7e420c31a00ceaa57b372047e1267f89d896d0d7e719bea35115d725c1fd",
+          "source_client": 16
+        },
+        {
+          "client": 17,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "0806d28defc8b00cd77af50fc0f88034d4318d9b06a81ea79f057330024aef63",
+          "source_client": 17
+        },
+        {
+          "client": 18,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "29644d071367b4f0e1b80b172742c9e54a04b659773d91141cc6a580295d93cf",
+          "source_client": 18
+        },
+        {
+          "client": 19,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "90321c0be46484da215920c489111e658c59b47a9f58ca1116b3587100d01e2f",
+          "source_client": 19
+        },
+        {
+          "client": 20,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "878b9165dcefc02b6ca0351c452f3970d9b4bd3c9651c3bb6eefc95f8ad7eb6b",
+          "source_client": 20
+        },
+        {
+          "client": 21,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "89d7f79b9180dc609088a299714e75f20a3e2628197ef07b079737cc31b4d378",
+          "source_client": 21
+        },
+        {
+          "client": 22,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "b009cb690a5111252f2a99cb9467bb86151110a0d515a7bdd148c4edb0cc2d01",
+          "source_client": 22
+        },
+        {
+          "client": 23,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "4c20a9a1c27033f467d2effb27c692fd82d7e9410aae49ea1b7ce6d461833a7a",
+          "source_client": 23
+        },
+        {
+          "client": 24,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "15902fb023fa67bc6aab657f0737b234a7fce40f3907a6323b295e1834dc661a",
+          "source_client": 24
+        },
+        {
+          "client": 25,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "d38188b8cd0df004403e53eea5395b374f497a08b6cfdf71dc5e929852af7f65",
+          "source_client": 25
+        },
+        {
+          "client": 26,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "7c160663de55543b18045abe652678177dc2ca8d822d5c6e9cea9292440cac86",
+          "source_client": 26
+        },
+        {
+          "client": 27,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "33e59c0b0e5ffb8bc4bb47782676f4546261f599e8147e91039e4fc3044a8585",
+          "source_client": 27
+        },
+        {
+          "client": 28,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "c12a2cd89c860ac364382cfdefac01b279e1be0f51b15b48a3e99de1a763222d",
+          "source_client": 28
+        },
+        {
+          "client": 29,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "b68ba5ff9ee5bd8489b89d038f502fe382ea8830955443cd3cf1622790b901df",
+          "source_client": 29
+        },
+        {
+          "client": 30,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "a8a078001bc278e3379be695b4728eaebf84fdc5a6099f36965b1171a49cd73e",
+          "source_client": 30
+        },
+        {
+          "client": 31,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "13e56725d375a3e511ed43fa9759cd675bd8fbf47b86146b68b028bdd861cd1f",
+          "source_client": 31
+        },
+        {
+          "client": 32,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "cff7741aa00a72340b91991402940db46ab53b997f55eb82781e78cb3a3f34b8",
+          "source_client": 32
+        },
+        {
+          "client": 33,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "04a581f664d2a26ab97f4cbb58f759b36947555a22619af4d4d659c6e483b7d1",
+          "source_client": 33
+        },
+        {
+          "client": 34,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "0d20bcd1d3a803e3e1d165bb4341b5c1cf550be4b93a1d47945b5e037f9acf18",
+          "source_client": 34
+        },
+        {
+          "client": 35,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "a80076385292336cc6f8ef99a9b4932c6539b990e8028e11553e5dea335373f7",
+          "source_client": 35
+        },
+        {
+          "client": 36,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "d220b112cc1e6687b6a3bf59c51acc46439ffcb0689783819503e40b4b6baebb",
+          "source_client": 36
+        },
+        {
+          "client": 37,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "f908f1682b592248cf2a961d1f2f9ac6e0f8130ecb3ba16f4f3a7bf6a3529e0d",
+          "source_client": 37
+        },
+        {
+          "client": 38,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "39e4679b720b5b8e94ae3bb534959b3d071cca02c268e14a008a2f200a3d0a61",
+          "source_client": 38
+        },
+        {
+          "client": 39,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "2d792e0da6348fa6990133c6143428c5b1784b6195bf63c25e95bffc3463dbf0",
+          "source_client": 39
+        },
+        {
+          "client": 40,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "5056fdb6a141041fb1c4b9db57cbd7f8efd7daba7b0ee41754ad18eec75bda5c",
+          "source_client": 40
+        },
+        {
+          "client": 41,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "8c2ddceb2de716a624f02a3852a905e915d00338c32c6b7b852775981f80871d",
+          "source_client": 41
+        },
+        {
+          "client": 42,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "74f76848a6d84ff9d716a435b85c477c8168ea6b59e25374e6d08243c402aa5f",
+          "source_client": 42
+        },
+        {
+          "client": 43,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "d4271aa575511c1eb2ffbbc52865b2622f92f0df6ee908dfc61a7a9d8d9c455c",
+          "source_client": 43
+        },
+        {
+          "client": 44,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "40c12096a9c2b8a7beb639d5945f719aa5a92e8c11e1eb86c9ee9cc86f058209",
+          "source_client": 44
+        },
+        {
+          "client": 45,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "7ef113f760a3d4cf829e8331e9202f4943766154f63f442e58914fa9c83c9d90",
+          "source_client": 45
+        },
+        {
+          "client": 46,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "479130492e5a4c73b188421d0670731f3ce97b691eec5f6e8f376ef4e30ac364",
+          "source_client": 46
+        },
+        {
+          "client": 47,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "9d6030864ce24dbdffb05345054bd2a509e2e84c78be42a10bcdf21cff68891a",
+          "source_client": 47
+        },
+        {
+          "client": 48,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "a890859351defe265e8f034f246f942128720415157765f4154800d2502cee88",
+          "source_client": 48
+        },
+        {
+          "client": 49,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "6cee22da55442107a865bc789574be73f67b1f258ce8eaea6f25189156c1dff1",
+          "source_client": 49
+        },
+        {
+          "client": 50,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "88e0570eb48ac6ee605c43d1cf1d0e521979638583f83f2bcd0ceca632719625",
+          "source_client": 50
+        },
+        {
+          "client": 51,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "a1e6913cec4096febcd86ddf9e54866457fd3a52445b0df2371309a62a30a651",
+          "source_client": 51
+        },
+        {
+          "client": 52,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "ca0dce9a21405439a6fc731baf496c3c45b312bceb833ebaf25b3f6a31a1773f",
+          "source_client": 52
+        },
+        {
+          "client": 53,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "af643dfd2b7690bc045a996d08bfeb519de6b707e95dbd14515dc187ab741d58",
+          "source_client": 53
+        },
+        {
+          "client": 54,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "3be3bfa9eb6058f937231b2e5fd41c19a57292cd9bb3c0dff289d78e602f33b3",
+          "source_client": 54
+        },
+        {
+          "client": 55,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "544b93c1f8dd3716631f1ab9cf60a068e3cf76a50c1f9169202714dc525427cb",
+          "source_client": 55
+        },
+        {
+          "client": 56,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "ce19879c21b4656fbf46726b3d384e239b4828aca6cb7479190125ab6fea780e",
+          "source_client": 56
+        },
+        {
+          "client": 57,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "409cacd2af676d98b67dd9dde64f5cd76a1436b4169eaee5bb80f8bdc05b30e6",
+          "source_client": 57
+        },
+        {
+          "client": 58,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "9e5f9fe01d2fd52bfe673afe9460fa807d277b9640569b1418f7c5d13d2b4015",
+          "source_client": 58
+        },
+        {
+          "client": 59,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "5900487dd41787e0800511fb7ce4014f0be77ad8b05b574af29bddde5557e995",
+          "source_client": 59
+        },
+        {
+          "client": 60,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "5a1d29943cef49a07ba35682185fbfe925ac74501a4fc817ed5dd7b4833e0783",
+          "source_client": 60
+        },
+        {
+          "client": 61,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "13930343e7b480a2e181ca4a7086e64dde3c204886f2d77fbb6b3e1be8e9d210",
+          "source_client": 61
+        },
+        {
+          "client": 62,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "75b7d03c3e8bbe4f6a1858fc33c7f06d51fc256729c5dbb3c5b7e86899d0ddf1",
+          "source_client": 62
+        },
+        {
+          "client": 63,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "40745010e4b9af6c6ab0c53bf909239600f1a91cf62d55ec999da0d3a1b37a8a",
+          "source_client": 63
+        },
+        {
+          "client": 64,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "d9db68fc94266d7472fc1b98f8489cc435e64fcd67e447517b79a8d76188b271",
+          "source_client": 64
+        },
+        {
+          "client": 65,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "f3e93fe931371555417842787487528893960c32650cbb08460a5b2b33295404",
+          "source_client": 65
+        },
+        {
+          "client": 66,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "a532444dde2dd8ea4f3b3670dad6d033e2156986b67175c6f6fc5ce0a68c54d6",
+          "source_client": 66
+        },
+        {
+          "client": 67,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "ca6627bd39f341b73e7893b7f670cb898fa9fce7f63aa921a1abafb64feaf311",
+          "source_client": 67
+        },
+        {
+          "client": 68,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "4f4027d57b46acdb04707311874e25d8389872cee3fc3f786da5107298fa16bc",
+          "source_client": 68
+        },
+        {
+          "client": 69,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "66f5d0c2da04b44e27a8080197d1114cbc867fd231fe48a05f1d86de932e3413",
+          "source_client": 69
+        },
+        {
+          "client": 70,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "a5f3fbffdaf74f50bbae3523e5f7861731f9047550ab46d9e296f647f00ec9d5",
+          "source_client": 70
+        },
+        {
+          "client": 71,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "989874e0f3ec72a06c167496b8bdb4bf645a4561e840ab01e6734b9c84eacd60",
+          "source_client": 71
+        },
+        {
+          "client": 72,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "ddc816a498d3d2006c351aaad82987421017743509fc2f31d3aa543e86a5c65a",
+          "source_client": 72
+        },
+        {
+          "client": 73,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "56b2c93a03bd281baf54ddb76cacdc8970f9f98bdc13906120d20a7db99f48ca",
+          "source_client": 73
+        },
+        {
+          "client": 74,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "03526757fee890a8825b09c1b7046b78635f234190cc8618e92ceed8304e4ae6",
+          "source_client": 74
+        },
+        {
+          "client": 75,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "b5dd3eb940959185bac9896328d2eae6f64bbe1f2906f84fc0ddff39cce03004",
+          "source_client": 75
+        },
+        {
+          "client": 76,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "9aff6ad8908fd940c207c1c483874865bc185c77430824575179fd064f250a38",
+          "source_client": 76
+        },
+        {
+          "client": 77,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "9b61baf1d1d0f737d6ccdf91ec779b92fd88bffbc4b6cdb3443ea222d5743c31",
+          "source_client": 77
+        },
+        {
+          "client": 78,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "d7f144bf503d8a85cfb8ef034c66304a5495d8fa8d183e11ba1e68b507e3c344",
+          "source_client": 78
+        },
+        {
+          "client": 79,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "044100e49fe8ac16a90026de4c6ceb4ddba75dcd08e79bbeaf87584537026990",
+          "source_client": 79
+        },
+        {
+          "client": 80,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "dd658fbd2225b35e2d64235d4ec406fb307de56442419d72728b3f39d95aa305",
+          "source_client": 80
+        },
+        {
+          "client": 81,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "53cbf74383fea3e37cb4d840280a1289cb6ddbaa1b79f85a1fcaab0d88879c0d",
+          "source_client": 81
+        },
+        {
+          "client": 82,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "2661acbff14413026a88d32a1fe55424ad04cc4a2f3d12fc7663f98b4fa764b3",
+          "source_client": 82
+        },
+        {
+          "client": 83,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "8c7873178d5f288443716b2a310c2a07a8086b493eef098f011a97524063c6a1",
+          "source_client": 83
+        },
+        {
+          "client": 84,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "2f6176bf8fccf4e1e42dfd9ab137c71edddf824c5ae28bb5e5ae931495e000d0",
+          "source_client": 84
+        },
+        {
+          "client": 85,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "2a22b28181f8cdddf16cebe4a473afda510c4900b136a69757a06cc21a38ac39",
+          "source_client": 85
+        },
+        {
+          "client": 86,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "77dac850bdabd60b3d2ad9e2f23fa5f7321cd0195a4cea1dca566e70e854c266",
+          "source_client": 86
+        },
+        {
+          "client": 87,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "484ff1c57bfb2ae904b002324955583e8de61bb999492f233c1c705db87d2717",
+          "source_client": 87
+        },
+        {
+          "client": 88,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "581b1456d1f66a5fd55387346c6a499fdb82893ed94c7f3f52c02aded912ff0d",
+          "source_client": 88
+        },
+        {
+          "client": 89,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "22cc3957ad27ad3e5514838d6481c100e646f20dd67fd26637255232822f5a09",
+          "source_client": 89
+        },
+        {
+          "client": 90,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "e4770bd15a52be48d8b816048a292fc3be3d35a7087a6072cd53e3e51ae2d558",
+          "source_client": 90
+        },
+        {
+          "client": 91,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "4a9691c8d1fcd151e174e8000a1dc6ba5dab266d7be1eec7dcb6b538ffa301d7",
+          "source_client": 91
+        },
+        {
+          "client": 92,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "2a7d82f5fc298807e7256739f807472235cfd38c8848df8654a59ac75609ba6a",
+          "source_client": 92
+        },
+        {
+          "client": 93,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "0c34650816463708ad581121d2a7c132e93cffed7639eeb9b1319a07a0018d05",
+          "source_client": 93
+        },
+        {
+          "client": 94,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "089f74906862707c0ecb7a9bb92c4c4a3808e1db40c1d25c6703e202e2ed941b",
+          "source_client": 94
+        },
+        {
+          "client": 95,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "51a9e1d766d874953373c7db8729e0b44b0cab4230e9d368ecc972c7a89dee5c",
+          "source_client": 95
+        },
+        {
+          "client": 96,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "ec7d7d37eb108d8c3ad9ebb65d5ce474f94cab6f3ab4e555b6cbd7e7d2d2f940",
+          "source_client": 96
+        },
+        {
+          "client": 97,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "755762e9944b7ff70eedc2a2a0e4d3237ed29e88b081fce002976c57b82bed0f",
+          "source_client": 97
+        },
+        {
+          "client": 98,
+          "encoded_shape": [
+            300,
+            103
+          ],
+          "sha256": "900fc468a4ea3d7eecc6b31fd38cd436c51bc2825ad1b5892bb42624e60b458d",
+          "source_client": 98
+        },
+        {
+          "client": 99,
+          "encoded_shape": [
+            462,
+            103
+          ],
+          "sha256": "07710f0318477efa09175f6953b0ed65da7f8505574aaedc3e9df9b09ce1801e",
+          "source_client": 99
+        }
+      ],
+      "clip": 175.0,
+      "dataset": "adult",
+      "represented_data_sha256": "0d40b99954487adc116a644d8e79980afb8734d6086cf449a7cae933eec1ffd7",
+      "scale_bits": 12,
+      "source_sha256": "3a5ac2981cb4b73acc83f6236bac6504685928254ac678843b59ff0407438b3e",
+      "version": "p124-unique-source-v2/FTF-1/b12"
+    },
+    {
+      "clients": [
+        {
+          "client": 0,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "dcf2c783033d660097986fd7c573af1c81e5f0c5e2344e435d6b7289005fb137",
+          "source_client": 0
+        },
+        {
+          "client": 1,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "7fcb77c19b7cd9a8fa89d18bdfa6ce258e5bfc2d3efabbfeb8604c77a3e07a82",
+          "source_client": 1
+        },
+        {
+          "client": 2,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "af9e50a9795c757ca69eb90fd963c26cbbbe55d0aa211a1e603acfcd604a6b53",
+          "source_client": 2
+        },
+        {
+          "client": 3,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "3125bafe75d0b13d4ebadf3e224083b6fa0147a07d6f63a3499674044b06b9f2",
+          "source_client": 3
+        },
+        {
+          "client": 4,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "d9edb722de43a6dc05375ea65c74d034772ac48cfd875b312ba8f0c005182486",
+          "source_client": 4
+        },
+        {
+          "client": 5,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "20bce3a6e7188b7ea2d9bc1d9dc7636c813aaa32d4bd822ca467a96d769a02fe",
+          "source_client": 5
+        },
+        {
+          "client": 6,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "2b05142fc1ff3ae2af507b06d7a1cc3d7b73817c12347bd13cbcae3e96a9698d",
+          "source_client": 6
+        },
+        {
+          "client": 7,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "341b905232c2f3a5ffef61de42bbd59a0181f665cc62c20f418d9fea35fa06e8",
+          "source_client": 7
+        },
+        {
+          "client": 8,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "e00e69bb2388dabb749462a102f7ec68d6e43ee679bb2359f2b8bed368c514d4",
+          "source_client": 8
+        },
+        {
+          "client": 9,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "c486c39a8d3540756d4edc07bfc89469f760fe35fce5f91abe5ad88eca926f9b",
+          "source_client": 9
+        },
+        {
+          "client": 10,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "4afbb05a34dc2afb71e4ca292f40859da94852e660e7b171a5be53c935e21ce9",
+          "source_client": 10
+        },
+        {
+          "client": 11,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "93be18d643f9b0277f0011b756fa29ac0c4cbd95c4efeca761b81c90b8a8782e",
+          "source_client": 11
+        },
+        {
+          "client": 12,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "e85b0ab60601253158474afeefda82e9617785f4022ef1582d43bb3053a46690",
+          "source_client": 12
+        },
+        {
+          "client": 13,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "ff9fbefe2b3dc7d1bd86d69dfff1c0943689a5843f57fff56ae26bf76eaddf29",
+          "source_client": 13
+        },
+        {
+          "client": 14,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "b377ac0cf16f373ed4ce63e2e01937a7792f54e6b0a085fe16c5504110ebceee",
+          "source_client": 14
+        },
+        {
+          "client": 15,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "57f5e384043d9b6f5f30c2fbeae6b08b05243a3f4ee7fed5529af322d94bf45a",
+          "source_client": 15
+        },
+        {
+          "client": 16,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "0c50d4107d86004252dad7314b4eb2a850236ddb61946d979cd5e98069a54086",
+          "source_client": 16
+        },
+        {
+          "client": 17,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "56e26eeebf84650f7fb5a9d6372b5a5656591793812f498498a8e1b542f8dbeb",
+          "source_client": 17
+        },
+        {
+          "client": 18,
+          "encoded_shape": [
+            2259,
+            42
+          ],
+          "sha256": "d04de6ae2512c1f641e7bfe07f0e3038f0980b495a044e29963e90ae5f6a5731",
+          "source_client": 18
+        },
+        {
+          "client": 19,
+          "encoded_shape": [
+            2290,
+            42
+          ],
+          "sha256": "c1c0eb641dea7bbdca9e7a2e831a2e28af041da865e3b5dc1bd694ae6fef66a3",
+          "source_client": 19
+        }
+      ],
+      "clip": 121.0,
+      "dataset": "bank",
+      "represented_data_sha256": "a6b14a906902c3a9235f3ff65cb9e71d19db09faca3d011dcfe4687d95e1e518",
+      "scale_bits": 12,
+      "source_sha256": "a56946270c4de9f80fdd1b87ffd583eff6f4e711ac5efee52898e8c9b1c34255",
+      "version": "p124-unique-source-v2/FTF-1/b12"
+    },
+    {
+      "clients": [
+        {
+          "client": 0,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "3676b2324f0cbd267dd3857a0e38d8565a80bd968fe1a92f424bc8c795c1bba3",
+          "source_client": 0
+        },
+        {
+          "client": 1,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d0519c1fc76415e314c90b348c012c31a6967a7740a2fae41d7f3ce978375d53",
+          "source_client": 1
+        },
+        {
+          "client": 2,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "2949706895d086e77fa8ea26b1b71960994a14fa32419208c09ba058e0a1edcc",
+          "source_client": 2
+        },
+        {
+          "client": 3,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "9e9dc9932375b57ed64522d9db7126935df4ae1ac2d34c2926996b379f095574",
+          "source_client": 3
+        },
+        {
+          "client": 4,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "1549fa39312c44c7d9c7520211357c8a63f2d45b6d69e5322e04c0a9e656f13b",
+          "source_client": 4
+        },
+        {
+          "client": 5,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "f9e003c9448fbe97186b37fa880d8d1431bb4f05422a7a6e8b827db4b1f8f18d",
+          "source_client": 5
+        },
+        {
+          "client": 6,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "356ec25d729639d6208ef1fc66a95ac435e827dfa98453621bed93c25d7f9bc2",
+          "source_client": 6
+        },
+        {
+          "client": 7,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c93a24ba2bce688231ce2af1c477dc46a6bf8ad67694f07d7ea8f80560a90950",
+          "source_client": 7
+        },
+        {
+          "client": 8,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "18627ae5ed01e4425a44a40483f650fe60a4702c1dfb23b2aaa446efadb3192e",
+          "source_client": 8
+        },
+        {
+          "client": 9,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d6c1d812044586e3492b5edb6fdd68cf2598d94253b356828c9e072a2516f4c9",
+          "source_client": 9
+        },
+        {
+          "client": 10,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d7b5a5a24a91d2721ae69c56df1a975419da116f54e1ecad61692dbed3c462f2",
+          "source_client": 10
+        },
+        {
+          "client": 11,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c38e09f6124eb2759f2bb220c8466fbf547fc52d067521609efc067b0839d129",
+          "source_client": 11
+        },
+        {
+          "client": 12,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "daffbb8d1f06168120ce5061faec2e0818e315b04d207a9dd4da2d244f10bc25",
+          "source_client": 12
+        },
+        {
+          "client": 13,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "a5f96408cf1ef1fe910e79fceb2af22ad3f82d5530f82c0c5bf3f1deecead1e1",
+          "source_client": 13
+        },
+        {
+          "client": 14,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "50a203ff158bb04bf5332354a167e3775b497d07b055af0c1baeb61b82ede51b",
+          "source_client": 14
+        },
+        {
+          "client": 15,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "6f6d88a2ad6d63b7b2d86825827ea6710106ef5c8eb08ae8c54a3f21b0c8911e",
+          "source_client": 15
+        },
+        {
+          "client": 16,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "b2ee26b5ece47746f52b4a58a6e4d0c5d630797719eb336ea401ee9e5ec9a60f",
+          "source_client": 16
+        },
+        {
+          "client": 17,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "4b441829f0087e92ac5b80680a32167dd9c95955ca67115d87e2874f376a3864",
+          "source_client": 17
+        },
+        {
+          "client": 18,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "0f8ab56f6c0f8d85f8af882b875dde918d0a278995d80dcebb850b0ae7dea27a",
+          "source_client": 18
+        },
+        {
+          "client": 19,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "7157a4ba8ef9d46632e6115e00ba536a971ae55d1848ffa8de9807b49fc27e5b",
+          "source_client": 19
+        },
+        {
+          "client": 20,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "5607feac440cc5634b1e449e6488110bc16391dd8680f541a705828a3af6a610",
+          "source_client": 20
+        },
+        {
+          "client": 21,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "b8c5b1c71384027712a2b6f1930c512695246692c3228e060e395399a662d768",
+          "source_client": 21
+        },
+        {
+          "client": 22,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c0267f9c8e27867f448d5abdf2308440ef8db6c1531d2d8a395b72aae1b26205",
+          "source_client": 22
+        },
+        {
+          "client": 23,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "e2913df89c7d39bbb994736b130dd0c38cb0b7db2f8c4c984b801acfd5924fb1",
+          "source_client": 23
+        },
+        {
+          "client": 24,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c40e1f9a7657d1da2e03cccab09924ba4ccfce507c6564d7df41fe47b746f332",
+          "source_client": 24
+        },
+        {
+          "client": 25,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "27e845fff1af7a5e18a625aa01bac003fc79bc2973364ef3bc5861e5917372a2",
+          "source_client": 25
+        },
+        {
+          "client": 26,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "5cb07b798f2ccbb5a519b3f5462c554c5e89dd430189dcef5f974cc9135b6bc2",
+          "source_client": 26
+        },
+        {
+          "client": 27,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "4ab3d17eb1a6201cbc0cf4d856b024f55b0a3af517d45884aff58986c95ea043",
+          "source_client": 27
+        },
+        {
+          "client": 28,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "7e7af362de827adf7d73c3df72e2f9d2d271333f6a5251abc2d4a9b9af8e9661",
+          "source_client": 28
+        },
+        {
+          "client": 29,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "94d67e0c5dc87ca7f4b5c4b2ceb68dde42320bdd90590313b078d9fbd09fcd54",
+          "source_client": 29
+        },
+        {
+          "client": 30,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "3b325cbade447ae82b0f20c6b79097a2f3288714adc7cd6dff599319f19e6f43",
+          "source_client": 30
+        },
+        {
+          "client": 31,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "480362a561f9cb82a8285226cf62abc945e353095f1ebb4a3506fbc2a97d75c8",
+          "source_client": 31
+        },
+        {
+          "client": 32,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "4baa5400cac9bb624c23733c22065cc15451bf79a3d6f604140eda3923827bf7",
+          "source_client": 32
+        },
+        {
+          "client": 33,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "8f6006d92bf4178411c048ad7dc5a225b76d6e685f7f636bc351bce8ee4b40cc",
+          "source_client": 33
+        },
+        {
+          "client": 34,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "6f839620c0207f65d8b78c4d22e3561c9afad7e69fad7c0af53cad9f2f18965a",
+          "source_client": 34
+        },
+        {
+          "client": 35,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "2bd3e42b1ce59130f6a5dcb162815ebc5bc87ace6f60ef2e5cbd246e0b604027",
+          "source_client": 35
+        },
+        {
+          "client": 36,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "fb9ac17597593405657a96ba7127255bc61fa623f4b6daccfd9d78fde4006a50",
+          "source_client": 36
+        },
+        {
+          "client": 37,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c53e4187aa32ba735d989b41a1e371c530b23c53943e9680792a90a061e59927",
+          "source_client": 37
+        },
+        {
+          "client": 38,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "dfca9f6d6ba15b6d4054480b4deb6a7713cab9598d6ae3d95675f43a5e683005",
+          "source_client": 38
+        },
+        {
+          "client": 39,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "42b0dd83c8401452412449b40bc949a1081339257a1909dc41445742184ef617",
+          "source_client": 39
+        },
+        {
+          "client": 40,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "fe10ec6a0bb48271ce1988e2cc232602f87f2688c624d94a16d5e08ba096cebc",
+          "source_client": 40
+        },
+        {
+          "client": 41,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "edb3e49116c682110fa73935af4e39ae127317b275ec27d338b892cbb2ff84ee",
+          "source_client": 41
+        },
+        {
+          "client": 42,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "aec750eb1ac78c65d4460451c68bd357e339edef8da4d71b56c5e0e4b81ea58b",
+          "source_client": 42
+        },
+        {
+          "client": 43,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "ec94a797726e4cfe2e7b958aa1289a45c9c2069557df9c27785a494835ffdc98",
+          "source_client": 43
+        },
+        {
+          "client": 44,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "0d39407343946597bff3a038267dac37600b6b1a5e1a66c1134be317935e8680",
+          "source_client": 44
+        },
+        {
+          "client": 45,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "a1ee3126d310c147cb557dafe0caffd53ebde192662bcc1eba8b75dbf285babe",
+          "source_client": 45
+        },
+        {
+          "client": 46,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d63aefc2a8794e1a73a244a86a0be4603a356b6ff400450bb26980c5169be962",
+          "source_client": 46
+        },
+        {
+          "client": 47,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "05dc713e11a5c56d2ea2b03befe6a0d826d98f87770e51f1fc58b08550ffc0b5",
+          "source_client": 47
+        },
+        {
+          "client": 48,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "4056932d046e7693ce32cd595cb572792435befea7d32ed5ab0bd27ca00e037f",
+          "source_client": 48
+        },
+        {
+          "client": 49,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "fe730b62bd64a5fc92743d97c04357d46c0afa8041c5da808d3232df1319d1b9",
+          "source_client": 49
+        },
+        {
+          "client": 50,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "3829c741472047252652cbde29646532142a7a5a9020866ea0bb9c4666440010",
+          "source_client": 50
+        },
+        {
+          "client": 51,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "84902494fe2ee266d44e99b1a281cac3ac0a28e85c08bd9d39842b4062ee7c26",
+          "source_client": 51
+        },
+        {
+          "client": 52,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "3f8c1250bfd84213999064c3dcfb34411891dd4ffd7445ceff6b0e44c4ed949a",
+          "source_client": 52
+        },
+        {
+          "client": 53,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "039955aecc606dfe12d4f974d182b08b2e0e67840eacf72edf3e1456717376d2",
+          "source_client": 53
+        },
+        {
+          "client": 54,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "24d160685a079b0ee48614f756bdab030abecee8458254d084de77703d04a798",
+          "source_client": 54
+        },
+        {
+          "client": 55,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "07e890c011ad1068e76a51d995ab99142e1a5a92d863dafae97054b51a320fc1",
+          "source_client": 55
+        },
+        {
+          "client": 56,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "23e2eac405665fbcd90c9b92bfd312ceaa93b9063050ad3ef5db43fe5ad875f5",
+          "source_client": 56
+        },
+        {
+          "client": 57,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "43131fd923a6b481d3a8ac63b40a398c44ffb7b41dc1299e4c300305e35aef21",
+          "source_client": 57
+        },
+        {
+          "client": 58,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "5993815c71f11b794c6201968d6724c6d1cf0a7941c50b707bbe507abff5ff23",
+          "source_client": 58
+        },
+        {
+          "client": 59,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "5ddfc3662bf0ef817074e3b553ad334ce6c50ff2233694f64c272495bede68fc",
+          "source_client": 59
+        },
+        {
+          "client": 60,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d27df5f3e64c837d0103ab2f16da7504c3fe358fbf5bbc1f17c7b5bbe4656067",
+          "source_client": 60
+        },
+        {
+          "client": 61,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "7899cdb47106284881d2b1a2027a95480f3624589130624e2f2bf69c7fd7cca3",
+          "source_client": 61
+        },
+        {
+          "client": 62,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "7110e7d9a3ebe6b8e6436cf4a70ae8ca288ef83d7da933f094d64340d65a812a",
+          "source_client": 62
+        },
+        {
+          "client": 63,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "cb0bf46ff5d0e66250e396e35a4fc1017b8f7f33575afb567b6947a0a8fc446c",
+          "source_client": 63
+        },
+        {
+          "client": 64,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "a2dd7722b0308135864ec153e21d7982c9fd9b9c4d90c5a917a1e09bc7fd853d",
+          "source_client": 64
+        },
+        {
+          "client": 65,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d9b0d11ecb6330cd3cd4464517e530f74dd1a97efc38054f425946ba59fc9fe1",
+          "source_client": 65
+        },
+        {
+          "client": 66,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c6a4a279d1ef5add85d476337170e2307774e7eea07dcaf299f38c99f9385d1d",
+          "source_client": 66
+        },
+        {
+          "client": 67,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "f2421b75dd27236ece89117fc52839ae0fac56421df6d0940cee8208ddcf1ac3",
+          "source_client": 67
+        },
+        {
+          "client": 68,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "6dc14045526b8c23337661882022c68f68b59fe4b8211dc035bac99988099db9",
+          "source_client": 68
+        },
+        {
+          "client": 69,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "b56238748575555eed91b21439cfa3d116b0ed6d3329105515a30583efd70e1d",
+          "source_client": 69
+        },
+        {
+          "client": 70,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d0298c0c818eae673675a26cf0901af3aa42dc119e44ea6db62912526bf15385",
+          "source_client": 70
+        },
+        {
+          "client": 71,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "759806afad1969926f08140a6010826bb45e8b63efcfb8656bad5be396ff18a2",
+          "source_client": 71
+        },
+        {
+          "client": 72,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "623a3be21c61a9b0215dc82d2ff3f35daf3d8f931b88bedd35d8bda5f369aad9",
+          "source_client": 72
+        },
+        {
+          "client": 73,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "0c071f540bd09115c54b5c2663294002958559a7fa6c5cbc6cd3d17df3c657fd",
+          "source_client": 73
+        },
+        {
+          "client": 74,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "d5cc5a5c5de6d8ad08c3b6f9233d2311934db89e1e3da1fa4469fee09a6236ea",
+          "source_client": 74
+        },
+        {
+          "client": 75,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "dc692cd4331fea1ea73f9f90fe2488113733b3d17366f1eb355a2f72730ed6bb",
+          "source_client": 75
+        },
+        {
+          "client": 76,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "54fae389de85331332756f32025b1e029d5ebecb42ac488045d407862c44a6f1",
+          "source_client": 76
+        },
+        {
+          "client": 77,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "007f379f4e080fc40bdc4290e8561fd0d532981645768b1ad38308f8f1d81fce",
+          "source_client": 77
+        },
+        {
+          "client": 78,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "00214b6d85de7dc703ae0d9d862bfa0443b5ca8a2d641ef6b2a9327467175b7f",
+          "source_client": 78
+        },
+        {
+          "client": 79,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "4f404632c6f95e88e5b2ccd2d1b9a91882d8beb3943b76c44c58b8c53b076d9a",
+          "source_client": 79
+        },
+        {
+          "client": 80,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "90a7da6f9c8572505a7b9f87a81ea491c6edbde850f9a995ba326710cbe8b934",
+          "source_client": 80
+        },
+        {
+          "client": 81,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "cf93e916a9150b1dce8eec131d195ed57112059d958106836cbf2c3150466a55",
+          "source_client": 81
+        },
+        {
+          "client": 82,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "2a86d44817aed914d4e0031d10daa149ba027fedc3e9d5c22e69629e8a9e3dad",
+          "source_client": 82
+        },
+        {
+          "client": 83,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "ca664656a9b5a3af907a0d36a99c5c9e60a6b5abf8ef1ecada8892eef701785d",
+          "source_client": 83
+        },
+        {
+          "client": 84,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "03c252fa0b178604876a60f4f4e59d94cfededb4551d6cb9461465f35dbc6cb6",
+          "source_client": 84
+        },
+        {
+          "client": 85,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c95ab98b8cde99bbea79b0abe55166d8562a814c7d0bf36c68d97e1a5d0acfe9",
+          "source_client": 85
+        },
+        {
+          "client": 86,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "08f20ea8a3625afa20692cd2a1cc0a98ab5ac35c6baa0848b242dfc60f39f1f5",
+          "source_client": 86
+        },
+        {
+          "client": 87,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "926453ee1c484d552da057dfdc1236b1cb6000122761ffcabfd3140f3dc4288d",
+          "source_client": 87
+        },
+        {
+          "client": 88,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "3e3ad153d4b8655bf794fdcdc5f0388a7f189817cf3bdfbf0aac2ba398a7cde5",
+          "source_client": 88
+        },
+        {
+          "client": 89,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "b942abda0ef18d69dba2364ff0c6ce2c06869cd40ab1a5692541a150f2ad12cd",
+          "source_client": 89
+        },
+        {
+          "client": 90,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "96519e67ac3d71062c6d53300064c68addf06040ab6d1bb2eb18b1ad3238f74a",
+          "source_client": 90
+        },
+        {
+          "client": 91,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "6320dde4b1621f1749562fc0adcda7cd3e3bbe0e5e60bad8e3e8f7dfec933ec8",
+          "source_client": 91
+        },
+        {
+          "client": 92,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "9088f573e1bbb180b24a669a6107f658e0ff474c8f42c9bebfb0d3f22e378cca",
+          "source_client": 92
+        },
+        {
+          "client": 93,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "df39b5b664a76cd705b086d05517d0616eebff11bc59f382a6321aa48fc7d6c1",
+          "source_client": 93
+        },
+        {
+          "client": 94,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "f7486fd8c9f9913020c5c4dcc840afcaacc0c1255e2b01f85b461851e578cd98",
+          "source_client": 94
+        },
+        {
+          "client": 95,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "e431da2bd2c61576b77c61caa88aff49415e1932a89821bd9ac4c9a0a144cc3a",
+          "source_client": 95
+        },
+        {
+          "client": 96,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "f0f1ccd847092d0a90839f5f08e229da552f790b0d100502d7bdfe064630ed36",
+          "source_client": 96
+        },
+        {
+          "client": 97,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "c530830eb3c054d4e20a93f2042d99aeae857b0ac68b86d2e408e7bf2eb1dc7c",
+          "source_client": 97
+        },
+        {
+          "client": 98,
+          "encoded_shape": [
+            299,
+            23
+          ],
+          "sha256": "e241559c318b935391148e40bc0e961e118396eb2e90bbaa7d374fdac9690a15",
+          "source_client": 98
+        },
+        {
+          "client": 99,
+          "encoded_shape": [
+            399,
+            23
+          ],
+          "sha256": "08b470c4de453df56c22457724a131bb6e0dfdd5ab8d157d736fdace842de54c",
+          "source_client": 99
+        }
+      ],
+      "clip": 74.0,
+      "dataset": "credit",
+      "represented_data_sha256": "7d8b1bc85bdc0070942a05071b756a035bf0d89759155e1d6bac9901cfbe9531",
+      "scale_bits": 12,
+      "source_sha256": "3a0c55f4ac6068753781ff4c47fac2a965c0841aba663065db34419d22e87065",
+      "version": "p124-unique-source-v2/FTF-1/b12"
+    }
+  ]
+}

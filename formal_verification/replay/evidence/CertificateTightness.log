@@ -1,0 +1,5 @@
+'Replay.exact_norm_full_tightness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.radii_full_tightness' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.radii_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.exact_norm_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Replay.two_center_exact_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]

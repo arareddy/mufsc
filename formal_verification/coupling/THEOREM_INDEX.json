@@ -1,0 +1,406 @@
+[
+  {
+    "name": "Coupling.primitive_old",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.primitive_new",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.count_odd",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.count_even",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.accepted_mismatch_bridge",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.accepted_mismatch_count",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.first_disagreement_half",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.rejection_shape",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.proposal_width",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.power_is_even",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.assembled_low_bit",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.low_bits_count",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.uniform_low_bits",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.word_low_bits_uniform",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.primitive_scaled_new",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.primitive_scaled_old",
+    "source": "proof/Coupling.lean"
+  },
+  {
+    "name": "Coupling.assembly_formula",
+    "source": "proof/WordBlocks.lean"
+  },
+  {
+    "name": "Coupling.assembly_bijective",
+    "source": "proof/WordBlocks.lean"
+  },
+  {
+    "name": "Coupling.block_low_bits_count",
+    "source": "proof/WordBlocks.lean"
+  },
+  {
+    "name": "Coupling.block_low_bits_uniform",
+    "source": "proof/WordBlocks.lean"
+  },
+  {
+    "name": "Coupling.block_first_low_bit",
+    "source": "proof/WordBlocks.lean"
+  },
+  {
+    "name": "Coupling.word_consumption",
+    "source": "proof/WordBlocks.lean"
+  },
+  {
+    "name": "Coupling.proposal_inverse_bounds",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.rejection_tail_zero",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.accepted_trace_sum",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.rejection_terminates_total_mass",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.category_law",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.first_category_count",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.exact_coupling_disagreement",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.binary_total_variation",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.disagreement_decomposition",
+    "source": "proof/Rejection.lean"
+  },
+  {
+    "name": "Coupling.trace_runs",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.trace_length",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.trace_weight_from_cylinder",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.old_trace_zero",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.old_trace_after_reject",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.accepted_count_without_reject",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.trace_mismatch_count",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.trace_disagreement_exact",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.trace_and_decomposition_agree",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.successful_prefix_classification",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.old_first_trace_count",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.old_trace_marginal_half",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.trace_binary_total_variation",
+    "source": "proof/Traces.lean"
+  },
+  {
+    "name": "Coupling.four_block_count",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.prefix_minus_one",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.prefix_minus_two",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.sum_cutoff",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.prefix_event_count",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.prefix_common_zero_slot",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.prefix_probability",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.retained_six_slot_mapping",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.old_six_slot_mapping",
+    "source": "proof/PrefixEvent.lean"
+  },
+  {
+    "name": "Coupling.retainID_injective",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.retained_exactly_not_deleted",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.dataset_sizes",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.endpoint_labels",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.ideal_certificate_decisions",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.sound_certificate_rejects_changed_label",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.failure_counts",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.round_zero_policy",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.actual_indexed_shifts",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.unit_cached_margins",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.actual_changed_record_count",
+    "source": "proof/Deletion.lean"
+  },
+  {
+    "name": "Coupling.table_is_d2_sampling",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.diagonal_zero",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.local_representatives_fixed",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.record_location_counts",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.transferred_weights",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.old_transferred_weights",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.table_probability_sum",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.table_nonnegative",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.six_table_signs",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.initialization_tuple_TV",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.retained_parameter_range",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.retained_tuple_TV",
+    "source": "proof/Initialization.lean"
+  },
+  {
+    "name": "Coupling.opposite_probability_lower",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.prefix_probability_real",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.wide_event_lower",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.narrow_event_lower",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.beta_gt_sixteenth",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.beta_times_failed",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.linear_work_constant",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.expectation_event_lower",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.obstruction_expectation",
+    "source": "proof/WorkProbability.lean"
+  },
+  {
+    "name": "Coupling.power_parameter",
+    "source": "proof/Obstruction.lean"
+  },
+  {
+    "name": "Coupling.event_probability_lower",
+    "source": "proof/Obstruction.lean"
+  },
+  {
+    "name": "Coupling.initialization_word_offsets",
+    "source": "proof/Obstruction.lean"
+  },
+  {
+    "name": "Coupling.each_variant_event_counts",
+    "source": "proof/Obstruction.lean"
+  },
+  {
+    "name": "Coupling.event_work_contribution",
+    "source": "proof/Obstruction.lean"
+  },
+  {
+    "name": "Coupling.finite_law_expected_work",
+    "source": "proof/Obstruction.lean"
+  },
+  {
+    "name": "Coupling.deletion_witness_summary",
+    "source": "proof/Obstruction.lean"
+  },
+  {
+    "name": "Coupling.countable_expectation_event_lower",
+    "source": "proof/InfiniteExpectation.lean"
+  },
+  {
+    "name": "Coupling.countable_law_expected_work",
+    "source": "proof/InfiniteExpectation.lean"
+  },
+  {
+    "name": "Coupling.narrow_joint_count",
+    "source": "proof/JointTrace.lean"
+  },
+  {
+    "name": "Coupling.narrow_joint_trace_mass",
+    "source": "proof/JointTrace.lean"
+  },
+  {
+    "name": "Coupling.second_category_count",
+    "source": "proof/JointTrace.lean"
+  },
+  {
+    "name": "Coupling.wide_opposite_count",
+    "source": "proof/JointTrace.lean"
+  },
+  {
+    "name": "Coupling.wide_opposite_trace_mass",
+    "source": "proof/JointTrace.lean"
+  },
+  {
+    "name": "Coupling.local_product_trace_normalized",
+    "source": "proof/JointTrace.lean"
+  },
+  {
+    "name": "Coupling.wide_joint_trace_mass",
+    "source": "proof/JointTrace.lean"
+  }
+]

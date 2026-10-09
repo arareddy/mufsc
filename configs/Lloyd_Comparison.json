@@ -1,0 +1,1854 @@
+[
+  {
+    "case_id": "record_adult_s10000",
+    "population": "record",
+    "dataset": "adult",
+    "seed": 10000,
+    "counts": [
+      9774,
+      20358
+    ],
+    "retained_identity_sha256": "ee96b8382cdf1149ca3b9ad3519f2d3b1839ff69a9788a169b003a39867021fd",
+    "id": "record_adult_s10000",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "removed": {
+      "10": [
+        111,
+        289
+      ],
+      "18": [
+        297
+      ],
+      "19": [
+        76
+      ],
+      "2": [
+        90
+      ],
+      "24": [
+        131
+      ],
+      "26": [
+        80
+      ],
+      "27": [
+        54
+      ],
+      "31": [
+        82,
+        219
+      ],
+      "32": [
+        207
+      ],
+      "36": [
+        270
+      ],
+      "41": [
+        152
+      ],
+      "42": [
+        201
+      ],
+      "49": [
+        236
+      ],
+      "51": [
+        119
+      ],
+      "54": [
+        274
+      ],
+      "6": [
+        108
+      ],
+      "67": [
+        113
+      ],
+      "68": [
+        104
+      ],
+      "7": [
+        60
+      ],
+      "76": [
+        116
+      ],
+      "77": [
+        72
+      ],
+      "88": [
+        244
+      ],
+      "9": [
+        125
+      ],
+      "92": [
+        118
+      ],
+      "93": [
+        47
+      ],
+      "94": [
+        14
+      ],
+      "96": [
+        165
+      ],
+      "97": [
+        121
+      ]
+    }
+  },
+  {
+    "case_id": "record_adult_s10001",
+    "population": "record",
+    "dataset": "adult",
+    "seed": 10001,
+    "counts": [
+      9775,
+      20357
+    ],
+    "retained_identity_sha256": "f9ce01588c5513b4e51aa40d60ee94f817cc35ac74344d194bd891b54a2cd8ac",
+    "id": "record_adult_s10001",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "removed": {
+      "0": [
+        105
+      ],
+      "1": [
+        48
+      ],
+      "16": [
+        272
+      ],
+      "17": [
+        145
+      ],
+      "18": [
+        85
+      ],
+      "2": [
+        102
+      ],
+      "20": [
+        48
+      ],
+      "31": [
+        254
+      ],
+      "43": [
+        90,
+        212
+      ],
+      "44": [
+        228
+      ],
+      "46": [
+        267
+      ],
+      "48": [
+        14
+      ],
+      "49": [
+        179
+      ],
+      "58": [
+        199
+      ],
+      "61": [
+        264
+      ],
+      "62": [
+        221
+      ],
+      "63": [
+        9,
+        164,
+        229
+      ],
+      "7": [
+        229
+      ],
+      "70": [
+        89
+      ],
+      "78": [
+        224
+      ],
+      "79": [
+        125
+      ],
+      "8": [
+        211
+      ],
+      "9": [
+        299
+      ],
+      "90": [
+        173
+      ],
+      "93": [
+        276
+      ],
+      "95": [
+        284
+      ],
+      "99": [
+        23
+      ]
+    }
+  },
+  {
+    "case_id": "record_adult_s10002",
+    "population": "record",
+    "dataset": "adult",
+    "seed": 10002,
+    "counts": [
+      9775,
+      20357
+    ],
+    "retained_identity_sha256": "06144fda5836499e2ba09ad2569a4547b4cdfec48dd6a4bca5082cdd53e3c626",
+    "id": "record_adult_s10002",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "removed": {
+      "1": [
+        51,
+        134
+      ],
+      "10": [
+        293
+      ],
+      "14": [
+        288
+      ],
+      "19": [
+        261
+      ],
+      "24": [
+        29,
+        226
+      ],
+      "3": [
+        192
+      ],
+      "39": [
+        63
+      ],
+      "42": [
+        144,
+        243
+      ],
+      "46": [
+        198
+      ],
+      "47": [
+        230
+      ],
+      "5": [
+        249
+      ],
+      "50": [
+        95
+      ],
+      "51": [
+        57
+      ],
+      "55": [
+        110
+      ],
+      "58": [
+        185
+      ],
+      "59": [
+        117
+      ],
+      "62": [
+        28,
+        257
+      ],
+      "67": [
+        18
+      ],
+      "71": [
+        287
+      ],
+      "74": [
+        233
+      ],
+      "79": [
+        50
+      ],
+      "8": [
+        216,
+        234
+      ],
+      "85": [
+        269
+      ],
+      "89": [
+        280
+      ],
+      "94": [
+        260
+      ]
+    }
+  },
+  {
+    "case_id": "record_adult_s10003",
+    "population": "record",
+    "dataset": "adult",
+    "seed": 10003,
+    "counts": [
+      9774,
+      20358
+    ],
+    "retained_identity_sha256": "9cb96b186419ecc4fe863a040129e2bfdcfee2069c1d077b7476423bd4d225a9",
+    "id": "record_adult_s10003",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "removed": {
+      "11": [
+        49
+      ],
+      "15": [
+        287
+      ],
+      "19": [
+        29
+      ],
+      "23": [
+        229
+      ],
+      "27": [
+        26
+      ],
+      "31": [
+        115
+      ],
+      "33": [
+        209,
+        222
+      ],
+      "37": [
+        159
+      ],
+      "44": [
+        49,
+        274
+      ],
+      "46": [
+        239
+      ],
+      "53": [
+        19
+      ],
+      "61": [
+        32
+      ],
+      "62": [
+        44,
+        53
+      ],
+      "64": [
+        287
+      ],
+      "70": [
+        168
+      ],
+      "71": [
+        168
+      ],
+      "72": [
+        95
+      ],
+      "74": [
+        258
+      ],
+      "76": [
+        94,
+        273
+      ],
+      "77": [
+        223
+      ],
+      "82": [
+        36
+      ],
+      "83": [
+        145
+      ],
+      "86": [
+        104
+      ],
+      "90": [
+        149
+      ],
+      "96": [
+        146
+      ],
+      "97": [
+        106
+      ]
+    }
+  },
+  {
+    "case_id": "record_adult_s10004",
+    "population": "record",
+    "dataset": "adult",
+    "seed": 10004,
+    "counts": [
+      9770,
+      20362
+    ],
+    "retained_identity_sha256": "ae88468f8c4ac1563b057648bd07a40c9d2515ee6480c53e566e35c07e5ee84e",
+    "id": "record_adult_s10004",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "removed": {
+      "0": [
+        212
+      ],
+      "15": [
+        157
+      ],
+      "16": [
+        4
+      ],
+      "22": [
+        274
+      ],
+      "24": [
+        26
+      ],
+      "25": [
+        119,
+        213
+      ],
+      "26": [
+        170
+      ],
+      "3": [
+        50
+      ],
+      "32": [
+        260
+      ],
+      "34": [
+        275
+      ],
+      "38": [
+        265
+      ],
+      "42": [
+        176
+      ],
+      "46": [
+        85
+      ],
+      "47": [
+        178
+      ],
+      "50": [
+        253
+      ],
+      "53": [
+        111
+      ],
+      "57": [
+        75
+      ],
+      "66": [
+        47
+      ],
+      "71": [
+        52,
+        207
+      ],
+      "74": [
+        117
+      ],
+      "82": [
+        271
+      ],
+      "83": [
+        244
+      ],
+      "85": [
+        235
+      ],
+      "91": [
+        194
+      ],
+      "92": [
+        176
+      ],
+      "94": [
+        270
+      ],
+      "98": [
+        171
+      ],
+      "99": [
+        325
+      ]
+    }
+  },
+  {
+    "case_id": "record_bank_s10000",
+    "population": "record",
+    "dataset": "bank",
+    "seed": 10000,
+    "counts": [
+      17978,
+      27188
+    ],
+    "retained_identity_sha256": "76455f81315def06755c3d3b20095ab7ed37e8c420b6d2e7ab2cac7aa67669ae",
+    "id": "record_bank_s10000",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "removed": {
+      "0": [
+        1034
+      ],
+      "1": [
+        601,
+        979,
+        1976
+      ],
+      "10": [
+        517,
+        684,
+        1123,
+        2098
+      ],
+      "13": [
+        929,
+        1360
+      ],
+      "15": [
+        434,
+        454,
+        547,
+        846,
+        879
+      ],
+      "16": [
+        459
+      ],
+      "17": [
+        1529
+      ],
+      "18": [
+        208,
+        876,
+        1218,
+        1622
+      ],
+      "19": [
+        489,
+        877,
+        1954,
+        2040,
+        2140
+      ],
+      "2": [
+        145,
+        412
+      ],
+      "3": [
+        1760,
+        1879
+      ],
+      "4": [
+        1472,
+        1953
+      ],
+      "5": [
+        84,
+        516,
+        926,
+        1536
+      ],
+      "6": [
+        508,
+        710,
+        1142,
+        1996
+      ],
+      "7": [
+        776
+      ],
+      "8": [
+        590,
+        1112,
+        2248
+      ],
+      "9": [
+        2057
+      ]
+    }
+  },
+  {
+    "case_id": "record_bank_s10001",
+    "population": "record",
+    "dataset": "bank",
+    "seed": 10001,
+    "counts": [
+      17980,
+      27186
+    ],
+    "retained_identity_sha256": "08b69632debf53194ab3a3e39ca5a10022f6324ede8178d9ac1b4652cd3ea66f",
+    "id": "record_bank_s10001",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "removed": {
+      "0": [
+        157,
+        345,
+        522,
+        1053
+      ],
+      "1": [
+        1231,
+        1649,
+        1654,
+        2236
+      ],
+      "11": [
+        1528
+      ],
+      "12": [
+        717,
+        1100,
+        1230,
+        1465,
+        1557
+      ],
+      "13": [
+        591,
+        2075,
+        2236
+      ],
+      "14": [
+        249
+      ],
+      "15": [
+        565,
+        1524,
+        1827
+      ],
+      "16": [
+        297
+      ],
+      "17": [
+        1546
+      ],
+      "18": [
+        59,
+        1569
+      ],
+      "19": [
+        215,
+        269,
+        1622
+      ],
+      "3": [
+        824,
+        1084,
+        1444,
+        2013
+      ],
+      "4": [
+        27,
+        59
+      ],
+      "6": [
+        768
+      ],
+      "7": [
+        49,
+        719
+      ],
+      "8": [
+        787,
+        1397,
+        1576,
+        2050
+      ],
+      "9": [
+        474,
+        754,
+        1271,
+        1965
+      ]
+    }
+  },
+  {
+    "case_id": "record_bank_s10002",
+    "population": "record",
+    "dataset": "bank",
+    "seed": 10002,
+    "counts": [
+      17978,
+      27188
+    ],
+    "retained_identity_sha256": "a6ab6e56fa7280997db309aec0805110848411a37ba10226b1a6084eba3a9d57",
+    "id": "record_bank_s10002",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "removed": {
+      "0": [
+        526,
+        650,
+        1637
+      ],
+      "1": [
+        362,
+        732,
+        1662,
+        1690
+      ],
+      "10": [
+        32,
+        422,
+        2108
+      ],
+      "11": [
+        45,
+        1508,
+        1733,
+        1849
+      ],
+      "12": [
+        810,
+        1154
+      ],
+      "13": [
+        788,
+        1815
+      ],
+      "14": [
+        727,
+        1429,
+        1998
+      ],
+      "15": [
+        1708
+      ],
+      "16": [
+        1723,
+        1997
+      ],
+      "17": [
+        215,
+        2028
+      ],
+      "18": [
+        1987
+      ],
+      "19": [
+        2209
+      ],
+      "2": [
+        416,
+        761,
+        1928,
+        2208
+      ],
+      "3": [
+        1477,
+        2158
+      ],
+      "4": [
+        1798,
+        2092
+      ],
+      "6": [
+        2060
+      ],
+      "7": [
+        991,
+        1634,
+        1817,
+        2080
+      ],
+      "8": [
+        1029,
+        1173
+      ],
+      "9": [
+        651,
+        1146
+      ]
+    }
+  },
+  {
+    "case_id": "record_bank_s10003",
+    "population": "record",
+    "dataset": "bank",
+    "seed": 10003,
+    "counts": [
+      17980,
+      27186
+    ],
+    "retained_identity_sha256": "4feb8735ef1c36697863b50c164135233d4d1991d64ff4f8f771ab6bf4562f67",
+    "id": "record_bank_s10003",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "removed": {
+      "0": [
+        1960,
+        2212
+      ],
+      "1": [
+        837,
+        1520
+      ],
+      "10": [
+        1272
+      ],
+      "12": [
+        163,
+        366,
+        399,
+        834,
+        844,
+        2003,
+        2096
+      ],
+      "14": [
+        94,
+        547,
+        887,
+        1406,
+        2034
+      ],
+      "15": [
+        428,
+        699,
+        1070
+      ],
+      "16": [
+        772,
+        1391
+      ],
+      "17": [
+        421,
+        1701
+      ],
+      "18": [
+        25,
+        2191
+      ],
+      "19": [
+        465,
+        849
+      ],
+      "2": [
+        502,
+        2090
+      ],
+      "3": [
+        396,
+        1808,
+        2118
+      ],
+      "4": [
+        1648
+      ],
+      "5": [
+        882
+      ],
+      "6": [
+        555,
+        1594,
+        1617
+      ],
+      "7": [
+        1059,
+        1560,
+        1889
+      ],
+      "8": [
+        1786,
+        2092,
+        2123
+      ],
+      "9": [
+        710
+      ]
+    }
+  },
+  {
+    "case_id": "record_bank_s10004",
+    "population": "record",
+    "dataset": "bank",
+    "seed": 10004,
+    "counts": [
+      17983,
+      27183
+    ],
+    "retained_identity_sha256": "257ff84316dd148b25d3471d17d228a03fb4e0a785334a7acebee71a795cb93e",
+    "id": "record_bank_s10004",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "removed": {
+      "0": [
+        189,
+        318,
+        341,
+        456,
+        1424
+      ],
+      "10": [
+        272,
+        1403
+      ],
+      "11": [
+        635,
+        887
+      ],
+      "13": [
+        56,
+        109,
+        379
+      ],
+      "14": [
+        372,
+        606,
+        1822
+      ],
+      "15": [
+        1602
+      ],
+      "16": [
+        245,
+        1136,
+        1545
+      ],
+      "17": [
+        162
+      ],
+      "18": [
+        542,
+        960,
+        1507,
+        2010
+      ],
+      "19": [
+        1401,
+        2069
+      ],
+      "2": [
+        1687
+      ],
+      "3": [
+        202,
+        423
+      ],
+      "4": [
+        1266,
+        1795
+      ],
+      "5": [
+        125,
+        173,
+        247,
+        264,
+        650,
+        1494
+      ],
+      "6": [
+        1222,
+        1258,
+        2147
+      ],
+      "7": [
+        396,
+        1671
+      ],
+      "8": [
+        1073
+      ],
+      "9": [
+        479,
+        1067
+      ]
+    }
+  },
+  {
+    "case_id": "record_credit_s10000",
+    "population": "record",
+    "dataset": "credit",
+    "seed": 10000,
+    "counts": [
+      5374,
+      24596
+    ],
+    "retained_identity_sha256": "75b0d63f253fbf64d5143b5665d37827bd944a08ede4d26fd1a86e535f9e0817",
+    "id": "record_credit_s10000",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "removed": {
+      "10": [
+        105,
+        282
+      ],
+      "18": [
+        284
+      ],
+      "19": [
+        64
+      ],
+      "2": [
+        88
+      ],
+      "24": [
+        116
+      ],
+      "26": [
+        64
+      ],
+      "27": [
+        37
+      ],
+      "31": [
+        63,
+        199
+      ],
+      "32": [
+        187
+      ],
+      "36": [
+        246
+      ],
+      "41": [
+        126
+      ],
+      "42": [
+        174
+      ],
+      "49": [
+        205
+      ],
+      "51": [
+        88
+      ],
+      "54": [
+        239
+      ],
+      "6": [
+        103
+      ],
+      "67": [
+        71
+      ],
+      "68": [
+        62
+      ],
+      "7": [
+        56
+      ],
+      "76": [
+        69
+      ],
+      "77": [
+        25
+      ],
+      "88": [
+        189
+      ],
+      "9": [
+        119
+      ],
+      "92": [
+        61,
+        289
+      ],
+      "93": [
+        255
+      ],
+      "96": [
+        105
+      ],
+      "97": [
+        61
+      ]
+    }
+  },
+  {
+    "case_id": "record_credit_s10001",
+    "population": "record",
+    "dataset": "credit",
+    "seed": 10001,
+    "counts": [
+      5378,
+      24592
+    ],
+    "retained_identity_sha256": "738fb12cd08ef16c92202e0e116105a8cb73a10b2550b22484f62aef72eac26a",
+    "id": "record_credit_s10001",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "removed": {
+      "0": [
+        104
+      ],
+      "1": [
+        47
+      ],
+      "16": [
+        261
+      ],
+      "17": [
+        134
+      ],
+      "18": [
+        73
+      ],
+      "2": [
+        101
+      ],
+      "20": [
+        36
+      ],
+      "31": [
+        234
+      ],
+      "43": [
+        63,
+        184
+      ],
+      "44": [
+        200
+      ],
+      "46": [
+        237
+      ],
+      "47": [
+        284
+      ],
+      "49": [
+        148
+      ],
+      "58": [
+        162
+      ],
+      "61": [
+        225
+      ],
+      "62": [
+        182,
+        269
+      ],
+      "63": [
+        124,
+        189
+      ],
+      "7": [
+        223
+      ],
+      "70": [
+        45
+      ],
+      "78": [
+        175
+      ],
+      "79": [
+        76
+      ],
+      "8": [
+        205
+      ],
+      "9": [
+        292
+      ],
+      "90": [
+        117
+      ],
+      "93": [
+        217
+      ],
+      "95": [
+        225
+      ],
+      "98": [
+        261
+      ]
+    }
+  },
+  {
+    "case_id": "record_credit_s10002",
+    "population": "record",
+    "dataset": "credit",
+    "seed": 10002,
+    "counts": [
+      5380,
+      24590
+    ],
+    "retained_identity_sha256": "1fdc056845115882934cb0bbf641f1543bc40d049df488dc7d8a75e686772ea8",
+    "id": "record_credit_s10002",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "removed": {
+      "1": [
+        50,
+        133
+      ],
+      "10": [
+        285
+      ],
+      "14": [
+        278
+      ],
+      "19": [
+        248
+      ],
+      "24": [
+        14,
+        210
+      ],
+      "3": [
+        189
+      ],
+      "39": [
+        39
+      ],
+      "42": [
+        117,
+        216
+      ],
+      "46": [
+        169
+      ],
+      "47": [
+        200
+      ],
+      "5": [
+        244
+      ],
+      "50": [
+        64
+      ],
+      "51": [
+        26
+      ],
+      "55": [
+        76
+      ],
+      "58": [
+        148
+      ],
+      "59": [
+        80
+      ],
+      "61": [
+        288
+      ],
+      "62": [
+        218
+      ],
+      "66": [
+        276
+      ],
+      "71": [
+        242
+      ],
+      "74": [
+        187
+      ],
+      "79": [
+        1
+      ],
+      "8": [
+        210,
+        228
+      ],
+      "85": [
+        216
+      ],
+      "89": [
+        224
+      ],
+      "94": [
+        201
+      ]
+    }
+  },
+  {
+    "case_id": "record_credit_s10003",
+    "population": "record",
+    "dataset": "credit",
+    "seed": 10003,
+    "counts": [
+      5379,
+      24591
+    ],
+    "retained_identity_sha256": "87d06f2d956350a90cc26351810f290bdad49f6b0a0b92bf980c5c3aa30020b9",
+    "id": "record_credit_s10003",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "removed": {
+      "11": [
+        42
+      ],
+      "15": [
+        276
+      ],
+      "19": [
+        17
+      ],
+      "23": [
+        214
+      ],
+      "27": [
+        9
+      ],
+      "31": [
+        95
+      ],
+      "33": [
+        187,
+        200
+      ],
+      "37": [
+        135
+      ],
+      "44": [
+        21,
+        245
+      ],
+      "46": [
+        209
+      ],
+      "52": [
+        286
+      ],
+      "60": [
+        293
+      ],
+      "62": [
+        6,
+        15
+      ],
+      "64": [
+        246
+      ],
+      "70": [
+        124
+      ],
+      "71": [
+        124
+      ],
+      "72": [
+        51
+      ],
+      "74": [
+        211
+      ],
+      "76": [
+        47,
+        225
+      ],
+      "77": [
+        174
+      ],
+      "81": [
+        285
+      ],
+      "83": [
+        94
+      ],
+      "86": [
+        50
+      ],
+      "90": [
+        93
+      ],
+      "96": [
+        87
+      ],
+      "97": [
+        46
+      ]
+    }
+  },
+  {
+    "case_id": "record_credit_s10004",
+    "population": "record",
+    "dataset": "credit",
+    "seed": 10004,
+    "counts": [
+      5380,
+      24590
+    ],
+    "retained_identity_sha256": "b7803be9c9df2af9ca058b0d6ef62e5048d400eb01fe0289fd5585e74298ed48",
+    "id": "record_credit_s10004",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "removed": {
+      "0": [
+        211
+      ],
+      "15": [
+        147,
+        293
+      ],
+      "22": [
+        260
+      ],
+      "24": [
+        11
+      ],
+      "25": [
+        103,
+        197
+      ],
+      "26": [
+        153
+      ],
+      "3": [
+        48
+      ],
+      "32": [
+        239
+      ],
+      "34": [
+        253
+      ],
+      "38": [
+        240
+      ],
+      "42": [
+        149
+      ],
+      "46": [
+        56
+      ],
+      "47": [
+        148
+      ],
+      "50": [
+        221
+      ],
+      "53": [
+        78
+      ],
+      "57": [
+        39
+      ],
+      "66": [
+        6
+      ],
+      "71": [
+        8,
+        162
+      ],
+      "74": [
+        71
+      ],
+      "82": [
+        219
+      ],
+      "83": [
+        192
+      ],
+      "85": [
+        181
+      ],
+      "91": [
+        138
+      ],
+      "92": [
+        119
+      ],
+      "94": [
+        211
+      ],
+      "98": [
+        110
+      ],
+      "99": [
+        262
+      ]
+    }
+  },
+  {
+    "case_id": "client_adult_s10000",
+    "population": "client",
+    "dataset": "adult",
+    "seed": 10000,
+    "counts": [
+      9685,
+      20177
+    ],
+    "retained_identity_sha256": "f70e2f6251dbc391a401bb3a64bfcd75744639fdb1563511f936278ae852f575",
+    "id": "client_adult_s10000",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_adult_s10001",
+    "population": "client",
+    "dataset": "adult",
+    "seed": 10001,
+    "counts": [
+      9685,
+      20177
+    ],
+    "retained_identity_sha256": "f70e2f6251dbc391a401bb3a64bfcd75744639fdb1563511f936278ae852f575",
+    "id": "client_adult_s10001",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_adult_s10002",
+    "population": "client",
+    "dataset": "adult",
+    "seed": 10002,
+    "counts": [
+      9685,
+      20177
+    ],
+    "retained_identity_sha256": "f70e2f6251dbc391a401bb3a64bfcd75744639fdb1563511f936278ae852f575",
+    "id": "client_adult_s10002",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_adult_s10003",
+    "population": "client",
+    "dataset": "adult",
+    "seed": 10003,
+    "counts": [
+      9685,
+      20177
+    ],
+    "retained_identity_sha256": "f70e2f6251dbc391a401bb3a64bfcd75744639fdb1563511f936278ae852f575",
+    "id": "client_adult_s10003",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_adult_s10004",
+    "population": "client",
+    "dataset": "adult",
+    "seed": 10004,
+    "counts": [
+      9685,
+      20177
+    ],
+    "retained_identity_sha256": "f70e2f6251dbc391a401bb3a64bfcd75744639fdb1563511f936278ae852f575",
+    "id": "client_adult_s10004",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 175,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_bank_s10000",
+    "population": "client",
+    "dataset": "bank",
+    "seed": 10000,
+    "counts": [
+      17098,
+      25854
+    ],
+    "retained_identity_sha256": "8e731c66d4b1a1dca6c1d9a484a0fcbf09515aec1e31574b8bae98e07adbd19f",
+    "id": "client_bank_s10000",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_bank_s10001",
+    "population": "client",
+    "dataset": "bank",
+    "seed": 10001,
+    "counts": [
+      17098,
+      25854
+    ],
+    "retained_identity_sha256": "8e731c66d4b1a1dca6c1d9a484a0fcbf09515aec1e31574b8bae98e07adbd19f",
+    "id": "client_bank_s10001",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_bank_s10002",
+    "population": "client",
+    "dataset": "bank",
+    "seed": 10002,
+    "counts": [
+      17098,
+      25854
+    ],
+    "retained_identity_sha256": "8e731c66d4b1a1dca6c1d9a484a0fcbf09515aec1e31574b8bae98e07adbd19f",
+    "id": "client_bank_s10002",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_bank_s10003",
+    "population": "client",
+    "dataset": "bank",
+    "seed": 10003,
+    "counts": [
+      17098,
+      25854
+    ],
+    "retained_identity_sha256": "8e731c66d4b1a1dca6c1d9a484a0fcbf09515aec1e31574b8bae98e07adbd19f",
+    "id": "client_bank_s10003",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_bank_s10004",
+    "population": "client",
+    "dataset": "bank",
+    "seed": 10004,
+    "counts": [
+      17098,
+      25854
+    ],
+    "retained_identity_sha256": "8e731c66d4b1a1dca6c1d9a484a0fcbf09515aec1e31574b8bae98e07adbd19f",
+    "id": "client_bank_s10004",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 121,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_credit_s10000",
+    "population": "client",
+    "dataset": "credit",
+    "seed": 10000,
+    "counts": [
+      5332,
+      24369
+    ],
+    "retained_identity_sha256": "da921b6ebf3f702de3e887683a59137d09d3596196be9f4a6f97ca5e3de0123e",
+    "id": "client_credit_s10000",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_credit_s10001",
+    "population": "client",
+    "dataset": "credit",
+    "seed": 10001,
+    "counts": [
+      5332,
+      24369
+    ],
+    "retained_identity_sha256": "da921b6ebf3f702de3e887683a59137d09d3596196be9f4a6f97ca5e3de0123e",
+    "id": "client_credit_s10001",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_credit_s10002",
+    "population": "client",
+    "dataset": "credit",
+    "seed": 10002,
+    "counts": [
+      5332,
+      24369
+    ],
+    "retained_identity_sha256": "da921b6ebf3f702de3e887683a59137d09d3596196be9f4a6f97ca5e3de0123e",
+    "id": "client_credit_s10002",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_credit_s10003",
+    "population": "client",
+    "dataset": "credit",
+    "seed": 10003,
+    "counts": [
+      5332,
+      24369
+    ],
+    "retained_identity_sha256": "da921b6ebf3f702de3e887683a59137d09d3596196be9f4a6f97ca5e3de0123e",
+    "id": "client_credit_s10003",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "deleted_client": 0
+  },
+  {
+    "case_id": "client_credit_s10004",
+    "population": "client",
+    "dataset": "credit",
+    "seed": 10004,
+    "counts": [
+      5332,
+      24369
+    ],
+    "retained_identity_sha256": "da921b6ebf3f702de3e887683a59137d09d3596196be9f4a6f97ca5e3de0123e",
+    "id": "client_credit_s10004",
+    "stage": "Lloyd_Comparison",
+    "k": 10,
+    "T": 2,
+    "L": 6,
+    "gamma": 0,
+    "scale_bits": 12,
+    "clip": 74,
+    "deleted_client": 0
+  }
+]

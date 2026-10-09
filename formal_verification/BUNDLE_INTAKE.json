@@ -1,0 +1,79 @@
+{
+  "scope": "Archive identity, CRC and supplied manifests verified during packaging; no new compiler run. All imported member bytes retained unchanged.",
+  "bundles": [
+    {
+      "lane": "fair_update",
+      "source_archive": "FairUpdate_Geometry_Lean_Extension_20260926.zip",
+      "archive_sha256": "709310d451875fb6ac64a423b79c7874a791367e8ccef9f57ad84b816e36c7c4",
+      "archive_bytes": 61634,
+      "files": 40,
+      "manifest_checks": [
+        {
+          "manifest": "MANIFEST.json",
+          "verified_entries": 39
+        }
+      ],
+      "bytes_modified": false
+    },
+    {
+      "lane": "lower_constructions",
+      "source_archive": "lower_constructions_checked_20260926.zip",
+      "archive_sha256": "34d309bca7669ce1776455fe26ebf16e59e465a31418c5c42acfb27854c33491",
+      "archive_bytes": 37614,
+      "files": 35,
+      "manifest_checks": [
+        {
+          "manifest": "MANIFEST.json",
+          "verified_entries": 17
+        },
+        {
+          "manifest": "MANIFEST_COMBINED.json",
+          "verified_entries": 34
+        }
+      ],
+      "bytes_modified": false
+    },
+    {
+      "lane": "replay",
+      "source_archive": "Replay_Certificates_Lean_ProofBundle_20260926.zip",
+      "archive_sha256": "3c3120a7ce3e5204f0d30cf0ea1d3ee2405a2f5d124bbecd1aad7d719980e9dc",
+      "archive_bytes": 52716,
+      "files": 42,
+      "manifest_checks": [
+        {
+          "manifest": "MANIFEST.json",
+          "verified_entries": 41
+        }
+      ],
+      "bytes_modified": false
+    },
+    {
+      "lane": "coupling",
+      "source_archive": "Coupling_Lean_ProofBundle_20260926.zip",
+      "archive_sha256": "33bcef981dafb5a7bb6b540ec7b9d8ba3075f8501e9e527931c3274a67a27246",
+      "archive_bytes": 53957,
+      "files": 51,
+      "manifest_checks": [
+        {
+          "manifest": "MANIFEST.json",
+          "verified_entries": 50
+        }
+      ],
+      "bytes_modified": false
+    },
+    {
+      "lane": "approximation",
+      "source_archive": "Approximation_Lean_ProofBundle_20260926.zip",
+      "archive_sha256": "d2bd76480d4072f2fb7ba752548fe400efbd7b66766761a8f5c391b6299efaf9",
+      "archive_bytes": 66794,
+      "files": 48,
+      "manifest_checks": [
+        {
+          "manifest": "MANIFEST.json",
+          "verified_entries": 47
+        }
+      ],
+      "bytes_modified": false
+    }
+  ]
+}

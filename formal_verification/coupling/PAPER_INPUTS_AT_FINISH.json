@@ -1,0 +1,24 @@
+{
+  "sha256": {
+    "main.tex": "ad7d71315574644404d3f54ab3d2c211db66cc7e19269577208a1d4568ebaf85",
+    "appendix.tex": "62b7087c7de4bf84b9a40975360075c9d079014673f64c7b0f4f5ac733eedc32",
+    "s2_coupling_statement.tex": "8fe5cb37110db3cc2ab0cd836caa420875100a328103b4c446f76fa32f8c6079",
+    "s2_coupling_proof.tex": "f18d1a66ed94a114188661937ef36999b666e65bd32e9f508f8ff33bc71dcfa3",
+    "AGENTS.md": "293fa32c19087f9fe9d8dde13fe000ebf680a28ebd368c66594fddfbb9be6804",
+    "LIVE_EDITING_RULES.md": "c366576166caecf7c3141b8e7460c889cd19880a95917b712fbc68a9a476954a"
+  },
+  "changed_since_initial_freeze": [
+    "main.tex",
+    "appendix.tex"
+  ],
+  "central_coupling_fragments_unchanged": true,
+  "checked_utc": "2026-09-26T10:09:11.457478+00:00",
+  "editorial_integration_commit_reported_by_parent": "733a1a790872f86b647a492ac3d66e6c7c8ef186",
+  "surrounding_assumptions_reread": [
+    "eq:basic-cert",
+    "eq:runner-cert",
+    "app:s2-coupling",
+    "strict-majority abandonment paragraph"
+  ],
+  "surrounding_assumptions_consistent_with_model": true
+}
